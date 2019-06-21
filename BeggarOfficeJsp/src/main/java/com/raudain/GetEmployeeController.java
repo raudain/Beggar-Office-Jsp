@@ -1,39 +1,31 @@
 package com.raudain;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.raudain.dao.EmployeeDao;
+import com.raudain.model.Employee;
+
 /**
  * Servlet implementation class GetEmployeeController
  */
 public class GetEmployeeController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public GetEmployeeController() {
-        super();
-        // TODO Auto-generated constructor stub
+
+    @Override
+    protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+
+        Integer.parseInt(request.getParameter("position"));
+        new EmployeeDao();
+        new Employee();
+
+        final javax.servlet.RequestDispatcher rd = request.getRequestDispatcher("showEmployee.jsp");
+        rd.forward(request, response);
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
 
 }

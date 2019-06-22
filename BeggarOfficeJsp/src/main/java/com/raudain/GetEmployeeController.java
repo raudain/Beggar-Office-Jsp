@@ -18,9 +18,11 @@ public class GetEmployeeController extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 
-        Integer.parseInt(request.getParameter("position"));
-        new EmployeeDao();
-        new Employee();
+        final int aid = Integer.parseInt(request.getParameter("position"));
+        final EmployeeDao dao = new EmployeeDao();
+        final Employee a1 = dao.getEmployee(aid);
+
+        request.setAttribute("employee", a1);
 
         final javax.servlet.RequestDispatcher rd = request.getRequestDispatcher("showEmployee.jsp");
         rd.forward(request, response);

@@ -1,0 +1,103 @@
+Position,Name,Profession,Endurance,Level,Cost
+101,Barbara,"Computer Engineer",Productive,1,NULL
+102,Dale,Santa,Productive,20,NULL
+103,Bernice,Cook,Productive,20,NULL
+201,Donald,Scientist,Productive,20,NULL
+202,Carrie,Firefighter,Tireless,20,NULL
+203,Christine,Lawyer,Tireless,6,NULL
+301,Marvin,Lawyer,Hardworking,1,"40,000,000"
+302,Roy,Scientist,Hardworking,1,NULL
+303,Andrew,Doctor,Hardworking,20,NULL
+401,Janet,Journalist,Productive,20,NULL
+402,Gary,Doctor,Productive,20,NULL
+403,May,Firefighter,Tireless,20,NULL
+501,Sharon,Lawyer,Tireless,20,NULL
+502,June,Scientist,Productive,20,NULL
+503,Greg,Santa,Productive,20,NULL
+601,Emma,"Computer Engineer",Productive,20,NULL
+602,Raymond,Journalist,Productive,20,NULL
+603,Evelyn,Doctor,Diligent,20,NULL
+701,Gregory,Journalist,Hardworking,20,NULL
+702,Andrew,Santa,Productive,20,NULL
+703,Phyllis,Politician,Diligent,1,"15,500,000"
+801,Heather,Journalist,Tireless,20,NULL
+802,Melvin,Doctor,Productive,20,NULL
+803,Charlotte,Scientist,Hardworking,20,NULL
+901,Manuel,Lawyer,Productive,1,"10,500,000"
+902,Lewis,Journalist,Tireless,20,NULL
+903,Juan,"Computer Engineer",Productive,20,NULL
+1001,Lori,"Computer Engineer",Productive,1,NULL
+1002,Wendy,Journalist,Productive,20,NULL
+1003,Alice,Firefighter,Hardworking,20,NULL
+1101,Shannon,Lawyer,Productive,20,NULL
+1102,Paula,"Computer Engineer",Hardworking,1,"40,000,000"
+1103,Harold,Artist,Hardworking,20,"2,200,000"
+1201,Billy,Santa,Hardworking,20,NULL
+1202,Greg,Journalist,Productive,20,NULL
+1203,George,Journalist,Hardworking,20,NULL
+1301,Shane,"Computer Engineer",Diligent,20,NULL
+1302,Darrel,Doctor,Tireless,20,NULL
+1303,Cindy,Scientist,Productive,20,NULL
+1401,Bradley,Santa,Tireless,20,NULL
+1402,Dale,Scientist,Productive,20,NULL
+1403,Mike,Artist,Diligent,1,"95,000"
+1501,Martin,Santa,Hardworking,20,NULL
+1502,Manuel,Scientist,Productive,20,NULL
+1503,Nicole,Journalist,Productive,20,NULL
+1601,Marilyn,Lawyer,Diligent,20,NULL
+1602,Jessica,Artist,Tireless,20,NULL
+1603,Jim,Artist,Hardworking,20,"2,200,000"
+1701,Gloria,Journalist,Productive,20,NULL
+1702,Sam,Firefighter,Diligent,20,"250,000"
+1703,Nicole,Lawyer,Diligent,20,NULL
+1801,Aaron,"Computer Engineer",Diligent,20,NULL
+1802,Joanne,Scientist,Productive,20,NULL
+1803,Katherine,Journalist,Productive,20,NULL
+1901,Keith,"Computer Engineer",Diligent,20,NULL
+1902,Rachel,Cook,Hardworking,20,NULL
+1903,Jeanette,Scientist,Tireless,20,NULL
+2001,Susan,Doctor,Productive,20,NULL
+2002,Gerald,Doctor,Diligent,20,NULL
+2003,Zachary,Journalist,Tireless,1,NULL
+2101,Philip,Santa,Productive,1,"10,500,000"
+2102,Stanley,Scientist,Productive,20,NULL
+2103,Tim,Santa,Productive,1,"10,500,000"
+2201,Helen,Lawyer,Diligent,20,NULL
+2202,Melanie,Firefighter,Hardworking,20,NULL
+2203,Louis,"Computer Engineer",Tireless,1,NULL
+2301,Willie,"Computer Engineer",Hardworking,1,NULL
+2302,Karen,Journalist,Tireless,20,NULL
+2303,Megan,Journalist,Productive,20,NULL
+2401,Terry,Businessman,Tireless,20,NULL
+2402,Alfred,"Computer Engineer",Productive,20,NULL
+2403,Jeffery,Lawyer,Tireless,20,NULL
+2501,Justin,Doctor,Tireless,20,NULL
+2502,Barbara,Politician,Diligent,20,"15,500,000"
+2503,Jonathan,Firefighter,Hardworking,20,NULL
+2601,Dana,Lawyer,Hardworking,20,NULL
+2602,Ronnie,Santa,Hardworking,20,NULL
+2603,Oscar,"Computer Engineer",Productive,20,NULL
+2701,Timothy,Businessman,Tireless,20,NULL
+2702,Peter,Politician,Tireless,20,NULL
+2703,Willie,Doctor,Tireless,20,NULL
+2801,Nicholas,Businessman,Tireless,20,NULL
+2802,Diane,Lawyer,Tireless,20,NULL
+2803,Todd,Santa,Hardworking,20,NULL
+2901,Frederick,Lawyer,Tireless,20,NULL
+2902,Gregory,Doctor,Productive,20,NULL
+2903,Floyd,Pilot,Sleepy,20,NULL
+3001,Jack,Journalist,Tireless,20,NULL
+3002,Marilyn,Journalist,Tireless,20,NULL
+3003,Samuel,Santa,Hardworking,20,NULL
+3101,Amy,Politician,Hardworking,20,NULL
+3102,Keith,Santa,Hardworking,20,NULL
+3103,Chad,"Computer Engineer",Hardworking,20,NULL
+3201,Melvin,Scientist,Tireless,20,NULL
+3202,Donna,"Computer Engineer",Productive,20,NULL
+3203,Darlene,Businessman,Tireless,18,NULL
+3301,Ronnie,Lawyer,Tireless,14,NULL
+3302,Manuel,Scientist,Hardworking,15,NULL
+3303,Brent,Doctor,Sleepy,17,NULL
+3401,April,Businessman,Tireless,6,NULL
+3402,Bradley,Lawyer,Tireless,8,NULL
+3403,Leonard,Pilot,Hardworking,1,"260,000,000"

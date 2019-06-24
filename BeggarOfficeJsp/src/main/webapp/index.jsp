@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body style="background-color: rgba(212, 236, 247, 1);">
-    <form action="getEmployee">
-        <input type="text" name="position" class="BannerSearch" placeholder="Search">
-        <input type="image" class="BannerSearchImg" src=images/search.gif>
-    </form>
+    <header style ="background-color: #fff; width: 100%; height: 100px;">
+      <h1 style="font-family: Catamaran; font-size: 24px; font-weight: 900; color: #111; display: block; margin: 31px 0; text-align: left; line-height: 38px; padding: 0 20px 0 40px; border-right: 3px solid #111; float:left; ">V-Beggar</h1>
+      <a href="employees.html" style="line-height: 60px; font-family: Catamaran; font-size: 16px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Hired Workers</a>
+      <form action="getEmployee">
+          <input type="text" name="position" class="BannerSearch" placeholder="Search">
+          <input type="image" class="BannerSearchImg" src=images/search.gif>
+      </form>
+    </header>
     <div class="main-content">
       <img src="images/Logo.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 561px; height: 143.97px;">
       <div id="building" class="main-container">

@@ -44,7 +44,7 @@ OR Profession = 'Farmer'
 ORDER BY endurance;
 
 
-/* Tier II */
+/************************************ Tier II ****************************************/
 
 SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
 FROM Workers 
@@ -52,7 +52,7 @@ WHERE Profession = 'Artist'
 OR Profession = 'Cook'
 OR Profession = 'Magician'
 OR Profession = 'Firefighter'
-ORDER BY Cost;
+ORDER BY Cost DESC;
 
 SELECT *
 FROM workers
@@ -106,7 +106,7 @@ WHERE Profession = 'Santa'
 ORDER BY Endurance;
 
 SELECT * 
-FROM workers 
+FROM Workers 
 WHERE Profession = 'Lawyer' 
 ORDER BY Endurance;
 

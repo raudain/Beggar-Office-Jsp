@@ -27,7 +27,8 @@ Politician
 Pilot
 */
 
-SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###')
+SELECT *
+/*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###')*/
 FROM workers;
 
 SELECT Position, Name, Profession, Endurance, Level, Cost
@@ -46,7 +47,8 @@ ORDER BY endurance;
 
 /************************************ Tier II ****************************************/
 
-SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
+SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
+/*SELECT **/
 FROM Workers 
 WHERE Profession = 'Artist' 
 OR Profession = 'Cook'
@@ -92,10 +94,11 @@ FROM Workers
 WHERE Profession = 'Doctor'
 ORDER BY Endurance;
 
+/*SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost*/
 SELECT *
 FROM Workers
 WHERE Profession = 'Computer Engineer'
-/*AND Endurance = 'Sleepy'*/
+AND Endurance = 'Productive'
 ORDER BY Endurance;
 
 SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
@@ -113,8 +116,8 @@ ORDER BY Endurance;
 
 /*************************************** Tier V ***********************************/
 
-/*SELECT **/
-SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
+SELECT *
+/*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost*/
 FROM Workers
 WHERE Profession = 'Politician'
 ORDER BY Endurance;
@@ -122,4 +125,4 @@ ORDER BY Endurance;
 SELECT *
 FROM workers
 WHERE profession = 'Pilot'
-ORDER BY endurance;
+ORDER BY endurance;ALTER TABLE Workers CHANGE Cost Room INT(4)

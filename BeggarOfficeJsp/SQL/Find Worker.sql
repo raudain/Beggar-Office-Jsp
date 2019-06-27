@@ -68,13 +68,13 @@ WHERE Profession = 'Cook'
 ORDER BY Endurance;
 
 /* SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost */
-SELECT Position, Name, Profession, Endurance, Level, Cost
+SELECT *
 FROM workers 
 WHERE Profession = 'Firefighter'
 ORDER BY Cost;
 
 
-/* Tier III */
+/*************************************** Tier III ***********************************/
 
 SELECT *
 FROM workers
@@ -92,7 +92,7 @@ ORDER BY Endurance;
 SELECT *
 FROM Workers
 WHERE Profession = 'Doctor'
-ORDER BY Endurance;
+ORDER BY Cost;
 
 /*SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost*/
 SELECT *
@@ -103,7 +103,7 @@ ORDER BY Endurance;
 
 SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
 
-SELECT Position, Name, Profession, Endurance, Level, Cost
+SELECT Room, Name, Profession, Endurance, Level, Cost
 FROM Workers 
 WHERE Profession = 'Santa'
 ORDER BY Endurance;

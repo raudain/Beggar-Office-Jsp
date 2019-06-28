@@ -29,7 +29,7 @@ Pilot
 
 SELECT *
 /*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###')*/
-FROM workers;
+FROM Workers;
 
 SELECT Position, Name, Profession, Endurance, Level, Cost
 FROM workers

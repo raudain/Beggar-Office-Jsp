@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <title>CHANGE INC.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body style="background-color: rgba(212, 236, 247, 1);">
     <header style ="background-color: #fff; width: 100%; height: 100px;">

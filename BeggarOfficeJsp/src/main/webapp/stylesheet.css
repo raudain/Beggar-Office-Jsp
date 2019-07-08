@@ -1,0 +1,78 @@
+body, header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.BannerSearch {
+    position: absolute;
+    right: 35px;
+    top: 10px;
+    width: 200px;
+    z-index: 99;
+}
+
+.BannerSearchImg {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    z-index: 98;
+    border: 0px;
+}
+
+.main-content {
+  margin-top: 72px;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 695px;
+  /*height: 6450px;*/
+  background-color: rgba(213, 214, 214, 1)
+}
+
+.column {
+  margin-top: 72px;
+  margin-left: 72px;
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(215, 223, 227, 1);
+  width: 132px;
+  height: 144px;
+  background-color: rgba(174, 223, 240, 1);
+  float: left;
+}
+
+.row {
+  height: 144px;
+}
+h1, h2 {
+  font-family: Roboto, Segoe UI, Arial, "Times New Roman";
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+h2 {
+  padding-top: 50px;
+  font-size: 16px;
+}
+
+.two-lines h1 {
+  padding-top: 0px;
+}
+
+.two-lines h2 {
+  padding-top: 33px;
+}

@@ -27,15 +27,15 @@ Politician
 Pilot
 */
 
-SELECT *
 /*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###')*/
+SELECT *
 FROM Workers;
 
 SELECT Position, Name, Profession, Endurance, Level, Cost
 FROM workers
 WHERE Position = '1902';
 
-/* Tier I */
+/************************************ Tier I ************************************/
 
 SELECT * 
 FROM Workers 
@@ -45,7 +45,7 @@ OR Profession = 'Farmer'
 ORDER BY endurance;
 
 
-/************************************ Tier II ****************************************/
+/************************************ Tier II *************************************/
 
 SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
 /*SELECT **/
@@ -54,16 +54,15 @@ WHERE Profession = 'Artist'
 OR Profession = 'Cook'
 OR Profession = 'Magician'
 OR Profession = 'Firefighter'
-ORDER BY Cost DESC;
+ORDER BY Cost ASC;
 
 SELECT *
 FROM workers
 WHERE Profession = 'Artist'
 ORDER BY Endurance;
 
-SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost
-/*SELECT Position, Name, Profession, Endurance, Level, Cost*/
-FROM workers 
+SELECT *
+FROM Workers 
 WHERE Profession = 'Cook'
 ORDER BY Endurance;
 
@@ -94,12 +93,11 @@ FROM Workers
 WHERE Profession = 'Doctor'
 ORDER BY Cost;
 
-/*SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost*/
+/*SELECT Room, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost*/
 SELECT *
 FROM Workers
 WHERE Profession = 'Computer Engineer'
-AND Endurance = 'Productive'
-ORDER BY Endurance;
+ORDER BY Cost ASC;
 
 SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
 
@@ -116,13 +114,13 @@ ORDER BY Endurance;
 
 /*************************************** Tier V ***********************************/
 
+/*SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost*/
 SELECT *
-/*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost*/
 FROM Workers
 WHERE Profession = 'Politician'
 ORDER BY Endurance;
 
 SELECT *
-FROM workers
-WHERE profession = 'Pilot'
-ORDER BY endurance;ALTER TABLE Workers CHANGE Cost Room INT(4)
+FROM Workers
+WHERE Profession = 'Pilot'
+ORDER BY Cost ASC;

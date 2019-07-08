@@ -23,3 +23,7 @@ AND endurance='Diligent';
 SELECT * FROM workers
 WHERE profession = 'Firefighter'
 ORDER BY endurance;
+
+Update Workers
+SET Endurance = 'Hard-working'
+WHERE Endurance = 'Hardworking';

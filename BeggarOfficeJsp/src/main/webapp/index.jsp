@@ -11,11 +11,11 @@
   </head>
   <body style="background-color: rgba(212, 236, 247, 1);">
     <header style ="background-color: #fff; width: 100%; height: 100px;">
-      <h1 style="font-family: Catamaran; font-size: 24px; font-weight: 900; color: #111; display: block; margin: 31px 0; text-align: left; line-height: 38px; padding: 0 20px 0 40px; border-right: 3px solid #111; float:left; ">V-Beggar</h1>
-      <a href="employees.html" style="line-height: 60px; font-family: Catamaran; font-size: 16px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Hired Workers</a>
+      <h1 style="font-family: Arial; font-size: 24px; font-weight: 900; color: #111; display: block; margin: 31px 0; text-align: left; line-height: 38px; padding: 0 20px 0 40px; border-right: 3px solid #111; float:left; ">V.B Manager</h1>
+      <a href="employees.html" style="line-height: 60px; font-family: Arial; font-size: 16px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0px 16px; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Board</a>
       <form action="getEmployee">
-          <input type="text" name="position" class="BannerSearch" placeholder="Search">
-          <input type="image" class="BannerSearchImg" src=images/search.gif>
+          <input type="text" name="position" placeholder="Search" class="BannerSearch" style="right: 35px; width: 200px; z-index: 99; font-size: large">
+          <input type="image" src=images/search.gif class="BannerSearch" style="right: 9px; z-index: 98; border: 0px;">
       </form>
     </header>
     <div class="main-content">

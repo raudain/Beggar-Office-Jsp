@@ -75,10 +75,17 @@ ORDER BY Cost;
 
 /*************************************** Tier III ***********************************/
 
+SELECT Room, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost
+
+FROM Workers
+WHERE Profession = 'Scientist'
+OR Profession = 'Journalist'
+ORDER BY Cost;
+
 SELECT *
-FROM workers
-WHERE profession = 'Scientist'
-ORDER BY endurance;
+FROM Workers
+WHERE Profession = 'Scientist'
+ORDER BY Endurance;
 
 SELECT *
 FROM Workers
@@ -97,7 +104,7 @@ ORDER BY Cost;
 SELECT *
 FROM Workers
 WHERE Profession = 'Computer Engineer'
-ORDER BY Cost ASC;
+ORDER BY Cost;
 
 SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
 
@@ -109,7 +116,7 @@ ORDER BY Endurance;
 SELECT * 
 FROM Workers 
 WHERE Profession = 'Lawyer' 
-ORDER BY Endurance;
+ORDER BY Cost;
 
 
 /*************************************** Tier V ***********************************/

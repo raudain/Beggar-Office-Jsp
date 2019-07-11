@@ -15,12 +15,12 @@
       <a href="employees.html" style="line-height: 60px; font-family: Arial; font-size: 16px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0px 16px; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Board</a>
       <form action="getEmployee">
           <input type="text" name="position" placeholder="Search" class="BannerSearch" style="right: 35px; width: 200px; z-index: 99; font-size: large">
-          <input type="image" src=images/search.gif class="BannerSearch" style="right: 9px; z-index: 98; border: 0px;">
+          <input type="image" src=images/search.gif class="BannerSearch" style="right: 5px; border: 0px; width: 27px">
       </form>
     </header>
-    <div class="main-content">
-      <img src="images/Logo.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 561px; height: 143.97px;">
-      <div id="building" class="main-container">
+    <div class="main-content" style="margin-top: 35px">
+      <img src="images/ChangeInc.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 600px; height: 143.97px;">
+      <div id="building" class="main-container" style="margin-left: auto; margin-right: auto; width: 660px; background-color: #729DBD;">
         <div class="row row34">
           <div class="column">
             <h1>Businessman</h1>

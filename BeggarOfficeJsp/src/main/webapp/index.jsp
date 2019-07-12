@@ -19,8 +19,8 @@
       </form>
     </header>
     <div class="main-content" style="margin-top: 35px">
-      <img src="images/ChangeInc.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 600px; height: 143.97px;">
-      <div id="building" class="main-container" style="margin-left: auto; margin-right: auto; width: 660px; background-color: #729DBD;">
+      <img src="images/ChangeInc.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 750px;">
+      <div id="building" class="main-container" style="margin-left: auto; margin-right: auto; width: 1000px; background-color: #729DBD;">
         <div class="row row34">
           <div class="column">
             <h1>Businessman</h1>

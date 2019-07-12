@@ -85,7 +85,7 @@ ORDER BY Cost;
 SELECT *
 FROM Workers
 WHERE Profession = 'Scientist'
-ORDER BY Endurance;
+ORDER BY Cost;
 
 SELECT *
 FROM Workers
@@ -130,4 +130,4 @@ ORDER BY Endurance;
 SELECT *
 FROM Workers
 WHERE Profession = 'Pilot'
-ORDER BY Cost ASC;
+ORDER BY Cost;

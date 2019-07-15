@@ -17,21 +17,29 @@ body, header {
     top: 10px;
 }
 
-.column {
-  margin-top: 70px;
-  margin-left: 72px;
-  border: 2px;
-  border-style: solid;
-  border-color: rgba(215, 223, 227, 1);
-  width: 200px;
+.row {
+  height: 144px;
+}
+
+.room {
+  margin-top: 124px;
+  margin-left: 95px;
+  border: 0px;
   height: 200px;
+  width: 200px;
+
   background-color: rgba(174, 223, 240, 1);
   float: left;
 }
 
-.row {
-  height: 144px;
+.room img {
+  margin-top: 70px;
+  margin-left: 60px;
+  height: 130px;
+  width: 65px;
 }
+
+
 h1, h2 {
   font-family: Roboto, Segoe UI, Arial, "Times New Roman";
   text-align: center;
@@ -46,12 +54,4 @@ h1 {
 h2 {
   padding-top: 50px;
   font-size: 16px;
-}
-
-.two-lines h1 {
-  padding-top: 0px;
-}
-
-.two-lines h2 {
-  padding-top: 33px;
 }

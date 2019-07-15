@@ -21,478 +21,469 @@
     <div class="main-content" style="margin-top: 35px">
       <img src="images/ChangeInc.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 750px;">
       <div id="building" class="main-container" style="margin-left: auto; margin-right: auto; width: 1000px; background-color: #729DBD;">
+        <div class="row row35">
+          <div class="room">
+            <img src="images/row35/left-lloyd.png">
+          </div>
+          <div class="room two-lines">
+            <img src="images/row35/middle-carol.png">
+          </div>
+          <div class="room">
+            <img src="images/row35/right-marcus.png">
+          </div>
+        </div>
         <div class="row row34">
-          <div class="column">
-            <h1>Businessman</h1>
-            <h2>Tireless</h2>
+          <div class="room">
+            <img src="images/row34/left-april.png">
           </div>
-          <div class="column two-lines">
-            <h1>Lawyer</h1>
-            <h2>Tireless</h2>
+          <div class="room">
+            <img src="images/row34/middle-bradley.png">
           </div>
-          <div class="column">
-            <h1>Pilot</h1>
-            <h2>Diligent</h2>
+          <div class="room">
+            <img src="images/row34/right-leonard.png">
           </div>
         </div>
         <div class="row row33">
-          <div class="column">
-            <h1>Lawyer</h1>
-            <h2>Tireless</h2>
+          <div class="room">
+            <img src="images/row33/left-ronnie.png">
           </div>
-          <div class="column two-lines">
-            <h1>Scientist</h1>
-            <h2>Hardworking</h2>
+          <div class="room">
+            <img src="images/row33/middle-manuel.png">
           </div>
-          <div class="column">
-            <h1>Doctor</h1>
-            <h2>Sleepy</h2>
-          </div>
-        </div>
-        <div class="row row32">
-          <div class="column">
-            <h1>Scientist</h1>
-            <h2>Tireless</h2>
-          </div>
-          <div class="column two-lines">
-            <h1>Computer Engineer</h1>
-            <h2>Productive</h2>
-          </div>
-          <div class="column">
-            <h1>Businessman</h1>
-            <h2>Tireless</h2>
+          <div class="room">
+            <img src="images/row33/right-amanda.png">
           </div>
         </div>
         <div class="row row31">
-          <div class="column">
+          <div class="room">
             <h1>Politician</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row30">
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row29">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Pilot</h1>
             <h2>Sleepy</h2>
           </div>
         </div>
         <div class="row row28">
-          <div class="column">
+          <div class="room">
             <h1>Businessman</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row27">
-          <div class="column">
+          <div class="room">
             <h1>Businessman</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Politician</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row26">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row25">
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Politician</h1>
             <h2>Sleepy</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row24">
-          <div class="column">
+          <div class="room">
             <h1>Businessman</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row23">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row22">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row21">
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Sleepy</h2>
           </div>
         </div>
         <div class="row row20">
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Sleepy</h2>
           </div>
         </div>
         <div class="row row19">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Cook</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row18">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row17">
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Diligent</h2>
           </div>
         </div>
         <div class="row row16">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Artist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Artist</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row15">
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row14">
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Diligent</h2>
           </div>
         </div>
         <div class="row row13">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row12">
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row11">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Artist</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row10">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row9">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row8">
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row7">
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Diligent</h2>
           </div>
         </div>
         <div class="row row6">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Diligent</h2>
           </div>
         </div>
         <div class="row row5">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Productive</h2>
           </div>
         </div>
         <div class="row row4">
-          <div class="column">
+          <div class="room">
             <h1>Journalist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row3">
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Diligent</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Hardworking</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Doctor</h1>
             <h2>Hardworking</h2>
           </div>
         </div>
         <div class="row row2">
-          <div class="column">
+          <div class="room">
             <h1>Scientist</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Firefighter</h1>
             <h2>Tireless</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Lawyer</h1>
             <h2>Tireless</h2>
           </div>
         </div>
         <div class="row row1">
-          <div class="column two-lines">
+          <div class="room two-lines">
             <h1>Computer Engineer</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Santa</h1>
             <h2>Productive</h2>
           </div>
-          <div class="column">
+          <div class="room">
             <h1>Cook</h1>
             <h2>Productive</h2>
           </div>

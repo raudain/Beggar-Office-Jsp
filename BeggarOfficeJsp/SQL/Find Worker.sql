@@ -66,7 +66,6 @@ FROM Workers
 WHERE Profession = 'Cook'
 ORDER BY Endurance;
 
-/* SELECT Position, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost */
 SELECT *
 FROM workers 
 WHERE Profession = 'Firefighter'
@@ -111,7 +110,7 @@ SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
 SELECT Room, Name, Profession, Endurance, Level, Cost
 FROM Workers 
 WHERE Profession = 'Santa'
-ORDER BY Endurance;
+ORDER BY Cost;
 
 SELECT * 
 FROM Workers 

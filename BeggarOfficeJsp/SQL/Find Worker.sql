@@ -89,7 +89,7 @@ ORDER BY Cost;
 SELECT *
 FROM Workers
 WHERE Profession = 'Journalist'
-ORDER BY Endurance;
+ORDER BY Cost;
 
 
 /*************************************** Tier IV ***********************************/

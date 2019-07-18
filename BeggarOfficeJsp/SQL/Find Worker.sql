@@ -48,7 +48,7 @@ ORDER BY endurance;
 /************************************ Tier II *************************************/
 
 SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
-/*SELECT **/
+
 FROM Workers 
 WHERE Profession = 'Artist' 
 OR Profession = 'Cook'

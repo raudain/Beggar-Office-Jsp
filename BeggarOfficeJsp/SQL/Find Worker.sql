@@ -108,13 +108,13 @@ ORDER BY Cost;
 SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
 
 SELECT Room, Name, Profession, Endurance, Level, Cost
-FROM Workers 
+FROM Workers
 WHERE Profession = 'Santa'
 ORDER BY Cost;
 
-SELECT * 
-FROM Workers 
-WHERE Profession = 'Lawyer' 
+SELECT *
+FROM Workers
+WHERE Profession = 'Lawyer'
 ORDER BY Cost;
 
 

@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <title>CHANGE INC.</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/tower.css">
   </head>
-  <body style="background-color: rgba(212, 236, 247, 1);">
+  <body>
     <header style ="background-color: #fff; width: 100%; height: 100px;">
       <h1 style="font-family: Arial; font-size: 24px; font-weight: 900; color: #111; display: block; margin: 31px 0; text-align: left; line-height: 38px; padding: 0 20px 0 40px; border-right: 3px solid #111; float:left; ">V.B Manager</h1>
       <a href="employees.html" style="line-height: 60px; font-family: Arial; font-size: 16px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0px 16px; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Board</a>
@@ -51,7 +52,7 @@
             <img src="images/row33/middle-manuel.png">
           </div>
           <div class="room">
-            <img src="images/row33/right-amanda .png">
+            <img src="images/row33/right-amanda.png">
           </div>
         </div>
         <div class="row row31">

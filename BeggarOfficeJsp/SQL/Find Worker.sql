@@ -27,13 +27,10 @@ Politician
 Pilot
 */
 
-/*SELECT Position, Name, Profession, Endurance, Level, format(Cost, '###,###,###')*/
+
 SELECT *
 FROM Workers;
 
-SELECT Position, Name, Profession, Endurance, Level, Cost
-FROM workers
-WHERE Position = '1902';
 
 /************************************ Tier I ************************************/
 
@@ -48,7 +45,6 @@ ORDER BY endurance;
 /************************************ Tier II *************************************/
 
 SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
-
 FROM Workers 
 WHERE Profession = 'Artist' 
 OR Profession = 'Cook'
@@ -75,7 +71,6 @@ ORDER BY Cost;
 /*************************************** Tier III ***********************************/
 
 SELECT Room, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost
-
 FROM Workers
 WHERE Profession = 'Scientist'
 OR Profession = 'Journalist'
@@ -94,20 +89,32 @@ ORDER BY Cost;
 
 /*************************************** Tier IV ***********************************/
 
+SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
+FROM Workers
+WHERE Profession = 'Doctor'
+OR Profession = 'Computer Engineer'
+OR Profession = 'Journalist'
+OR Profession = 'Santa'
+OR Profession = 'Lawyer'
+ORDER BY Cost;
+
 SELECT *
 FROM Workers
 WHERE Profession = 'Doctor'
 ORDER BY Cost;
 
-/*SELECT Room, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost*/
+
 SELECT *
 FROM Workers
 WHERE Profession = 'Computer Engineer'
 ORDER BY Cost;
 
-SELECT * FROM workers WHERE profession = 'Journalist' ORDER BY endurance;
+SELECT * 
+FROM Workers 
+WHERE Profession = 'Journalist' 
+ORDER BY Cost;
 
-SELECT Room, Name, Profession, Endurance, Level, Cost
+SELECT *
 FROM Workers
 WHERE Profession = 'Santa'
 ORDER BY Cost;

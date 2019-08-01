@@ -6,11 +6,41 @@ body {
 header {
 	background-color: #FFFFFF;
 }
-.BannerSearch {
-    margin-right: 40px;
-    margin-top: 30px;
-    position: absolute;
-    top: 10px;
+
+.top {
+	font-family: Arial Black;
+	font-size: 20px;
+	padding-left: 40px;
+	float: left;
 }
 
+.top-right {
+	margin-top: 24px;
+}
 
+.banner-search {
+    position: absolute;
+}
+
+#title {
+	font-size: 28px;
+	padding-right: 20px;
+	border-right: 3px solid #111;
+}
+
+#link {
+	color: #111;
+	text-decoration: none;
+}
+
+#search-box {
+	padding-left: 0px;
+	right: 85px;
+	width: 200px;
+}
+
+#magnifying-glass {
+	right: 40px;
+	border: 0px;
+	width: 36px;
+}

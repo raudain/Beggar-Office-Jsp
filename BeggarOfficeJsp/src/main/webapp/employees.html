@@ -24,28 +24,25 @@
   </style>
   <body>
     <header style ="background-color: #fff; width: 100%; height: 80px;">
-      <h1 style="font-family: Arial; font-size: 24px; font-weight: 900; color: #111; display: block; margin: 31px 0; text-align: left; line-height: 38px; padding: 0 20px 0 40px; border-right: 3px solid #111; float:left; ">V.B Desktop</h1>
-      <a href="index.jsp" style="line-height: 60px; font-family: Arial; font-size: 20px; color: #111; display: block; margin: 20px 0px 0px 20px; padding: 0px 16px; vertical-align: baseline; background: transparent; text-decoration: none; cursor: pointer; float: left">Tower</a>
+      <h1 id="title" class="top">V.B Desktop</h1>
+      <a id="link" class="top top-right" href="index.jsp">Tower</a>
       <form action="getEmployee">
-        <input type="text" name="position" placeholder="Search" class="BannerSearch" style="right: 35px; width: 200px; z-index: 99; font-size: large">
-        <input type="image" src=images/search.gif class="BannerSearch" style="right: 5px; border: 0px; width: 27px">
+        <input id="search-box" class="top banner-search top-right"type="text" name="position" placeholder="Search">
+        <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
       </form>
     </header>
     <img id="clock" src="images/clok.png" style="width: 148px; margin-top: 5px;">
     <div id="cork-board-top">
-
+      <h2 class="top floor-label">FLOOR 1</h2>
     </div>
-    <p id="demo"></p>
     <script>
       function centerClock() {
-        
         var clock = document.getElementById("clock");
-        var middle = window.innerWidth / 2 - (clock.width * 2);
+        var middle = window.innerWidth / 2 - (clock.width / 2);
         if (middle < 470) {
             middle = 470
         }
         clock.style.marginLeft = middle + "px";
-        document.getElementById("demo").innerHTML = middle;
       }
       centerClock();
       window.addEventListener("resize", function(){

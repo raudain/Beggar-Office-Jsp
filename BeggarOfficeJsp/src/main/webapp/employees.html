@@ -24,16 +24,29 @@
   </style>
   <body>
     <header style ="background-color: #fff; width: 100%; height: 80px;">
-      <h1 id="title" class="top">V.B Desktop</h1>
-      <a id="link" class="top top-right" href="index.jsp">Tower</a>
+      <h1 id="title" class="text top">V.B Desktop</h1>
+      <a id="link" class="text top top-right" href="index.jsp">Tower</a>
       <form action="getEmployee">
-        <input id="search-box" class="top banner-search top-right"type="text" name="position" placeholder="Search">
+        <input id="search-box" class="text top banner-search top-right"type="text" name="position" placeholder="Search">
         <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
       </form>
     </header>
     <img id="clock" src="images/clok.png" style="width: 148px; margin-top: 5px;">
     <div id="cork-board-top">
-      <h2 class="top floor-label">FLOOR 1</h2>
+      <div id="floor1" class="floor">
+        <div class="floor-label" style="top: 290.14px; left: 588.19px;">
+          <h2 class="text floor-number" style="top: 2.7px; left: 8px; margin: 0px">FLOOR 1</h2>
+        </div>
+        <div>
+          <img style="left: 210px;" src="images/board/left-tammy.jpg">
+        </div>
+        <div>
+          <img style="left: 386px;" src="images/board/middle-vernon.jpg">
+        </div>
+        <div class="">
+          <img style="left: 600px;" src="images/board/right-jeff.jpg">
+        </div>
+      </div>
     </div>
     <script>
       function centerClock() {

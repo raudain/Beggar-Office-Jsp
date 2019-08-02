@@ -1,4 +1,24 @@
+.floor * {
+	position: absolute;
+}
+
 .floor-label {
+	width: 110.88px;
+	height: 34.1px;
+	background-color: white;
+}
+
+.floor-number {
 	color: #CDBB8A;
-	margin-top: 36px;
+}
+
+.floor img {
+	width: 136px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
+}
+
+#floor1 img {
+	top: 97px;
 }

@@ -7,9 +7,12 @@ header {
 	background-color: #FFFFFF;
 }
 
-.top {
+.text {
 	font-family: Arial Black;
-	font-size: 20px;
+  font-size: 20px;
+}
+
+.top {
 	padding-left: 40px;
 	float: left;
 }

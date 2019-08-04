@@ -14,12 +14,7 @@
     #cork-board-top {
       background-image: url("images/cork-board.jpg");
       background-color: rgba(212, 236, 247, 1);
-      width: 1534.25px;
-      height: 863.4px;
-      background-size: 1534.25px 863.4px;
-      margin-top: 5px;
-      margin-right: auto;
-      margin-left: auto;
+      background-size: 1377px 775px;
     }
   </style>
   <body>
@@ -31,12 +26,10 @@
         <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
       </form>
     </header>
-    <img id="clock" src="images/clok.png" style="width: 148px; margin-top: 5px;">
-    <div id="cork-board-top">
+    <img id="clock" src="images/clok.png" style="display: block;margin-top: 15px; margin-right: auto; margin-bottom: 12px; margin-left: auto; width: 148px;">
+    <div id="cork-board-top" style="width: 1377px; height: 775px; margin-right: auto; margin-left: auto;">
       <div id="floor1" class="floor">
-        <div class="floor-label" style="left: 179px;">
-          <h2 class="text floor-number" style="top: 2.7px; left: 8px; margin: 0px">FLOOR 1</h2>
-        </div>
+        <div class="text floor-label">FLOOR 1</div>
         <div class="left-worker">
           <img src="images/board/left-tammy.jpg">
           <div class="endurance-label">
@@ -56,20 +49,29 @@
           </div>
         </div>
       </div>
+      <div id="floor2" class="floor">
+        <div class="floor-label" style="left: 179px;">
+          <h2 class="text floor-number" style="top: 2px; left: 8px; margin: 0px">FLOOR 1</h2>
+        </div>
+        <div class="left-worker">
+          <img src="images/board/left-tammy.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
+        </div>
+        <div class="middle-worker">
+          <img src="images/board/middle-vernon.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
+        </div>
+        <div class="right-worker">
+          <img style="left: 324px;" src="images/board/right-jeff.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-      function centerClock() {
-        var clock = document.getElementById("clock");
-        var middle = (window.innerWidth / 2) - (clock.width / 2 + 8);
-        if (middle < 470) {
-            middle = 470
-        }
-        clock.style.marginLeft = middle + "px";
-      }
-      centerClock();
-      window.addEventListener("resize", function(){
-    	  centerClock();
-      });
-    </script>
   </body>
 </html>

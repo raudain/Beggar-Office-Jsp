@@ -1,24 +1,52 @@
+.floor {
+  width: 460px;
+  height: 333.12px;
+  position: absolute;
+  top: 290.14px;
+  left: 414px;
+}
+
 .floor * {
-	position: absolute;
+  position: inherit;
 }
 
 .floor-label {
-	width: 110.88px;
-	height: 34.1px;
-	background-color: white;
+  width: 110.88px;
+  height: 34.1px;
+  background-color: white;
 }
 
 .floor-number {
-	color: #CDBB8A;
+  color: #CDBB8A;
 }
 
 .floor img {
-	width: 136px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: white;
+  width: 136px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
 }
 
 #floor1 img {
-	top: 97px;
+  top: 50px;
+}
+
+.endurance-label {
+  width: 146px;
+  height: 35px;
+  background-color: white;
+  top: 317px;
+}
+
+.middle-worker .endurance-label {
+  left: 162px;
+}
+
+.right-worker .endurance-label {
+  left: 324px;
+}
+
+h3 {
+  margin-top: 7px;
+  margin-left: 28px;
 }

@@ -34,24 +34,33 @@
     <img id="clock" src="images/clok.png" style="width: 148px; margin-top: 5px;">
     <div id="cork-board-top">
       <div id="floor1" class="floor">
-        <div class="floor-label" style="top: 290.14px; left: 588.19px;">
+        <div class="floor-label" style="left: 179px;">
           <h2 class="text floor-number" style="top: 2.7px; left: 8px; margin: 0px">FLOOR 1</h2>
         </div>
-        <div>
-          <img style="left: 210px;" src="images/board/left-tammy.jpg">
+        <div class="left-worker">
+          <img src="images/board/left-tammy.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
         </div>
-        <div>
-          <img style="left: 386px;" src="images/board/middle-vernon.jpg">
+        <div class="middle-worker">
+          <img style="left: 162px;" src="images/board/middle-vernon.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
         </div>
-        <div class="">
-          <img style="left: 600px;" src="images/board/right-jeff.jpg">
+        <div class="right-worker">
+          <img style="left: 324px;" src="images/board/right-jeff.jpg">
+          <div class="endurance-label">
+            <h3>TIRELESS</h3>
+          </div>
         </div>
       </div>
     </div>
     <script>
       function centerClock() {
         var clock = document.getElementById("clock");
-        var middle = window.innerWidth / 2 - (clock.width / 2);
+        var middle = (window.innerWidth / 2) - (clock.width / 2 + 8);
         if (middle < 470) {
             middle = 470
         }

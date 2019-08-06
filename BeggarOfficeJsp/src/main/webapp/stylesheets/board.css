@@ -1,16 +1,21 @@
 .floor {
-  width: 460px;
-  height: 333.12px;
   position: absolute;
-  top: 298px;
 }
 
-#floor1 {
-  left: 384px;
+.odd-row {
+  left: 387px;
+}
+
+.row1 {
+  top: 302px;
+}
+
+.row2 {
+  top: 626px;
 }
 
 #floor2 {
-  left: 1384px;
+  left: 954px;
 }
 
 .floor-label {
@@ -24,36 +29,29 @@
   margin-left: auto;
 }
 
+.employee {
+	float: left;
+	margin-top: 15px;
+}
+
+.middle-worker, .right-worker {
+	margin-left: 15px;
+}
+
 .floor img {
-  width: 136px;
+  width: 118px;
   border-style: solid;
   border-width: 5px;
   border-color: white;
 }
 
-#floor1 img {
-  top: 50px;
-}
-
-.middle-worker img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .endurance-label {
-  width: 146px;
-  height: 35px;
+  width: 114px;
   background-color: white;
-  top: 317px;
-}
-
-.middle-worker .endurance-label {
-  left: 162px;
-}
-
-.right-worker .endurance-label {
-  left: 324px;
+  font-size: 16px;
+  color: #CDBB8A;
+  padding-left: 26px;
+  margin-top: 11px;
 }
 
 h3 {

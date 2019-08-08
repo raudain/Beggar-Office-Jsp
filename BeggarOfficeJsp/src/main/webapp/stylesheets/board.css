@@ -3,7 +3,11 @@
 }
 
 .odd-row {
-  left: 387px;
+  left: 434px;
+}
+
+.even-row {
+	right: 434px;
 }
 
 .row1 {
@@ -14,17 +18,13 @@
   top: 626px;
 }
 
-#floor2 {
-  left: 954px;
-}
-
 .floor-label {
   width: 110.88px;
   height: 34.1px;
   background-color: white;
   color: #CDBB8A;
+  text-align: center;
   padding-top: 5px;
-  padding-left: 18px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -46,11 +46,11 @@
 }
 
 .endurance-label {
-  width: 114px;
+  width: 128px;
   background-color: white;
   font-size: 16px;
   color: #CDBB8A;
-  padding-left: 26px;
+  text-align: center;
   margin-top: 11px;
 }
 

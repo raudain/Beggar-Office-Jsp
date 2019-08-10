@@ -13,11 +13,11 @@
   <style>
     #cork-board-top {
       background-image: url("images/cork-board.jpg");
-      background-size: 1470px 827px;
+      background-size: 76.6vw 100vh;
     }
   </style>
   <body>
-    <header style ="background-color: #fff; width: 100%; height: 80px;">
+    <header style ="background-color: #fff; width: 100%; height: 8.5vh;">
       <h1 id="title" class="text top">V.B Desktop</h1>
       <a id="link" class="text top top-right" href="index.jsp">Tower</a>
       <form action="getEmployee">
@@ -25,8 +25,8 @@
         <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
       </form>
     </header>
-    <img id="clock" src="images/clok.png" style="display: block;margin-top: 15px; margin-right: auto; margin-bottom: 12px; margin-left: auto; width: 148px;">
-    <div id="cork-board-top" style="width: 1470px; height: 863px; margin-right: auto; margin-left: auto;">
+    <img id="clock" src="images/clok.png" style="display: block; margin-top: .8%; margin-right: auto; margin-bottom: .8%; margin-left: auto; width: 7.7vw;">
+    <div id="cork-board-top" style="width: 76.6vw; height: 100vh; margin-right: auto; margin-left: auto;">
       <div class="floor odd-row row1">
         <div class="text floor-label">FLOOR 1</div>
         <div class="employee left-worker">

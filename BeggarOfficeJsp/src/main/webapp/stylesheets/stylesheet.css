@@ -27,7 +27,7 @@ header {
 
 #title {
 	font-size: 1.45vw;
-	padding-right: 1%;
+	padding-right: .7em;
 	border-right-width: thick;
 	border-right-style: solid;
 	border-right-color: #111;
@@ -40,12 +40,12 @@ header {
 
 #search-box {
 	padding-left: 0px;
-	right: 85px;
-	width: 200px;
+	right: 4.2%;
+	width: 10.5%;
 }
 
 #magnifying-glass {
-	right: 40px;
+	right: 2.2%;
 	border: 0px;
-	width: 36px;
+	width: 1.8%;
 }

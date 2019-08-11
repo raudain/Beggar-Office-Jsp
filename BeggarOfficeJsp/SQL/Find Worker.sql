@@ -96,7 +96,7 @@ OR Profession = 'Computer Engineer'
 OR Profession = 'Journalist'
 OR Profession = 'Santa'
 OR Profession = 'Lawyer'
-ORDER BY Cost;
+ORDER BY Cost, Room;
 
 SELECT *
 FROM Workers

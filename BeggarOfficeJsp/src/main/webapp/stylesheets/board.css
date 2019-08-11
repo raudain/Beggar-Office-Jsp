@@ -1,13 +1,14 @@
 .floor {
   position: absolute;
+  width: 21.446%;
 }
 
-.odd-row {
-  left: 434px;
+.colum1 {
+  left: 22.8%;
 }
 
-.even-row {
-	right: 434px;
+.colum2 {
+	right: 22.8%;
 }
 
 .row1 {
@@ -15,46 +16,105 @@
 }
 
 .row2 {
-  top: 626px;
+  top: 67.5%;
+}
+
+.row3 {
+  top: 102.2%;
+}
+
+.row4 {
+  top: 136.8%;
+}
+
+.row5 {
+  top: 171.4%;
+}
+
+.row6 {
+  top: 206%;
+}
+
+.row7 {
+  top: 240.6%;
+}
+
+.row8 {
+  top: 275.2%;
+}
+
+.row9 {
+  top: 309.8%;
+}
+
+.row10 {
+  top: 344.4%;
+}
+
+.row11 {
+  top: 379%;
+}
+
+.row12 {
+  top: 413.6%;
+}
+
+.row13 {
+  top: 448.2%;
+}
+
+.row14 {
+  top: 482.8%;
+}
+
+.row15 {
+  top: 517.4%;
+}
+
+.row16 {
+  top: 552%;
+}
+
+.row17 {
+  top: 586.6%;
+}
+
+.row18 {
+  top: 621.2%;
 }
 
 .floor-label {
-  width: 110.88px;
-  height: 34.1px;
+  width: 6.5em;
   background-color: white;
   color: #CDBB8A;
   text-align: center;
-  padding-top: 5px;
+  padding-top: .38em;
+  padding-bottom: .38em;
   margin-right: auto;
   margin-left: auto;
 }
 
 .employee {
 	float: left;
-	margin-top: 15px;
+	margin-top: 3.8%;
 }
 
 .middle-worker, .right-worker {
-	margin-left: 15px;
+	margin-left: 4%;
 }
 
 .floor img {
-  width: 118px;
+  width: 6vw;
   border-style: solid;
-  border-width: 5px;
+  border-width: .26vw;
   border-color: white;
 }
 
 .endurance-label {
-  width: 128px;
+  width: 7.81em;
   background-color: white;
-  font-size: 16px;
+  font-size: .83vw;
   color: #CDBB8A;
   text-align: center;
-  margin-top: 11px;
-}
-
-h3 {
-  margin-top: 7px;
-  margin-left: 28px;
+  margin-top: .7em;
 }

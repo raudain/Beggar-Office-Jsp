@@ -1,3 +1,12 @@
+.center-image {
+	display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.board {
+  width: 76.6vw;
+}
+
 .floor {
   position: absolute;
   width: 21.446%;

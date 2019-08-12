@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="stylesheets/board.css">
   </head>
   <style>
-    #cork-board-top {
-      background-image: url("images/cork-board.jpg");
+    #cork-board {
+      background-image: url("images/board/cork-board-top.jpg"), url("images/board/cork-board-middle.jpg");
+      background-repeat: no-repeat, repeat;
       background-size: 76.6vw 100vh;
     }
   </style>
@@ -25,8 +26,8 @@
         <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
       </form>
     </header>
-    <img id="clock" src="images/clok.png" style="display: block; margin-top: .8%; margin-right: auto; margin-bottom: .8%; margin-left: auto; width: 7.7vw;">
-    <div id="cork-board-top" style="width: 76.6vw; height: 1100vh; margin-right: auto; margin-left: auto;">
+    <img id="clock" class="center-image" src="images/clok.png" style="margin-top: .8%; margin-bottom: .8%; width: 7.7vw;">
+    <div id="cork-board" class="board" style="height: 626.7vh; margin-right: auto; margin-left: auto;">
       <div class="floor colum1 row1">
         <div class="text floor-label">FLOOR 1</div>
         <div class="employee left-worker">
@@ -568,5 +569,6 @@
         </div>
       </div>
     </div>
+    <img class="board center-image" src="images/board/cork-board-bottom.jpg">
   </body>
 </html>

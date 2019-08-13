@@ -131,7 +131,7 @@ ORDER BY Cost;
 SELECT *
 FROM Workers
 WHERE Profession = 'Politician'
-ORDER BY Endurance;
+ORDER BY Cost;
 
 SELECT *
 FROM Workers

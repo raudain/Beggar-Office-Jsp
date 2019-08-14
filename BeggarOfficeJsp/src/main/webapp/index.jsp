@@ -121,90 +121,90 @@
       <div class="floor colum1 row4">
         <div class="text floor-label">FLOOR 7</div>
         <div class="employee left-worker">
-          <img src="images/board/floor7/place-holder.jpg">
+          <img src="images/board/floor7/left-lawrence.jpg">
           <div class="text endurance-label">PRODUCTIVE</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor7/place-holder.jpg">
+          <img src="images/board/floor7/middle-tammy.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor7/place-holder.jpg">
+          <img src="images/board/floor7/right-regina.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>
       <div class="floor colum2 row4">
         <div class="text floor-label">FLOOR 8</div>
         <div class="employee left-worker">
-          <img src="images/board/floor8/place-holder.jpg">
+          <img src="images/board/floor8/left-heather.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor8/place-holder.jpg">
+          <img src="images/board/floor8/middle-willie.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor8/place-holder.jpg">
+          <img src="images/board/floor8/right-philip.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>
       <div class="floor colum1 row5">
         <div class="text floor-label">FLOOR 9</div>
         <div class="employee left-worker">
-          <img src="images/board/floor9/place-holder.jpg">
+          <img src="images/board/floor9/left-vivian.jpg">
           <div class="text endurance-label">PRODUCTIVE</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor9/place-holder.jpg">
+          <img src="images/board/floor9/middle-lewis.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor9/place-holder.jpg">
+          <img src="images/board/floor9/right-jessica.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>
       <div class="floor colum2 row5">
         <div class="text floor-label">FLOOR 10</div>
         <div class="employee left-worker">
-          <img src="images/board/floor10/place-holder.jpg">
+          <img src="images/board/floor10/left-maria.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor10/place-holder.jpg">
+          <img src="images/board/floor10/middle-timmy.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor10/place-holder.jpg">
+          <img src="images/board/floor10/right-dustin.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>
       <div class="floor colum1 row6">
         <div class="text floor-label">FLOOR 11</div>
         <div class="employee left-worker">
-          <img src="images/board/floor11/place-holder.jpg">
+          <img src="images/board/floor11/left-anthony.jpg">
           <div class="text endurance-label">PRODUCTIVE</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor11/place-holder.jpg">
+          <img src="images/board/floor11/middle-paula.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor11/place-holder.jpg">
+          <img src="images/board/floor11/right-amber.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>
       <div class="floor colum2 row6">
         <div class="text floor-label">FLOOR 12</div>
         <div class="employee left-worker">
-          <img src="images/board/floor12/place-holder.jpg">
+          <img src="images/board/floor12/left-billy.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor12/place-holder.jpg">
+          <img src="images/board/floor12/middle-danna.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor12/place-holder.jpg">
+          <img src="images/board/floor12/right-martha.jpg">
           <div class="text endurance-label">TIRELESS</div>
         </div>
       </div>

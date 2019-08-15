@@ -29,8 +29,14 @@ Pilot
 
 
 SELECT *
-FROM Workers;
+FROM Workers
+ORDER BY CAST(Room AS UNSIGNED INTEGER);
 
+
+SELECT *
+FROM Workers
+WHERE Endurance='Hard-working'
+ORDER BY CAST(Room AS UNSIGNED INTEGER);
 
 /************************************ Tier I ************************************/
 

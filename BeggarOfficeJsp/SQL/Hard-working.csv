@@ -1,0 +1,46 @@
+Room,Name,Profession,Endurance,Level,Cost
+503,Helen,Pilot,Hard-working,1,260000000
+602,Earl,Pilot,Hard-working,1,260000000
+603,Marjorie,Doctor,Hard-working,1,40000000
+802,Willie,Doctor,Hard-working,1,40000000
+1001,Maria,"Computer Engineer",Hard-working,1,40000000
+1002,Timmy,Pilot,Hard-working,1,260000000
+1102,Paula,"Computer Engineer",Hard-working,1,40000000
+1103,Amber,Pilot,Hard-working,1,260000000
+1201,Billy,Santa,Hard-working,20,40000000
+1202,Dana,Politician,Hard-working,1,260000000
+1301,Connie,"Computer Engineer",Hard-working,1,40000000
+1403,Rose,Lawyer,Hard-working,1,40000000
+1501,Martin,Santa,Hard-working,20,40000000
+1502,Veronica,Lawyer,Hard-working,1,40000000
+1503,James,"Computer Engineer",Hard-working,1,40000000
+1601,Tammy,Lawyer,Hard-working,1,40000000
+1602,Earl,Politician,Hard-working,1,260000000
+1603,Nicholas,Politician,Hard-working,1,260000000
+1701,Martin,Santa,Hard-working,1,40000000
+1801,Emma,"Computer Engineer",Hard-working,20,40000000
+1803,Fransisco,Pilot,Hard-working,1,260000000
+1902,Janice,Politician,Hard-working,1,260000000
+2001,Gilbert,Doctor,Hard-working,1,40000000
+2002,Kristen,Doctor,Hard-working,1,40000000
+2103,Rick,Santa,Hard-working,1,40000000
+2201,Mario,Lawyer,Hard-working,1,40000000
+2202,Juan,Pilot,Hard-working,1,260000000
+2301,Willie,"Computer Engineer",Hard-working,1,40000000
+2303,John,Pilot,Hard-working,1,260000000
+2503,Samantha,Lawyer,Hard-working,1,40000000
+2601,Dana,Lawyer,Hard-working,20,40000000
+2602,Ronnie,Santa,Hard-working,20,40000000
+2603,Jonathan,"Computer Engineer",Hard-working,1,40000000
+2803,Todd,Santa,Hard-working,20,40000000
+2903,Wanda,Pilot,Hard-working,1,260000000
+3003,Samuel,Santa,Hard-working,20,40000000
+3101,Amy,Politician,Hard-working,20,260000000
+3102,Keith,Santa,Hard-working,20,40000000
+3103,Chad,"Computer Engineer",Hard-working,20,40000000
+3202,Howard,"Computer Engineer",Hard-working,1,40000000
+3403,Leonard,Pilot,Hard-working,1,260000000
+3501,Lloyd,Politician,Hard-working,1,260000000
+3502,Carol,Doctor,Hard-working,1,40000000
+3503,Marcus,Politician,Hard-working,1,260000000
+3602,Scott,Lawyer,Hard-working,1,40000000

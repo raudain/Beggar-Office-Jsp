@@ -28,16 +28,6 @@ Pilot
 */
 
 
-SELECT *
-FROM Workers
-ORDER BY CAST(Room AS UNSIGNED INTEGER);
-
-
-SELECT *
-FROM Workers
-WHERE Endurance='Hard-working'
-ORDER BY CAST(Room AS UNSIGNED INTEGER);
-
 /************************************ Tier I ************************************/
 
 SELECT * 
@@ -95,14 +85,14 @@ ORDER BY Cost;
 
 /*************************************** Tier IV ***********************************/
 
-SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
+SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Coins
 FROM Workers
 WHERE Profession = 'Doctor'
 OR Profession = 'Computer Engineer'
 OR Profession = 'Journalist'
 OR Profession = 'Santa'
 OR Profession = 'Lawyer'
-ORDER BY Cost, Room;
+ORDER BY Cost;
 
 SELECT *
 FROM Workers

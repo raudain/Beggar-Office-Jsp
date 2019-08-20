@@ -13,7 +13,7 @@
   <style>
     #cork-board {
       background-image: url("images/board/cork-board-middle.jpg");
-      background-size: 76.6vw 100vh;
+      background-size: 76.6vw 34.3vh;
     }
   </style>
   <body>
@@ -392,7 +392,7 @@
         <div class="text label floor-label">FLOOR 25</div>
         <div class="employee left-worker">
           <img src="images/board/floor25/left-justin.jpg">
-          <div class="text label endurance-label">Productive</div>
+          <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee middle-worker">
           <img src="images/board/floor25/middle-gene.jpg">
@@ -422,7 +422,7 @@
         <div class="text label floor-label">FLOOR 27</div>
         <div class="employee left-worker">
           <img src="images/board/floor27/left-timothy.jpg">
-          <div class="text label endurance-label">Productive</div>
+          <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee middle-worker">
           <img src="images/board/floor27/middle-peter.jpg">
@@ -452,7 +452,7 @@
         <div class="text label floor-label">FLOOR 29</div>
         <div class="employee left-worker">
           <img src="images/board/floor29/left-frederick.jpg">
-          <div class="text label endurance-label">Productive</div>
+          <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee middle-worker">
           <img src="images/board/floor29/middle-victor.jpg">
@@ -530,7 +530,7 @@
           <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor34/middle-worker.jpg">
+          <img src="images/board/floor34/middle-bradley.jpg">
           <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee right-worker">
@@ -565,7 +565,7 @@
         </div>
         <div class="employee right-worker">
           <img src="images/board/floor36/right-frances.jpg">
-          <div class="text label endurance-label">Tireless</div>
+          <div class="text label endurance-label">Productive</div>
         </div>
       </div>
     </div>

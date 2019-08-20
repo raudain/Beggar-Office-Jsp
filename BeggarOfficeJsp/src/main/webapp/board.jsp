@@ -110,7 +110,7 @@
           <div class="text label endurance-label">Tireless</div>
         </div>
         <div class="employee middle-worker">
-          <img src="images/board/floor6/middle-earl.jpg">
+          <img src="images/board/floor6/middle-thomas.jpg">
           <div class="text label endurance-label">Hard-working</div>
         </div>
         <div class="employee right-worker">
@@ -166,7 +166,7 @@
       <div class="floor colum2 row5">
         <div class="text label floor-label">FLOOR 10</div>
         <div class="employee left-worker">
-          <img src="images/board/floor10/left-maria.jpg">
+          <img src="images/board/floor10/left-larry.jpg">
           <div class="text label endurance-label">Hard-working</div>
         </div>
         <div class="employee middle-worker">
@@ -564,8 +564,8 @@
           <div class="text label endurance-label">Hard-working</div>
         </div>
         <div class="employee right-worker">
-          <img src="images/board/floor36/right-frances.jpg">
-          <div class="text label endurance-label">Productive</div>
+          <img src="images/board/floor36/right-chris.jpg">
+          <div class="text label endurance-label">Hard-working</div>
         </div>
       </div>
     </div>

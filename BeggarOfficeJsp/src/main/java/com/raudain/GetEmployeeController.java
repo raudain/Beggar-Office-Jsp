@@ -14,7 +14,8 @@ import com.raudain.model.Employee;
  * Servlet implementation class GetEmployeeController
  */
 public class GetEmployeeController extends HttpServlet {
-
+	private static final long serialVersionUID = 2L;
+	
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 

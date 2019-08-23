@@ -19,7 +19,7 @@
   <body>
     <header style ="background-color: #fff; width: 100%; height: 8.5vh;">
       <h1 id="title" class="text top">V.B Desktop</h1>
-      <a id="link" class="text top top-right" href="index.jsp">Tower</a>
+      <a id="link" class="text top top-right" href="index.html">Tower</a>
       <form action="getEmployee">
         <input id="search-box" class="text top banner-search top-right"type="text" name="position" placeholder="Search">
         <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>

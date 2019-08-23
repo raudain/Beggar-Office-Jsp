@@ -1,14 +1,14 @@
-package com.raudain.model;
+package raudain;
 
 import java.io.Serializable;
 
-public class Worker implements Serializable {
+public class Book implements Serializable {
     static final long serialVersionUID = 12345L;
     private String title;
     private String description;
     private float price;
 
-    public Worker() {
+    public Book() {
     }
 
     public String getTitle() {

@@ -1,12 +1,10 @@
-package com.raudain;
+package raudain;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,20 +13,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.raudain.dao.DatabaseCredentials;
-import com.raudain.model.Book;
-
 /**
- * Servlet implementation class ListProducts
+ * Servlet implementation class AddProduct
  */
-@WebServlet("/ListProducts")
-public class ListProducts extends HttpServlet {
+@WebServlet("/AddProduct")
+public class AddProduct extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListProducts() {
+    public AddProduct() {
         super();
     }
 
@@ -40,63 +35,50 @@ public class ListProducts extends HttpServlet {
     protected void doGet(final HttpServletRequest request,
                          final HttpServletResponse response) throws ServletException, IOException {
 
-        final ArrayList<Book> bookList = new ArrayList<>();
-        // Adding the (at this moment empty) bookList to the session
-        request.setAttribute("bookList", bookList);
-
         Connection connection;
-        Statement statement;
-        ResultSet result = null;
+        PreparedStatement statement;
+
+        final String title = request.getParameter("title");
+        final String description = request.getParameter("description");
+        final float price = Float.parseFloat(request.getParameter("price"));
 
         final String dbURL = DatabaseCredentials.getURL();
         final String user = DatabaseCredentials.getUser();
         final String password = DatabaseCredentials.getPassword();
 
         try {
+
             Class.forName(DatabaseCredentials.getDriver());
         } catch (final ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Error. Driver class not found: " + e);
         }
 
         try {
             connection = DriverManager.getConnection(dbURL, user, password);
         } catch (final SQLException e) {
+            System.out.println("Error. Connection problem: " + e);
             return;
         }
 
+
         try {
-            statement = connection.createStatement();
+            statement = connection.prepareStatement("INSERT INTO products (id, title, description, price) VALUES (0,?,?,?)");
+
+            statement.setString(1,title);
+            statement.setString(2, description);
+            statement.setFloat(3, price);
         } catch (final SQLException e) {
             System.out.println("Error. Can not create the statement: " + e);
             return;
         }
 
-        final String searchString = "SELECT * FROM products";
+
+
         try {
-            result = statement.executeQuery(searchString);
+
+            statement.executeUpdate();
         } catch (final SQLException e) {
             System.out.println("Error. Problem with executeUpdate: " + e);
-            return;
-        }
-
-        // Now we collect the data from the result in order to display them in
-        // the Java Server Page
-
-        try {
-            while (result.next()) {
-                final Book book = new Book();
-                final String title = result.getString("title");
-                book.setTitle(title);
-
-                final String description = result.getString("description");
-                book.setDescription(description);
-
-                final float price = result.getFloat("price");
-                book.setPrice(price);
-                bookList.add(book);
-            }
-        } catch (final SQLException e) {
-            System.out.println("Error. Problem reading data: " + e);
             return;
         }
 
@@ -107,9 +89,13 @@ public class ListProducts extends HttpServlet {
             return;
         }
 
-        final RequestDispatcher disp = request
-            .getRequestDispatcher("/WEB-INF/showBookList.jsp");
+        final RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/addingOk.jsp");
         disp.forward(request, response);
+
+
+
+
+
     }
 
     /**

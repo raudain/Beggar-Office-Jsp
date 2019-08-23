@@ -1,4 +1,4 @@
-package com.raudain.dao;
+package raudain;
 
 public class DatabaseCredentials {
     //static String host = "jws-app-mysql"; // The standard name in Tomcat+ MySQL on openshift

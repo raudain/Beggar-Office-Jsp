@@ -13,19 +13,18 @@ header {
 }
 
 .top {
+	margin-top: 1.4%;
 	padding-left: 2.1%;
 	float: left;
 }
 
-.top-right {
-	margin-top: 1.4%;
-}
-
-.banner-search {
+.header-search {
     position: absolute;
+    margin-top: 1.2%;
 }
 
 #title {
+	margin-top: 1.06%;
 	font-size: 1.45vw;
 	padding-right: .7em;
 	border-right-width: thick;
@@ -33,7 +32,7 @@ header {
 	border-right-color: #111;
 }
 
-#link {
+.link {
 	color: #111;
 	text-decoration: none;
 }
@@ -48,4 +47,99 @@ header {
 	right: 2.2%;
 	border: 0px;
 	width: 1.8%;
+}
+
+.center-image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main {
+  width: 76.6vw;
+}
+
+.top-image {
+	margin-top: .8%;
+	margin-bottom: .8%;
+}
+
+.floor {
+  position: absolute;
+}
+
+.row1 {
+  top: 32.8%;
+}
+
+.row2 {
+  top: 67.5%;
+}
+
+.row3 {
+  top: 102.2%;
+}
+
+.row4 {
+  top: 136.8%;
+}
+
+.row5 {
+  top: 171.4%;
+}
+
+.row6 {
+  top: 206%;
+}
+
+.row7 {
+  top: 240.6%;
+}
+
+.row8 {
+  top: 275.2%;
+}
+
+.row9 {
+  top: 309.8%;
+}
+
+.row10 {
+  top: 344.4%;
+}
+
+.row11 {
+  top: 379%;
+}
+
+.row12 {
+  top: 413.6%;
+}
+
+.row13 {
+  top: 448.2%;
+}
+
+.row14 {
+  top: 482.8%;
+}
+
+.row15 {
+  top: 517.4%;
+}
+
+.row16 {
+  top: 552%;
+}
+
+.row17 {
+  top: 586.6%;
+}
+
+.row18 {
+  top: 621.2%;
+}
+
+.row19 {
+  top: 655.8%;
 }

@@ -1,14 +1,4 @@
-.center-image {
-	display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-.board {
-  width: 76.6vw;
-}
-
-.floor {
-  position: absolute;
+.board-floor {
   width: 22.91%;
 }
 
@@ -92,6 +82,10 @@
   top: 621.2%;
 }
 
+.row19 {
+  top: 655.8%;
+}
+
 .label {
   width: 8.3em;
   background-color: white;
@@ -113,7 +107,7 @@
 	margin-left: 4%;
 }
 
-.floor img {
+.board-floor img {
   width: 6.4vw;
   border-style: solid;
   border-width: .26vw;

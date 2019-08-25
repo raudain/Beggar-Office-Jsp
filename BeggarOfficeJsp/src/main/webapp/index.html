@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8">
-<title>Database</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Worker tracker for the Virtual Beggar mobile clicker game">
+  <meta name="author" content="Roody Audain">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <title>Change Inc.</title>
+  <link rel="stylesheet" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="stylesheets/tower.css">
 </head>
+
 <body>
-    <h1>Database test</h1>
-    <a href="newProduct.html">Add a new product to the database</a><br>
-    <a href="ListProducts">List all the products from the database</a><br>
-    <a href="ListWorkers">List all the workers from the database</a><br>
-    <a href="board.jsp">Show all workers on a static page</a>
+  <header style ="background-color: #fff; width: 100%; height: 8.5vh;">
+      <a id="title" class="text top link" href="index.html">V.B Desktop</a>
+      <a class="text top link" href="index.html">Home</a>
+      <a class="text top link" href="newProduct.html">Add Books</a>
+      <a class="text top link" href="ListProducts">Book Collection</a>
+      <a class="text top link" href="ListWorkers">List Workers</a>
+      <a class="text top link" href="board.jsp">Worker Board</a>
+      <form action="getEmployee">
+        <input id="search-box" class="text top header-search"type="text" name="position" placeholder="Search">
+        <input id="magnifying-glass" class="top header-search" type="image" src=images/search.gif>
+      </form>
+  </header>
+  <img id="clock" class="center-image top-image" src="images/tower/change-inc.jpg" style="width: 20vw;">
+  <div class="main" style="height: 648.5vh; margin-right: auto; margin-left: auto; background-color: #729DBD;">
+    <div class="floor tower-floor row1">
+      <div class="employee left-worker">
+        <img src="images/board/floor1/left-tammy.jpg">
+        <div class="text label endurance-label">Tireless</div>
+      </div>
+      <div class="employee middle-worker">
+        <img src="images/board/floor1/middle-vernon.jpg">
+        <div class="text label endurance-label">Tireless</div>
+      </div>
+      <div class="employee right-worker">
+        <img src="images/board/floor1/right-jeff.jpg">
+        <div class="text label endurance-label">Tireless</div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

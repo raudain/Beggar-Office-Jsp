@@ -3,3 +3,10 @@
 .tower-floor {
   left: 22.8%;
 }
+
+.tower-floor .cubicle {
+  width: 210px;
+  height: 249px;
+  background-color: #B6E6F5;
+  margin-right: 210px;
+}

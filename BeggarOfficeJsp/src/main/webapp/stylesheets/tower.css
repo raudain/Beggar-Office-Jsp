@@ -1,12 +1,17 @@
-@CHARSET "ISO-8859-1";
+@charset "UTF-8";
 
 .tower-floor {
   left: 22.8%;
 }
 
-.tower-floor .cubicle {
+.cubicle {
   width: 210px;
   height: 249px;
   background-color: #B6E6F5;
   margin-right: 210px;
+}
+
+.cubicle img {
+  margin-top: 124px;
+  width: 3.25vw;
 }

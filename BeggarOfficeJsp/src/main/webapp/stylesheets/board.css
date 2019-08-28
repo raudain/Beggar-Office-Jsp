@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .board-floor {
   width: 22.91%;
 }
@@ -102,7 +104,7 @@
 	margin-left: 4%;
 }
 
-.board-floor img {
+.cubicle img {
   width: 6.4vw;
   border-style: solid;
   border-width: .26vw;

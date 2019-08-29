@@ -14,16 +14,94 @@
   background-position: bottom center;
 }
 
-#three-thousand-seven-hundred-one {
+#three-thousand-701 {
   background-image: url("../images/tower/floor37/left-jon.png");
 }
 
-#three-thousand-seven-hundred-two {
+#three-thousand-702 {
   background-image: url("../images/tower/floor37/middle-maria.png");
 }
 
-#three-thousand-seven-hundred-three {
+#three-thousand-703 {
   background-image: url("../images/tower/floor37/right-ryan.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-601 {
+  background-image: url("../images/tower/floor36/left-emily.png");
+}
+
+#three-thousand-602 {
+  background-image: url("../images/tower/floor36/middle-scott.png");
+}
+
+#three-thousand-603 {
+  background-image: url("../images/tower/floor36/right-chris.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-501 {
+  background-image: url("../images/tower/floor35/left-lloyd.png");
+}
+
+#three-thousand-502 {
+  background-image: url("../images/tower/floor35/middle-carol.png");
+}
+
+#three-thousand-503 {
+  background-image: url("../images/tower/floor35/right-marcus.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-401 {
+  background-image: url("../images/tower/floor34/left-april.png");
+}
+
+#three-thousand-402 {
+  background-image: url("../images/tower/floor34/middle-bradley.png");
+}
+
+#three-thousand-403 {
+  background-image: url("../images/tower/floor34/right-leonard.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-301 {
+  background-image: url("../images/tower/floor33/left-ronnie.png");
+}
+
+#three-thousand-302 {
+  background-image: url("../images/tower/floor33/middle-manuel.png");
+}
+
+#three-thousand-303 {
+  background-image: url("../images/tower/floor33/right-amanda.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-201 {
+  background-image: url("../images/tower/floor32/left-jon.png");
+}
+
+#three-thousand-202 {
+  background-image: url("../images/tower/floor32/middle-maria.png");
+}
+
+#three-thousand-203 {
+  background-image: url("../images/tower/floor32/right-ryan.png");
+  background-size: 3.5vw 16vh;
+}
+
+#three-thousand-101 {
+  background-image: url("../images/tower/floor31/left-jon.png");
+}
+
+#three-thousand-102 {
+  background-image: url("../images/tower/floor31/middle-maria.png");
+}
+
+#three-thousand-103 {
+  background-image: url("../images/tower/floor31/right-ryan.png");
   background-size: 3.5vw 16vh;
 }
 

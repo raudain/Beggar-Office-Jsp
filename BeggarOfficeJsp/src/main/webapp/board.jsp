@@ -11,12 +11,6 @@
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" href="stylesheets/board.css">
 </head>
-  <style>
-    #cork-board {
-      background-image: url("images/board/cork-board-middle.jpg");
-      background-size: 76.6vw 60vh;
-    }
-  </style>
 
 <body>
   <header style ="background-color: #fff; width: 100%; height: 8.5vh;">

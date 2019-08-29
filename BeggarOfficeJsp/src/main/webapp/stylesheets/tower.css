@@ -9,6 +9,22 @@
   height: 249px;
   background-color: #B6E6F5;
   margin-right: 210px;
+  background-repeat: no-repeat;
+  background-size: 3vw 13.6vh;
+  background-position: bottom center;
+}
+
+#three-thousand-seven-hundred-one {
+  background-image: url("../images/tower/floor37/left-jon.png");
+}
+
+#three-thousand-seven-hundred-two {
+  background-image: url("../images/tower/floor37/middle-maria.png");
+}
+
+#three-thousand-seven-hundred-three {
+  background-image: url("../images/tower/floor37/right-ryan.png");
+  background-size: 3.5vw 16vh;
 }
 
 .cubicle img {

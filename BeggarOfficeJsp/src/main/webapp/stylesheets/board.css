@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+#cork-board {
+  background-image: url("../images/board/cork-board-middle.jpg");
+  background-size: 76.6vw 60vh;
+}
+
 .board-floor {
   width: 22.91%;
 }

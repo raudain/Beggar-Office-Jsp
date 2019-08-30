@@ -1,0 +1,2 @@
+Plug-in "org.eclipse.jst.server.tomcat.core" was unable to instantiate class "org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate".
+org.eclipse.jst.server.tomcat.core.internal.TomcatLaunchConfigurationDelegate.allowAdvancedSourcelookup()V

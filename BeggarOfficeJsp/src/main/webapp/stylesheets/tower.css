@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
 .tower-floor {
-  left: 22.8%;
+  width: 77.25%;
 }
 
 .cubicle {
-  width: 210px;
+  width: 15%;
   height: 249px;
   background-color: #B6E6F5;
-  margin-right: 210px;
+  margin-left: 13.75%;
   background-repeat: no-repeat;
-  background-size: 3vw 13.6vh;
+  background-size: 6.8vh 13.6vh;
   background-position: bottom center;
 }
 
@@ -24,7 +24,6 @@
 
 #three-thousand-703 {
   background-image: url("../images/tower/floor37/right-ryan.png");
-  background-size: 3.5vw 16vh;
 }
 
 #three-thousand-601 {
@@ -76,32 +75,154 @@
 }
 
 #three-thousand-201 {
-  background-image: url("../images/tower/floor32/left-jon.png");
+  background-image: url("../images/tower/floor32/left-melvin.png");
 }
 
 #three-thousand-202 {
-  background-image: url("../images/tower/floor32/middle-maria.png");
+  background-image: url("../images/tower/floor32/middle-howard.png");
 }
 
 #three-thousand-203 {
-  background-image: url("../images/tower/floor32/right-ryan.png");
-  background-size: 3.5vw 16vh;
+  background-image: url("../images/tower/floor32/right-darlene.png");
 }
 
 #three-thousand-101 {
-  background-image: url("../images/tower/floor31/left-jon.png");
+  background-image: url("../images/tower/floor31/left-amy.png");
 }
 
 #three-thousand-102 {
-  background-image: url("../images/tower/floor31/middle-maria.png");
+  background-image: url("../images/tower/floor31/middle-keith.png");
 }
 
 #three-thousand-103 {
-  background-image: url("../images/tower/floor31/right-ryan.png");
-  background-size: 3.5vw 16vh;
+  background-image: url("../images/tower/floor31/right-chad.png");
+}
+
+#three-thousand-1 {
+  background-image: url("../images/tower/floor30/left-jack.png");
+}
+
+#three-thousand-2 {
+  background-image: url("../images/tower/floor30/middle-marilyn.png");
+}
+
+#three-thousand-3 {
+  background-image: url("../images/tower/floor30/right-samuel.png");
+}
+
+#two-thousand-901 {
+  background-image: url("../images/tower/floor29/left-frederick.png");
+}
+
+#two-thousand-902 {
+  background-image: url("../images/tower/floor29/middle-victor.png");
+}
+
+#two-thousand-903 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-801 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-802 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-803 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-701 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-702 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-703 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-601 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-602 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-603 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-501 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-502 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-503 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-401 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-402 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-303 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-301 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-302 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-303 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-201 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-202 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-203 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-101 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-102 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
+}
+
+#two-thousand-103 {
+  background-image: url("../images/tower/floor29/right-wanda.png");
 }
 
 .cubicle img {
   margin-top: 124px;
   width: 3.25vw;
+}
+
+.santa {
+	background-size: 7.5vh 16.4vh;
 }

@@ -4,7 +4,7 @@ public class DatabaseCredentials {
     //static String host = "jws-app-mysql"; // The standard name in Tomcat+ MySQL on openshift
     private static String host = "localhost";
 
-    private static String name = "portfolio";
+    private static String name = "sakila";
     private static int port = 3306; // This is for MySQL
     private static String universalResourceLocator = "jdbc:mysql://" + host + ":" + port + "/"
         + name;

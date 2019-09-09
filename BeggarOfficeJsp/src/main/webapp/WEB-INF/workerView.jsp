@@ -20,7 +20,7 @@
     }
   </style>
   <body>
-    <header style ="background-color: #fff; width: 100%; height: 8.5vh;">
+    <header style="background-color: #fff; width: 100%; height: 8.5vh;">
       <h1 id="title" class="text top">V.B Desktop</h1>
       <a id="link" class="text top top-right" href="index.html">Tower</a>
       <form action="getEmployee">

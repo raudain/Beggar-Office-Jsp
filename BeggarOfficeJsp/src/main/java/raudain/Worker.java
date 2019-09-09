@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Worker implements Serializable {
     static final long serialVersionUID = 12346L;
+    
     private short room;
     private String name;
     private String profession;

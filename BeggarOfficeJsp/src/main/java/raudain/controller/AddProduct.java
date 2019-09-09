@@ -1,4 +1,4 @@
-package raudain;
+package raudain.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,6 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import raudain.DatabaseCredentials;
 
 /**
  * Servlet implementation class AddProduct

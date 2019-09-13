@@ -11,22 +11,37 @@ text;
 ALTER TABLE employees
 MODIFY Level bit(5);
 
+
 /*
 	room
 */
 ALTER TABLE employees
-MODIFY Room smallint(4);
+MODIFY room smallint(4);
 
-ALTER TABLE employees
-CHANGE Room room
-text;
 
 /*
 	name
 */
 ALTER TABLE employees
-MODIFY Name smallint(4);
+MODIFY name tinytext;
 
+
+/*
+	profession
+*/
 ALTER TABLE employees
-CHANGE Name name
-text;
+MODIFY profession tinytext;
+
+
+/*
+	endurance
+*/
+ALTER TABLE employees
+MODIFY endurance tinytext;
+
+
+/*
+	level
+*/
+ALTER TABLE employees
+MODIFY endurance bit(5);

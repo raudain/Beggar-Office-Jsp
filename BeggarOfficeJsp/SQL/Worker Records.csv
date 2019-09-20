@@ -110,3 +110,6 @@ room,name,profession,endurance,level,cost
 3701,Jon,Lawyer,Hard-working,1,40000000
 3702,Maria,Journalist,Tireless,1,125000000
 3703,Ryan,Santa,Productive,1,105000000
+3801,Dan,Pilot,Tireless,10,NULL
+3802,Jorge,Politician,Hard-working,11,NULL
+3803,Jeanette,Doctor,Productive,11,NULL

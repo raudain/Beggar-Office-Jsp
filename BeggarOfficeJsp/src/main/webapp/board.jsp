@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,17 +15,21 @@
 </head>
 
 <body>
-  <header style ="background-color: #fff; width: 100%; height: 8.5vh;">
-      <h1 id="title" class="text top">V.B Desktop</h1>
-      <a id="link" class="text top top-right" href="index.html">Tower</a>
-      <form action="getEmployee">
-        <input id="search-box" class="text top banner-search top-right"type="text" name="position" placeholder="Search">
-        <input id="magnifying-glass" class="top top-right banner-search" type="image" src=images/search.gif>
-      </form>
-  </header>
-  <img id="clock" class="center-image" src="images/board/clok.png" style="margin-top: .8%; margin-bottom: .8%; width: 7.7vw;">
-  <img class="main center-image" src="images/board/cork-board-top.jpg">
-  <div id="cork-board" class="main" style="height: 648.5vh; margin-right: auto; margin-left: auto;">
+
+  <section class="wide center-element menu">
+      <a id="logo" class="links text" href="index.html">V.B Tower</a>
+      <ul class="links">
+        <li><a class="text top" href="index.html">Home</a></li>
+      	<li><a class="text top" href="newProduct.html">Add Book</a></li>
+      	<li><a class="text top" href="ListProducts">Book Collection</a></li>
+      	<li><a class="text top" href="ListWorkers">List Workers</a></li>
+      	<li><a class="text top" href="board.jsp">Worker Board</a></li>
+      	<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
+      </ul>
+  </section>
+  <img id="clock" class="center-element top-image" src="images/board/clok.png" style="margin-bottom: 1.2%;width: 7.7vw;">
+  <img class="wide center-element" src="images/board/cork-board-top.jpg">
+  <div id="cork-board" class="wide" style="height: 648.5vh; margin-right: auto; margin-left: auto;">
       <div class="floor board-floor colum1 row1">
         <div class="text label floor-label">FLOOR 1</div>
         <div class="cubicle left-worker">
@@ -579,8 +585,24 @@
           <div class="text label endurance-label">Productive</div>
         </div>
       </div>
+      <div class="floor board-floor colum2 row19">
+        <div class="text label floor-label">FLOOR 38</div>
+        <div class="cubicle left-worker">
+          <img src="images/board/floor38/left-dan.jpg">
+          <div class="text label endurance-label">Hard-working</div>
+        </div>
+        <div class="cubicle middle-worker">
+          <img src="images/board/floor38/middle-jorge.jpg">
+          <div class="text label endurance-label">Diligent</div>
+        </div>
+        <div class="cubicle right-worker">
+          <img src="images/board/floor38/right-jeanette.jpg">
+          <div class="text label endurance-label">Productive</div>
+        </div>
+      </div>
   </div>
-  <img class="main center-image" src="images/board/cork-board-bottom.jpg">
+  <img class="wide center-element" src="images/board/cork-board-bottom.jpg">
+  
 </body>
 
 </html>

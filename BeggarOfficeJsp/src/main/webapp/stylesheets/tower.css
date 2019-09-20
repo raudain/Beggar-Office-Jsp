@@ -9,9 +9,13 @@
   height: 249px;
   border-style: solid;
   border-width: 10px;
-  border-color: #DDE6E9;
+  border-color: #D7D7D7;
   background-color: #B6E6F5;
-  margin-left: 13.75%;
+  /*  
+    Cubicle width = 15% * 3 = 45
+    Margin width = 100 - 45 = 55
+  */
+  margin-left: 11%;
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;
   background-position: bottom center;

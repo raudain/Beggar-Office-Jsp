@@ -69,7 +69,7 @@ public class ListWorkers extends HttpServlet {
         try {
             result = statement.executeQuery(searchString);
         } catch (final SQLException e) {
-            System.out.println("Error. Problem with executeUpdate: " + e);
+            System.out.println("Error. Problem with executeQuery: " + e);
             return;
         }
 
@@ -117,7 +117,7 @@ public class ListWorkers extends HttpServlet {
         }
 
         final RequestDispatcher disp = request
-            .getRequestDispatcher("/WEB-INF/workerView.jsp");
+            .getRequestDispatcher("/WEB-INF/board.jsp");
         disp.forward(request, response);
     }
 

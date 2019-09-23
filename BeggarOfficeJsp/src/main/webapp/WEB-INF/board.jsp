@@ -9,7 +9,7 @@
     <meta name="author" content="Roody Audain">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <title>Change Inc.</title>
+    <title>Change Inc | Board</title>
     <link rel="stylesheet" href="stylesheets/common.css">
     <link rel="stylesheet" href="stylesheets/board.css">
 </head>
@@ -23,7 +23,7 @@
       	<li><a class="text top" href="newProduct.html">Add Book</a></li>
       	<li><a class="text top" href="ListProducts">Book Collection</a></li>
       	<li><a class="text top" href="ListWorkers">List Workers</a></li>
-      	<li><a class="text top" href="board.jsp">Worker Board</a></li>
+      	<li><a class="text top" href="Board">Worker Board</a></li>
       	<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
       </ul>
   </section>

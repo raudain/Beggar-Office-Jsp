@@ -21,14 +21,14 @@ import raudain.Worker;
 /**
  * Servlet implementation class ListWorkersServlet
  */
-@WebServlet("/ListWorkers")
-public class ListWorkers extends HttpServlet {
+@WebServlet("/Board")
+public class Board extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListWorkers() {
+    public Board() {
         super();
     }
 
@@ -117,7 +117,7 @@ public class ListWorkers extends HttpServlet {
         }
 
         final RequestDispatcher disp = request
-            .getRequestDispatcher("/WEB-INF/workerList.jsp");
+            .getRequestDispatcher("/WEB-INF/board.jsp");
         disp.forward(request, response);
     }
 

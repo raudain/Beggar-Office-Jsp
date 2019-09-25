@@ -1,256 +1,260 @@
 @charset "UTF-8";
 
+:root {
+	--section-margin: 3.4%;
+}
+
 body {
-  margin: 0px;
-  background-color: rgba(212, 236, 247, 1);
+	margin: 0px;
+	background-color: rgba(212, 236, 247, 1);
 }
 
 section {
-  height: 8vh;
-  background-color: #EFE0B1;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  box-shadow: 0px 0px 20px 0px #000000;
+	height: 8vh;
+	background-color: #EFE0B1;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	box-shadow: 0px 0px 20px 0px #000000;
 }
 
 .wide {
-  width: 76.6vw;
-  box-sizing: border-box;
+	width: 76.6vw;
+	box-sizing: border-box;
 }
 
 .center-element {
-  display: block;
-  left: 0;
-  right: 0;
-  margin: auto;
+	display: block;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 .text {
-  font-family: Arial Black;
-  font-size: .79vw;
+	font-family: Arial Black;
+	font-size: .79vw;
 }
 
 .links {
-  margin-top: 1.1%;
+	margin-top: 1.1%;
 }
 
 #logo {
-  display: inline-block;
-  margin-left: 3.4%;
-  border: 2px solid #888;
-  padding-right: 1%;
-  padding-left: 1%;
-  font-size: 1.8vw;
-  color: #D99F4D;
+	display: inline-block;
+	margin-left: var(--section-margin);
+	border: 2px solid #888;
+	padding-right: 1%;
+	padding-left: 1%;
+	font-size: 1.8vw;
+	color: #D99F4D;
 }
 
-.menu *{
-  background-color: #F4EAC9;
-  text-decoration: none;
+.menu * {
+	background-color: #F4EAC9;
+	text-decoration: none;
 }
 
 .links {
-  margin-top: .8%;
+	margin-top: .8%;
 }
 
 ul {
-  float: right;
-  list-style-type: none;
-  margin-right: .7%;
-  padding: 0;
-  overflow: hidden;
+	float: right;
+	list-style-type: none;
+	margin-right: var(--section-margin);
+	padding: 0;
+	overflow: hidden;
 }
 
 li {
-  float: left;
+	float: left;
 }
 
 li a {
-  display: block;
-  color: #7595B2;
-  padding: 15px;
+	display: block;
+	color: #7595B2;
+	padding: 15px;
 }
 
 li a:hover {
-  background-color: #E3C867;
+	background-color: #E3C867;
 }
 
 .top-image {
-  margin-top: 5.3%;
+	margin-top: 5.3%;
 }
 
 .floor {
-  position: absolute;
+	position: absolute;
 }
 
 .row1 {
-  top: 32.8%;
+	top: 32.8%;
 }
 
 .row2 {
-  top: 67.5%;
+	top: 67.5%;
 }
 
 .row3 {
-  top: 102.2%;
+	top: 102.2%;
 }
 
 .row4 {
-  top: 136.8%;
+	top: 136.8%;
 }
 
 .row5 {
-  top: 171.4%;
+	top: 171.4%;
 }
 
 .row6 {
-  top: 206%;
+	top: 206%;
 }
 
 .row7 {
-  top: 240.6%;
+	top: 240.6%;
 }
 
 .row8 {
-  top: 275.2%;
+	top: 275.2%;
 }
 
 .row9 {
-  top: 309.8%;
+	top: 309.8%;
 }
 
 .row10 {
-  top: 344.4%;
+	top: 344.4%;
 }
 
 .row11 {
-  top: 379%;
+	top: 379%;
 }
 
 .row12 {
-  top: 413.6%;
+	top: 413.6%;
 }
 
 .row13 {
-  top: 448.2%;
+	top: 448.2%;
 }
 
 .row14 {
-  top: 482.8%;
+	top: 482.8%;
 }
 
 .row15 {
-  top: 517.4%;
+	top: 517.4%;
 }
 
 .row16 {
-  top: 552%;
+	top: 552%;
 }
 
 .row17 {
-  top: 586.6%;
+	top: 586.6%;
 }
 
 .row18 {
-  top: 621.2%;
+	top: 621.2%;
 }
 
 .row19 {
-  top: 655.8%;
+	top: 655.8%;
 }
 
 .row20 {
-  top: 690.4%;
+	top: 690.4%;
 }
 
 .row21 {
-  top: 725%;
+	top: 725%;
 }
 
 .row22 {
-  top: 759.6%;
+	top: 759.6%;
 }
 
 .row23 {
-  top: 794.2%;
+	top: 794.2%;
 }
 
 .row24 {
-  top: 828.8%;
+	top: 828.8%;
 }
 
 .row25 {
-  top: 863.4%;
+	top: 863.4%;
 }
 
 .row26 {
-  top: 898%;
+	top: 898%;
 }
 
 .row27 {
-  top: 932.6%;
+	top: 932.6%;
 }
 
 .row28 {
-  top: 967.2%;
+	top: 967.2%;
 }
 
 .row29 {
-  top: 1001.8%;
+	top: 1001.8%;
 }
 
 .row30 {
-  top: 1036.4%;
+	top: 1036.4%;
 }
 
 .row31 {
-  top: 1071%;
+	top: 1071%;
 }
 
 .row32 {
-  top: 1105.6%;
+	top: 1105.6%;
 }
 
 .row33 {
-  top: 1140.2%;
+	top: 1140.2%;
 }
 
 .row34 {
-  top: 1174.8%;
+	top: 1174.8%;
 }
 
 .row35 {
-  top: 1209.4%;
+	top: 1209.4%;
 }
 
 .row36 {
-  top: 1244%;
+	top: 1244%;
 }
 
 .row37 {
-  top: 1278.6%;
+	top: 1278.6%;
 }
 
 .row38 {
-  top: 1313.2%;
+	top: 1313.2%;
 }
 
 .cubicle {
-    float: left;
-    margin-top: 3.8%;
+	float: left;
+	margin-top: 3.8%;
 }
 
 #overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	cursor: pointer;
 }

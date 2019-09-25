@@ -4,40 +4,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<meta charset="UTF-8">
-	<meta name="description" content="Worker tracker for the Virtual Beggar mobile clicker game">
-	<meta name="author" content="Roody Audain">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Change Inc | List</title>
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<link rel="stylesheet" href="stylesheets/common.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
+<meta name="description"
+	content="Worker tracker for the Virtual Beggar mobile clicker game">
+<meta name="author" content="Roody Audain">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Inc | List</title>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="stylesheets/common.css">
 </head>
 
 <body>
-  
-  <section class="wide center-element menu">
-      <a id="logo" class="links text" href="index.html">V.B Tower</a>
-      <ul class="links">
-        <li><a class="text top" href="index.html">Home</a></li>
-      	<li><a class="text top" href="newProduct.html">Add Book</a></li>
-      	<li><a class="text top" href="ListProducts">Book Collection</a></li>
-      	<li><a class="text top" href="ListWorkers">List Workers</a></li>
-      	<li><a class="text top" href="Board">Worker Board</a></li>
-      	<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
-      </ul>
-  </section>
-	<header style="background-color: #fff; width: 100%; height: 8.5vh;">
-		<h1 id="title" class="text top">V.B Desktop</h1>
-		<a id="link" class="text top top-right" href="index.html">Tower</a>
-		<form action="getEmployee">
-			<input id="search-box" class="text top banner-search top-right"
-				type="text" name="position" placeholder="Search"> <input
-				id="magnifying-glass" class="top top-right banner-search"
-				type="image" src=images/search.gif>
-		</form>
-	</header>
-	${workerList.get(0)}
+
+	<section class="wide center-element menu">
+		<a id="logo" class="links text" href="index.html">V.B Tower</a>
+		<ul class="links">
+			<li><a class="text top" href="index.html">Home</a></li>
+			<li><a class="text top" href="newProduct.html">Add Book</a></li>
+			<li><a class="text top" href="ListProducts">Book Collection</a></li>
+			<li><a class="text top" href="ListWorkers">List Workers</a></li>
+			<li><a class="text top" href="Board">Worker Board</a></li>
+			<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
+		</ul>
+	</section>
 	<h1>These are the workers from the database</h1>
 	<hr>
 	<c:choose>

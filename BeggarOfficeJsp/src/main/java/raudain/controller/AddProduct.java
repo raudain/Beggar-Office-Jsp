@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import raudain.DatabaseCredentials;
+import raudain.doa.DatabaseCredentials;
 
 /**
  * Servlet implementation class AddProduct
@@ -91,7 +91,7 @@ public class AddProduct extends HttpServlet {
             return;
         }
 
-        final RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/addingOk.jsp");
+        final RequestDispatcher disp = request.getRequestDispatcher("/addingOk.jsp");
         disp.forward(request, response);
 
 

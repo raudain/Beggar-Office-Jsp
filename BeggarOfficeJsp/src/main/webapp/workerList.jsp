@@ -12,6 +12,7 @@
 	<title>Change Inc | List</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<link rel="stylesheet" href="stylesheets/common.css">
+	<link rel="stylesheet" href="stylesheets/struts2.css" type="text/css" />
 </head>
 
 <body>
@@ -27,25 +28,12 @@
       	<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
       </ul>
   </section>
-	<header style="background-color: #fff; width: 100%; height: 8.5vh;">
-		<h1 id="title" class="text top">V.B Desktop</h1>
-		<a id="link" class="text top top-right" href="index.html">Tower</a>
-		<form action="getEmployee">
-			<input id="search-box" class="text top banner-search top-right"
-				type="text" name="position" placeholder="Search"> <input
-				id="magnifying-glass" class="top top-right banner-search"
-				type="image" src=images/search.gif>
-		</form>
-	</header>
-	${workerList.get(0)}
-	<h1>These are the workers from the database</h1>
-	<hr>
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">
                 The List is empty.
               </c:when>
 		<c:otherwise>
-			<table border="1">
+			<table class="center-element below-top" style="display: table;">
 				<tr>
 					<th>Room</th>
 					<th>Name</th>

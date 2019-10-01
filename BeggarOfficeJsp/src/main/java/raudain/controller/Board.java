@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import raudain.DatabaseCredentials;
 import raudain.Worker;
-import raudain.doa.DatabaseCredentials;
 
 /**
  * Servlet implementation class ListWorkersServlet
@@ -117,7 +117,7 @@ public class Board extends HttpServlet {
         }
 
         final RequestDispatcher disp = request
-            .getRequestDispatcher("/board.jsp");
+            .getRequestDispatcher("/WEB-INF/board.jsp");
         disp.forward(request, response);
     }
 

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import raudain.Book;
-import raudain.doa.DatabaseCredentials;
+import raudain.DatabaseCredentials;
 
 /**
  * Servlet implementation class ListProducts
@@ -108,7 +108,7 @@ public class ListProducts extends HttpServlet {
         }
 
         final RequestDispatcher disp = request
-            .getRequestDispatcher("/showBookList.jsp");
+            .getRequestDispatcher("/WEB-INF/showBookList.jsp");
         disp.forward(request, response);
     }
 

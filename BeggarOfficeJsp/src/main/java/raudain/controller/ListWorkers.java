@@ -2,6 +2,7 @@ package raudain.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -14,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import raudain.DatabaseCredentials;
 import raudain.Worker;
-import raudain.doa.DataConnection;
 
 /**
  * Servlet implementation class ListWorkersServlet
@@ -41,7 +42,21 @@ public class ListWorkers extends HttpServlet {
         Statement statement;
         ResultSet result = null;
 
-        connection = DataConnection.createConnection();
+        final String dbURL = DatabaseCredentials.getURL();
+        final String user = DatabaseCredentials.getUser();
+        final String password = DatabaseCredentials.getPassword();
+
+        try {
+            Class.forName(DatabaseCredentials.getDriver());
+        } catch (final ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            connection = DriverManager.getConnection(dbURL, user, password);
+        } catch (final SQLException e) {
+            return;
+        }
 
         try {
             statement = connection.createStatement();
@@ -102,7 +117,7 @@ public class ListWorkers extends HttpServlet {
         }
 
         final RequestDispatcher disp = request
-            .getRequestDispatcher("/workerList.jsp");
+            .getRequestDispatcher("/WEB-INF/workerList.jsp");
         disp.forward(request, response);
     }
 

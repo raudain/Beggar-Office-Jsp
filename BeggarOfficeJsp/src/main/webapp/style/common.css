@@ -30,11 +30,6 @@ section {
 	margin: auto;
 }
 
-.text {
-	font-family: Arial Black;
-	font-size: .79vw;
-}
-
 .links {
 	margin-top: 1.1%;
 }
@@ -50,6 +45,8 @@ section {
 }
 
 .menu * {
+	font-family: Arial Black;
+	font-size: .79vw;
 	background-color: #F4EAC9;
 	text-decoration: none;
 }

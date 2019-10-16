@@ -20,13 +20,9 @@
 	<section class="wide center-element menu">
 		<a id="logo" class="links text" href="index.html">V.B Tower</a>
 		<ul class="links">
-			<li><a class="text top" href="index.html">Home</a></li>
-			<li><a class="text top" href="newProduct.html">Add Book</a></li>
-			<li><a class="text top" href="ListProducts">Book Collection</a></li>
-			<li><a class="text top" href="ListWorkers">List Workers</a></li>
-			<li><a class="text top" href="Board">Worker Board</a></li>
-			<li><a class="text top" href="Home Property/index.html">Home
-					Property</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="ListWorkers">List Workers</a></li>
+			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</section>
 	<img id="clock" class="center-element below-top"

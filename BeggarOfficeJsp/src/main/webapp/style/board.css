@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+	--floor-margin: 17.2%;
+}
+
 #cork-board {
   background-image: url("../images/board/cork-board-middle.jpg");
   background-size: 76.6vw 60vh;
@@ -10,11 +14,11 @@
 }
 
 .colum1 {
-  left: 22.8%;
+  left: var(--floor-margin);
 }
 
 .colum2 {
-	right: 12%;
+	right: var(--floor-margin);
 }
 
 .row1 {

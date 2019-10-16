@@ -11,23 +11,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Change Inc | List</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<link rel="stylesheet" href="stylesheets/common.css">
-	<link rel="stylesheet" href="stylesheets/struts2.css" type="text/css" />
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/struts2.css">
 </head>
 
 <body>
   
   <section class="wide center-element menu">
-      <a id="logo" class="links text" href="index.html">V.B Tower</a>
-      <ul class="links">
-        <li><a class="text top" href="index.html">Home</a></li>
-      	<li><a class="text top" href="newProduct.html">Add Book</a></li>
-      	<li><a class="text top" href="ListProducts">Book Collection</a></li>
-      	<li><a class="text top" href="ListWorkers">List Workers</a></li>
-      	<li><a class="text top" href="Board">Worker Board</a></li>
-      	<li><a class="text top" href="Home Property/index.html">Home Property</a></li>
-      </ul>
-  </section>
+		<a id="logo" class="links text" href="index.html">V.B Tower</a>
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="ListWorkers">List Workers</a></li>
+			<li><a href="Board">Worker Board</a></li>
+		</ul>
+	</section>
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">
                 The List is empty.

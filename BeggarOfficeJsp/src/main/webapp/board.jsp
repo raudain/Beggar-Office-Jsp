@@ -22,7 +22,7 @@
 		<ul class="links">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="ListWorkers">List Workers</a></li>
-			<li><a href="Board">Worker Board</a></li>
+			<li><a style="background-color: white; color: #D99F4D;" href="Board">Worker Board</a></li>
 		</ul>
 	</section>
 	<img id="clock" class="center-element below-top"
@@ -601,8 +601,18 @@
 			</figure>
 		</div>
 	</div>
-	<img class="wide center-element"
-		src="images/board/cork-board-bottom.jpg">
+	<img class="wide center-element" src="images/board/cork-board-bottom.jpg">
+	<div id="overlay" onclick="off()"></div>
+
+	<script>
+		function overlayOn() {
+			document.getElementById("overlay").style.display = "block";
+		}
+
+		function off() {
+			document.getElementById("overlay").style.display = "none";
+		}
+	</script>
 
 </body>
 

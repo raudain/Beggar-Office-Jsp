@@ -18,10 +18,13 @@
 <body>
   
   <section class="wide center-element menu">
-		<a id="logo" class="links text" href="index.html">V.B Tower</a>
+  		<div id="brand">
+  			<h1 id="logo">V.B Tower</h1>
+			<span class="caret"></span>
+  		</div>
 		<ul class="links">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="ListWorkers">List Workers</a></li>
+			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</section>

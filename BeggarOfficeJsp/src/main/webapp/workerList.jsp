@@ -12,14 +12,14 @@
 	<title>Change Inc | List</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<link rel="stylesheet" href="style/common.css">
-	<link rel="stylesheet" href="style/struts2.css">
+	<link rel="stylesheet" href="style/list.css">
 </head>
 
 <body>
   
-  <section class="wide center-element menu">
+  <section class="wide center-element navigation">
   		<div id="brand">
-  			<h1 id="logo">V.B Tower</h1>
+  			<h1 id="logo">V.B. Tower</h1>
 			<span class="caret"></span>
   		</div>
 		<ul class="links">
@@ -55,8 +55,14 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-	<hr>
-	<a href='index.html'>Main Page</a>
-	<br>
+	<div id="app-switcher">
+		<a href="http://localhost:8080/BeggarOfficeJsp">
+			<figure>
+				<img class="icon" src="images/virtual-beggar.png">
+				<figcaption>Change Inc</figcaption>
+			</figure>
+		</a>
+	</div>
+
 </body>
 </html>

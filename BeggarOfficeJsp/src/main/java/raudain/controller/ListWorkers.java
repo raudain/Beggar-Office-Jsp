@@ -64,7 +64,7 @@ public class ListWorkers extends HttpServlet {
 		workerList = doa.listWorkers();
 		request.setAttribute("workerList", workerList);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/workerList.jsp");
+		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
 		disp.forward(request, response);
 	}
 

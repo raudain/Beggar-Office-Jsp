@@ -17,8 +17,8 @@
 
 <body>
   
-  <section class="wide center-element navigation">
-  		<div id="brand">
+  <section class="wide navigation">
+  		<div id="brand" onclick="appSwitcherOn()">
   			<h1 id="logo">V.B. Tower</h1>
 			<span class="caret"></span>
   		</div>
@@ -33,7 +33,7 @@
                 The List is empty.
               </c:when>
 		<c:otherwise>
-			<table class="center-element below-top" style="display: table;">
+			<table class="below-top" style="display: table;">
 				<tr>
 					<th>Room</th>
 					<th>Name</th>
@@ -58,11 +58,33 @@
 	<div id="app-switcher">
 		<a href="http://localhost:8080/BeggarOfficeJsp">
 			<figure>
-				<img class="icon" src="images/virtual-beggar.png">
+				<img src="images/virtual-beggar.png">
 				<figcaption>Change Inc</figcaption>
 			</figure>
 		</a>
+		<a href="http://localhost:8080/Calendar">
+			<figure>
+				<div id="icon">
+					<div id="dayOfWeek"></div>
+					<div id="dayNumber"></div>
+				</div>
+				<figcaption>Calendar</figcaption>
+			</figure>
+		</a>
+		<a href="http://localhost:8080/FestivalPortalR2_Participant">
+			<figure>
+				<img src="images/event-registration.png">
+				<figcaption>Event Portal</figcaption>
+			</figure>
+		</a>
+		<a href="http://localhost:8080/HomeProperty">
+			<figure>
+				<img src="images/home-property.png">
+				<figcaption>Real Estate</figcaption>
+			</figure>
+		</a>
 	</div>
+	<script src="main.js"></script>
 
 </body>
 </html>

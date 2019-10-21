@@ -35,4 +35,9 @@ function getWeekDayString(weekDayNumber) {
 
 function appSwitcherOn() {
 	document.getElementById("app-switcher").style.display = "block";
+	document.getElementById("pane").style.zIndex = 2;
+}
+function returnFromOverlay() {
+	document.getElementById("app-switcher").style.display = "none";
+	document.getElementById("pane").style.zIndex = 0;
 }

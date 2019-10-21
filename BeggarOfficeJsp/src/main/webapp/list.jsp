@@ -17,6 +17,7 @@
 
 <body>
   
+  <div id="pane" onclick="returnFromOverlay()"></div>
   <section class="wide navigation">
   		<div id="brand" onclick="appSwitcherOn()">
   			<h1 id="logo">V.B. Tower</h1>

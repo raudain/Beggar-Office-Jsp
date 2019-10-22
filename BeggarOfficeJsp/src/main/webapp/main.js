@@ -1,3 +1,13 @@
+var pane = document.createElement("div");
+pane.id = "pane";
+pane.addEventListener("click", returnFromOverlay);
+
+var section = document.querySelector("section");
+document.body.insertBefore(pane, section);
+
+var brand = document.getElementById("brand");
+brand.addEventListener("click", appSwitcherOn);
+
 var todaysDate = new Date();
 var todaysWeekDay= todaysDate.getDay()
 var dayString = getWeekDayString(todaysWeekDay);
@@ -34,7 +44,9 @@ function getWeekDayString(weekDayNumber) {
 }
 
 function appSwitcherOn() {
-	document.getElementById("app-switcher").style.display = "block";
+	var appSwitcher = document.getElementById("app-switcher");
+	appSwitcher.style.display = "block";
+	appSwitcher.style.zIndex = 9;
 	document.getElementById("pane").style.zIndex = 2;
 }
 function returnFromOverlay() {

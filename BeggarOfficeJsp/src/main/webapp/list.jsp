@@ -17,13 +17,12 @@
 
 <body>
   
-  <div id="pane" onclick="returnFromOverlay()"></div>
   <section class="wide navigation">
-  		<div id="brand" onclick="appSwitcherOn()">
+  		<div id="brand">
   			<h1 id="logo">V.B. Tower</h1>
 			<span class="caret"></span>
   		</div>
-		<ul class="links">
+		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>

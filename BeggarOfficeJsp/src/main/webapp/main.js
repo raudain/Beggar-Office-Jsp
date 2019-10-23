@@ -8,6 +8,15 @@ document.body.insertBefore(pane, section);
 var brand = document.getElementById("brand");
 brand.addEventListener("click", appSwitcherOn);
 
+var logo = document.createElement("h1");
+logo.id = "logo";
+var node = document.createTextNode("V.B. Tower");
+logo.appendChild(node);
+brand.appendChild(logo);
+
+var caret = document.createElement("span");
+brand.appendChild(caret);
+
 var todaysDate = new Date();
 var todaysWeekDay= todaysDate.getDay()
 var dayString = getWeekDayString(todaysWeekDay);

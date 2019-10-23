@@ -67,7 +67,7 @@ section {
 
 #logo {
 	display: inline;
-	padding-right: 1%;
+	padding-right: 2%;
 	padding-left: 1%;
 	font-size: 1.8vw;
 	color: #D99F4D;
@@ -79,9 +79,9 @@ span {
     height: 0;
     margin-left: 2px;
     vertical-align: middle;
-    border-top: 4px dashed;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
 }
 
 ul {

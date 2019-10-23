@@ -19,8 +19,6 @@
   
   <section class="wide navigation">
   		<div id="brand">
-  			<h1 id="logo">V.B. Tower</h1>
-			<span class="caret"></span>
   		</div>
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -84,6 +82,7 @@
 			</figure>
 		</a>
 	</div>
+	
 	<script src="main.js"></script>
 
 </body>

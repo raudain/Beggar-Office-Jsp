@@ -1,25 +1,60 @@
+var section = document.querySelector("section");
+
+// Pane
 var pane = document.createElement("div");
 pane.id = "pane";
 pane.addEventListener("click", returnFromOverlay);
-
-var section = document.querySelector("section");
 document.body.insertBefore(pane, section);
 
-var brand = document.getElementById("brand");
+// Brand
+var brand = document.createElement("div");
+brand.id = "brand";
 brand.addEventListener("click", appSwitcherOn);
+section.appendChild(brand);
 
 var logo = document.createElement("h1");
 logo.id = "logo";
-var node = document.createTextNode("V.B. Tower");
-logo.appendChild(node);
+var logoText = document.createTextNode("V.B. Tower");
+logo.appendChild(logoText);
 brand.appendChild(logo);
 
 var caret = document.createElement("span");
 brand.appendChild(caret);
 
+
+/* 
+ *	***************** Application Switcher ****************
+ */
+var figures = document.querySelectorAll("figure");
+
+//                       Virtual Beggar
+var beggarFigure = figures[0];
+
+// Virtual Beggar Icon
+var virtualBeggarIcon = document.createElement("img");
+virtualBeggarIcon.src = "images/virtual-beggar.png";
+beggarFigure.appendChild(virtualBeggarIcon);
+
+// Virtual Beggar Caption
+var virtualBeggarCaption = document.createElement("figcaption");
+var virtualBeggarCaptionText = document.createTextNode("Change Inc");
+virtualBeggarCaption.appendChild(virtualBeggarCaptionText);
+beggarFigure.appendChild(virtualBeggarCaption);
+
+//                       Calendar
+var calendarFigure = figures[0];
 var todaysDate = new Date();
 var todaysWeekDay= todaysDate.getDay()
+
+// Calendar Icon
+var calendarIcon = document.createElement("div");
+calendarIcon.id = "icon";
+calendarFigure.appendChild(calendarIcon);
+var dayOfTheWeek = document.createElement("div");
+dayOfTheWeek.id = "dayOfWeek";
 var dayString = getWeekDayString(todaysWeekDay);
+
+
 var dayNumber = todaysDate.getDate();
 document.getElementById("dayOfWeek").innerHTML = dayString;
 document.getElementById("dayNumber").innerHTML = dayNumber;

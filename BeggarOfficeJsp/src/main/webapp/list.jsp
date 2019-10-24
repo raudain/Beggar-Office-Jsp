@@ -18,14 +18,39 @@
 <body>
   
   <section class="wide navigation">
-  		<div id="brand">
-  		</div>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</section>
+	<div id="app-switcher">
+		<a href="http://localhost:8080/BeggarOfficeJsp">
+			<figure>
+			</figure>
+		</a>
+		<a href="http://localhost:8080/Calendar">
+			<figure>
+				<div id="icon">
+					<div id="dayOfWeek"></div>
+					<div id="dayNumber"></div>
+				</div>
+				<figcaption>Calendar</figcaption>
+			</figure>
+		</a>
+		<a href="http://localhost:8080/FestivalPortalR2_Participant">
+			<figure>
+				<img src="images/event-registration.png">
+				<figcaption>Event Portal</figcaption>
+			</figure>
+		</a>
+		<a href="http://localhost:8080/HomeProperty">
+			<figure>
+				<img src="images/home-property.png">
+				<figcaption>Real Estate</figcaption>
+			</figure>
+		</a>
+	</div>
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">
                 The List is empty.
@@ -53,35 +78,6 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-	<div id="app-switcher">
-		<a href="http://localhost:8080/BeggarOfficeJsp">
-			<figure>
-				<img src="images/virtual-beggar.png">
-				<figcaption>Change Inc</figcaption>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/Calendar">
-			<figure>
-				<div id="icon">
-					<div id="dayOfWeek"></div>
-					<div id="dayNumber"></div>
-				</div>
-				<figcaption>Calendar</figcaption>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/FestivalPortalR2_Participant">
-			<figure>
-				<img src="images/event-registration.png">
-				<figcaption>Event Portal</figcaption>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/HomeProperty">
-			<figure>
-				<img src="images/home-property.png">
-				<figcaption>Real Estate</figcaption>
-			</figure>
-		</a>
-	</div>
 	
 	<script src="main.js"></script>
 

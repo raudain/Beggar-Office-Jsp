@@ -24,33 +24,9 @@
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</section>
-	<div id="app-switcher">
-		<a href="http://localhost:8080/BeggarOfficeJsp">
-			<figure>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/Calendar">
-			<figure>
-				<div id="icon">
-					<div id="dayOfWeek"></div>
-					<div id="dayNumber"></div>
-				</div>
-				<figcaption>Calendar</figcaption>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/FestivalPortalR2_Participant">
-			<figure>
-				<img src="images/event-registration.png">
-				<figcaption>Event Portal</figcaption>
-			</figure>
-		</a>
-		<a href="http://localhost:8080/HomeProperty">
-			<figure>
-				<img src="images/home-property.png">
-				<figcaption>Real Estate</figcaption>
-			</figure>
-		</a>
-	</div>
+	
+	<script src="main.js"></script>
+
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">
                 The List is empty.
@@ -78,8 +54,6 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-	
-	<script src="main.js"></script>
 
 </body>
 </html>

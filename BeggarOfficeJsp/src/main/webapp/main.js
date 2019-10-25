@@ -1,16 +1,20 @@
+/* 
+ *	***************** Menu Section Header ****************
+ */
 var section = document.querySelector("section");
 
-// Pane
+//             Pane
 var pane = document.createElement("div");
 pane.id = "pane";
 pane.addEventListener("click", returnFromOverlay);
 document.body.insertBefore(pane, section);
 
-// Brand
+//                   Brand
 var brand = document.createElement("div");
 brand.id = "brand";
 brand.addEventListener("click", appSwitcherOn);
-section.appendChild(brand);
+var menu = document.querySelector("ul");
+section.insertBefore(brand, menu);
 
 var logo = document.createElement("h1");
 logo.id = "logo";
@@ -25,39 +29,75 @@ brand.appendChild(caret);
 /* 
  *	***************** Application Switcher ****************
  */
-var figures = document.querySelectorAll("figure");
+var appSwitcher = document.createElement("div");
+appSwitcher.id = "app-switcher";
+document.body.appendChild(appSwitcher);
+
+
+function appSwitcherOn() {	
+	appSwitcher.style.display = "block";
+	appSwitcher.style.zIndex = 9;
+	document.getElementById("pane").style.zIndex = 2;
+}
+
+function returnFromOverlay() {
+	appSwitcher.style.display = "none";
+	pane.style.zIndex = 0;
+}
 
 //                       Virtual Beggar
-var beggarFigure = figures[0];
 
-// Virtual Beggar Icon
-var virtualBeggarIcon = document.createElement("img");
-virtualBeggarIcon.src = "images/virtual-beggar.png";
-beggarFigure.appendChild(virtualBeggarIcon);
+// VIRTUAL BEGGAR LINK
+var beggarLink = document.createElement("a");
+beggarLink.href = "http://localhost:8080/BeggarOfficeJsp"
+appSwitcher.appendChild(beggarLink);
 
-// Virtual Beggar Caption
-var virtualBeggarCaption = document.createElement("figcaption");
-var virtualBeggarCaptionText = document.createTextNode("Change Inc");
-virtualBeggarCaption.appendChild(virtualBeggarCaptionText);
-beggarFigure.appendChild(virtualBeggarCaption);
+// VIRTUAL BEGGAR FIGURE
+var beggarFigure = document.createElement("figure");
+beggarLink.appendChild(beggarFigure);
+
+// VIRTUAL BEGGAR ICON
+var beggarIcon = document.createElement("img");
+beggarIcon.src = "images/beggar.png";
+beggarFigure.appendChild(beggarIcon);
+
+// VIRTUAL BEGGAR CAPTION
+var beggarCaption = document.createElement("figcaption");
+var beggarCaptionText = document.createTextNode("Change Inc");
+beggarCaption.appendChild(beggarCaptionText);
+beggarFigure.appendChild(beggarCaption);
 
 //                       Calendar
-var calendarFigure = figures[0];
-var todaysDate = new Date();
-var todaysWeekDay= todaysDate.getDay()
 
-// Calendar Icon
+// CALENDAR LINK
+var calendarLink = document.createElement("a");
+calendarLink.href = "http://localhost:8080/Calendar"
+appSwitcher.appendChild(calendarLink);
+
+// CALENDAR FIGURE
+var calendarFigure = document.createElement("figure");
+calendarLink.appendChild(calendarFigure);
+var todaysDate = new Date();
+
+// CALENDAR ICON
 var calendarIcon = document.createElement("div");
 calendarIcon.id = "icon";
 calendarFigure.appendChild(calendarIcon);
+// Day of The Week
 var dayOfTheWeek = document.createElement("div");
 dayOfTheWeek.id = "dayOfWeek";
+var todaysWeekDay= todaysDate.getDay()
 var dayString = getWeekDayString(todaysWeekDay);
-
-
-var dayNumber = todaysDate.getDate();
-document.getElementById("dayOfWeek").innerHTML = dayString;
-document.getElementById("dayNumber").innerHTML = dayNumber;
+var dayOfTheWeekText = document.createTextNode(dayString);
+dayOfTheWeek.appendChild(dayOfTheWeekText);
+calendarIcon.appendChild(dayOfTheWeek);
+// Day Number
+var dayNumber = document.createElement("div");
+dayNumber.id = "dayNumber";
+var todaysDayNumber = todaysDate.getDate();
+var dayNumberText = document.createTextNode(todaysDayNumber);
+dayNumber.appendChild(dayNumberText);
+calendarIcon.appendChild(dayNumber);
 
 function getWeekDayString(weekDayNumber) {
 	var weekDayString;
@@ -87,13 +127,52 @@ function getWeekDayString(weekDayNumber) {
 	return weekDayString;
 }
 
-function appSwitcherOn() {
-	var appSwitcher = document.getElementById("app-switcher");
-	appSwitcher.style.display = "block";
-	appSwitcher.style.zIndex = 9;
-	document.getElementById("pane").style.zIndex = 2;
-}
-function returnFromOverlay() {
-	document.getElementById("app-switcher").style.display = "none";
-	document.getElementById("pane").style.zIndex = 0;
-}
+// CALENDAR CAPTION
+var calendarCaption = document.createElement("figcaption");
+var calendarCaptionText = document.createTextNode("Calendar");
+calendarCaption.appendChild(calendarCaptionText);
+calendarFigure.appendChild(calendarCaption);
+
+//                       Event Registration Portal
+
+// EVENT REGISTRATION PORTAL LINK
+var portalLink = document.createElement("a");
+portalLink.href = "http://localhost:8080/FestivalPortalR2_Participant"
+appSwitcher.appendChild(portalLink);
+
+// EVENT REGISTRATION PORTAL FIGURE
+var portalFigure = document.createElement("figure");
+portalLink.appendChild(portalFigure);
+
+// EVENT REGISTRATION PORTAL ICON
+var portalIcon = document.createElement("img");
+portalIcon.src = "images/event-registration.png";
+portalFigure.appendChild(portalIcon);
+
+// EVENT REGISTRATION PORTAL CAPTION
+var portalCaption = document.createElement("figcaption");
+var portalCaptionText = document.createTextNode("Event Portal");
+portalCaption.appendChild(portalCaptionText);
+portalFigure.appendChild(portalCaption);
+
+//                     Home Property
+
+// HOME PROPERTY LINK
+var propertyLink = document.createElement("a");
+propertyLink.href = "http://localhost:8080/HomeProperty"
+appSwitcher.appendChild(propertyLink);
+
+// HOME PROPERTY FIGURE
+var propertyFigure = document.createElement("figure");
+propertyLink.appendChild(propertyFigure);
+
+// HOME PROPERTY ICON
+var propertyIcon = document.createElement("img");
+propertyIcon.src = "images/home-property.png";
+propertyFigure.appendChild(propertyIcon);
+
+// HOME PROPERTY CAPTION
+var propertyCaption = document.createElement("figcaption");
+var propertyCaptionText = document.createTextNode("Real Estate");
+propertyCaption.appendChild(propertyCaptionText);
+propertyFigure.appendChild(propertyCaption);

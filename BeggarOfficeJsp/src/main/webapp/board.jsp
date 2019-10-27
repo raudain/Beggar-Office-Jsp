@@ -17,7 +17,7 @@
 
 <body>
 
-	<section class="wide center-element menu">
+	<section class="center-element menu">
 		<a id="logo" class="links text" href="index.html">V.B Tower</a>
 		<ul class="links">
 			<li><a href="index.html">Home</a></li>
@@ -27,8 +27,8 @@
 	</section>
 	<img id="clock" class="center-element below-top"
 		src="images/board/clok.png" style="margin-bottom: 1.2%; width: 7.7vw;">
-	<img class="wide center-element" src="images/board/cork-board-top.jpg">
-	<div id="cork-board" class="wide"
+	<img class="center-element" src="images/board/cork-board-top.jpg">
+	<div id="cork-board"
 		style="height: 648.5vh; margin-right: auto; margin-left: auto;">
 		<div class="floor board-floor colum1 row1">
 			<div class="text label floor-label">FLOOR 1</div>
@@ -601,7 +601,7 @@
 			</figure>
 		</div>
 	</div>
-	<img class="wide center-element" src="images/board/cork-board-bottom.jpg">
+	<img class="center-element" src="images/board/cork-board-bottom.jpg">
 	<div id="overlay" onclick="off()"></div>
 
 	<script>

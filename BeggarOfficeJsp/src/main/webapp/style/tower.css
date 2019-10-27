@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+#tower {
+	height: 1350vh;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    border-width: 50px;
+    background-color: #729DBD;
+}
+
 .tower-floor {
   width: 77.25%;
 }

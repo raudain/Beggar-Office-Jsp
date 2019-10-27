@@ -9,6 +9,10 @@ pane.id = "pane";
 pane.addEventListener("click", returnFromOverlay);
 document.body.insertBefore(pane, section);
 
+function overlayOn() {
+	pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+}
+
 //                   Brand
 var brand = document.createElement("div");
 brand.id = "brand";
@@ -37,11 +41,12 @@ document.body.appendChild(appSwitcher);
 function appSwitcherOn() {	
 	appSwitcher.style.display = "block";
 	appSwitcher.style.zIndex = 9;
-	document.getElementById("pane").style.zIndex = 2;
+	pane.style.zIndex = 2;
 }
 
 function returnFromOverlay() {
 	appSwitcher.style.display = "none";
+	pane.style.backgroundColor = "";
 	pane.style.zIndex = 0;
 }
 

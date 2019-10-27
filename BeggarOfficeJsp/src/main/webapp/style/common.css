@@ -25,12 +25,12 @@ body * {
 	bottom: 0;
 }
 
-.wide {
+section, body img, #tower, #cork-board {
 	width: 76.6vw;
 	box-sizing: border-box;
 }
 
-section, #app-switcher img, #icon, body img {
+section, #app-switcher img, #icon, body img, table {
 	display: block;
 	right: 0;
 	left: 0;
@@ -49,7 +49,7 @@ section {
 	box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#brand, section a {
+#brand, section a, #table-heading {
 	background-color: #F4EAC9;
 }
 
@@ -167,6 +167,10 @@ li a:hover {
 
 .below-top {
 	margin-top: 5.3%;
+}
+
+#tower, table {
+	border-color: #D7D7D7;
 }
 
 .floor {
@@ -328,18 +332,4 @@ li a:hover {
 .cubicle {
 	float: left;
 	margin-top: 3.8%;
-}
-
-#overlay {
-	position: fixed;
-	display: none;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 2;
-	cursor: pointer;
 }

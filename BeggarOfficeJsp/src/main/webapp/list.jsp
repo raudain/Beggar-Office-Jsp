@@ -17,7 +17,7 @@
 
 <body>
   
-  <section class="wide navigation">
+  <section class="navigation">
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>
@@ -33,7 +33,7 @@
               </c:when>
 		<c:otherwise>
 			<table class="below-top" style="display: table;">
-				<tr>
+				<tr id="table-heading">
 					<th>Room</th>
 					<th>Name</th>
 					<th>Profession</th>

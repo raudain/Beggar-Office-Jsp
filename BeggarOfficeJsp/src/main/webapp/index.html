@@ -16,7 +16,7 @@
 
 <body>
 
-	<section class="wide navigation">
+	<section class="navigation">
 		<ul>
 			<li><a style="background-color: white; color: #D99F4D;" href="index.html">Home</a></li>
 			<li><a href="ListWorkers">List Workers</a></li>
@@ -27,8 +27,7 @@
 	<script src="main.js"></script>
 	
 	<img class="below-top" src="images/tower/CHANGE INC.png" style="width: 30vw;">
-	<div class="wide"
-		style="height: 1350vh; margin-right: auto; margin-left: auto; border-style: solid; border-width: 50px; border-color: #D7D7D7; background-color: #729DBD;">
+	<div id="tower">
 		<!-- Floor 38 -->
 		<div class="floor tower-floor row1">
 			<div class="cubicle"
@@ -372,8 +371,15 @@
 				style="background-image: url('images/tower/floor1/right-jeff.png');" onclick="overlayOn()"></div>
 		</div>
 	</div>
-	<div id="overlay" onclick="off()"></div>
 	
+	<script>
+		function overlayOn() {
+			var pane = document.getElementById("pane")
+			pane.style.zIndex = 2;
+			pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+		}
+	</script>
+
 </body>
 
 </html>

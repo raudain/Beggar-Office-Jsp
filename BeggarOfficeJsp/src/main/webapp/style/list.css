@@ -5,6 +5,7 @@ body {
 	color: #660000;
 	}
 
-table, th, td {
-  border: 1px solid black;
+td {
+  border-width: 1px;
+  border-style: solid;
 }

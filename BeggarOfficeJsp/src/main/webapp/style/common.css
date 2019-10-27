@@ -25,19 +25,19 @@ body * {
 	bottom: 0;
 }
 
-section, body img, #tower, #cork-board {
+section, body img, #tower, #cork-board, table {
 	width: 76.6vw;
 	box-sizing: border-box;
 }
 
-section, #app-switcher img, #icon, body img, table {
+section, #app-switcher img, #icon, body img, table, #worker-overlay {
 	display: block;
 	right: 0;
 	left: 0;
 	margin: auto;
 }
 
-.navigation {
+section, #worker-overlay {
 	position: fixed;
 }
 
@@ -98,9 +98,12 @@ li {
 	float: left;
 }
 
+li a, table {
+	color: #9C8E87;
+}
+
 li a {
 	display: block;
-	color: #9C8E87;
 	padding: 15px;
 }
 
@@ -170,7 +173,8 @@ li a:hover {
 }
 
 #tower, table {
-	border-color: #D7D7D7;
+	border-style: solid;
+	border-color: #888888;
 }
 
 .floor {
@@ -332,4 +336,11 @@ li a:hover {
 .cubicle {
 	float: left;
 	margin-top: 3.8%;
+}
+
+#worker-overlay {
+	width: 997px;
+	height: 313px;
+	background-color: #D7D7D7;
+	top: 33.31%;
 }

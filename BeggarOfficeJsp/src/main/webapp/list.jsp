@@ -12,12 +12,19 @@
 	<title>Change Inc | List</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<link rel="stylesheet" href="style/common.css">
-	<link rel="stylesheet" href="style/list.css">
+	
+	<style>
+		td {
+  			border-width: 1px;
+  			border-style: solid;
+  			text-align: center;
+		}
+	</style>
 </head>
 
-<body>
+<body style="margin: 13px 0px 10px 0px; background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; color: #660000;">
   
-  <section class="navigation">
+  <section>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>

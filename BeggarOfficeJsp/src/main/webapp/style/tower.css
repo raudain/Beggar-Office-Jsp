@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+#tower, .tower-floor div {
+	box-sizing: border-box;
+}
+
 #tower {
 	height: 1350vh;
     margin-right: auto;
@@ -10,26 +14,33 @@
 }
 
 .tower-floor {
-  width: 77.25%;
+  width: 53.38%;
 }
 
-.cubicle {
-  width: 15%;
+.tower-floor div {
+  width: 22%;
   height: 249px;
   border-style: solid;
   border-width: 10px;
   border-color: #D7D7D7;
   background-color: #B6E6F5;
-  /*  
-    Cubicle width = 15% * 3 = 45
-    Margin width = 100 - 45 = 55
-  */
-  margin-left: 11%;
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;
   background-position: bottom center;
 }
 
+
+.left-cubicle, .middle-cubicle {
+	float: left;
+}
+
+.middle-cubicle {
+	margin-left: 17%;
+}
+
+.right-cubicle {
+	float: right;
+}
 .santa {
 	background-size: 7.5vh 16.4vh;
 }

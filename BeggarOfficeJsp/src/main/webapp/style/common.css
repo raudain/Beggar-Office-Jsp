@@ -27,10 +27,9 @@ body * {
 
 section, body img, #tower, #cork-board, table {
 	width: 76.6vw;
-	box-sizing: border-box;
 }
 
-section, #app-switcher img, #icon, body img, table, #worker-overlay {
+section, #app-switcher img, #icon, body img, .tower-floor, table, #worker-overlay {
 	display: block;
 	right: 0;
 	left: 0;
@@ -177,168 +176,9 @@ li a:hover {
 	border-color: #888888;
 }
 
-.floor {
-	position: absolute;
-}
-
-.row1 {
-	top: 32.8%;
-}
-
-.row2 {
-	top: 67.5%;
-}
-
-.row3 {
-	top: 102.2%;
-}
-
-.row4 {
-	top: 136.8%;
-}
-
-.row5 {
-	top: 171.4%;
-}
-
-.row6 {
-	top: 206%;
-}
-
-.row7 {
-	top: 240.6%;
-}
-
-.row8 {
-	top: 275.2%;
-}
-
-.row9 {
-	top: 309.8%;
-}
-
-.row10 {
-	top: 344.4%;
-}
-
-.row11 {
-	top: 379%;
-}
-
-.row12 {
-	top: 413.6%;
-}
-
-.row13 {
-	top: 448.2%;
-}
-
-.row14 {
-	top: 482.8%;
-}
-
-.row15 {
-	top: 517.4%;
-}
-
-.row16 {
-	top: 552%;
-}
-
-.row17 {
-	top: 586.6%;
-}
-
-.row18 {
-	top: 621.2%;
-}
-
-.row19 {
-	top: 655.8%;
-}
-
-.row20 {
-	top: 690.4%;
-}
-
-.row21 {
-	top: 725%;
-}
-
-.row22 {
-	top: 759.6%;
-}
-
-.row23 {
-	top: 794.2%;
-}
-
-.row24 {
-	top: 828.8%;
-}
-
-.row25 {
-	top: 863.4%;
-}
-
-.row26 {
-	top: 898%;
-}
-
-.row27 {
-	top: 932.6%;
-}
-
-.row28 {
-	top: 967.2%;
-}
-
-.row29 {
-	top: 1001.8%;
-}
-
-.row30 {
-	top: 1036.4%;
-}
-
-.row31 {
-	top: 1071%;
-}
-
-.row32 {
-	top: 1105.6%;
-}
-
-.row33 {
-	top: 1140.2%;
-}
-
-.row34 {
-	top: 1174.8%;
-}
-
-.row35 {
-	top: 1209.4%;
-}
-
-.row36 {
-	top: 1244%;
-}
-
-.row37 {
-	top: 1278.6%;
-}
-
-.row38 {
-	top: 1313.2%;
-}
-
-.cubicle {
-	float: left;
-	margin-top: 3.8%;
-}
 
 #worker-overlay {
+	display: none;
 	width: 997px;
 	height: 313px;
 	background-color: #D7D7D7;

@@ -17,20 +17,21 @@
 
 <body>
 
-	<section class="center-element menu">
-		<a id="logo" class="links text" href="index.html">V.B Tower</a>
-		<ul class="links">
+	<section>
+		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="ListWorkers">List Workers</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="Board">Worker Board</a></li>
 		</ul>
 	</section>
+	
+	<script src="main.js"></script>
 	<img id="clock" class="center-element below-top"
 		src="images/board/clok.png" style="margin-bottom: 1.2%; width: 7.7vw;">
-	<img class="center-element" src="images/board/cork-board-top.jpg">
-	<div id="cork-board"
-		style="height: 648.5vh; margin-right: auto; margin-left: auto;">
-		<div class="floor board-floor colum1 row1">
+	<img src="images/board/cork-board-top.jpg">
+	<div id="cork-board">
+		<div>
+			<div class="board-floor colum1 row1">
 			<div class="text label floor-label">FLOOR 1</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor1/left-tammy.jpg">
@@ -44,8 +45,8 @@
 				<img src="images/board/floor1/right-jeff.jpg">
 				<div class="text label endurance-label">${workerList.get(2).getEndurance()}</div>
 			</figure>
-		</div>
-		<div class="floor board-floor colum2 row1">
+			</div>
+			<div class="board-floor colum2 row1">
 			<div class="text label floor-label">FLOOR 2</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor2/left-jeremy.jpg">
@@ -59,8 +60,9 @@
 				<img src="images/board/floor2/right-christine.png">
 				<div class="text label endurance-label">${workerList.get(5).getEndurance()}</div>
 			</figure>
+			</div>
 		</div>
-		<div class="floor board-floor colum1 row2">
+		<div class="board-floor colum1 row2">
 			<div class="text label floor-label">FLOOR 3</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor3/left-sherry.png">
@@ -75,7 +77,7 @@
 				<div class="text label endurance-label">${workerList.get(8).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row2">
+		<div class="board-floor colum2 row2">
 			<div class="text label floor-label">FLOOR 4</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor4/left-anne.jpg">
@@ -90,7 +92,7 @@
 				<div class="text label endurance-label">${workerList.get(11).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row3">
+		<div class="board-floor colum1 row3">
 			<div class="text label floor-label">FLOOR 5</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor5/left-sharon.jpg">
@@ -105,7 +107,7 @@
 				<div class="text label endurance-label">${workerList.get(14).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row3">
+		<div class="board-floor colum2 row3">
 			<div class="text label floor-label">FLOOR 6</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor6/left-nathan.jpg">
@@ -120,7 +122,7 @@
 				<div class="text label endurance-label">${workerList.get(17).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row4">
+		<div class="board-floor colum1 row4">
 			<div class="text label floor-label">FLOOR 7</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor7/left-derrick.jpg">
@@ -135,7 +137,7 @@
 				<div class="text label endurance-label">${workerList.get(20).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row4">
+		<div class="board-floor colum2 row4">
 			<div class="text label floor-label">FLOOR 8</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor8/left-heather.jpg">
@@ -150,7 +152,7 @@
 				<div class="text label endurance-label">${workerList.get(23).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row5">
+		<div class="board-floor colum1 row5">
 			<div class="text label floor-label">FLOOR 9</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor9/left-vivian.jpg">
@@ -165,7 +167,7 @@
 				<div class="text label endurance-label">${workerList.get(26).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row5">
+		<div class="board-floor colum2 row5">
 			<div class="text label floor-label">FLOOR 10</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor10/left-larry.jpg">
@@ -180,7 +182,7 @@
 				<div class="text label endurance-label">${workerList.get(29).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row6">
+		<div class="board-floor colum1 row6">
 			<div class="text label floor-label">FLOOR 11</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor11/left-anthony.jpg">
@@ -195,7 +197,7 @@
 				<div class="text label endurance-label">${workerList.get(32).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row6">
+		<div class="board-floor colum2 row6">
 			<div class="text label floor-label">FLOOR 12</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor12/left-billy.jpg">
@@ -210,7 +212,7 @@
 				<div class="text label endurance-label">${workerList.get(35).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row7">
+		<div class="board-floor colum1 row7">
 			<div class="text label floor-label">FLOOR 13</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor13/left-connie.jpg">
@@ -225,7 +227,7 @@
 				<div class="text label endurance-label">${workerList.get(38).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row7">
+		<div class="board-floor colum2 row7">
 			<div class="text label floor-label">FLOOR 14</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor14/left-bradley.jpg">
@@ -240,7 +242,7 @@
 				<div class="text label endurance-label">${workerList.get(41).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row8">
+		<div class="board-floor colum1 row8">
 			<div class="text label floor-label">FLOOR 15</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor15/left-martin.jpg">
@@ -255,7 +257,7 @@
 				<div class="text label endurance-label">${workerList.get(44).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row8">
+		<div class="board-floor colum2 row8">
 			<div class="text label floor-label">FLOOR 16</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor16/left-jamie.jpg">
@@ -270,7 +272,7 @@
 				<div class="text label endurance-label">${workerList.get(47).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row9">
+		<div class="board-floor colum1 row9">
 			<div class="text label floor-label">FLOOR 17</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor17/left-martin.jpg">
@@ -285,7 +287,7 @@
 				<div class="text label endurance-label">${workerList.get(50).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row9">
+		<div class="board-floor colum2 row9">
 			<div class="text label floor-label">FLOOR 18</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor18/left-emma.jpg">
@@ -300,7 +302,7 @@
 				<div class="text label endurance-label">${workerList.get(53).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row10">
+		<div class="board-floor colum1 row10">
 			<div class="text label floor-label">FLOOR 19</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor19/left-ryan.jpg">
@@ -315,7 +317,7 @@
 				<div class="text label endurance-label">${workerList.get(56).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row10">
+		<div class="board-floor colum2 row10">
 			<div class="text label floor-label">FLOOR 20</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor20/left-gilbert.jpg">
@@ -330,7 +332,7 @@
 				<div class="text label endurance-label">${workerList.get(59).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row11">
+		<div class="board-floor colum1 row11">
 			<div class="text label floor-label">FLOOR 21</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor21/left-mario.jpg">
@@ -345,7 +347,7 @@
 				<div class="text label endurance-label">${workerList.get(62).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row11">
+		<div class="board-floor colum2 row11">
 			<div class="text label floor-label">FLOOR 22</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor22/left-mario.jpg">
@@ -360,7 +362,7 @@
 				<div class="text label endurance-label">${workerList.get(65).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row12">
+		<div class="board-floor colum1 row12">
 			<div class="text label floor-label">FLOOR 23</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor23/left-willie.jpg">
@@ -375,7 +377,7 @@
 				<div class="text label endurance-label">${workerList.get(68).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row12">
+		<div class="board-floor colum2 row12">
 			<div class="text label floor-label">FLOOR 24</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor24/left-terry.jpg">
@@ -390,7 +392,7 @@
 				<div class="text label endurance-label">${workerList.get(71).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row13">
+		<div class="board-floor colum1 row13">
 			<div class="text label floor-label">FLOOR 25</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor25/left-justin.jpg">
@@ -405,7 +407,7 @@
 				<div class="text label endurance-label">${workerList.get(74).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row13">
+		<div class="board-floor colum2 row13">
 			<div class="text label floor-label">FLOOR 26</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor26/left-dana.jpg">
@@ -420,7 +422,7 @@
 				<div class="text label endurance-label">${workerList.get(77).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row14">
+		<div class="board-floor colum1 row14">
 			<div class="text label floor-label">FLOOR 27</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor27/left-timothy.jpg">
@@ -435,7 +437,7 @@
 				<div class="text label endurance-label">${workerList.get(80).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row14">
+		<div class="board-floor colum2 row14">
 			<div class="text label floor-label">FLOOR 28</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor28/left-nicholas.jpg">
@@ -450,7 +452,7 @@
 				<div class="text label endurance-label">${workerList.get(83).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row15">
+		<div class="board-floor colum1 row15">
 			<div class="text label floor-label">FLOOR 29</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor29/left-frederick.jpg">
@@ -465,7 +467,7 @@
 				<div class="text label endurance-label">${workerList.get(86).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row15">
+		<div class="board-floor colum2 row15">
 			<div class="text label floor-label">FLOOR 30</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor30/left-jack.jpg">
@@ -480,7 +482,7 @@
 				<div class="text label endurance-label">${workerList.get(89).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row16">
+		<div class="board-floor colum1 row16">
 			<div class="text label floor-label">FLOOR 31</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor31/left-amy.jpg">
@@ -495,7 +497,7 @@
 				<div class="text label endurance-label">${workerList.get(92).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row16">
+		<div class="board-floor colum2 row16">
 			<div class="text label floor-label">FLOOR 32</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor32/left-melvin.jpg">
@@ -510,7 +512,7 @@
 				<div class="text label endurance-label">${workerList.get(95).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row17">
+		<div class="board-floor colum1 row17">
 			<div class="text label floor-label">FLOOR 33</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor33/left-ronnie.jpg">
@@ -525,7 +527,7 @@
 				<div class="text label endurance-label">${workerList.get(98).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row17">
+		<div class="board-floor colum2 row17">
 			<div class="text label floor-label">FLOOR 34</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor34/left-april.jpg">
@@ -540,7 +542,7 @@
 				<div class="text label endurance-label">${workerList.get(101).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row18">
+		<div class="board-floor colum1 row18">
 			<div class="text label floor-label">FLOOR 35</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor35/left-lloyd.jpg">
@@ -555,7 +557,7 @@
 				<div class="text label endurance-label">${workerList.get(104).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row18">
+		<div class="board-floor colum2 row18">
 			<div class="text label floor-label">FLOOR 36</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor36/left-emily.jpg">
@@ -570,7 +572,7 @@
 				<div class="text label endurance-label">${workerList.get(107).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum1 row19">
+		<div class="board-floor colum1 row19">
 			<div class="text label floor-label">FLOOR 37</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor37/left-jon.png">
@@ -585,7 +587,7 @@
 				<div class="text label endurance-label">${workerList.get(110).getEndurance()}</div>
 			</figure>
 		</div>
-		<div class="floor board-floor colum2 row19">
+		<div class="board-floor colum2 row19">
 			<div class="text label floor-label">FLOOR 38</div>
 			<figure class="cubicle left-worker">
 				<img src="images/board/floor38/left-dan.jpg">

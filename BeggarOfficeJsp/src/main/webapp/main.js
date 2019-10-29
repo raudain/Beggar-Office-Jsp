@@ -9,10 +9,6 @@ pane.id = "pane";
 pane.addEventListener("click", returnFromOverlay);
 document.body.insertBefore(pane, section);
 
-function overlayOn() {
-	pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-}
-
 //                   Brand
 var brand = document.createElement("div");
 brand.id = "brand";

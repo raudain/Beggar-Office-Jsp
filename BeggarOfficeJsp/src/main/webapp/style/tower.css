@@ -8,17 +8,18 @@
 	height: 1350vh;
     margin-right: auto;
     margin-left: auto;
-    border-style: solid;
     border-width: 50px;
     background-color: #729DBD;
 }
 
 .tower-floor {
-  width: 53.38%;
+  width: 80%;
+  height: 1.98%;
+  margin-top: 4.8%;
 }
 
 .tower-floor div {
-  width: 22%;
+  width: 25%;
   height: 249px;
   border-style: solid;
   border-width: 10px;
@@ -27,6 +28,7 @@
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;
   background-position: bottom center;
+  position: relative;
 }
 
 
@@ -35,7 +37,7 @@
 }
 
 .middle-cubicle {
-	margin-left: 17%;
+	margin-left: 12.5%;
 }
 
 .right-cubicle {

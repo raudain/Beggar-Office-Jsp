@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
-:root {
-	--floor-margin: 17.2%;
+:root { --floor-margin: 19%;
 }
 
 #cork-board {
-  background-image: url("../images/board/cork-board-middle.jpg");
-  background-size: 76.6vw 60vh;
+	height: 648.5vh;
+	background-image: url("../images/board/cork-board-middle.jpg");
+	background-size: 76.6vw 60vh;
 }
 
 .board-floor {
-  width: 32%;
+	width: 50%;
 }
 
 .colum1 {
-  left: var(--floor-margin);
+	left: var(--floor-margin);
 }
 
 .colum2 {
@@ -22,91 +22,91 @@
 }
 
 .row1 {
-  top: 32.8%;
+	top: 32.8%;
 }
 
 .row2 {
-  top: 67.5%;
+	top: 67.5%;
 }
 
 .row3 {
-  top: 102.2%;
+	top: 102.2%;
 }
 
 .row4 {
-  top: 136.8%;
+	top: 136.8%;
 }
 
 .row5 {
-  top: 171.4%;
+	top: 171.4%;
 }
 
 .row6 {
-  top: 206%;
+	top: 206%;
 }
 
 .row7 {
-  top: 240.6%;
+	top: 240.6%;
 }
 
 .row8 {
-  top: 275.2%;
+	top: 275.2%;
 }
 
 .row9 {
-  top: 309.8%;
+	top: 309.8%;
 }
 
 .row10 {
-  top: 344.4%;
+	top: 344.4%;
 }
 
 .row11 {
-  top: 379%;
+	top: 379%;
 }
 
 .row12 {
-  top: 413.6%;
+	top: 413.6%;
 }
 
 .row13 {
-  top: 448.2%;
+	top: 448.2%;
 }
 
 .row14 {
-  top: 482.8%;
+	top: 482.8%;
 }
 
 .row15 {
-  top: 517.4%;
+	top: 517.4%;
 }
 
 .row16 {
-  top: 552%;
+	top: 552%;
 }
 
 .row17 {
-  top: 586.6%;
+	top: 586.6%;
 }
 
 .row18 {
-  top: 621.2%;
+	top: 621.2%;
 }
 
 .row19 {
-  top: 655.8%;
+	top: 655.8%;
 }
 
 .label {
-  width: 8.3em;
-  background-color: white;
-  color: #9C8E87;
-  text-align: center;
+	width: 8.3em;
+	background-color: white;
+	color: #9C8E87;
+	text-align: center;
 }
 
 .floor-label {
-  margin-right: auto;
-  margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .middle-worker, .right-worker {
@@ -114,14 +114,14 @@
 }
 
 .cubicle img {
-  width: 6.4vw;
-  border-style: solid;
-  border-width: .26vw;
-  border-color: white;
-  vertical-align: top;
+	width: 6.4vw;
+	border-style: solid;
+	border-width: .26vw;
+	border-color: white;
+	vertical-align: top;
 }
 
 .endurance-label {
-  font-size: .83vw;
-  margin-top: .7em;
+	font-size: .83vw;
+	margin-top: .7em;
 }

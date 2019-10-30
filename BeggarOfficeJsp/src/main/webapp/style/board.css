@@ -3,98 +3,25 @@
 :root { --floor-margin: 19%;
 }
 
+#clock {
+	margin-bottom: 1.2%;
+	width: 7.7vw;
+}
+
 #cork-board {
 	height: 648.5vh;
 	background-image: url("../images/board/cork-board-middle.jpg");
 	background-size: 76.6vw 60vh;
 }
 
+.row {
+	width: 90%;
+	height: 4.92%;
+	margin-bottom: 2.2%;
+}
+
 .board-floor {
-	width: 50%;
-}
-
-.colum1 {
-	left: var(--floor-margin);
-}
-
-.colum2 {
-	right: var(--floor-margin);
-}
-
-.row1 {
-	top: 32.8%;
-}
-
-.row2 {
-	top: 67.5%;
-}
-
-.row3 {
-	top: 102.2%;
-}
-
-.row4 {
-	top: 136.8%;
-}
-
-.row5 {
-	top: 171.4%;
-}
-
-.row6 {
-	top: 206%;
-}
-
-.row7 {
-	top: 240.6%;
-}
-
-.row8 {
-	top: 275.2%;
-}
-
-.row9 {
-	top: 309.8%;
-}
-
-.row10 {
-	top: 344.4%;
-}
-
-.row11 {
-	top: 379%;
-}
-
-.row12 {
-	top: 413.6%;
-}
-
-.row13 {
-	top: 448.2%;
-}
-
-.row14 {
-	top: 482.8%;
-}
-
-.row15 {
-	top: 517.4%;
-}
-
-.row16 {
-	top: 552%;
-}
-
-.row17 {
-	top: 586.6%;
-}
-
-.row18 {
-	top: 621.2%;
-}
-
-.row19 {
-	top: 655.8%;
+	width: 46.82%;
 }
 
 .label {

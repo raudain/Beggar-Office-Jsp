@@ -31,18 +31,10 @@
   position: relative;
 }
 
-
-.left-cubicle, .middle-cubicle {
-	float: left;
-}
-
 .middle-cubicle {
 	margin-left: 12.5%;
 }
 
-.right-cubicle {
-	float: right;
-}
 .santa {
 	background-size: 7.5vh 16.4vh;
 }

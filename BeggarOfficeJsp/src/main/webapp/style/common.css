@@ -29,7 +29,7 @@ section, body img, #tower, #cork-board, table {
 	width: 76.6vw;
 }
 
-section, #app-switcher img, #icon, body img, .tower-floor, table, #worker-overlay, #cork-board {
+section, #app-switcher img, #icon, body img, .tower-floor, table, #worker-overlay, #cork-board, .row {
 	display: block;
 	right: 0;
 	left: 0;
@@ -52,7 +52,7 @@ section {
 	background-color: #F4EAC9;
 }
 
-#brand {
+#brand, span, #app-switcher figure, .board-floor, .board-floor figure {
 	display: inline-block;
 	width: 16.24%;
 	margin-top: 1%;
@@ -83,6 +83,10 @@ span {
     border-left: 6px solid transparent;
 }
 
+ul, .right-cubicle, .column2 {
+	float: right;
+}
+
 ul {
 	width: 30.52%;
 	float: right;
@@ -92,9 +96,12 @@ ul {
 	overflow: hidden;
 }
 
+li, .left-cubicle, .middle-cubicle, .column1 {
+	float: left;
+}
+
 li {
 	margin-right: 2%;
-	float: left;
 }
 
 li a, table {
@@ -125,10 +132,6 @@ li a:hover {
     border: 1px solid #d5d5d5;
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
     border-radius: 8px;
-}
-
-#app-switcher figure, .board-floor figure {
-	display: inline-block;
 }
 
 #app-switcher figure {

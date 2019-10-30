@@ -113,3 +113,9 @@ room,name,profession,endurance,level,cost
 3801,Dan,Pilot,Tireless,10,NULL
 3802,Jorge,Politician,Hard-working,11,NULL
 3803,Jeanette,Doctor,Productive,11,NULL
+3901,Miguel,Santa,Tireless,15,NULL
+3902,Jill,Pilot,Hard-working,14,NULL
+3903,Pauline,Doctor,Hard-working,15,NULL
+4001,Dorothy,Lawyer,Hard-working,1,NULL
+4002,Jimmy,Cook,Tireless,1,NULL
+4003,Eric,Pilot,Diligent,2,NULL

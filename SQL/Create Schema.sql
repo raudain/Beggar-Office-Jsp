@@ -26,25 +26,10 @@ CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
   `name` TEXT(45) NULL,
   `profession` TEXT(45) NULL,
   `endurance` TEXT(45) NOT NULL,
-  `level` BIT(5) NULL,
+  `level` SMALLINT(4) UNSIGNED NOT NULL,
   `cost` BIGINT(10) UNSIGNED NULL,
   PRIMARY KEY (`room`))
 ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`products`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`products` (
-  `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
-  `title` VARCHAR(256) NOT NULL,
-  `description` TEXT(256) NOT NULL,
-  `price` FLOAT NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-ALTER TABLE `products`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

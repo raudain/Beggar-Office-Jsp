@@ -32,7 +32,7 @@
 		</ul>
 	</section>
 	
-	<script src="main.js"></script>
+	<script src="top.js"></script>
 
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">

@@ -27,7 +27,7 @@
 		</ul>
 	</section>
 
-	<script src="main.js"></script>
+	<script src="top.js"></script>
 	<img id="clock" class="below-top" src="images/board/clok.png">
 	<img src="images/board/cork-board-top.jpg">
 	<div id="cork-board">
@@ -641,17 +641,12 @@
 		</div>
 	</div>
 	<img class="center-element" src="images/board/cork-board-bottom.jpg">
-	<div id="overlay" onclick="off()"></div>
-
-	<script>
-		function overlayOn() {
-			document.getElementById("overlay").style.display = "block";
-		}
-
-		function off() {
-			document.getElementById("overlay").style.display = "none";
-		}
-	</script>
+	
+	<div id="worker-overlay">
+		
+	</div>
+	
+	<script src="main.js"></script>
 
 </body>
 

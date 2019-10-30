@@ -83,7 +83,7 @@ span {
     border-left: 6px solid transparent;
 }
 
-ul, .right-cubicle, .column2 {
+ul, .right-worker, .column2 {
 	float: right;
 }
 
@@ -96,7 +96,7 @@ ul {
 	overflow: hidden;
 }
 
-li, .left-cubicle, .middle-cubicle, .column1 {
+li, .left-worker, .middle-worker, .column1 {
 	float: left;
 }
 
@@ -182,8 +182,12 @@ li a:hover {
 	border-color: #E2B452;
 }
 
+.left-worker, .middle-worker, .right-worker {
+	position: relative;
+}
 
 #worker-overlay {
+	display: none;
 	width: 56.55%;
 	height: 313px;
 	background-color: #D7D7D7;

@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
  * A helper class that centralizes the management of data connections in the
  * underlying database. <br/>
  * 
- * @author krishna.kishore
+ * @author krishna.kishore, Roody Audain
  * 
  */
 public class DataConnection {

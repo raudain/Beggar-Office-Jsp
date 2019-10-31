@@ -21,7 +21,7 @@
 }
 
 .board-floor {
-	width: 46.82%;
+	width: 46%;
 }
 
 .label {
@@ -29,11 +29,6 @@
 	background-color: white;
 	color: #9C8E87;
 	text-align: center;
-}
-
-.floor-label {
-	margin-right: auto;
-	margin-left: auto;
 }
 
 .middle-worker, .right-worker {

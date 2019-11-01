@@ -21,9 +21,7 @@
 .tower-floor div {
   width: 25%;
   height: 249px;
-  border-style: solid;
   border-width: 10px;
-  border-color: #D7D7D7;
   background-color: #B6E6F5;
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;

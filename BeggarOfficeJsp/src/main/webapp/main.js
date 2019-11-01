@@ -11,4 +11,5 @@ function overlayOn() {
 	pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 	var workerOverlay = document.getElementById("worker-overlay");
 	workerOverlay.style.display = "block";
+	workerOverlay.style.zIndex = "9";
 }

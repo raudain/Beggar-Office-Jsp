@@ -19,19 +19,12 @@ import raudain.entity.Worker;
 /**
  * Servlet implementation class ListWorkersServlet
  */
-@WebServlet("/ListWorkers")
+@WebServlet("/List")
 public class ListWorkers extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	private static Logger log = LogManager.getLogger(ListWorkers.class);
-	
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public ListWorkers() {
-		super();
-	}
 
 	/**
 	 * <br/>
@@ -43,7 +36,7 @@ public class ListWorkers extends HttpServlet {
 	 * @param request
 	 * @param response
 	 * 
-	 * @throws Exception
+	 * @throws ServletException, IOException
 	 */
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)

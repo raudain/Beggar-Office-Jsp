@@ -24,11 +24,11 @@ body * {
 	bottom: 0;
 }
 
-section, body img, #tower, #cork-board, table {
+section, #tower, #cork-board, table, .below-top {
 	width: 76.6vw;
 }
 
-section, #app-switcher img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .label, #profile {
+section, #app-switcher img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
 	display: block;
 	right: 0;
 	left: 0;
@@ -47,7 +47,7 @@ section {
 	box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#brand, span, #app-switcher figure, .board-column1, .board-column2 {
+#brand, span, #app-switcher figure, .board-column1, .board-column2, figure div {
 	display: inline-block;
 	font-size: 1.8vw;
 	color: #D99F4D;
@@ -85,7 +85,6 @@ section {
 }
 
 span {
-    display: inline-block;
     width: 0;
     height: 0;
     margin-left: 2px;
@@ -210,4 +209,12 @@ li a:hover {
 	border-style: solid;
 	border-color: #E2B452;
 	top: 33.31%;
+}
+
+#profile {
+	width: 342px;
+	height: 273px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
 }

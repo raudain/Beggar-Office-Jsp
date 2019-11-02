@@ -27,7 +27,7 @@
   <section>
 		<ul>
 			<li><a href="index.html">Home</a></li>
-			<li><a style="background-color: white; color: #D99F4D;" href="ListWorkers">List Workers</a></li>
+			<li><a style="background-color: white; color: #D99F4D;" href="List">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</section>

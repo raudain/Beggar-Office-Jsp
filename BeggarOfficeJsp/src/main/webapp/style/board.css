@@ -24,7 +24,7 @@
 	width: 46%;
 }
 
-.label {
+.floor-label, figcaption {
 	width: 8.3em;
 	background-color: white;
 	color: #9C8E87;
@@ -35,7 +35,7 @@
 	margin-left: 4%;
 }
 
-.cubicle img {
+figure img {
 	width: 6.4vw;
 	border-style: solid;
 	border-width: .26vw;
@@ -43,7 +43,7 @@
 	vertical-align: top;
 }
 
-.endurance-label {
+figcaption {
 	font-size: .83vw;
 	margin-top: .7em;
 }

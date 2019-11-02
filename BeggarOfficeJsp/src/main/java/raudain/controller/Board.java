@@ -53,8 +53,11 @@ public class Board extends HttpServlet {
 		
 		WorkerDAO doa = new WorkerDAO();
 		ArrayList<Worker> workerList = new ArrayList<>();
+		ArrayList<String> nameList = new ArrayList<>();
 		workerList = doa.listWorkers();
+		nameList = doa.listNames();
 		request.setAttribute("workerList", workerList);
+		request.setAttribute("nameList", nameList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/board.jsp");
 		disp.forward(request, response);

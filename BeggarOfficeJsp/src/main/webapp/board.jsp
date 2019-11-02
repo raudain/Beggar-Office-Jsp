@@ -35,11 +35,11 @@
 				<div class="floor-label">FLOOR 1</div>
 				<figure class="left-worker">
 					<img src="images/board/floor1/left-tammy.jpg">
-					<figcaption>${workerList.get(0).getEndurance()}</figcaption>
+					<figcaption>${nameList.get(0)}</figcaption>
 				</figure>
 				<figure class="middle-worker">
 					<img src="images/board/floor1/middle-vernon.jpg">
-					<figcaption>${workerList.get(1).getEndurance()}</figcaption>
+					<figcaption>${nameList.get(1)}</figcaption>
 				</figure>
 				<figure class="right-worker">
 					<img src="images/board/floor1/right-jeff.jpg">

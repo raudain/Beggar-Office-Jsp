@@ -31,105 +31,105 @@ Pilot
 /************************************ Tier I ************************************/
 
 SELECT * 
-FROM Workers 
-WHERE Profession = 'Construction Worker' 
-OR Profession = 'Postman'
-OR Profession = 'Farmer'
+FROM workers 
+WHERE profession = 'Construction Worker' 
+OR profession = 'Postman'
+OR profession = 'Farmer'
 ORDER BY endurance;
 
 
 /************************************ Tier II *************************************/
 
-SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost
-FROM Workers 
-WHERE Profession = 'Artist' 
-OR Profession = 'Cook'
-OR Profession = 'Magician'
-OR Profession = 'Firefighter'
-ORDER BY Cost ASC;
+SELECT room, name, profession, endurance, level, format(cost, '###,###,###') AS cost
+FROM workers 
+WHERE profession = 'Artist' 
+OR profession = 'Cook'
+OR profession = 'Magician'
+OR profession = 'Firefighter'
+ORDER BY cost ASC;
 
 SELECT *
 FROM workers
-WHERE Profession = 'Artist'
-ORDER BY Endurance;
-
-SELECT *
-FROM Workers 
-WHERE Profession = 'Cook'
-ORDER BY Endurance;
+WHERE profession = 'Artist'
+ORDER BY endurance;
 
 SELECT *
 FROM workers 
-WHERE Profession = 'Firefighter'
-ORDER BY Cost;
+WHERE profession = 'Cook'
+ORDER BY endurance;
+
+SELECT *
+FROM workers 
+WHERE profession = 'Firefighter'
+ORDER BY cost;
 
 
 /*************************************** Tier III ***********************************/
 
-SELECT Room, Name, Profession, Endurance, Level, format(cost, '###,###,###') AS Cost
-FROM Workers
-WHERE Profession = 'Scientist'
-OR Profession = 'Journalist'
-ORDER BY Cost;
+SELECT room, name, profession, endurance, level, format(cost, '###,###,###') AS cost
+FROM workers
+WHERE profession = 'Scientist'
+OR profession = 'Journalist'
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Scientist'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Scientist'
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Journalist'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Journalist'
+ORDER BY cost;
 
 
 /*************************************** Tier IV ***********************************/
 
-SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Coins
-FROM Workers
-WHERE Profession = 'Doctor'
-OR Profession = 'Computer Engineer'
-OR Profession = 'Journalist'
-OR Profession = 'Santa'
-OR Profession = 'Lawyer'
-ORDER BY Cost;
+SELECT room, name, profession, endurance, level, format(cost, '###,###,###') AS coins
+FROM workers
+WHERE profession = 'Doctor'
+OR profession = 'Computer Engineer'
+OR profession = 'Journalist'
+OR profession = 'Santa'
+OR profession = 'Lawyer'
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Doctor'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Doctor'
+ORDER BY cost;
 
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Computer Engineer'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Computer Engineer'
+ORDER BY cost;
 
 SELECT * 
-FROM Workers 
-WHERE Profession = 'Journalist' 
-ORDER BY Cost;
+FROM workers 
+WHERE profession = 'Journalist' 
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Santa'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Santa'
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Lawyer'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Lawyer'
+ORDER BY cost;
 
 
 /*************************************** Tier V ***********************************/
 
-/*SELECT Room, Name, Profession, Endurance, Level, format(Cost, '###,###,###') AS Cost*/
+/*SELECT Room, Name, profession, endurance, level, format(cost, '###,###,###') AS cost*/
 SELECT *
-FROM Workers
-WHERE Profession = 'Politician'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Politician'
+ORDER BY cost;
 
 SELECT *
-FROM Workers
-WHERE Profession = 'Pilot'
-ORDER BY Cost;
+FROM workers
+WHERE profession = 'Pilot'
+ORDER BY cost;

@@ -6,8 +6,18 @@ var section = document.querySelector("section");
 //             Pane
 var pane = document.createElement("div");
 pane.id = "pane";
+if (isOverlayOn()) {
+	pane.style.zIndex = 2;
+	pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+}
 pane.addEventListener("click", returnFromOverlay);
 document.body.insertBefore(pane, section);
+
+function isOverlayOn() {	
+	if (document.baseURI == "http://localhost:8080/BeggarOfficeJsp/Overlay") {
+		return true;
+	}
+}
 
 //                   Brand
 var brand = document.createElement("div");

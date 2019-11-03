@@ -1,7 +1,13 @@
 package raudain.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,23 +19,23 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import raudain.doa.DatabaseCredentials;
 import raudain.doa.WorkerDAO;
 import raudain.entity.Worker;
 
 /**
  * Servlet implementation class ListWorkersServlet
  */
-@WebServlet("/List")
-public class ListWorkers extends HttpServlet {
-	
+@WebServlet("/Overlay")
+public class Overlay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static Logger log = LogManager.getLogger(ListWorkers.class);
+	private static Logger log = LogManager.getLogger(Overlay.class);
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers date from workers table in mydb database<br/>
+	 * This method is for showing ...<br/>
 	 * 
 	 * @return void
 	 * 
@@ -45,13 +51,17 @@ public class ListWorkers extends HttpServlet {
 		if (request == null || response == null) {
 			log.info("Request or Response failed for doGet METHOD..");
 		}
-
+		
 		WorkerDAO doa = new WorkerDAO();
 		ArrayList<Worker> workerList = new ArrayList<>();
+		ArrayList<String> nameList = new ArrayList<>();
 		workerList = doa.listWorkers();
+		nameList = doa.listNames();
 		request.setAttribute("workerList", workerList);
+		ListIterator<String> nameIterator = nameList.listIterator();
+		request.setAttribute("nameIterator", nameIterator);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
+		final RequestDispatcher disp = request.getRequestDispatcher("/overlay.jsp");
 		disp.forward(request, response);
 	}
 

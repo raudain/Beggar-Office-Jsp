@@ -47,7 +47,7 @@ section {
 	box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#brand, span, #app-switcher figure, .board-column1, .board-column2, figure div {
+#brand, span, #app-switcher figure, .board-column1, .board-column2, #profile div {
 	display: inline-block;
 	font-size: 1.8vw;
 	color: #D99F4D;
@@ -58,7 +58,7 @@ section {
 	margin-left: var(--section-margin);
 }
 
-#brand, #app-switcher figure {
+#brand {
 	border: 2px solid #888;
 }
 
@@ -133,7 +133,7 @@ li a:hover {
 
 #app-switcher {
 	display: none;
-    width: 11.3%;
+    width: 11.5%;
     max-width: calc(100% - 20px);
     max-inline-size: calc(100% - 20px);
     position: fixed;
@@ -201,7 +201,6 @@ li a:hover {
 }
 
 #worker-overlay {
-	display: block;
 	width: 56.55%;
 	height: 313px;
 	background-color: #D7D7D7;
@@ -209,6 +208,7 @@ li a:hover {
 	border-style: solid;
 	border-color: #E2B452;
 	top: 33.31%;
+	z-index: 9;
 }
 
 #profile {
@@ -217,4 +217,12 @@ li a:hover {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
+}
+
+.left-worker img, .middle-worker img, .right-worker img, #profile img {
+	width: 6.4vw;
+	border-style: solid;
+	border-width: .26vw;
+	border-color: white;
+	vertical-align: top;
 }

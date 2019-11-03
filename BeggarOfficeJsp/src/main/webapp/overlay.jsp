@@ -642,6 +642,15 @@
 		</div>
 	</div>
 	<img class="below-top" src="images/board/cork-board-bottom.jpg">
+	
+	<div id="worker-overlay">
+		<figure id="profile">
+			<img src="images/board/floor1/left-tammy.jpg">
+			<div>
+				<figcaption>${nameIterator.next()}</figcaption>
+			</div>
+		</figure>
+	</div>
 </body>
 
 </html>

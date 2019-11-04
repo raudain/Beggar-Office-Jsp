@@ -24,12 +24,15 @@ body * {
 	bottom: 0;
 }
 
-section, #tower, #cork-board, .below-top {
+section, #app-switcher img, #icon, .below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #profile {
+	display: block;
+}
+
+section, #tower, #cork-board, .below-top, #big-table {
 	width: 76.6vw;
 }
 
 section, #app-switcher img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
-	display: block;
 	right: 0;
 	left: 0;
 	margin: auto;
@@ -47,16 +50,13 @@ section {
 	box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#brand, span, #app-switcher figure, .board-column1, .board-column2, table {
-	display: inline-block;
-}
-
-#brand, span, #app-switcher figure, .board-column1, .board-column2, table, th {
-	color: #D99F4D;
-}
-
 #brand, span, #app-switcher figure, .board-column1, .board-column2 {
+	display: inline-block;
 	font-size: 1.8vw;
+}
+
+#brand, span, #app-switcher figure, .board-column1, .board-column2, th {
+	color: #D99F4D;
 }
 
 #brand, span, #app-switcher figure {
@@ -99,6 +99,12 @@ span {
     border-left: 6px solid transparent;
 }
 
+polyline {
+	fill: #F4EAC9;
+	stroke: #D99F4D;
+	stroke-width: 2;
+}
+
 ul, .right-worker, .board-column2 {
 	float: right;
 }
@@ -119,7 +125,7 @@ li {
 	margin-right: 2%;
 }
 
-li a, table {
+li a, td {
 	color: #9C8E87;
 }
 
@@ -192,7 +198,7 @@ li a:hover {
     line-height: 80%;
 }
 
-.below-top {
+.below-top, #big-table {
 	margin-top: 7%;
 }
 
@@ -216,7 +222,7 @@ li a:hover {
 }
 
 #profile {
-	width: 342px;
+	width: 34.3%;
 	height: 70%;
 	position: absolute;
 	top: 0px;
@@ -229,6 +235,14 @@ li a:hover {
 	border-width: .26vw;
 	border-color: white;
 	vertical-align: top;
+}
+
+table {
+	border-spacing: 19px;
+}
+
+#profile table {
+	display: inline-table;
 }
 
 #profile th {

@@ -34,7 +34,10 @@ brand.appendChild(logo);
 
 var caret = document.createElement("span");
 brand.appendChild(caret);
-
+var dropDownCaret = document.createElement("polyline");
+var points = "0,0 7,7 7,7 15,0";
+dropDownCaret.setAttribute('points', points);
+brand.appendChild(dropDownCaret);
 
 /* 
  *	***************** Application Switcher ****************

@@ -39,7 +39,7 @@
                 The List is empty.
               </c:when>
 		<c:otherwise>
-			<table class="below-top" style="display: table;">
+			<table id="big-table">
 				<tr id="table-heading">
 					<th>Room</th>
 					<th>Name</th>

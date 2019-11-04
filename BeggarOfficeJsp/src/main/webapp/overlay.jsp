@@ -19,10 +19,6 @@
 <body>
 
 	<section>
-		<svg height="15" width="15">
-  			<polyline points="0,0 7,7 7,7 15,0"/>
-  			Sorry, your browser does not support inline SVG.
-		</svg>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="List">List Workers</a></li>
@@ -32,6 +28,7 @@
 	</section>
 
 	<script src="top.js"></script>
+	
 	<img class="below-top" src="images/board/cork-board-top.jpg">
 	<div id="cork-board">
 		<div class="row">

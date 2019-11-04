@@ -32,12 +32,16 @@ var logoText = document.createTextNode("V.B. Tower");
 logo.appendChild(logoText);
 brand.appendChild(logo);
 
-var caret = document.createElement("span");
+var caret = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+caret.setAttribute("width", 16);
+caret.setAttribute("height", 16);
+//caret.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+var lines = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+var points = "0,0 8,8 8,8 16,0";
+lines.setAttribute('points', points);
+caret.appendChild(lines);
+caret.innerHTML += "Sorry, your browser does not support inline SVG.";
 brand.appendChild(caret);
-var dropDownCaret = document.createElement("polyline");
-var points = "0,0 7,7 7,7 15,0";
-dropDownCaret.setAttribute('points', points);
-brand.appendChild(dropDownCaret);
 
 /* 
  *	***************** Application Switcher ****************

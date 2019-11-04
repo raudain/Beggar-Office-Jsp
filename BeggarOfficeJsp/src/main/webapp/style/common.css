@@ -24,7 +24,7 @@ body * {
 	bottom: 0;
 }
 
-section, #tower, #cork-board, table, .below-top {
+section, #tower, #cork-board, .below-top {
 	width: 76.6vw;
 }
 
@@ -47,10 +47,16 @@ section {
 	box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#brand, span, #app-switcher figure, .board-column1, .board-column2, #profile div {
+#brand, span, #app-switcher figure, .board-column1, .board-column2, table {
 	display: inline-block;
-	font-size: 1.8vw;
+}
+
+#brand, span, #app-switcher figure, .board-column1, .board-column2, table, th {
 	color: #D99F4D;
+}
+
+#brand, span, #app-switcher figure, .board-column1, .board-column2 {
+	font-size: 1.8vw;
 }
 
 #brand, span, #app-switcher figure {
@@ -81,7 +87,6 @@ section {
 	padding-right: 2%;
 	padding-left: 1%;
 	font-size: 1.8vw;
-	color: #D99F4D;
 }
 
 span {
@@ -191,7 +196,7 @@ li a:hover {
 	margin-top: 7%;
 }
 
-#tower, table, .tower-floor div {
+#tower, .tower-floor div {
 	border-style: solid;
 	border-color: #E2B452;
 }
@@ -202,7 +207,6 @@ li a:hover {
 
 #worker-overlay {
 	width: 56.55%;
-	height: 313px;
 	background-color: #D7D7D7;
 	border-width: 10px;
 	border-style: solid;
@@ -213,7 +217,7 @@ li a:hover {
 
 #profile {
 	width: 342px;
-	height: 273px;
+	height: 70%;
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -225,4 +229,8 @@ li a:hover {
 	border-width: .26vw;
 	border-color: white;
 	vertical-align: top;
+}
+
+#profile th {
+	text-align: left;
 }

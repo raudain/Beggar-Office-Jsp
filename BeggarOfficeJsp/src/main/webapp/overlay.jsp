@@ -646,9 +646,28 @@
 	<div id="worker-overlay">
 		<figure id="profile">
 			<img src="images/board/floor1/left-tammy.jpg">
-			<div>
-				<figcaption>${nameIterator.next()}</figcaption>
-			</div>
+			<table>
+				<tr>
+					<th>Name:</th>
+					<td>${nameIterator.next()}</td>
+				</tr>
+				<tr>
+					<th>Profession:</th>
+					<td>${nameIterator.next()}</td>
+				</tr>
+				<tr>
+					<th>Endurance:</th>
+					<td>${nameIterator.next()}</td>
+				</tr>
+				<tr>
+					<th>Level:</th>
+					<td>${nameIterator.next()}</td>
+				</tr>
+				<tr>
+					<th>Cost:</th>
+					<td>${nameIterator.next()}</td>
+				</tr>
+			</table>
 		</figure>
 	</div>
 </body>

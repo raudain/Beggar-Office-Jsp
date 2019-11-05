@@ -33,12 +33,13 @@
 		<div class="row">
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 1</div>
-				<a href="Overlay">
-					<figure class="left-worker">
+				<figure class="left-worker">
+					<form action="Overlay">
+						<input name="worker" type="image">
 						<img src="images/board/floor1/left-tammy.jpg">
-						<figcaption>${nameIterator.next()}</figcaption>
-					</figure>
-				</a>
+					</form>
+					<figcaption>${nameIterator.next()}</figcaption>
+				</figure>
 				<figure class="middle-worker">
 					<img src="images/board/floor1/middle-vernon.jpg">
 					<figcaption>${nameIterator.next()}</figcaption>

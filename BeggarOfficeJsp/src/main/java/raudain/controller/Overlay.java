@@ -53,13 +53,12 @@ public class Overlay extends HttpServlet {
 		}
 		
 		WorkerDAO doa = new WorkerDAO();
-		ArrayList<Worker> workerList = new ArrayList<>();
 		ArrayList<String> nameList = new ArrayList<>();
-		workerList = doa.listWorkers();
 		nameList = doa.listNames();
-		request.setAttribute("workerList", workerList);
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
+		Worker worker = new Worker();
+		worker = doa.getWorker();
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/overlay.jsp");
 		disp.forward(request, response);

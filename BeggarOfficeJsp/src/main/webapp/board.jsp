@@ -28,6 +28,7 @@
 	</section>
 
 	<script src="top.js"></script>
+	
 	<img class="below-top" src="images/board/cork-board-top.jpg">
 	<div id="cork-board">
 		<div class="row">
@@ -867,7 +868,9 @@
 			</div>
 		</div>
 	</div>
-	<img class="below-top" src="images/board/cork-board-bottom.jpg">
+	
+	<script src="main.js"></script>
+	
 </body>
 
 </html>

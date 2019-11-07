@@ -62,7 +62,9 @@ function returnFromOverlay() {
 	pane.style.backgroundColor = "";
 	pane.style.zIndex = 0;
 	var workerOverlay = document.getElementById("worker-overlay");
-	workerOverlay.style.display = "none";
+	if (workerOverlay != null) {
+		workerOverlay.style.display = "none";
+	}
 }
 
 //                       Virtual Beggar

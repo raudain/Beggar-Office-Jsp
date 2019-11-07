@@ -10,10 +10,7 @@ body {
 	background-color: rgba(212, 236, 247, 1);
 }
 
-body * {
-	font-family: Arial Black;
-	text-decoration: none;
-}
+
 
 #pane {
 	position: fixed;
@@ -25,15 +22,16 @@ body * {
 	bottom: 0;
 }
 
-#app-switcher img, #icon, .below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #profile {
-	display: block;
+section *, #cork-board {
+	font-family: Arial Black;
+	text-decoration: none;
 }
 
-section, #tower, #cork-board, .below-top, #big-table {
+section, #tower, #cork-board, .below-top, #big-table, #cbb {
 	width: 76.6vw;
 }
 
-section, img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
+section, img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
 	margin: auto;
 }
 
@@ -142,6 +140,10 @@ li a:hover {
 	background-color: #E3C867;
 }
 
+#app-switcher img, #icon, .below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
+	display: block;
+}
+
 #app-switcher {
 	display: none;
     width: 11.5%;
@@ -229,7 +231,7 @@ li a:hover {
 	bottom: 0px;
 }
 
-.left-worker img, .middle-worker img, .right-worker img, #profile img {
+.left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
 	width: 6.4vw;
 	border-style: solid;
 	border-width: .26vw;

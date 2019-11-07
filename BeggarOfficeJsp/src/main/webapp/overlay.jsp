@@ -27,7 +27,7 @@
 		</ul>
 	</section>
 
-	<script src="top.js"></script>
+	<script src="javascript/top.js"></script>
 	
 	<img class="below-top" src="images/board/cork-board-top.jpg">
 	<div id="cork-board">
@@ -861,7 +861,7 @@
 				</figure>
 				<figure class="right-worker">
 					<form action="Overlay">
-						<input name="worker" type="image" src="images/board/floor38/right-jeanette.jpg">
+						<input type="image" src="images/board/floor38/right-jeanette.jpg">
 					</form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
@@ -869,7 +869,7 @@
 		</div>
 	</div>
 	
-	<script src="main.js"></script>
+	<script src="javascript/main.js"></script>
 	
 	<div id="worker-overlay">
 		<figure id="profile">
@@ -877,23 +877,23 @@
 			<table>
 				<tr>
 					<th>Name:</th>
-					<td>${nameIterator.next()}</td>
+					<td>${worker.getName()}</td>
 				</tr>
 				<tr>
 					<th>Profession:</th>
-					<td>${nameIterator.next()}</td>
+					<td>${worker.getProfession()}</td>
 				</tr>
 				<tr>
 					<th>Endurance:</th>
-					<td>${nameIterator.next()}</td>
+					<td>${worker.getEndurance()}</td>
 				</tr>
 				<tr>
 					<th>Level:</th>
-					<td>${nameIterator.next()}</td>
+					<td>${worker.getLevel()}</td>
 				</tr>
 				<tr>
 					<th>Cost:</th>
-					<td>${nameIterator.next()}</td>
+					<td>${worker.getCost()}</td>
 				</tr>
 			</table>
 		</figure>

@@ -70,15 +70,8 @@ section {
 	border: 2px solid #888;
 }
 
-
 #brand, #app-switcher figure {
 	width: 15.4%;
-}
-
-@media only screen and (max-width: 1140px) {
-	#brand, #app-switcher figure {
-		width: 18%;
-	}
 }
 	
 #brand, section a, #table-heading {
@@ -233,6 +226,7 @@ li a:hover {
 
 .left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
 	width: 6.4vw;
+	height: 164px;
 	border-style: solid;
 	border-width: .26vw;
 	border-color: white;
@@ -249,4 +243,19 @@ table {
 
 #profile th {
 	text-align: left;
+}
+
+@media screen and (max-width: 2000px) {
+	
+	#brand, #app-switcher figure {
+		width: 16.5%;
+	}
+	
+	ul {
+		width: 35.9%;
+	}
+	
+	#profile {
+    	width: 38%;
+	}
 }

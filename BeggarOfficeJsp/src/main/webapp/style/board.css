@@ -42,3 +42,15 @@
 	font-size: .83vw;
 	margin-top: .7em;
 }
+
+@media screen and (max-width: 2000px) {
+	
+	.row {
+    	width: 95%;
+    	margin-bottom: 5.6%;
+	}
+	
+	.board-column1, .board-column2 {
+    	width: 48%;
+	}
+}

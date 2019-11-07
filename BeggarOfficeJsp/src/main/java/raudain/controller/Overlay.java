@@ -1,11 +1,6 @@
 package raudain.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -19,19 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import raudain.doa.DatabaseCredentials;
 import raudain.doa.WorkerDAO;
 import raudain.entity.Worker;
 
-/**
- * Servlet implementation class ListWorkersServlet
- */
 @WebServlet("/Overlay")
 public class Overlay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static Logger log = LogManager.getLogger(Overlay.class);
 
+	//JDBC API classes for data persistence
+		
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -51,14 +44,18 @@ public class Overlay extends HttpServlet {
 		if (request == null || response == null) {
 			log.info("Request or Response failed for doGet METHOD..");
 		}
+		String workerRoom = request.getParameter("id");
+		short room = Short.parseShort(workerRoom);
 		
 		WorkerDAO doa = new WorkerDAO();
 		ArrayList<String> nameList = new ArrayList<>();
 		nameList = doa.listNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
+		
 		Worker worker = new Worker();
-		worker = doa.getWorker();
+		worker = doa.getWorker(room);
+		request.setAttribute("worker", worker);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/overlay.jsp");
 		disp.forward(request, response);

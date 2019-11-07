@@ -1,6 +1,7 @@
 package raudain.doa;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -29,6 +30,7 @@ public class WorkerDAO {
 
 	// JDBC API classes for data persistence
 	private Connection connection = null;
+	private PreparedStatement preparedStatement = null;
 	private ResultSet resultSet = null;
 
 	/**
@@ -187,32 +189,20 @@ public class WorkerDAO {
 	 * @throws SQLException
 	 * 
 	 */
-	public Worker getWorker() {
-		
-		Statement statement = null;
+	public Worker getWorker(short room) {
 		
 		connection = DataConnection.createConnection();
-		
-		try {
-			statement = connection.createStatement();
-		} catch (final SQLException e) {
-			System.out.println("Error. Can not create the statement: " + e);
-		}
-		
-		final String searchString = "SELECT name FROM workers;";
-		try {
-			resultSet = statement.executeQuery(searchString);
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem with executeQuery: " + e);
-		}
-		
-		// Now we collect the data from the result in order to display them in
-		// the Java Server Page
-		
+		final String searchString = "SELECT * FROM workers WHERE room=?;";
 		Worker worker = new Worker();
 		try {
+			preparedStatement = connection.prepareStatement(searchString);
+			preparedStatement.setShort(1, room);
+			resultSet = preparedStatement.executeQuery();
+			
+			// Now we collect the data from the result in order to display them in
+			// the Java Server Page
+			
 			while (resultSet.next()) {
-				short room = resultSet.getShort("room");
 				worker.setRoom(room);
 
 				String name = resultSet.getString("name");
@@ -228,17 +218,13 @@ public class WorkerDAO {
 				worker.setLevel(level);
 
 				long cost = resultSet.getLong("cost");
-				worker.setCost(cost);
+				worker.setCost(cost);	
 			}
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem reading data: " + e);
+			DataConnection.closeConnection();
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
 		}
 		log.info("All workers retreived from Database");
-		try {
-			DataConnection.closeConnection();
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem with closing connection: " + e);
-		}
 		return worker;
 	}
 }

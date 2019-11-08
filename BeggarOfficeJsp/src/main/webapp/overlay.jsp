@@ -873,7 +873,7 @@
 	
 	<div id="worker-overlay">
 		<figure id="profile">
-			<img src="images/board/floor1/left-tammy.jpg">
+			<img src="images/${worker.getRoom()}.jpg">
 			<table>
 				<tr>
 					<th>Name:</th>

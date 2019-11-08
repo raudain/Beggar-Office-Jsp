@@ -28,6 +28,10 @@
   background-position: bottom center;
 }
 
+#tower, .tower-floor div {
+	border-color: #E2B452;
+}
+
 .middle-worker {
 	margin-left: 12.5%;
 }

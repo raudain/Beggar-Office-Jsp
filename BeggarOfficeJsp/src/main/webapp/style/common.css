@@ -197,9 +197,8 @@ li a:hover {
 	margin-top: 7%;
 }
 
-#tower, .tower-floor div {
+#tower, .tower-floor div, #worker-overlay, .left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
 	border-style: solid;
-	border-color: #E2B452;
 }
 
 .left-worker, .middle-worker, .right-worker {
@@ -210,10 +209,17 @@ li a:hover {
 	width: 56.55%;
 	background-color: #D7D7D7;
 	border-width: 10px;
-	border-style: solid;
 	border-color: #E2B452;
 	top: 33.31%;
 	z-index: 9;
+}
+
+.left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
+	width: 6.4vw;
+	height: 23.134vh;
+	border-width: .26vw;
+	border-color: white;
+	vertical-align: top;
 }
 
 #profile {
@@ -222,15 +228,6 @@ li a:hover {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
-}
-
-.left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
-	width: 6.4vw;
-	height: 164px;
-	border-style: solid;
-	border-width: .26vw;
-	border-color: white;
-	vertical-align: top;
 }
 
 table {
@@ -245,7 +242,7 @@ table {
 	text-align: left;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1500px) {
 	
 	#brand, #app-switcher figure {
 		width: 16.5%;

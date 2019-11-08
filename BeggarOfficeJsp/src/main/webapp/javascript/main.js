@@ -3,11 +3,12 @@ cbb.id = "cbb";
 cbb.src = "images/board/cork-board-bottom.jpg";
 document.body.appendChild(cbb);
 
-function setScrollCookie(cname, cvalue, exdays) {
+function setScrollCookie() {
 	var d = new Date();
-	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	d.setTime(d.getTime() + (24*60*60*1000));
 	var expires = "expires="+ d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	cvalue = window.scrollY;
+	document.cookie = "scrollheight=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {

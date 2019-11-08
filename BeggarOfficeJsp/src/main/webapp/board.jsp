@@ -860,8 +860,8 @@
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay" name="workerid" value="Roody Audain">
-						<input type="submit" name="id" value="3803" style="color: transparent; background-image:url('images/board/floor38/right-jeanette.jpg'); background-size: cover;" >
+					<form action="Overlay">
+						<input type="submit" name="id" value="3803" style="color: transparent; background-image:url('images/board/floor38/right-jeanette.jpg'); background-size: cover;">
 					</form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>

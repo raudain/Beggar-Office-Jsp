@@ -11,7 +11,7 @@ function setScrollCookie() {
 	document.cookie = "scrollheight=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
+function getScrollHeight(cname) {
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
 	var ca = decodedCookie.split(';');
@@ -27,5 +27,6 @@ function getCookie(cname) {
 	return "";
 }
 
-var scrollHeight = getCookie("scrollheight");
+var scrollHeight = getScrollHeight("scrollheight");
+document.cookie = "scrollheight=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 window.scrollTo(0, scrollHeight);

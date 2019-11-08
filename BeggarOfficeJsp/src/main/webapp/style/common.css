@@ -220,6 +220,8 @@ li a:hover {
 	border-width: .26vw;
 	border-color: white;
 	vertical-align: top;
+	color: transparent;
+	background-size: cover;
 }
 
 #profile {

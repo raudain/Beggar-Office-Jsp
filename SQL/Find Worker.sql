@@ -133,3 +133,5 @@ SELECT *
 FROM workers
 WHERE profession = 'Pilot'
 ORDER BY cost;
+
+SELECT name FROM workers;

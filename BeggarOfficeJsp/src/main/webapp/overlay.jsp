@@ -118,7 +118,7 @@
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">/form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
@@ -359,36 +359,26 @@
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2102" style="background-image:url('images/2102.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2103" style="background-image:url('images/2103.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 22</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2201" style="background-image:url('images/2201.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2202" style="background-image:url('images/2202.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2203" style="background-image:url('images/2203.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -397,42 +387,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 23</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2301" style="background-image:url('images/2301.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2302" style="background-image:url('images/2302.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2303" style="background-image:url('images/2303.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 24</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2401" style="background-image:url('images/2401.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2402" style="background-image:url('images/2402.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2403" style="background-image:url('images/2403.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -441,42 +419,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 25</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2501" style="background-image:url('images/2501.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2502" style="background-image:url('images/2502.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2503" style="background-image:url('images/2503.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 26</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2601" style="background-image:url('images/2601.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2602" style="background-image:url('images/2602.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2603" style="background-image:url('images/2603.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -485,42 +451,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 27</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2701" style="background-image:url('images/2701.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2702" style="background-image:url('images/2702.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2703" style="background-image:url('images/2703.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 28</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2801" style="background-image:url('images/2801.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2802" style="background-image:url('images/2802.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2803" style="background-image:url('images/2803.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -529,42 +483,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 29</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2901" style="background-image:url('images/2901.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2902" style="background-image:url('images/2902.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="2903" style="background-image:url('images/2903.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 30</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3001" style="background-image:url('images/3001.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3002" style="background-image:url('images/3002.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3003" style="background-image:url('images/3003.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -573,42 +515,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 31</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3101" style="background-image:url('images/3101.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3102" style="background-image:url('images/3102.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3103" style="background-image:url('images/3103.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 32</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3201" style="background-image:url('images/3201.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3202" style="background-image:url('images/3202.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3202" style="background-image:url('images/3203.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -617,42 +547,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 33</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3301" style="background-image:url('images/3301.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3302" style="background-image:url('images/3302.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3303" style="background-image:url('images/3303.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 34</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3401" style="background-image:url('images/3401.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3402" style="background-image:url('images/3402.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3403" style="background-image:url('images/3403.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -661,42 +579,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 35</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3501" style="background-image:url('images/3501.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3502" style="background-image:url('images/3502.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3503" style="background-image:url('images/3503.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 36</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3601" style="background-image:url('images/3601.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3602" style="background-image:url('images/3602.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3803" style="background-image:url('images/3603.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -705,42 +611,30 @@
 			<div class="board-column1">
 				<div class="floor-label">FLOOR 37</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3701" style="background-image:url('images/3701.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3702" style="background-image:url('images/3702.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3703" style="background-image:url('images/3703.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
 			<div class="board-column2">
 				<div class="floor-label">FLOOR 38</div>
 				<figure class="left-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3801" style="background-image:url('images/3801.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="middle-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3802" style="background-image:url('images/3802.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3803" style="background-image:url('images/3803.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>
@@ -752,28 +646,31 @@
 	<div id="worker-overlay">
 		<figure id="profile">
 			<img src="images/${worker.getRoom()}.jpg">
-			<table>
-				<tr>
-					<th>Name:</th>
-					<td>${worker.getName()}</td>
-				</tr>
-				<tr>
-					<th>Profession:</th>
-					<td>${worker.getProfession()}</td>
-				</tr>
-				<tr>
-					<th>Endurance:</th>
-					<td>${worker.getEndurance()}</td>
-				</tr>
-				<tr>
-					<th>Level:</th>
-					<td>${worker.getLevel()}</td>
-				</tr>
-				<tr>
-					<th>Cost:</th>
-					<td>${worker.getCost()}</td>
-				</tr>
-			</table>
+			<form action="Board">
+				<table>
+					<tr>
+						<th>Name:</th>
+						<td><input type="text" name="workername" value=${worker.getName()}></td>
+					</tr>
+					<tr>
+						<th>Profession:</th>
+						<td><input type="text" name="profession" value=${worker.getProfession()}></td>
+					</tr>
+					<tr>
+						<th>Endurance:</th>
+						<td><input type="text" name="endurance" value=${worker.getEndurance()}></td>
+					</tr>
+					<tr>
+						<th>Level:</th>
+						<td><input type="text" name="level" value=${worker.getLevel()}></td>
+					</tr>
+					<tr>
+						<th>Cost:</th>
+						<td><input type="text" name="cost" value=${worker.getCost()}></td>
+					</tr>
+				</table>
+				<input id="save" type="submit" value="Save">
+			</form>
 		</figure>
 	</div>
 </body>

@@ -3,7 +3,7 @@
  */
 var section = document.querySelector("section");
 
-//             Pane
+// Pane
 var pane = document.createElement("div");
 pane.id = "pane";
 if (isOverlayOn()) {
@@ -13,13 +13,17 @@ if (isOverlayOn()) {
 pane.addEventListener("click", returnFromOverlay);
 document.body.insertBefore(pane, section);
 
-function isOverlayOn() {	
-	if (document.baseURI == "http://localhost:8080/BeggarOfficeJsp/Overlay") {
+function isOverlayOn() {
+	var documentlink = document.baseURI;
+	var linkString = documentlink.toString();
+	var searchSeed = "http://localhost:8080/BeggarOfficeJsp/Overlay";
+	var pos = linkString.indexOf(searchSeed);
+	if (pos == 0) {
 		return true;
 	}
 }
 
-//                   Brand
+// Brand
 var brand = document.createElement("div");
 brand.id = "brand";
 brand.addEventListener("click", appSwitcherOn);
@@ -35,7 +39,8 @@ brand.appendChild(logo);
 var caret = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 caret.setAttribute("width", 16);
 caret.setAttribute("height", 16);
-//caret.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+// caret.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink",
+// "http://www.w3.org/1999/xlink");
 var lines = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
 var points = "0,0 8,8 8,8 16,0";
 lines.setAttribute('points', points);
@@ -43,15 +48,14 @@ caret.appendChild(lines);
 caret.innerHTML += "Sorry, your browser does not support inline SVG.";
 brand.appendChild(caret);
 
-/* 
- *	***************** Application Switcher ****************
+/*
+ * ***************** Application Switcher ****************
  */
 var appSwitcher = document.createElement("div");
 appSwitcher.id = "app-switcher";
 document.body.appendChild(appSwitcher);
 
-
-function appSwitcherOn() {	
+function appSwitcherOn() {
 	appSwitcher.style.display = "block";
 	appSwitcher.style.zIndex = 9;
 	pane.style.zIndex = 2;
@@ -67,7 +71,7 @@ function returnFromOverlay() {
 	}
 }
 
-//                       Virtual Beggar
+// Virtual Beggar
 
 // VIRTUAL BEGGAR LINK
 var beggarLink = document.createElement("a");
@@ -89,7 +93,7 @@ var beggarCaptionText = document.createTextNode("Change Inc");
 beggarCaption.appendChild(beggarCaptionText);
 beggarFigure.appendChild(beggarCaption);
 
-//                       Calendar
+// Calendar
 
 // CALENDAR LINK
 var calendarLink = document.createElement("a");
@@ -108,7 +112,7 @@ calendarFigure.appendChild(calendarIcon);
 // Day of The Week
 var dayOfTheWeek = document.createElement("div");
 dayOfTheWeek.id = "dayOfWeek";
-var todaysWeekDay= todaysDate.getDay()
+var todaysWeekDay = todaysDate.getDay()
 var dayString = getWeekDayString(todaysWeekDay);
 var dayOfTheWeekText = document.createTextNode(dayString);
 dayOfTheWeek.appendChild(dayOfTheWeekText);
@@ -155,7 +159,7 @@ var calendarCaptionText = document.createTextNode("Calendar");
 calendarCaption.appendChild(calendarCaptionText);
 calendarFigure.appendChild(calendarCaption);
 
-//                       Event Registration Portal
+// Event Registration Portal
 
 // EVENT REGISTRATION PORTAL LINK
 var portalLink = document.createElement("a");
@@ -177,7 +181,7 @@ var portalCaptionText = document.createTextNode("Event Portal");
 portalCaption.appendChild(portalCaptionText);
 portalFigure.appendChild(portalCaption);
 
-//                     Home Property
+// Home Property
 
 // HOME PROPERTY LINK
 var propertyLink = document.createElement("a");

@@ -22,10 +22,14 @@ body {
 	bottom: 0;
 }
 
-section *, #cork-board {
+section, .board-column1, .board-column2 {
 	font-family: Arial Black;
+}
+
+section {
 	text-decoration: none;
 }
+
 
 section, #tower, #cork-board, .below-top, #big-table, #cbb {
 	width: 76.6vw;
@@ -83,8 +87,11 @@ section {
 	padding-left: 1%;
 }
 
-#logo {
+#logo, form {
 	display: inline;
+}
+
+#logo {
 	padding-right: 3%;
 	padding-left: 1%;
 	font-size: 1.8vw;
@@ -127,6 +134,7 @@ li a,  .floor-label {
 li a {
 	display: block;
 	padding: 15px;
+	text-decoration: none;
 }
 
 li a:hover {
@@ -214,7 +222,7 @@ li a:hover {
 	z-index: 9;
 }
 
-.left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
+.left-worker input, .middle-worker input, .right-worker input, #profile img {
 	width: 6.4vw;
 	height: 23.134vh;
 	border-width: .26vw;
@@ -231,7 +239,9 @@ li a:hover {
 	top: 0px;
 	bottom: 0px;
 }
-
+form {
+	
+}
 table {
 	border-spacing: 22px;
 }
@@ -244,6 +254,12 @@ table {
 	text-align: left;
 }
 
+#save {
+	width: 100%;
+	border-color: rgb(129, 191, 119);
+	background-image: linear-gradient(rgb(177,237,165), rgb(164,234,148));
+}
+
 @media screen and (max-width: 1500px) {
 	
 	#brand, #app-switcher figure {
@@ -254,7 +270,16 @@ table {
 		width: 35.9%;
 	}
 	
+	.left-worker input, .middle-worker input, .right-worker input, #profile img {
+    	height: 18vh;
+	}
+	
 	#profile {
-    	width: 38%;
+    	width: 48.7%;
+    	height: 54.5%;
+	}
+	
+	table {
+    	border-spacing: 1.2vh;
 	}
 }

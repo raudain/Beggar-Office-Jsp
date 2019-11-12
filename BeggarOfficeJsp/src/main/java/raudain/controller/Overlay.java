@@ -44,6 +44,7 @@ public class Overlay extends HttpServlet {
 		if (request == null || response == null) {
 			log.info("Request or Response failed for doGet METHOD..");
 		}
+		
 		String workerRoom = request.getParameter("room");
 		short room = Short.parseShort(workerRoom);
 		

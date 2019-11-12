@@ -634,9 +634,7 @@
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 				<figure class="right-worker">
-					<form action="Overlay">
-						<input type="submit" name="room" value="3803" style="background-image:url('images/3803.jpg');">
-					</form>
+					<form action="Overlay"></form>
 					<figcaption>${nameIterator.next()}</figcaption>
 				</figure>
 			</div>

@@ -32,25 +32,33 @@ var scrollHeight = getScrollHeight("scrollheight");
 document.cookie = "scrollheight=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 window.scrollTo(0, scrollHeight);
 
-inputNodeList = document.querySelectorAll("input");
+var formElements = document.forms;
 var i = 0;
 var imageInput;
 var roomNumber = 100;
 var imageURL = "images/" + roomNumber +".jpg";
-while (i < inputNodeList.length) {
-	imageInput = inputNodeList[i];
+while (i < formElements.length) {
+	imageInput = document.createElement("input");
 	imageInput.type = "submit";
 	imageInput.name = "room";
 	roomNumber = getNextRoom(roomNumber);
+	imageInput.value = roomNumber;
 	imageUrl = "images/" + roomNumber +".jpg";
 	imageInput.style.backgroundImage = "url('" + imageUrl + "')";
+	var form = formElements[i]
+	form.appendChild(imageInput);
 	++i;
-//document.body.appendChild(cbb);
 }
-//<input type="submit" name="room" value="102" style="background-image:url('images/102.jpg');">
 
 function getNextRoom(room) {
-	
-	var nextRoom = ++room;
+	var roomString = room.toString();
+	var positionIndex = roomString.length - 1;
+	var position = roomString.charAt(positionIndex);
+	var rightPosition = 3;
+	if (position < rightPosition) {
+		var nextRoom = ++room;
+	} else {
+		var nextRoom = room + 98;
+	}
 	return nextRoom;
 }

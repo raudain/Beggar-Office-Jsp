@@ -62,6 +62,19 @@ public class Board extends HttpServlet {
 		disp.forward(request, response);
 		
 		String name = request.getParameter("workername");
+		String profession = request.getParameter("profession");
+		String endurance = request.getParameter("endurance");
+		String workerLevel = request.getParameter("level");
+		Byte level = Byte.parseByte(workerLevel);
+		String workerCost = request.getParameter("cost");
+		Long cost = Long.parseLong(workerCost);
+		
+		Worker updatedWorker = new Worker();
+		updatedWorker.setName(name);
+		updatedWorker.setProfession(profession);
+		updatedWorker.setEndurance(endurance);
+		updatedWorker.setLevel(level);
+		updatedWorker.setCost(cost);
 	}
 
 	/**

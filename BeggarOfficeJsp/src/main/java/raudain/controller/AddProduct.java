@@ -93,11 +93,6 @@ public class AddProduct extends HttpServlet {
 
         final RequestDispatcher disp = request.getRequestDispatcher("/addingOk.jsp");
         disp.forward(request, response);
-
-
-
-
-
     }
 
     /**

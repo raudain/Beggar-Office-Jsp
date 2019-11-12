@@ -7,8 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import raudain.entity.Worker;
 
@@ -20,7 +23,7 @@ import raudain.entity.Worker;
  * database. The interface between the application and event data persisting in
  * the database. <br/>
  * 
- * @author krishna.kishore
+ * @author Roody Audain
  * 
  */
 public class WorkerDAO {
@@ -31,17 +34,19 @@ public class WorkerDAO {
 	// JDBC API classes for data persistence
 	private Connection connection = null;
 	private PreparedStatement preparedStatement = null;
+	private FERSDbQuery query;
 	private ResultSet resultSet = null;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all of the worker names in the worker Table in the Database <br/>
+	 * DAO for displaying all of the worker names in the worker Table in the
+	 * Database <br/>
 	 * 
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the worker names from
-	 * the worker table. <br/>
+	 * Prepare a statement object using the connection that gets all the worker
+	 * names from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Using a WHILE LOOP, store each record in the result set returned in a Worker
 	 * object by setting the values of the Event attributes as the corresponding
@@ -55,27 +60,27 @@ public class WorkerDAO {
 	 * 
 	 */
 	public ArrayList<Worker> listWorkers() {
-		
+
 		Statement statement = null;
-		
+
 		connection = DataConnection.createConnection();
-		
+
 		try {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
 			System.out.println("Error. Can not create the statement: " + e);
 		}
-		
+
 		final String searchString = "SELECT * FROM workers;";
 		try {
 			resultSet = statement.executeQuery(searchString);
 		} catch (final SQLException e) {
 			System.out.println("Error. Problem with executeQuery: " + e);
 		}
-		
+
 		// Now we collect the data from the result in order to display them in
 		// the Java Server Page
-		
+
 		ArrayList<Worker> workerList = new ArrayList<Worker>();
 		try {
 			while (resultSet.next()) {
@@ -112,7 +117,7 @@ public class WorkerDAO {
 		}
 		return workerList;
 	}
-	
+
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -120,8 +125,8 @@ public class WorkerDAO {
 	 * 
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the workers from
-	 * the worker table. <br/>
+	 * Prepare a statement object using the connection that gets all the workers
+	 * from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 * 
@@ -132,27 +137,27 @@ public class WorkerDAO {
 	 * 
 	 */
 	public ArrayList<String> listNames() {
-		
+
 		Statement statement = null;
-		
+
 		connection = DataConnection.createConnection();
-		
+
 		try {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
 			System.out.println("Error. Can not create the statement: " + e);
 		}
-		
+
 		final String searchString = "SELECT name FROM workers;";
 		try {
 			resultSet = statement.executeQuery(searchString);
 		} catch (final SQLException e) {
 			System.out.println("Error. Problem with executeQuery: " + e);
 		}
-		
+
 		// Now we collect the data from the result in order to display them in
 		// the Java Server Page
-		
+
 		ArrayList<String> namesList = new ArrayList<String>();
 		try {
 			while (resultSet.next()) {
@@ -170,7 +175,7 @@ public class WorkerDAO {
 		}
 		return namesList;
 	}
-	
+
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -178,8 +183,8 @@ public class WorkerDAO {
 	 * 
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the workers from
-	 * the worker table. <br/>
+	 * Prepare a statement object using the connection that gets all the workers
+	 * from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 * 
@@ -190,7 +195,7 @@ public class WorkerDAO {
 	 * 
 	 */
 	public Worker getWorker(short room) {
-		
+
 		connection = DataConnection.createConnection();
 		final String searchString = "SELECT * FROM workers WHERE room=?;";
 		Worker worker = new Worker();
@@ -198,10 +203,10 @@ public class WorkerDAO {
 			preparedStatement = connection.prepareStatement(searchString);
 			preparedStatement.setShort(1, room);
 			resultSet = preparedStatement.executeQuery();
-			
+
 			// Now we collect the data from the result in order to display them in
 			// the Java Server Page
-			
+
 			while (resultSet.next()) {
 				worker.setRoom(room);
 
@@ -218,7 +223,7 @@ public class WorkerDAO {
 				worker.setLevel(level);
 
 				long cost = resultSet.getLong("cost");
-				worker.setCost(cost);	
+				worker.setCost(cost);
 			}
 			DataConnection.closeConnection();
 		} catch (final SQLException exception) {
@@ -226,5 +231,37 @@ public class WorkerDAO {
 		}
 		log.info("All workers retreived from Database");
 		return worker;
+	}
+
+	/**
+	 * This method updates a worker
+	 * 
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that get a worker from the
+	 * worker table for provided worker id. <br/>
+	 * Execute the SQL statement and keep a reference to the result set. <br/>
+	 * Update the event object by calling getUpdateEventSession method Event is
+	 * updated in database. <br/>
+	 * Return the status of executed query. <br/>
+	 * 
+	 * @param updateEvent
+	 * @return
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
+	public void updateWorker(Worker updateWorker) {
+
+		// Create a new connection to the database
+		connection = DataConnection.createConnection();
+
+		try {
+			preparedStatement = connection.prepareStatement("UPDATE `mydb`.`workers` SET `name` = 'Roody' WHERE (`room` = '101');");
+			preparedStatement.executeUpdate();
+			connection.close();
+		} catch (final SQLException exception) {
+			exception.printStackTrace();
+			return;
+		}
 	}
 }

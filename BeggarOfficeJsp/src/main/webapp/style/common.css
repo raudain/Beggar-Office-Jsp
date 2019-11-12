@@ -262,12 +262,16 @@ table {
 
 @media screen and (max-width: 1500px) {
 	
-	#brand, #app-switcher figure {
+	#brand {
 		width: 16.5%;
 	}
 	
 	ul {
 		width: 35.9%;
+	}
+	
+	#app-switcher {
+    	width: 15.3%;
 	}
 	
 	.left-worker input, .middle-worker input, .right-worker input, #profile img {

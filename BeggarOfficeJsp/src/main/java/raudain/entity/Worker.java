@@ -21,11 +21,6 @@ public class Worker implements Serializable {
         return room;
     }
 
-    @Override
-	public String toString() {
-		return "Worker [room=" + room + ", name=" + name + ", profession=" + profession + ", endurance=" + endurance
-				+ ", level=" + level + ", cost=" + cost + "]";
-	}
 
 	/**
      * @param room the room to set
@@ -114,5 +109,11 @@ public class Worker implements Serializable {
 
         this.cost = cost;
     }
+    
+    @Override
+	public String toString() {
+		return "Worker [room=" + room + ", name=" + name + ", profession=" + profession + ", endurance=" + endurance
+				+ ", level=" + level + ", cost=" + cost + "]";
+	}
 
 }

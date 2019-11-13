@@ -8,6 +8,6 @@
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
 	<bean id="SqlBean" class="raudain.doa.DatabaseQuery">
-		<property name="updateWorker" value="UPDATE `mydb`.`workers` SET `name` = 'Roody' WHERE (`room` = '101');"></property>
+		<property name="updateWorker" value="UPDATE `mydb`.`workers` SET `name` = ?, `profession` = ?, `endurance` = ?, `level` = ?, `cost` = ? WHERE (`room` = ?);"></property>
  	</bean>
 </beans>

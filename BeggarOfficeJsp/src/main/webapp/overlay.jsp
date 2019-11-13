@@ -646,7 +646,8 @@
 	<div id="worker-overlay">
 		<figure id="profile">
 			<img src="images/${worker.getRoom()}.jpg">
-			<form action="UpdateWorker">
+			<form action="update.htm">
+				<input type="hidden" name="room" value=${worker.getRoom()}/>
 				<table>
 					<tr>
 						<th>Name:</th>

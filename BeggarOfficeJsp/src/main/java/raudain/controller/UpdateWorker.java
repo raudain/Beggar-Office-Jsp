@@ -44,6 +44,9 @@ public class UpdateWorker extends HttpServlet {
 			log.info("request or response not valid in updateWorker METHOD ");
 		}
 
+		String workerID = request.getParameter("room");
+		String workerRoom = workerID.replace("/", "");
+		Short room = Short.parseShort(workerRoom);
 		String name = request.getParameter("workername");
 		String profession = request.getParameter("profession");
 		String endurance = request.getParameter("endurance");
@@ -53,6 +56,7 @@ public class UpdateWorker extends HttpServlet {
 		Long cost = Long.parseLong(workerCost);
 		
 		Worker updatedWorker = new Worker();
+		updatedWorker.setRoom(room);
 		updatedWorker.setName(name);
 		updatedWorker.setProfession(profession);
 		updatedWorker.setEndurance(endurance);
@@ -62,6 +66,7 @@ public class UpdateWorker extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		doa.updateWorker(updatedWorker);
+		
 		ArrayList<String> nameList = new ArrayList<>();
 		nameList = doa.listNames();
 		ListIterator<String> nameIterator = nameList.listIterator();

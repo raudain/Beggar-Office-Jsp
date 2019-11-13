@@ -646,7 +646,7 @@
 	<div id="worker-overlay">
 		<figure id="profile">
 			<img src="images/${worker.getRoom()}.jpg">
-			<form action="Board">
+			<form action="UpdateWorker">
 				<table>
 					<tr>
 						<th>Name:</th>

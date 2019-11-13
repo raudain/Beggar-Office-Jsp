@@ -28,7 +28,7 @@ public class Overlay extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing ...<br/>
+	 * This method is for showing the worker profile overlay<br/>
 	 * 
 	 * @return void
 	 * 

@@ -3,14 +3,14 @@ package raudain.doa;
 /**
  * Helper class for externalization of queries
  */
-public class FERSDbQuery {
+public class DatabaseQuery {
 	
 	// SQL queries for EVENTDAO
 	private String searchEvent = "";
 	private String searchByEventName = "";
 	private String searchEventAsc = "";
 	private String searchEventDesc = "";
-	private String updateEvent = "";
+	private String updateWorker = "";
 	private String checkEvent = "";
 	private String updateDeleteEvent = "";
 	private String getEvent = "";

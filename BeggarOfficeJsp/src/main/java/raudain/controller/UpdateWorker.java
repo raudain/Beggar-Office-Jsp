@@ -1,11 +1,6 @@
 package raudain.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -19,23 +14,21 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import raudain.doa.DatabaseCredentials;
 import raudain.doa.WorkerDAO;
 import raudain.entity.Worker;
 
-/**
- * Servlet implementation class ListWorkersServlet
- */
-@WebServlet("/Board")
-public class Board extends HttpServlet {
+@WebServlet("/update.htm")
+public class UpdateWorker extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static Logger log = LogManager.getLogger(Board.class);
+	private static Logger log = LogManager.getLogger(UpdateWorker.class);
 
+	//JDBC API classes for data persistence
+		
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing ...<br/>
+	 * This method updates a worker <br/>
 	 * 
 	 * @return void
 	 * 
@@ -48,16 +41,32 @@ public class Board extends HttpServlet {
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
 
 		if (request == null || response == null) {
-			log.info("Request or Response failed for doGet METHOD..");
+			log.info("request or response not valid in updateWorker METHOD ");
 		}
+
+		String name = request.getParameter("workername");
+		String profession = request.getParameter("profession");
+		String endurance = request.getParameter("endurance");
+		String workerLevel = request.getParameter("level");
+		Byte level = Byte.parseByte(workerLevel);
+		String workerCost = request.getParameter("cost");
+		Long cost = Long.parseLong(workerCost);
+		
+		Worker updatedWorker = new Worker();
+		updatedWorker.setName(name);
+		updatedWorker.setProfession(profession);
+		updatedWorker.setEndurance(endurance);
+		updatedWorker.setLevel(level);
+		updatedWorker.setCost(cost);
 		
 		WorkerDAO doa = new WorkerDAO();
 		
+		doa.updateWorker(updatedWorker);
 		ArrayList<String> nameList = new ArrayList<>();
 		nameList = doa.listNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
-
+		
 		final RequestDispatcher disp = request.getRequestDispatcher("/board.jsp");
 		try {
 			disp.forward(request, response);

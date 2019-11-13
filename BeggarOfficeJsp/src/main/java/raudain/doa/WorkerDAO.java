@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -34,9 +32,16 @@ public class WorkerDAO {
 	// JDBC API classes for data persistence
 	private Connection connection = null;
 	private PreparedStatement preparedStatement = null;
-	private FERSDbQuery query;
+	private FERSDbQuery sqlScripts;
 	private ResultSet resultSet = null;
 
+	// Default constructor for injecting Spring dependencies for SQL queries
+	public WorkerDAO() {
+		try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
+			sqlScripts = (FERSDbQuery) context.getBean("SqlBean");
+		}
+	}
+	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -243,20 +248,17 @@ public class WorkerDAO {
 	 * Execute the SQL statement and keep a reference to the result set. <br/>
 	 * Update the event object by calling getUpdateEventSession method Event is
 	 * updated in database. <br/>
-	 * Return the status of executed query. <br/>
 	 * 
-	 * @param updateEvent
-	 * @return
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
+	 * @param A worker that need to be updated
+	 * @return void
 	 */
-	public void updateWorker(Worker updateWorker) {
+	public void updateWorker(Worker updatedWorker) {
 
 		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 
 		try {
-			preparedStatement = connection.prepareStatement("UPDATE `mydb`.`workers` SET `name` = 'Roody' WHERE (`room` = '101');");
+			preparedStatement = connection.prepareStatement(sqlScripts.getUpdateEvent());
 			preparedStatement.executeUpdate();
 			connection.close();
 		} catch (final SQLException exception) {

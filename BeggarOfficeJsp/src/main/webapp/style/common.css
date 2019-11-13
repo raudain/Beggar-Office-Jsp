@@ -3,6 +3,7 @@
 :root {
 	--section-margin: 3.4%;
 	--section-background-color: #F4EAC9;
+	--profile-spacing: 2vh;
 }
 
 body {
@@ -233,8 +234,8 @@ li a:hover {
 }
 
 #profile {
-	width: 38.8%;
-	height: 70%;
+	width: 42.5%;
+	height: 82.5%;
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -243,7 +244,7 @@ form {
 	
 }
 table {
-	border-spacing: 22px;
+	border-spacing: var(--profile-spacing);
 }
 
 #profile table {
@@ -256,8 +257,9 @@ table {
 
 #save {
 	width: 100%;
+	margin-top: var(--profile-spacing);
 	border-color: rgb(129, 191, 119);
-	background-image: linear-gradient(rgb(177,237,165), rgb(164,234,148));
+	background-color: rgb(164,234,148);
 }
 
 @media screen and (max-width: 1500px) {

@@ -18,7 +18,7 @@
   margin-top: 4.8%;
 }
 
-.tower-floor div {
+.tower-floor div, .tower-floor form {
   width: 25%;
   height: 249px;
   border-width: 10px;

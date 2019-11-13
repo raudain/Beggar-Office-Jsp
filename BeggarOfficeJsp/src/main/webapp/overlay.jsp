@@ -647,33 +647,34 @@
 		<figure id="profile">
 			<img src="images/${worker.getRoom()}.jpg">
 			<form action="update.htm">
-				<input type="hidden" name="room" value=${worker.getRoom()}/>
+				<input type="hidden" name="room" value="${worker.getRoom()}"/>
 				<table>
 					<tr>
 						<th>Name:</th>
-						<td><input type="text" name="workername" value=${worker.getName()}></td>
+						<td><input type="text" name="workername" value="${worker.getName()}"></td>
 					</tr>
 					<tr>
 						<th>Profession:</th>
-						<td><input type="text" name="profession" value=${worker.getProfession()}></td>
+						<td><input type="text" name="profession" value="${worker.getProfession()}"></td>
 					</tr>
 					<tr>
 						<th>Endurance:</th>
-						<td><input type="text" name="endurance" value=${worker.getEndurance()}></td>
+						<td><input type="text" name="endurance" value="${worker.getEndurance()}"></td>
 					</tr>
 					<tr>
 						<th>Level:</th>
-						<td><input type="text" name="level" value=${worker.getLevel()}></td>
+						<td><input type="text" name="level" value="${worker.getLevel()}"></td>
 					</tr>
 					<tr>
 						<th>Cost:</th>
-						<td><input type="text" name="cost" value=${worker.getCost()}></td>
+						<td><input type="text" name="cost" value="${worker.getCost()}"></td>
 					</tr>
 				</table>
 				<input id="save" type="submit" value="Save">
 			</form>
 		</figure>
 	</div>
+	
 </body>
 
 </html>

@@ -32,13 +32,13 @@ public class WorkerDAO {
 	// JDBC API classes for data persistence
 	private Connection connection = null;
 	private PreparedStatement preparedStatement = null;
-	private FERSDbQuery sqlScripts;
+	private DatabaseQuery sqlScripts;
 	private ResultSet resultSet = null;
 
 	// Default constructor for injecting Spring dependencies for SQL queries
 	public WorkerDAO() {
 		try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
-			sqlScripts = (FERSDbQuery) context.getBean("SqlBean");
+			sqlScripts = (DatabaseQuery) context.getBean("SqlBean");
 		}
 	}
 	
@@ -258,7 +258,8 @@ public class WorkerDAO {
 		connection = DataConnection.createConnection();
 
 		try {
-			preparedStatement = connection.prepareStatement(sqlScripts.getUpdateEvent());
+			String sqlScript = sqlScripts.getUpdateEvent();
+			preparedStatement = connection.prepareStatement(sqlScript);
 			preparedStatement.executeUpdate();
 			connection.close();
 		} catch (final SQLException exception) {

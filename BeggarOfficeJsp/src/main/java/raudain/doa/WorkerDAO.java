@@ -20,9 +20,9 @@ import raudain.entity.Worker;
  * requested, updated, and processed in the application and maintained in the
  * database. The interface between the application and event data persisting in
  * the database. <br/>
- * 
+ *
  * @author Roody Audain
- * 
+ *
  */
 public class WorkerDAO {
 
@@ -41,13 +41,13 @@ public class WorkerDAO {
 			sqlScripts = (DatabaseQuery) context.getBean("SqlBean");
 		}
 	}
-	
+
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
 	 * DAO for displaying all of the worker names in the worker Table in the
 	 * Database <br/>
-	 * 
+	 *
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
 	 * Prepare a statement object using the connection that gets all the worker
@@ -57,12 +57,12 @@ public class WorkerDAO {
 	 * object by setting the values of the Event attributes as the corresponding
 	 * values in the Result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
-	 * 
+	 *
 	 * @return Collection of Events
-	 * 
+	 *
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
-	 * 
+	 *
 	 */
 	public ArrayList<Worker> listWorkers() {
 
@@ -127,19 +127,19 @@ public class WorkerDAO {
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
 	 * DAO for displaying all the workers in the worker Table in the Database <br/>
-	 * 
+	 *
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
 	 * Prepare a statement object using the connection that gets all the workers
 	 * from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
-	 * 
+	 *
 	 * @return Collection of Events
-	 * 
+	 *
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
-	 * 
+	 *
 	 */
 	public ArrayList<String> listNames() {
 
@@ -185,19 +185,19 @@ public class WorkerDAO {
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
 	 * DAO for displaying all the workers in the worker Table in the Database <br/>
-	 * 
+	 *
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
 	 * Prepare a statement object using the connection that gets all the workers
 	 * from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
-	 * 
+	 *
 	 * @return Collection of Events
-	 * 
+	 *
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
-	 * 
+	 *
 	 */
 	public Worker getWorker(short room) {
 
@@ -240,7 +240,7 @@ public class WorkerDAO {
 
 	/**
 	 * This method updates a worker
-	 * 
+	 *
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
 	 * Prepare a statement object using the connection that get a worker from the
@@ -248,7 +248,7 @@ public class WorkerDAO {
 	 * Execute the SQL statement and keep a reference to the result set. <br/>
 	 * Update the event object by calling getUpdateEventSession method Event is
 	 * updated in database. <br/>
-	 * 
+	 *
 	 * @param A worker that need to be updated
 	 * @return void
 	 */
@@ -257,14 +257,25 @@ public class WorkerDAO {
 		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 
+		short room = updatedWorker.getRoom();
+		String name = updatedWorker.getName();
+		String profession = updatedWorker.getProfession();
+		String endurance = updatedWorker.getEndurance();
+		Byte level = updatedWorker.getLevel();
+		Long cost = updatedWorker.getCost();
 		try {
-			String sqlScript = sqlScripts.getUpdateEvent();
-			preparedStatement = connection.prepareStatement(sqlScript);
+			// Prepare a statement object using the connection for provided worker room
+			preparedStatement = connection.prepareStatement(sqlScripts.getUpdateWorker());
+			preparedStatement.setString(1, name);
+			preparedStatement.setString(2, profession);
+			preparedStatement.setString(3, endurance);
+			preparedStatement.setByte(4, level);
+			preparedStatement.setLong(5, cost);;
+			preparedStatement.setInt(6, room);
 			preparedStatement.executeUpdate();
 			connection.close();
 		} catch (final SQLException exception) {
 			exception.printStackTrace();
-			return;
 		}
 	}
 }

@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 import raudain.doa.WorkerDAO;
 import raudain.entity.Worker;
 
-@WebServlet("/Overlay")
+@WebServlet("/overlay.htm")
 public class Overlay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -49,7 +49,7 @@ public class Overlay extends HttpServlet {
 		short room = Short.parseShort(workerRoom);
 		
 		WorkerDAO doa = new WorkerDAO();
-		ArrayList<String> nameList = new ArrayList<>();
+		ArrayList<String> nameList = new ArrayList<String>();
 		nameList = doa.listNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);

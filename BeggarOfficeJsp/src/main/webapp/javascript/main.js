@@ -1,9 +1,13 @@
 var formElements = document.forms;
+var workerClassNames = ".left-worker, .middle-worker, .right-worker";
+var workerNodeList = document.querySelectorAll(workerClassNames);
 var i = 0;
 var imageInput;
 var roomNumber = 100;
 var imageURL = "images/" + roomNumber +".jpg";
-while (i < formElements.length) {
+var workerElement;
+var caption;
+while (i < workerNodeList.length) {
 	imageInput = document.createElement("input");
 	imageInput.type = "submit";
 	imageInput.name = "room";
@@ -11,8 +15,9 @@ while (i < formElements.length) {
 	imageInput.value = roomNumber;
 	imageUrl = "images/" + roomNumber +".jpg";
 	imageInput.style.backgroundImage = "url('" + imageUrl + "')";
-	var form = formElements[i]
-	form.appendChild(imageInput);
+	workerElement = workerNodeList[i];
+	caption = workerElement.getElementsByTagName("figcaption")[0];
+	workerElement.insertBefore(imageInput, caption);
 	++i;
 }
 

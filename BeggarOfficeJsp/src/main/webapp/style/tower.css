@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
+
 #tower, .tower-floor div {
 	box-sizing: border-box;
+}
+
+#tower, .tower-floor div {
+	border-color: #E2B452;
 }
 
 #tower {
@@ -18,18 +23,26 @@
   margin-top: 4.8%;
 }
 
-.tower-floor div, .tower-floor form {
+.tower-floor div, input {
+  background-color: #B6E6F5;
+}
+
+.tower-floor div {
   width: 25%;
   height: 249px;
   border-width: 10px;
-  background-color: #B6E6F5;
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;
   background-position: bottom center;
 }
 
-#tower, .tower-floor div {
-	border-color: #E2B452;
+.left-worker input, .middle-worker input, .right-worker input, #profile img {
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-size: 6.8vh 13.6vh;
+    background-position: bottom center;
 }
 
 .middle-worker {

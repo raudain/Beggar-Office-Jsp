@@ -257,6 +257,7 @@ public class WorkerDAO {
 		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 
+		String sqlScript = sqlScripts.getUpdateWorker();
 		short room = updatedWorker.getRoom();
 		String name = updatedWorker.getName();
 		String profession = updatedWorker.getProfession();
@@ -265,7 +266,7 @@ public class WorkerDAO {
 		Long cost = updatedWorker.getCost();
 		try {
 			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(sqlScripts.getUpdateWorker());
+			preparedStatement = connection.prepareStatement(sqlScript);
 			preparedStatement.setString(1, name);
 			preparedStatement.setString(2, profession);
 			preparedStatement.setString(3, endurance);

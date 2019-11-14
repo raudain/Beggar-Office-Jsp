@@ -223,16 +223,6 @@ li a:hover {
 	z-index: 9;
 }
 
-.left-worker input, .middle-worker input, .right-worker input, #profile img {
-	width: 6.4vw;
-	height: 23.134vh;
-	border-width: .26vw;
-	border-color: white;
-	vertical-align: top;
-	color: transparent;
-	background-size: cover;
-}
-
 #profile {
 	width: 42.5%;
 	height: 82.5%;

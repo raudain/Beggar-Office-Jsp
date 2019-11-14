@@ -68,7 +68,7 @@ room,name,profession,endurance,level,cost
 2301,Willie,"Computer Engineer",Hard-working,1,40000000
 2302,Karen,Journalist,Tireless,20,125000000
 2303,John,Pilot,Hard-working,1,260000000
-2401,Terry,Businessman,Tireless,20,NULL
+2401,Terry,Businessman,Tireless,20,1700
 2402,Wanda,"Computer Engineer",Tireless,1,520000000
 2403,Jeffery,Lawyer,Tireless,20,520000000
 2501,Justin,Doctor,Tireless,20,520000000
@@ -77,10 +77,10 @@ room,name,profession,endurance,level,cost
 2601,Dana,Lawyer,Hard-working,20,40000000
 2602,Ronnie,Santa,Hard-working,20,40000000
 2603,Jonathan,"Computer Engineer",Hard-working,1,40000000
-2701,Timothy,Businessman,Tireless,20,NULL
+2701,Timothy,Businessman,Tireless,20,1700
 2702,Peter,Politician,Tireless,20,5800000000
 2703,Willie,Doctor,Tireless,20,520000000
-2801,Nicholas,Businessman,Tireless,20,NULL
+2801,Nicholas,Businessman,Tireless,20,1700
 2802,Diane,Lawyer,Tireless,20,520000000
 2803,Todd,Santa,Hard-working,20,40000000
 2901,Frederick,Lawyer,Tireless,20,520000000
@@ -94,11 +94,11 @@ room,name,profession,endurance,level,cost
 3103,Chad,"Computer Engineer",Hard-working,20,40000000
 3201,Melvin,Scientist,Tireless,20,125000000
 3202,Howard,"Computer Engineer",Hard-working,1,40000000
-3203,Darlene,Businessman,Tireless,18,NULL
+3203,Darlene,Businessman,Tireless,18,1700
 3301,Ronnie,Lawyer,Tireless,14,520000000
 3302,Jeffrey,Doctor,Tireless,1,520000000
 3303,Amanda,Doctor,Tireless,1,520000000
-3401,April,Businessman,Tireless,6,NULL
+3401,April,Businessman,Tireless,6,1700
 3402,Bradley,Lawyer,Tireless,8,520000000
 3403,Leonard,Pilot,Hard-working,1,260000000
 3501,Lloyd,Politician,Hard-working,1,260000000

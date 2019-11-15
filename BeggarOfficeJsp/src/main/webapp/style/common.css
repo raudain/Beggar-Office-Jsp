@@ -79,7 +79,7 @@ section {
 	width: 15.4%;
 }
 	
-#brand, section a, #table-heading {
+#brand, section a {
 	background-color: var(--section-background-color);
 }
 
@@ -124,10 +124,6 @@ li {
 	margin-right: 2%;
 }
 
-li a, td {
-	color: #9C8E87;
-}
-
 li a,  .floor-label {
 	font-size: 1.1vw;
 }
@@ -135,6 +131,7 @@ li a,  .floor-label {
 li a {
 	display: block;
 	padding: 15px;
+	color: #9C8E87;
 	text-decoration: none;
 }
 
@@ -180,14 +177,16 @@ li a:hover {
 	font-size: 13px;
     font-weight: 400;
     color: #333;
-    text-align: center;
     white-space: nowrap;
     overflow-wrap: break-word;
     padding-top: .8em;
     color: #333;
-    text-align: center;
     font-family: SFText, Helvetica, sans-serif;
     pointer-events: all;
+}
+
+#app-switcher figcaption, #icon div, .floor-label, .left-worker figcaption, .middle-worker figcaption, .right-worker figcaption, td {
+    text-align: center;
 }
 
 #icon #dayOfWeek {

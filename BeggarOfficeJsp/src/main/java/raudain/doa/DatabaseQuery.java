@@ -5,7 +5,16 @@ package raudain.doa;
  */
 public class DatabaseQuery {
 	
+	private String listWorkers = "";
 	private String updateWorker = "";
+	
+	public String getlistWorkers() {
+		return listWorkers;
+	}
+
+	public void setlistWorkers(String listWorkers) {
+		this.listWorkers = listWorkers;
+	}
 	
 	public String getUpdateWorker() {
 		return updateWorker;

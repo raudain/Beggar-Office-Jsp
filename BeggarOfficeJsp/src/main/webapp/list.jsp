@@ -14,10 +14,8 @@
 	<link rel="stylesheet" href="style/common.css">
 	
 	<style>
-		td {
-  			border-width: 1px;
-  			border-style: solid;
-  			text-align: center;
+		th {
+			border-bottom-style: solid;
 		}
 	</style>
 </head>
@@ -32,7 +30,7 @@
 		</ul>
 	</section>
 	
-	<script src="top.js"></script>
+	<script src="javascript/top.js"></script>
 
 	<c:choose>
 		<c:when test="${workerList == null or workerList.isEmpty()}">
@@ -40,7 +38,7 @@
               </c:when>
 		<c:otherwise>
 			<table id="big-table">
-				<tr id="table-heading">
+				<tr>
 					<th>Room</th>
 					<th>Name</th>
 					<th>Profession</th>

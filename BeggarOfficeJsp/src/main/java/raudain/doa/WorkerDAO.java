@@ -70,22 +70,17 @@ public class WorkerDAO {
 
 		connection = DataConnection.createConnection();
 
-		try {
-			statement = connection.createStatement();
-		} catch (final SQLException e) {
-			System.out.println("Error. Can not create the statement: " + e);
-		}
-
+		String sqlScript = sqlScripts.getListWorkers();
 		final String searchString = "SELECT * FROM workers;";
 		try {
+			statement = connection.createStatement();
 			resultSet = statement.executeQuery(searchString);
 		} catch (final SQLException e) {
-			System.out.println("Error. Problem with executeQuery: " + e);
+			e.printStackTrace();;
 		}
 
 		// Now we collect the data from the result in order to display them in
 		// the Java Server Page
-
 		ArrayList<Worker> workerList = new ArrayList<Worker>();
 		try {
 			while (resultSet.next()) {
@@ -275,8 +270,8 @@ public class WorkerDAO {
 			preparedStatement.setInt(6, room);
 			preparedStatement.executeUpdate();
 			connection.close();
-		} catch (final SQLException exception) {
-			exception.printStackTrace();
+		} catch (final SQLException e) {
+			e.printStackTrace();
 		}
 	}
 }

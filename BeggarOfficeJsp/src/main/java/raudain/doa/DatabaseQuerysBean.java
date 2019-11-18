@@ -3,16 +3,16 @@ package raudain.doa;
 /**
  * Helper class for externalization of queries
  */
-public class DatabaseQuery {
+public class DatabaseQuerysBean {
 	
 	private String listWorkers = "";
 	private String updateWorker = "";
 	
-	public String getlistWorkers() {
+	public String getListWorkers() {
 		return listWorkers;
 	}
 
-	public void setlistWorkers(String listWorkers) {
+	public void setListWorkers(String listWorkers) {
 		this.listWorkers = listWorkers;
 	}
 	

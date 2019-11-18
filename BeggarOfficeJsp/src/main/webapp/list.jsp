@@ -22,6 +22,10 @@
 
 <body style="margin: 13px 0px 10px 0px; background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; color: #660000;">
   
+  <div id="aa-preloader-area">
+  		<div class="pulse"></div>
+  </div>
+  
   <section>
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -59,6 +63,12 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-
+	
+	<script>
+		window.addEventListener("load", function () {
+			const loader = document.querySelector("#aa-preloader-area");
+			loader.style.display = "none";
+		})
+	</script>
 </body>
 </html>

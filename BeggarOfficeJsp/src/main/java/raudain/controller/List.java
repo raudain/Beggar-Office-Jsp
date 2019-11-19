@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
-import raudain.entity.Worker;
 
 /**
  * Servlet implementation class ListWorkersServlet

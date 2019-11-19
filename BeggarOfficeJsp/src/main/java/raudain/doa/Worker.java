@@ -1,4 +1,4 @@
-package raudain.entity;
+package raudain.doa;
 
 import java.io.Serializable;
 

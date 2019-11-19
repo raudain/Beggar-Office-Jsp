@@ -1,11 +1,6 @@
 package raudain.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -19,8 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import raudain.doa.DatabaseCredentials;
-import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
 /**
@@ -36,12 +29,12 @@ public class Board extends HttpServlet {
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
 	 * This method is for showing ...<br/>
-	 * 
+	 *
 	 * @return void
-	 * 
+	 *
 	 * @param request
 	 * @param response
-	 * 
+	 *
 	 * @throws ServletException, IOException
 	 */
 	@Override
@@ -50,9 +43,9 @@ public class Board extends HttpServlet {
 		if (request == null || response == null) {
 			log.info("Request or Response failed for doGet METHOD..");
 		}
-		
+
 		WorkerDAO doa = new WorkerDAO();
-		
+
 		ArrayList<String> nameList = new ArrayList<>();
 		nameList = doa.listNames();
 		ListIterator<String> nameIterator = nameList.listIterator();

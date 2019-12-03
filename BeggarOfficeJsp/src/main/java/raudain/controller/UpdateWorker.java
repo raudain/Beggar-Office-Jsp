@@ -68,7 +68,7 @@ public class UpdateWorker extends HttpServlet {
 		doa.updateWorker(updatedWorker);
 		
 		ArrayList<String> nameList = new ArrayList<>();
-		nameList = doa.listNames();
+		nameList = doa.getWorkerNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
 		

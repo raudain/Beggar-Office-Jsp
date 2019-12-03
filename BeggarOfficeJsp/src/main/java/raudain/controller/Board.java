@@ -47,7 +47,7 @@ public class Board extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 
 		ArrayList<String> nameList = new ArrayList<>();
-		nameList = doa.listNames();
+		nameList = doa.getWorkerNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
 

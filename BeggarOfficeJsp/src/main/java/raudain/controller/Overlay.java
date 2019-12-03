@@ -50,7 +50,7 @@ public class Overlay extends HttpServlet {
 		
 		WorkerDAO doa = new WorkerDAO();
 		ArrayList<String> nameList = new ArrayList<String>();
-		nameList = doa.listNames();
+		nameList = doa.getWorkerNames();
 		ListIterator<String> nameIterator = nameList.listIterator();
 		request.setAttribute("nameIterator", nameIterator);
 		

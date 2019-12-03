@@ -48,7 +48,7 @@ public class List extends HttpServlet {
 
 		WorkerDAO doa = new WorkerDAO();
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.listWorkers();
+		workerList = doa.getWorkers();
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");

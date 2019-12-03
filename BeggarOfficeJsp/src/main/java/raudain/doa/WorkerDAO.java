@@ -62,7 +62,7 @@ public class WorkerDAO {
 	 * @throws SQLException
 	 *
 	 */
-	public ArrayList<Worker> listWorkers() {
+	public ArrayList<Worker> getWorkers() {
 
 		Statement statement = null;
 
@@ -133,7 +133,7 @@ public class WorkerDAO {
 	 * @throws SQLException
 	 *
 	 */
-	public ArrayList<String> listNames() {
+	public ArrayList<String> getWorkerNames() {
 
 		Statement statement = null;
 

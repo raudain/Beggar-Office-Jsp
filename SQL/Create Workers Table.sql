@@ -10,26 +10,23 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+DROP DATABASE IF EXISTS `mydb`;
+CREATE SCHEMA `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`workers`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
-  `room` SMALLINT(4) UNSIGNED NOT NULL,
-  `name` VARCHAR(45) NULL,
-  `profession` VARCHAR(45) NULL,
-  `endurance` VARCHAR(45) NOT NULL,
-  `level` BIT(2) NULL,
-  `cost` BIGINT(10) UNSIGNED NULL,
+  `room` SMALLINT(10) UNSIGNED NOT NULL,
+  `name` TINYTEXT NULL DEFAULT NULL,
+  `profession` TINYTEXT NULL DEFAULT NULL,
+  `endurance` TINYTEXT NOT NULL,
+  `level` TINYINT(10) NULL DEFAULT NULL,
+  `cost` BIGINT(10) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`room`))
-ENGINE = InnoDB;
-
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `restdb`.`alien` (
+  `id` INT(11) NOT NULL,
+  `name` VARCHAR(20) NULL DEFAULT NULL,
+  `points` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci

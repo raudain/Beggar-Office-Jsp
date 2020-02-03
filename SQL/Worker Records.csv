@@ -117,5 +117,13 @@ room,name,profession,endurance,level,cost
 3902,Jill,Pilot,Hard-working,14,NULL
 3903,Pauline,Doctor,Hard-working,15,NULL
 4001,Dorothy,Lawyer,Hard-working,1,NULL
-4002,Jimmy,Cook,Tireless,1,NULL
-4003,Eric,Pilot,Diligent,2,NULL
+4002,Erica,Politician,Productive,20,NULL
+4003,Pauline,Pilot,Hard-working,20,NULL
+4101,Billy,Lawyer,Tireless,19,NULL
+4102,Terry,Politician,Diligent,20,NULL
+4103,Kevin,Santa,Hard-working,19,NULL
+4201,Jane,Journalist,Tireless,1,NULL
+4202,Dolores,Lawyer,Hard-working,1,NULL
+4203,Paul,Santa,Hard-working,1,NULL
+4301,Ashley,Pilot,Diligent,1,NULL
+4302,Carolyn,Politician,Sleepy,1,NULL

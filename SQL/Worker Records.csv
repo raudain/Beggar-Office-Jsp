@@ -1,82 +1,82 @@
 room,name,profession,endurance,level,cost
-101,Tammy,"Computer Engineer",Tireless,1,520000000
-102,Vernon,Santa,Tireless,1,520000000
-103,Jeff,Politician,Tireless,1,5800000000
-201,Jeremy,Pilot,Tireless,1,5800000000
-202,Marvin,Doctor,Tireless,1,520000000
-203,Christine,Lawyer,Tireless,6,520000000
-301,Sherry,Politician,Tireless,1,5800000000
-302,David,Lawyer,Tireless,1,520000000
-303,Jeanette,Doctor,Tireless,1,520000000
-401,Anne,"Computer Engineer",Tireless,1,520000000
-402,Mary,Doctor,Tireless,1,520000000
-403,Leo,Santa,Tireless,1,520000000
+101,Tammy,"Computer Engineer",Tireless,20,520000000
+102,Vernon,Santa,Tireless,20,520000000
+103,Jeff,Politician,Tireless,20,5800000000
+201,Jeremy,Pilot,Tireless,20,5800000000
+202,Marvin,Doctor,Tireless,20,520000000
+203,Christine,Lawyer,Tireless,20,520000000
+301,Sherry,Politician,Tireless,20,5800000000
+302,David,Lawyer,Tireless,20,520000000
+303,Jeanette,Doctor,Tireless,20,520000000
+401,Anne,"Computer Engineer",Tireless,20,520000000
+402,Mary,Doctor,Tireless,20,520000000
+403,Leo,Santa,Tireless,20,520000000
 501,Sharon,Lawyer,Tireless,20,520000000
-502,Amanda,Scientist,Tireless,1,125000000
-503,Sam,Pilot,Tireless,1,5800000000
-601,Nathan,"Computer Engineer",Tireless,1,520000000
-602,Thomas,Pilot,Tireless,1,5800000000
-603,Marjorie,Doctor,Hard-working,1,40000000
-701,Derrick,Santa,Tireless,1,520000000
-702,Tammy,Pilot,Tireless,1,5800000000
-703,Regina,Politician,Tireless,1,5800000000
-801,Heather,Journalist,Tireless,20,125000000
-802,Willie,Doctor,Hard-working,1,40000000
-803,Philip,Politician,Productive,1,55000000
-901,Vivian,Lawyer,Tireless,1,520000000
-902,Lewis,Journalist,Tireless,20,125000000
-903,Katherine,"Computer Engineer",Tireless,1,520000000
-1001,Larry,"Computer Engineer",Tireless,1,520000000
-1002,David,Pilot,Tireless,1,5800000000
-1003,Dustin,Pilot,Tireless,1,5800000000
-1101,Anthony,Lawyer,Tireless,1,520000000
-1102,Paula,"Computer Engineer",Hard-working,1,40000000
-1103,Amber,Pilot,Hard-working,1,260000000
+502,Ricky,"Mad Scientist",Productive,1,400000000
+503,Sam,Pilot,Tireless,20,5800000000
+601,Nathan,"Computer Engineer",Tireless,20,520000000
+602,Thomas,Pilot,Tireless,20,5800000000
+603,Marjorie,Doctor,Hard-working,20,40000000
+701,Derrick,Santa,Tireless,20,520000000
+702,Tammy,Pilot,Tireless,20,5800000000
+703,Regina,Politician,Tireless,20,5800000000
+801,Danr,"Mad Scientist",Productive,1,400000000
+802,Willie,Doctor,Hard-working,20,40000000
+803,Philip,Politician,Productive,20,55000000
+901,Vivian,Lawyer,Tireless,20,520000000
+902,Judy,Politician,Hard-working,1,260000000
+903,Katherine,"Computer Engineer",Tireless,20,520000000
+1001,Larry,"Computer Engineer",Tireless,20,520000000
+1002,David,Pilot,Tireless,20,5800000000
+1003,Dustin,Pilot,Tireless,20,5800000000
+1101,Anthony,Lawyer,Tireless,20,520000000
+1102,Paula,"Computer Engineer",Hard-working,20,40000000
+1103,Amber,Pilot,Hard-working,20,260000000
 1201,Billy,Santa,Hard-working,20,40000000
-1202,Dana,Politician,Hard-working,1,260000000
-1203,Billy,Lawyer,Tireless,1,520000000
-1301,Connie,"Computer Engineer",Hard-working,1,40000000
+1202,Dana,Politician,Hard-working,20,260000000
+1203,Billy,Lawyer,Tireless,20,520000000
+1301,Connie,"Computer Engineer",Hard-working,20,40000000
 1302,Darrel,Doctor,Tireless,20,520000000
-1303,Kathryn,Scientist,Tireless,1,125000000
+1303,Kathryn,Scientist,Tireless,20,125000000
 1401,Bradley,Santa,Tireless,20,520000000
-1402,Danielle,Scientist,Tireless,1,125000000
-1403,Rose,Lawyer,Hard-working,1,40000000
+1402,Danielle,Scientist,Tireless,20,125000000
+1403,Rose,Lawyer,Hard-working,20,40000000
 1501,Martin,Santa,Hard-working,20,40000000
-1502,Veronica,Lawyer,Hard-working,1,40000000
-1503,James,"Computer Engineer",Hard-working,1,40000000
-1601,Jamie,Politician,Productive,1,55000000
-1602,Earl,Politician,Hard-working,1,260000000
-1603,Nicholas,Politician,Hard-working,1,260000000
-1701,Martin,Santa,Hard-working,1,40000000
-1702,Lewis,Santa,Tireless,1,520000000
-1703,Steve,Lawyer,Tireless,1,520000000
+1502,Veronica,Lawyer,Hard-working,20,40000000
+1503,James,"Computer Engineer",Hard-working,20,40000000
+1601,Jamie,Politician,Productive,20,55000000
+1602,Earl,Politician,Hard-working,20,260000000
+1603,Nicholas,Politician,Hard-working,20,260000000
+1701,Martin,Santa,Hard-working,20,40000000
+1702,Tyler,Santa,Tireless,20,520000000
+1703,Steve,Lawyer,Tireless,20,520000000
 1801,Emma,"Computer Engineer",Hard-working,20,40000000
-1802,Carlos,Scientist,Tireless,1,125000000
-1803,Fransisco,Pilot,Hard-working,1,260000000
-1901,Ryan,"Computer Engineer",Tireless,1,520000000
-1902,Janice,Politician,Hard-working,1,260000000
+1802,Carlos,Scientist,Tireless,20,125000000
+1803,Thelma,Pilot,Tireless,20,260000000
+1901,Ryan,"Computer Engineer",Tireless,20,520000000
+1902,Janice,Politician,Hard-working,20,260000000
 1903,Jeanette,Scientist,Tireless,20,125000000
-2001,Gilbert,Doctor,Hard-working,1,40000000
-2002,Kristen,Doctor,Hard-working,1,40000000
-2003,Zachary,Journalist,Tireless,1,125000000
-2101,Mario,Politician,Productive,1,55000000
-2102,Frank,Scientist,Tireless,1,125000000
-2103,Rick,Santa,Hard-working,1,40000000
-2201,Mario,Lawyer,Hard-working,1,40000000
-2202,Juan,Pilot,Hard-working,1,260000000
-2203,Louis,"Computer Engineer",Tireless,1,520000000
-2301,Willie,"Computer Engineer",Hard-working,1,40000000
+2001,Gilbert,Doctor,Hard-working,20,40000000
+2002,Kristen,Doctor,Hard-working,20,40000000
+2003,Zachary,Journalist,Tireless,20,125000000
+2101,Mario,Politician,Productive,20,55000000
+2102,Frank,Scientist,Tireless,20,125000000
+2103,Rick,Santa,Hard-working,20,40000000
+2201,Mario,Lawyer,Hard-working,20,40000000
+2202,Juan,Pilot,Hard-working,20,260000000
+2203,Sam,"Computer Engineer",Tireless,20,520000000
+2301,Willie,"Computer Engineer",Hard-working,20,40000000
 2302,Karen,Journalist,Tireless,20,125000000
-2303,John,Pilot,Hard-working,1,260000000
+2303,John,Pilot,Hard-working,20,260000000
 2401,Terry,Businessman,Tireless,20,NULL
-2402,Wanda,"Computer Engineer",Tireless,1,520000000
+2402,Wanda,"Computer Engineer",Tireless,20,520000000
 2403,Jeffery,Lawyer,Tireless,20,520000000
 2501,Justin,Doctor,Tireless,20,520000000
-2502,Gene,Politician,Tireless,6,5800000000
-2503,Samantha,Lawyer,Hard-working,1,40000000
+2502,Gene,Politician,Tireless,20,5800000000
+2503,Samantha,Lawyer,Hard-working,20,40000000
 2601,Dana,Lawyer,Hard-working,20,40000000
 2602,Ronnie,Santa,Hard-working,20,40000000
-2603,Jonathan,"Computer Engineer",Hard-working,1,40000000
+2603,Jonathan,"Computer Engineer",Hard-working,20,40000000
 2701,Timothy,Businessman,Tireless,20,NULL
 2702,Peter,Politician,Tireless,20,5800000000
 2703,Willie,Doctor,Tireless,20,520000000
@@ -84,8 +84,8 @@ room,name,profession,endurance,level,cost
 2802,Diane,Lawyer,Tireless,20,520000000
 2803,Todd,Santa,Hard-working,20,40000000
 2901,Frederick,Lawyer,Tireless,20,520000000
-2902,Victor,Doctor,Tireless,1,520000000
-2903,Wanda,Pilot,Hard-working,1,260000000
+2902,Victor,Doctor,Tireless,20,520000000
+2903,Wanda,Pilot,Hard-working,20,260000000
 3001,Jack,Journalist,Tireless,20,125000000
 3002,Marilyn,Journalist,Tireless,20,125000000
 3003,Samuel,Santa,Hard-working,20,40000000
@@ -93,37 +93,53 @@ room,name,profession,endurance,level,cost
 3102,Keith,Santa,Hard-working,20,40000000
 3103,Chad,"Computer Engineer",Hard-working,20,40000000
 3201,Melvin,Scientist,Tireless,20,125000000
-3202,Howard,"Computer Engineer",Hard-working,1,40000000
-3203,Darlene,Businessman,Tireless,18,NULL
-3301,Ronnie,Lawyer,Tireless,14,520000000
-3302,Jeffrey,Doctor,Tireless,1,520000000
-3303,Amanda,Doctor,Tireless,1,520000000
-3401,April,Businessman,Tireless,6,NULL
-3402,Bradley,Lawyer,Tireless,8,520000000
-3403,Leonard,Pilot,Hard-working,1,260000000
-3501,Lloyd,Politician,Hard-working,1,260000000
-3502,Carol,Doctor,Hard-working,1,40000000
-3503,Marcus,Politician,Hard-working,1,260000000
-3601,Emily,Pilot,Tireless,1,5800000000
-3602,Scott,Lawyer,Hard-working,1,40000000
-3603,Chris,Doctor,Hard-working,1,40000000
-3701,Jon,Lawyer,Hard-working,1,40000000
-3702,Maria,Journalist,Tireless,1,125000000
-3703,Ryan,Santa,Productive,1,105000000
-3801,Dan,Pilot,Tireless,10,NULL
-3802,Jorge,Politician,Hard-working,11,NULL
-3803,Jeanette,Doctor,Productive,11,NULL
-3901,Miguel,Santa,Tireless,15,NULL
-3902,Jill,Pilot,Hard-working,14,NULL
-3903,Pauline,Doctor,Hard-working,15,NULL
-4001,Dorothy,Lawyer,Hard-working,1,NULL
+3202,Howard,"Computer Engineer",Hard-working,20,40000000
+3203,Darlene,Businessman,Tireless,20,NULL
+3301,Ronnie,Lawyer,Tireless,20,520000000
+3302,Jeffrey,Doctor,Tireless,20,520000000
+3303,Amanda,Doctor,Tireless,20,520000000
+3401,April,Businessman,Tireless,20,NULL
+3402,Bradley,Lawyer,Tireless,20,520000000
+3403,Leonard,Pilot,Hard-working,20,260000000
+3501,Lloyd,Politician,Hard-working,20,260000000
+3502,Carol,Doctor,Hard-working,20,40000000
+3503,Marcus,Politician,Hard-working,20,260000000
+3601,Emily,Pilot,Tireless,20,5800000000
+3602,Scott,Lawyer,Hard-working,20,40000000
+3603,Chris,Doctor,Hard-working,20,40000000
+3701,Jon,Lawyer,Hard-working,20,40000000
+3702,Maria,Journalist,Tireless,20,125000000
+3703,Ryan,Santa,Productive,20,105000000
+3801,Dan,Pilot,Tireless,20,NULL
+3802,Jorge,Politician,Hard-working,20,NULL
+3803,Nicole,Doctor,Tireless,20,NULL
+3901,Miguel,Santa,Tireless,20,NULL
+3902,Jill,Pilot,Hard-working,20,NULL
+3903,Pauline,Doctor,Hard-working,20,NULL
+4001,Dorothy,Lawyer,Hard-working,20,40000000
 4002,Erica,Politician,Productive,20,NULL
 4003,Pauline,Pilot,Hard-working,20,NULL
-4101,Billy,Lawyer,Tireless,19,NULL
+4101,Billy,Lawyer,Tireless,20,520000000
 4102,Terry,Politician,Diligent,20,NULL
-4103,Kevin,Santa,Hard-working,19,NULL
-4201,Jane,Journalist,Tireless,1,NULL
-4202,Dolores,Lawyer,Hard-working,1,NULL
-4203,Paul,Santa,Hard-working,1,NULL
-4301,Ashley,Pilot,Diligent,1,NULL
-4302,Carolyn,Politician,Sleepy,1,NULL
+4103,Kevin,Santa,Hard-working,20,NULL
+4201,Jane,Journalist,Tireless,20,125000000
+4202,Dolores,Lawyer,Hard-working,20,40000000
+4203,Paul,Santa,Hard-working,20,NULL
+4301,Ashley,Pilot,Diligent,20,NULL
+4302,Carolyn,Politician,Sleepy,20,NULL
+4303,Joseph,"Computer Engineer",Tireless,20,NULL
+4401,Jerome,Doctor,Hard-working,20,NULL
+4402,Martin,Politician,Productive,20,NULL
+4403,Diana,Lawyer,Hard-working,20,40000000
+4501,Eugene,"Computer Engineer",Tireless,18,NULL
+4502,Nancy,Pilot,Tireless,18,NULL
+4503,Jamie,Lawyer,Hard-working,18,40000000
+4601,Kathy,Pilot,Hard-working,14,NULL
+4602,Tyler,Santa,Tireless,15,NULL
+4603,Eugene,"Computer Engineer",Tireless,14,NULL
+4701,Anna,Pilot,Tireless,13,NULL
+4702,Maria,Lawyer,Hard-working,14,40000000
+4703,Valerie,Doctor,Diligent,14,NULL
+4801,Victor,Santa,Tireless,9,NULL
+4802,Barbara,Pilot,Productive,10,NULL
+4803,Maria,"Computer Engineer",Hard-working,10,NULL

@@ -121,7 +121,7 @@ WHERE profession = 'Lawyer'
 ORDER BY cost;
 
 
-/*************************************** Tier V ***********************************/
+/***************************************** Tier V *************************************/
 
 /*SELECT Room, Name, profession, endurance, level, format(cost, '###,###,###') AS cost*/
 SELECT *
@@ -135,3 +135,10 @@ WHERE profession = 'Pilot'
 ORDER BY cost;
 
 SELECT name FROM workers;
+
+/***************************************** Tier VI *************************************/
+
+SELECT *
+FROM workers
+WHERE profession = 'Mad Scientist'
+ORDER BY cost;

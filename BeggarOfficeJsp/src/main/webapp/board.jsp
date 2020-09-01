@@ -36,25 +36,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 1</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 2</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -62,26 +104,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 3</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 4</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -89,25 +172,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 5</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 6</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -115,25 +240,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 7</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 8</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -141,26 +308,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 9</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 10</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -168,27 +376,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 11</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 12</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -196,25 +444,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 13</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 14</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -222,26 +512,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 15</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 16</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -249,27 +580,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 17</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 18</div>
 					<figure class="left-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -277,25 +648,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 19</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 20</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -303,25 +716,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 21</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 22</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -329,25 +784,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 23</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 24</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -355,25 +852,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 25</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 26</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -381,25 +920,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 27</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 28</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -407,25 +988,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 29</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 30</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -433,25 +1056,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 31</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 32</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -459,25 +1124,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 33</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 34</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -485,26 +1192,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 35</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 36</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<form action="Overlay"></form>
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>
@@ -512,25 +1260,67 @@
 				<div class="board-column1">
 					<div class="floor-label">FLOOR 37</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 				<div class="board-column2">
 					<div class="floor-label">FLOOR 38</div>
 					<figure class="left-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="middle-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 					<figure class="right-worker">
-						<figcaption>${nameIterator.next()}</figcaption>
+						<c:choose>
+							<c:when test = "${nameIterator.hasNext()}">
+								<figcaption>${nameIterator.next()}</figcaption>
+							</c:when>
+							<c:otherwise>
+								<figcaption>No Name</figcaption>
+							</c:otherwise>
+						</c:choose>
 					</figure>
 				</div>
 			</div>

@@ -40,9 +40,8 @@ public class Board extends HttpServlet {
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
 
-		if (request == null || response == null) {
+		if (request == null || response == null)
 			log.info("Request or Response failed for doGet METHOD..");
-		}
 
 		WorkerDAO doa = new WorkerDAO();
 

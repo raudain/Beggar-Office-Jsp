@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -23,9 +21,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  */
 public class WorkerDAO {
-
-	// LOGGER for handling all transaction messages in EVENTDAO
-	private static Logger log = LogManager.getLogger(WorkerDAO.class);
 
 	// JDBC API classes for data persistence
 	private Connection connection = null;
@@ -106,7 +101,6 @@ public class WorkerDAO {
 		} catch (final SQLException e) {
 			System.out.println("Error. Problem reading data: " + e);
 		}
-		log.info("All workers retreived from Database");
 		try {
 			DataConnection.closeConnection();
 		} catch (final SQLException e) {
@@ -164,7 +158,6 @@ public class WorkerDAO {
 		} catch (final SQLException e) {
 			System.out.println("Error. Problem reading data: " + e);
 		}
-		log.info("All workers retreived from Database");
 		try {
 			DataConnection.closeConnection();
 		} catch (final SQLException e) {
@@ -226,7 +219,6 @@ public class WorkerDAO {
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 		}
-		log.info("All workers retreived from Database");
 		return worker;
 	}
 

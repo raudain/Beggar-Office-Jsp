@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import raudain.doa.WorkerDAO;
 
 /**
@@ -22,8 +19,6 @@ import raudain.doa.WorkerDAO;
 @WebServlet("/Board")
 public class Board extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	private static Logger log = LogManager.getLogger(Board.class);
 
 	/**
 	 * <br/>
@@ -39,9 +34,6 @@ public class Board extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
-
-		if (request == null || response == null)
-			log.info("Request or Response failed for doGet METHOD..");
 
 		WorkerDAO doa = new WorkerDAO();
 

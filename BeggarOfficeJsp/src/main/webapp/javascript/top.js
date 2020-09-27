@@ -16,7 +16,7 @@ document.body.insertBefore(pane, section);
 function isOverlayOn() {
 	var documentlink = document.baseURI;
 	var linkString = documentlink.toString();
-	var searchSeed = "http://localhost:8080/BeggarOfficeJsp/Overlay";
+	var searchSeed = "http://localhost:8080/BeggarOfficeJsp/overlay";
 	var pos = linkString.indexOf(searchSeed);
 	if (pos == 0) {
 		return true;

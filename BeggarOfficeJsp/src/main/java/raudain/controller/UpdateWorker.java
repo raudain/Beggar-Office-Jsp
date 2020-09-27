@@ -11,17 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
 @WebServlet("/update.htm")
 public class UpdateWorker extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	private static Logger log = LogManager.getLogger(UpdateWorker.class);
 
 	//JDBC API classes for data persistence
 		
@@ -39,10 +34,6 @@ public class UpdateWorker extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
-
-		if (request == null || response == null) {
-			log.info("request or response not valid in updateWorker METHOD ");
-		}
 
 		String workerID = request.getParameter("room");
 		String workerRoom = workerID.replace("/", "");

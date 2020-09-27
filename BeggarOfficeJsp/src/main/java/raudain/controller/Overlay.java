@@ -11,17 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
 @WebServlet("/overlay.htm")
 public class Overlay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	private static Logger log = LogManager.getLogger(Overlay.class);
 
 	//JDBC API classes for data persistence
 		
@@ -40,10 +35,6 @@ public class Overlay extends HttpServlet {
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
-
-		if (request == null || response == null) {
-			log.info("Request or Response failed for doGet METHOD..");
-		}
 		
 		String workerRoom = request.getParameter("room");
 		short room = Short.parseShort(workerRoom);

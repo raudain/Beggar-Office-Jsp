@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * <br/>
  * CLASS DESCRIPTION: <br/>
@@ -18,9 +15,6 @@ import org.apache.logging.log4j.Logger;
  * 
  */
 public class DataConnection {
-
-	// LOGGER for logging connection details
-	private static Logger logger = LogManager.getLogger(DataConnection.class);
 
 	// New instance of Connection
 	private static Connection connection = null;
@@ -43,7 +37,6 @@ public class DataConnection {
 		try {
             Class.forName(DatabaseCredentials.getDriver());
         } catch (final ClassNotFoundException exception) {
-        	logger.info("Exception is :" + exception.getMessage());
         	exception.printStackTrace();
         }
 		
@@ -53,10 +46,8 @@ public class DataConnection {
         try {
             connection = DriverManager.getConnection(databaseURL, user, password);
         } catch (final SQLException exception) {
-        	logger.info("Exception is :" + exception.getMessage());
         	exception.printStackTrace();
         } 
-        logger.info("----Connection established with MYSQL database----");
 		return connection;
 	}
 
@@ -72,7 +63,6 @@ public class DataConnection {
 	 * 
 	 */
 	public static void closeConnection() throws SQLException {
-		logger.info("----Connection closed with MYSQL database----");
 		connection.close();
 	}
 }

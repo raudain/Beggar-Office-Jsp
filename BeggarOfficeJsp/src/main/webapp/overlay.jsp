@@ -1327,7 +1327,7 @@
 		</form>
 	</div>
 
-	<script src="javascript/main.js"></script>
+	<script src="javascript/board.js"></script>
 
 	<div id="worker-overlay">
 		<figure id="profile">

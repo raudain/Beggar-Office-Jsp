@@ -18,6 +18,16 @@ function isOverlayOn() {
 	}
 }
 
+function returnFromOverlay() {
+	appSwitcher.style.display = "none";
+	pane.style.backgroundColor = "";
+	pane.style.zIndex = 0;
+	var workerOverlay = document.getElementById("worker-overlay");
+	if (workerOverlay != null) {
+		workerOverlay.style.display = "none";
+	}
+}
+
 var formElements = document.forms;
 var workerClassNames = ".left-worker, .middle-worker, .right-worker";
 var workerNodeList = document.querySelectorAll(workerClassNames);
@@ -54,6 +64,7 @@ function getNextRoom(room) {
 	return nextRoom;
 }
 
+// Cork Board Bottom Image
 var cbb = document.createElement("img");
 cbb.id = "cbb";
 cbb.src = "images/board/cork-board-bottom.jpg";

@@ -41,16 +41,6 @@ function appSwitcherOn() {
 	pane.style.zIndex = 2;
 }
 
-function returnFromOverlay() {
-	appSwitcher.style.display = "none";
-	pane.style.backgroundColor = "";
-	pane.style.zIndex = 0;
-	var workerOverlay = document.getElementById("worker-overlay");
-	if (workerOverlay != null) {
-		workerOverlay.style.display = "none";
-	}
-}
-
 // Virtual Beggar
 
 // VIRTUAL BEGGAR LINK

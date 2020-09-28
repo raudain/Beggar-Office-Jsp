@@ -1,3 +1,23 @@
+// Pane
+var pane = document.createElement("div");
+pane.id = "pane";
+if (isOverlayOn()) {
+	pane.style.zIndex = 2;
+	pane.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+}
+pane.addEventListener("click", returnFromOverlay);
+document.body.insertBefore(pane, section);
+
+function isOverlayOn() {
+	var documentlink = document.baseURI;
+	var linkString = documentlink.toString();
+	var searchSeed = "http://localhost:8080/BeggarOfficeJsp/overlay";
+	var pos = linkString.indexOf(searchSeed);
+	if (pos == 0) {
+		return true;
+	}
+}
+
 var formElements = document.forms;
 var workerClassNames = ".left-worker, .middle-worker, .right-worker";
 var workerNodeList = document.querySelectorAll(workerClassNames);

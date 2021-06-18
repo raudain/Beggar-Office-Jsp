@@ -1,4 +1,4 @@
-INSERT INTO `workers` (`room`, `name`,`profession`, `endurance`, `cost`) VALUES
+INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
 (101, 'Terry', 71, 6, 0),
 (102, 'Timothy', 71, 6, 0),
 (103, 'Nicholas', 71, 6, 0),

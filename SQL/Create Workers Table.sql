@@ -21,14 +21,15 @@ DROP TABLE `mydb`.`workers`;
 CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
   `room` SMALLINT(16) UNSIGNED NOT NULL,
   `name` TINYTEXT NULL DEFAULT NULL,
-  `profession` TINYINT(8) UNSIGNED NOT NULL,
+  `ProfessionID` TINYINT(8) UNSIGNED NOT NULL,
   `endurance` TINYINT(8) UNSIGNED NOT NULL,
   `cost` BIGINT(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`room`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+  PRIMARY KEY (`room`),
+  FOREIGN KEY (`ProfessionID`) REFERENCES professions(`ProfessionID`),
+  FOREIGN KEY (`endurance`) REFERENCES endurances(`id`)
+);
 
-INSERT INTO `workers` (`room`, `name`,`profession`, `endurance`, `cost`) VALUES
+INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
 -- Floor 1
 (101, 'Terry', 71, 6, 0),
 (102, 'Timothy', 71, 6, 0),
@@ -173,8 +174,9 @@ CREATE TABLE `mydb`.`profession` (
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   UNIQUE INDEX `type_UNIQUE` (`type` ASC) VISIBLE);
 
-INSERT INTO `professions` (`id`, `type`) VALUES
+INSERT INTO `professions` (`ProfessionID`, `type`) VALUES
 (11, 'Construction Worker'),
+(12, 'Postman'),
 (21, 'Artist'),
 (22, 'Cook'),
 (23, 'Magician'),
@@ -190,9 +192,18 @@ INSERT INTO `professions` (`id`, `type`) VALUES
 (61, 'Mad Scientist'),
 (71, 'Businessman');
 
+DROP TABLE `mydb`.`endurances`;
 CREATE TABLE `mydb`.`endurances` (
-  `id` INT NOT NULL,
+  `id` TINYINT(8) UNSIGNED NOT NULL,
   `level` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   UNIQUE INDEX `level_UNIQUE` (`level` ASC) VISIBLE);
+
+INSERT INTO `endurances` (`id`, `level`) VALUES
+(1, 'Lazy'),
+(2, 'Sleepy'),
+(3, 'Diligent'),
+(4, 'Productive'),
+(5, 'Hard-working'),
+(6, 'Tireless');

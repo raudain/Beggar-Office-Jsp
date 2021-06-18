@@ -1,7 +1,7 @@
 /* 
  *	***************** Menu Section Header ****************
  */
-var section = document.querySelector("section");
+var section = document.querySelector("nav");
 
 // Brand
 var brand = document.createElement("div");

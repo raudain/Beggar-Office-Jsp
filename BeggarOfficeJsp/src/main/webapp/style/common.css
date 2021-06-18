@@ -162,33 +162,33 @@ body {
 	bottom: 0;
 }
 
-section, .board-column1, .board-column2 {
+nav, .board-column1, .board-column2 {
 	font-family: Arial Black;
 }
 
-section {
+nav {
 	text-decoration: none;
 }
 
 
-section, #tower, #cork-board, .below-top, #big-table, #cbb {
+nav, #tower, #cork-board, .below-top, #big-table, #cbb {
 	width: 76.6vw;
 }
 
-section, img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
+nav, img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
 	margin: auto;
 }
 
-section, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
+nav, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
 	right: 0;
 	left: 0;
 }
 
-section, #worker-overlay {
+nav, #worker-overlay {
 	position: fixed;
 }
 
-section {
+nav {
 	height: 9.8vh;
 	background-color: #EFE0B1;
 	top: 0;
@@ -251,8 +251,6 @@ ul {
 	width: 33.3%;
 	list-style-type: none;
 	margin-right: var(--section-margin);
-	padding: 0;
-	overflow: hidden;
 }
 
 li, .left-worker, .middle-worker, .board-column1 {
@@ -395,7 +393,7 @@ table {
 	}
 	
 	ul {
-		width: 35.9%;
+		width: 50%;
 	}
 	
 	#app-switcher {

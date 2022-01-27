@@ -1,15 +1,17 @@
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-DROP DATABASE IF EXISTS `mydb`;
-CREATE SCHEMA `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE DATABASE VirtualBeggar;
+USE VirtualBeggar;
+GO
+
+CREATE SCHEMA hr;
+GO
 
 -- -----------------------------------------------------
 -- Table `mydb`.`workers`
 -- -----------------------------------------------------
-DROP TABLE `mydb`.`workers`;
-CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
+CREATE TABLE VirtualBeggar.hr.workers (
   `room` SMALLINT(16) UNSIGNED NOT NULL,
   `name` TINYTEXT NULL DEFAULT NULL,
   `ProfessionID` TINYINT(8) UNSIGNED NOT NULL,

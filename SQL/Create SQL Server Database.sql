@@ -12,17 +12,17 @@ GO
 -- Table `mydb`.`workers`
 -- -----------------------------------------------------
 CREATE TABLE VirtualBeggar.hr.workers (
-  `room` SMALLINT(16) UNSIGNED NOT NULL,
-  `name` TINYTEXT NULL DEFAULT NULL,
-  `ProfessionID` TINYINT(8) UNSIGNED NOT NULL,
-  `endurance` TINYINT(8) UNSIGNED NOT NULL,
-  `cost` BIGINT(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`room`),
-  FOREIGN KEY (`ProfessionID`) REFERENCES professions(`ProfessionID`),
-  FOREIGN KEY (`endurance`) REFERENCES endurances(`id`)
+  room SMALLINT(16) UNSIGNED NOT NULL,
+  name TINYTEXT NULL DEFAULT NULL,
+  ProfessionID TINYINT(8) UNSIGNED NOT NULL,
+  endurance TINYINT(8) UNSIGNED NOT NULL,
+  cost BIGINT(10) UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (room),
+  FOREIGN KEY (ProfessionID) REFERENCES professions(ProfessionID),
+  FOREIGN KEY (endurance) REFERENCES endurances(id)
 );
 
-INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
+INSERT INTO VirtualBeggar.hr.workers (room, name, ProfessionID, endurance, cost) VALUES
 -- Floor 1
 (101, 'Terry', 71, 6, 0),
 (102, 'Timothy', 71, 6, 0),

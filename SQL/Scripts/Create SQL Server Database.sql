@@ -1,20 +1,21 @@
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
 --CREATE DATABASE VirtualBeggar;
-
 
 USE VirtualBeggar;
 GO
 
 
 /* CREATE SCHEMA hr;
-GO */
+GO */ 
 
+
+-- -----------------------------------------------------
+-- Table hr.professions
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS hr.workers;
 DROP TABLE IF EXISTS hr.professions;
 
 CREATE TABLE hr.professions (
-  id TINYINT NOT NULL,
+  id INT NOT NULL,
   type VARCHAR(19) NOT NULL,
   PRIMARY KEY (id)
  );
@@ -42,9 +43,14 @@ VALUES
 	(71, 'Businessman');
 
 
+-- -----------------------------------------------------
+-- Table hr.endurances
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS hr.endurances;
+
 CREATE TABLE hr.endurances (
-  id TINYINT NOT NULL,
-  level VARCHAR NOT NULL,
+  id INT NOT NULL,
+  level VARCHAR(12) NOT NULL,
   PRIMARY KEY (id)
  );
 
@@ -61,11 +67,14 @@ VALUES
 	(6, 'Tireless');
 
 
+-- -----------------------------------------------------
+-- Table hr.workers
+-- -----------------------------------------------------
 CREATE TABLE VirtualBeggar.hr.workers (
   room SMALLINT NOT NULL,
-  name VARCHAR NOT NULL,
-  profession_id TINYINT NOT NULL,
-  endurance_id TINYINT NOT NULL,
+  name VARCHAR(9) NOT NULL,
+  profession_id INT NOT NULL,
+  endurance_id INT NOT NULL,
   cost BIGINT NULL DEFAULT NULL,
   PRIMARY KEY (room),
   FOREIGN KEY (profession_id) REFERENCES hr.professions(id),

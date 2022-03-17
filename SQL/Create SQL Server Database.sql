@@ -8,15 +8,61 @@ GO
 CREATE SCHEMA hr;
 GO
 
+
+CREATE TABLE hr.profession (
+  id INT NOT NULL,
+  type VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id)
+ );
+
+INSERT INTO hr.professions (
+	id,
+	type
+)
+VALUES
+	(11, 'Construction Worker'),
+	(12, 'Postman'),
+	(21, 'Artist'),
+	(22, 'Cook'),
+	(23, 'Magician'),
+(24, 'Firefighter'),
+(31, 'Scientist'),
+(32, 'Journalist'),
+(41, 'Doctor'),
+(42, 'Computer Engineer'),
+(43, 'Santa'),
+(44, 'Lawyer'),
+(51, 'Politician'),
+(52, 'Pilot'),
+(61, 'Mad Scientist'),
+(71, 'Businessman');
+
+DROP TABLE mydb.endurances;
+CREATE TABLE mydb.endurances (
+  id TINYINT(8) UNSIGNED NOT NULL,
+  level VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE,
+  UNIQUE INDEX level_UNIQUE (level ASC) VISIBLE);
+
+INSERT INTO endurances (id, level) VALUES
+(1, 'Lazy'),
+(2, 'Sleepy'),
+(3, 'Diligent'),
+(4, 'Productive'),
+(5, 'Hard-working'),
+(6, 'Tireless');
+
+
 -- -----------------------------------------------------
 -- Table `mydb`.`workers`
 -- -----------------------------------------------------
 CREATE TABLE VirtualBeggar.hr.workers (
-  room SMALLINT(16) UNSIGNED NOT NULL,
-  name TINYTEXT NULL DEFAULT NULL,
-  ProfessionID TINYINT(8) UNSIGNED NOT NULL,
-  endurance TINYINT(8) UNSIGNED NOT NULL,
-  cost BIGINT(10) UNSIGNED NULL DEFAULT NULL,
+  room SMALLINT NOT NULL,
+  name VARCHAR NOT NULL,
+  profession_id TINYINT NOT NULL,
+  endurance TINYINT NOT NULL,
+  cost BIGINT NULL DEFAULT NULL,
   PRIMARY KEY (room),
   FOREIGN KEY (ProfessionID) REFERENCES professions(ProfessionID),
   FOREIGN KEY (endurance) REFERENCES endurances(id)
@@ -159,44 +205,3 @@ INSERT INTO VirtualBeggar.hr.workers (room, name, ProfessionID, endurance, cost)
 (3401, 'Rhonda', 44, 3, 0),
 (3402, 'Brent', 32, 2, 0),
 (3403, 'Philip', 24, 6, 0);
-
-CREATE TABLE `mydb`.`profession` (
-  `id` INT UNSIGNED NOT NULL,
-  `type` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `type_UNIQUE` (`type` ASC) VISIBLE);
-
-INSERT INTO `professions` (`ProfessionID`, `type`) VALUES
-(11, 'Construction Worker'),
-(12, 'Postman'),
-(21, 'Artist'),
-(22, 'Cook'),
-(23, 'Magician'),
-(24, 'Firefighter'),
-(31, 'Scientist'),
-(32, 'Journalist'),
-(41, 'Doctor'),
-(42, 'Computer Engineer'),
-(43, 'Santa'),
-(44, 'Lawyer'),
-(51, 'Politician'),
-(52, 'Pilot'),
-(61, 'Mad Scientist'),
-(71, 'Businessman');
-
-DROP TABLE `mydb`.`endurances`;
-CREATE TABLE `mydb`.`endurances` (
-  `id` TINYINT(8) UNSIGNED NOT NULL,
-  `level` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `level_UNIQUE` (`level` ASC) VISIBLE);
-
-INSERT INTO `endurances` (`id`, `level`) VALUES
-(1, 'Lazy'),
-(2, 'Sleepy'),
-(3, 'Diligent'),
-(4, 'Productive'),
-(5, 'Hard-working'),
-(6, 'Tireless');

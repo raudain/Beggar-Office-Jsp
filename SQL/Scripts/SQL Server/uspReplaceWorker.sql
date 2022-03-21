@@ -19,3 +19,10 @@ BEGIN
 		room = @room;
 
 END;
+
+EXECUTE hr.uspReplaceWorker 
+	'Roger'
+	,41
+	,5
+	,40000000
+	,502

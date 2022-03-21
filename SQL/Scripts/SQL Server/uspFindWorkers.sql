@@ -22,3 +22,5 @@ BEGIN
     ORDER BY
         room;
 END;
+
+EXECUTE hr.uspFindWorkers 'Magician';

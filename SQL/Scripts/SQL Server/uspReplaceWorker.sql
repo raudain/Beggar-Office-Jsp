@@ -1,15 +1,21 @@
 USE VirtualBeggar;
 GO
 
-CREATE PROCEDURE uspReplaceWorker
+CREATE PROCEDURE hr.uspReplaceWorker (
+	@name AS VARCHAR(9)
+    ,@profession_id AS INT
+	,@endurance_id AS INT
+	,@cost AS BIGINT
+	,@room AS SMALLINT
+)
 AS
 BEGIN
 	UPDATE VirtualBeggar.hr.workers
-	SET name = 0.02,
-		profession_id = 0.01,
-		endurance_id = 1,
-		cost = 1
+	SET name = @name,
+		profession_id = @profession_id,
+		endurance_id = @endurance_id,
+		cost = @cost
 	WHERE
-		room = 0.01;
+		room = @room;
 
 END;

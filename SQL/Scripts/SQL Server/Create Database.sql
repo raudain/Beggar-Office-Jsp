@@ -70,7 +70,7 @@ VALUES
 -- -----------------------------------------------------
 -- Table hr.workers
 -- -----------------------------------------------------
-CREATE TABLE VirtualBeggar.hr.workers (
+CREATE TABLE hr.workers (
   room SMALLINT NOT NULL,
   name VARCHAR(9) NOT NULL,
   profession_id INT NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE VirtualBeggar.hr.workers (
   FOREIGN KEY (endurance_id) REFERENCES hr.endurances(id)
 );
 
-INSERT INTO VirtualBeggar.hr.workers (
+INSERT INTO hr.workers (
 	room,
 	name, 
 	profession_id,

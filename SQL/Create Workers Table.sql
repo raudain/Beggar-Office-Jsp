@@ -165,7 +165,23 @@ INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUE
 -- Floor 34
 (3401, 'Rhonda', 44, 3, 0),
 (3402, 'Brent', 32, 2, 0),
-(3403, 'Philip', 24, 6, 0);
+(3403, 'Philip', 24, 6, 0),
+-- Floor 35
+(3501, 'Irene', 51, 3, 0),
+(3502, 'Alice', 44, 4, 0),
+(3503, 'Christina', 31, 5, 0),
+-- Floor 36
+(3601, 'Hector', 52, 6, 0),
+(3602, 'Esther', 44, 6, 0),
+(3603, 'Douglas', 61, 4, 0),
+-- Floor 37
+(3701, 'Sally', 52, 4, 0),
+(3702, 'Irene', 41, 6, 0),
+(3703, 'Sharon', 52, 3, 0),
+-- Floor 38
+(3801, 'Hector', 51, 5, 0),
+(3802, 'Norman', 43, 5, 0),
+(3803, 'Vincent', 41, 4, 0);
 
 CREATE TABLE `mydb`.`profession` (
   `id` INT UNSIGNED NOT NULL,
@@ -207,3 +223,8 @@ INSERT INTO `endurances` (`id`, `level`) VALUES
 (4, 'Productive'),
 (5, 'Hard-working'),
 (6, 'Tireless');
+
+SELECT workers.room, workers.name, professions.type AS profession, endurances.level AS endurance, workers.cost
+FROM mydb.workers
+INNER JOIN professions ON  professions.ProfessionID = workers.ProfessionID
+INNER JOIN endurances ON endurances.id = workers.endurance;

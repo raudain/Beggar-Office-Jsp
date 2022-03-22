@@ -24,5 +24,5 @@ EXECUTE hr.uspReplaceWorker
 	'Howard'
 	,71
 	,6
-	,40000000
+	,1700
 	,1901

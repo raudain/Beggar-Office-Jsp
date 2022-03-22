@@ -4,8 +4,8 @@ USE VirtualBeggar;
 GO
 
 
-/* CREATE SCHEMA hr;
-GO */ 
+CREATE SCHEMA hr;
+GO 
 
 
 -- -----------------------------------------------------

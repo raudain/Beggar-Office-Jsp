@@ -1,4 +1,4 @@
---CREATE DATABASE VirtualBeggar;
+-- CREATE DATABASE VirtualBeggar;
 
 USE VirtualBeggar;
 GO

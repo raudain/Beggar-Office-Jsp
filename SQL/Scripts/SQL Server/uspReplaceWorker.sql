@@ -21,8 +21,8 @@ BEGIN
 END;
 
 EXECUTE hr.uspReplaceWorker 
-	'Craig'
-	,51
-	,4
-	,55000000
-	,1203
+	'Vivian'
+	,44
+	,5
+	,40000000
+	,1102

@@ -27,6 +27,7 @@ INSERT INTO hr.professions (
 VALUES
 	(11, 'Construction Worker'),
 	(12, 'Postman'),
+	(13, 'Gardener')
 	(21, 'Artist'),
 	(22, 'Cook'),
 	(23, 'Magician'),

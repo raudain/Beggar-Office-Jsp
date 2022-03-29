@@ -21,8 +21,8 @@ BEGIN
 END;
 
 EXECUTE hr.uspReplaceWorker 
-	'Dustin'
-	,61
-	,5
-	,2000000000
-	,1803
+	'Thelma'
+	,51
+	,6
+	,5800000000
+	,303

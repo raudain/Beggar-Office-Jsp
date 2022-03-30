@@ -110,7 +110,7 @@ VALUES
 	-- Floor 8
 	(801, 'Marilyn', 71, 6),
 	(802, 'Danielle', 31, 5),
-	(803, 'Calvin', 44, 3),
+	(803, 'Judith', 61, 3),
 	-- Floor 9
 	(901, 'Raymond', 11, 5),
 	(902, 'Bonnie', 61, 5),
@@ -133,14 +133,14 @@ VALUES
 	(1303, 'Karen', 52, 6),
 	-- Floor 14
 	(1401, 'Travis', 41, 3),
-	(1402, 'Victor', 44, 3),
+	(1402, 'Vanessa', 52, 4),
 	(1403, 'Marion', 51, 2),
 	-- Floor 15
 	(1501, 'Dawn', 42, 5),
 	(1502, 'Rhonda', 42, 6),
 	(1503, 'Kenneth', 41, 6),
 	-- Floor 16
-	(1601, 'Nathan', 44, 3),
+	(1601, 'Eugene', 51, 3),
 	(1602, 'Sally', 51, 6),
 	(1603, 'Marcus', 61, 3),
 	-- Floor 17

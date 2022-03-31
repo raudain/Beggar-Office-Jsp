@@ -117,7 +117,7 @@ VALUES
 	(903, 'Mary', 44, 6),
 	-- Floor 10
 	(1001, 'Erin', 31, 5),
-	(1002, 'Travis', 41, 3),
+	(1002, 'Jack', 61, 5),
 	(1003, 'Regina', 61, 5),
 	-- Floor 11
 	(1101, 'Thomas', 52, 3),
@@ -212,7 +212,7 @@ VALUES
 	(3302, 'Randall', 52, 5),
 	(3303, 'Howard', 41, 4),
 	-- Floor 34
-	(3401, 'Rhonda', 44, 3),
+	(3401, 'Charlotte', 61, 6),
 	(3402, 'Wesley', 52, 5),
 	(3403, 'Philip', 24, 6),
 	-- Floor 35

@@ -1,2 +1,5 @@
 ALTER TABLE VirtualBeggar.hr.workers
-ADD cost AS (hr.udfCost(profession_id, endurance_id));
+	DROP COLUMN cost;
+
+ALTER TABLE VirtualBeggar.hr.workers
+	ADD cost AS (hr.udfCost(profession_id, endurance_id));

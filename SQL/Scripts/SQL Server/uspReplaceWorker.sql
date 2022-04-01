@@ -1,5 +1,5 @@
 EXECUTE hr.uspReplaceWorker 
-	'Jack'
-	,61
-	,5
-	,1002
+	'Edith'
+	,52
+	,6
+	,1401

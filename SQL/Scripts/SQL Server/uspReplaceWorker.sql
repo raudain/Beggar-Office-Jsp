@@ -1,5 +1,5 @@
 EXECUTE hr.uspReplaceWorker 
-	'Edith'
+	'Mary'
 	,52
 	,6
-	,1401
+	,501

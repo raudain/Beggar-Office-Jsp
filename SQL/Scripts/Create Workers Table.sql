@@ -17,8 +17,8 @@ USE `mydb` ;
 -- -----------------------------------------------------
 -- Table `mydb`.`workers`
 -- -----------------------------------------------------
-DROP TABLE `mydb`.`workers`;
-CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
+DROP TABLE IF EXISTS `mydb`.`worker`;
+CREATE TABLE IF NOT EXISTS `mydb`.`worker` (
   `room` SMALLINT(16) UNSIGNED NOT NULL,
   `name` TINYTEXT NULL DEFAULT NULL,
   `ProfessionID` TINYINT(8) UNSIGNED NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`workers` (
   FOREIGN KEY (`endurance`) REFERENCES endurances(`id`)
 );
 
-INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
+INSERT INTO `worker` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
 -- Floor 1
 (101, 'Terry', 71, 6, 0),
 (102, 'Timothy', 71, 6, 0),
@@ -186,11 +186,11 @@ INSERT INTO `workers` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUE
 CREATE TABLE `mydb`.`profession` (
   `id` INT UNSIGNED NOT NULL,
   `type` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `type_UNIQUE` (`type` ASC) VISIBLE);
+  PRIMARY KEY (`id`));
+  -- UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  -- UNIQUE INDEX `type_UNIQUE` (`type` ASC) VISIBLE);
 
-INSERT INTO `professions` (`ProfessionID`, `type`) VALUES
+INSERT INTO `profession` (`ProfessionID`, `type`) VALUES
 (11, 'Construction Worker'),
 (12, 'Postman'),
 (21, 'Artist'),
@@ -208,15 +208,15 @@ INSERT INTO `professions` (`ProfessionID`, `type`) VALUES
 (61, 'Mad Scientist'),
 (71, 'Businessman');
 
-DROP TABLE `mydb`.`endurances`;
-CREATE TABLE `mydb`.`endurances` (
+DROP TABLE IF EXISTS `mydb`.`endurance`;
+CREATE TABLE `mydb`.`endurance` (
   `id` TINYINT(8) UNSIGNED NOT NULL,
   `level` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `level_UNIQUE` (`level` ASC) VISIBLE);
+  PRIMARY KEY (`id`));
+  -- UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  -- UNIQUE INDEX `level_UNIQUE` (`level` ASC) VISIBLE);
 
-INSERT INTO `endurances` (`id`, `level`) VALUES
+INSERT INTO `endurance` (`id`, `level`) VALUES
 (1, 'Lazy'),
 (2, 'Sleepy'),
 (3, 'Diligent'),
@@ -224,7 +224,7 @@ INSERT INTO `endurances` (`id`, `level`) VALUES
 (5, 'Hard-working'),
 (6, 'Tireless');
 
-SELECT workers.room, workers.name, professions.type AS profession, endurances.level AS endurance, workers.cost
+SELECT workers.room, workers.name, profession.type AS profession, endurances.level AS endurance, workers.cost
 FROM mydb.workers
-INNER JOIN professions ON  professions.ProfessionID = workers.ProfessionID
-INNER JOIN endurances ON endurances.id = workers.endurance;
+INNER JOIN profession ON  profession.ProfessionID = workers.ProfessionID
+INNER JOIN endurance ON endurances.id = workers.endurance;

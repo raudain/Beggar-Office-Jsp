@@ -8,7 +8,7 @@
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
 	<bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
-		<property name="listWorkers" value="SELECT * FROM workers;"></property>
+		<property name="listWorkers" value="SELECT * FROM Worker;"></property>
 		<property name="updateWorker" value="UPDATE `mydb`.`workers` SET `name` = ?, `profession` = ?, `endurance` = ?, `level` = ?, `cost` = ? WHERE (`room` = ?);"></property>
  	</bean>
 </beans>

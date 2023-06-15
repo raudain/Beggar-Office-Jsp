@@ -8,28 +8,28 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema dbo
 -- -----------------------------------------------------
-DROP DATABASE IF EXISTS `mydb`;
-CREATE SCHEMA `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+DROP DATABASE IF EXISTS `dbo`;
+CREATE SCHEMA `dbo` DEFAULT CHARACTER SET utf8 ;
+USE `dbo` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`workers`
+-- Table `dbo`.`workers`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`worker`;
-CREATE TABLE IF NOT EXISTS `mydb`.`worker` (
-  `room` SMALLINT(16) UNSIGNED NOT NULL,
-  `name` TINYTEXT NULL DEFAULT NULL,
-  `ProfessionID` TINYINT(8) UNSIGNED NOT NULL,
-  `endurance` TINYINT(8) UNSIGNED NOT NULL,
-  `cost` BIGINT(10) UNSIGNED NULL DEFAULT NULL,
+DROP TABLE IF EXISTS `dbo`.`worker`;
+CREATE TABLE IF NOT EXISTS `dbo`.`worker` (
+  `Room` SMALLINT(16) UNSIGNED NOT NULL,
+  `Name` TINYTEXT NULL DEFAULT NULL,
+  `Profession` TINYINT(8) UNSIGNED NOT NULL,
+  `Endurance` TINYINT(8) UNSIGNED NOT NULL,
+  `Cost` BIGINT(10) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`room`),
-  FOREIGN KEY (`ProfessionID`) REFERENCES professions(`ProfessionID`),
-  FOREIGN KEY (`endurance`) REFERENCES endurances(`id`)
+  FOREIGN KEY (`Profession`) REFERENCES professions(`ProfessionName`),
+  FOREIGN KEY (`Endurance`) REFERENCES endurances(`EnduranceName`)
 );
 
-INSERT INTO `worker` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
+INSERT INTO `worker` (`Room`, `Name`,`Profession`, `Endurance`, `Cost`) VALUES
 -- Floor 1
 (101, 'Terry', 71, 6, 0),
 (102, 'Timothy', 71, 6, 0),
@@ -183,14 +183,14 @@ INSERT INTO `worker` (`room`, `name`,`ProfessionID`, `endurance`, `cost`) VALUES
 (3802, 'Norman', 43, 5, 0),
 (3803, 'Vincent', 41, 4, 0);
 
-CREATE TABLE `mydb`.`profession` (
-  `id` INT UNSIGNED NOT NULL,
-  `type` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`));
+CREATE TABLE `dbo`.`profession` (
+  `Profession` INT UNSIGNED NOT NULL,
+  `ProfessionName` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Profession`));
   -- UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   -- UNIQUE INDEX `type_UNIQUE` (`type` ASC) VISIBLE);
 
-INSERT INTO `profession` (`ProfessionID`, `type`) VALUES
+INSERT INTO `profession` (`Profession`, `ProfessionName`) VALUES
 (11, 'Construction Worker'),
 (12, 'Postman'),
 (21, 'Artist'),
@@ -208,15 +208,15 @@ INSERT INTO `profession` (`ProfessionID`, `type`) VALUES
 (61, 'Mad Scientist'),
 (71, 'Businessman');
 
-DROP TABLE IF EXISTS `mydb`.`endurance`;
-CREATE TABLE `mydb`.`endurance` (
-  `id` TINYINT(8) UNSIGNED NOT NULL,
-  `level` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`));
+DROP TABLE IF EXISTS `dbo`.`endurance`;
+CREATE TABLE `dbo`.`endurance` (
+  `Endurance` TINYINT(8) UNSIGNED NOT NULL,
+  `EnduranceName` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Endurance`));
   -- UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   -- UNIQUE INDEX `level_UNIQUE` (`level` ASC) VISIBLE);
 
-INSERT INTO `endurance` (`id`, `level`) VALUES
+INSERT INTO `endurance` (`Endurance`, `EnduranceName`) VALUES
 (1, 'Lazy'),
 (2, 'Sleepy'),
 (3, 'Diligent'),
@@ -224,7 +224,7 @@ INSERT INTO `endurance` (`id`, `level`) VALUES
 (5, 'Hard-working'),
 (6, 'Tireless');
 
-SELECT workers.room, workers.name, profession.type AS profession, endurances.level AS endurance, workers.cost
-FROM mydb.workers
-INNER JOIN profession ON  profession.ProfessionID = workers.ProfessionID
-INNER JOIN endurance ON endurances.id = workers.endurance;
+SELECT worker.Room, worker.Name, profession.Profession AS Profession, endurance.EnduranceName AS Endurance, worker.Cost
+FROM dbo.worker
+INNER JOIN profession ON profession.Profession = worker.Profession
+INNER JOIN endurance ON endurance.Endurance = worker.Endurance;

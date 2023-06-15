@@ -44,7 +44,7 @@ public class DataConnection {
         final String user = DatabaseCredentials.getUser();
         final String password = DatabaseCredentials.getPassword();
         try {
-            connection = DriverManager.getConnection(databaseURL, user, password);
+        	connection = DriverManager.getConnection(databaseURL, user, password);
         } catch (final SQLException exception) {
         	exception.printStackTrace();
         } 

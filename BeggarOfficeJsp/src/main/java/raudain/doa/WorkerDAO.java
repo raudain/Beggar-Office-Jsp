@@ -66,9 +66,18 @@ public class WorkerDAO {
 		String sqlScript = sqlScripts.getListWorkers();
 		try {
 			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in getWorkers WorkerDAO");
+			e.printStackTrace();
+		}
+		
+		try {
 			resultSet = statement.executeQuery(sqlScript);
 		} catch (final SQLException e) {
-			e.printStackTrace();;
+			System.out.println("Error creating "
+					+ "ResultSet in getWorkers WorkerDAO");
+			e.printStackTrace();
 		}
 
 		// Now we collect the data from the result in order to display them in
@@ -78,22 +87,19 @@ public class WorkerDAO {
 			while (resultSet.next()) {
 				Worker worker = new Worker();
 
-				short room = resultSet.getShort("room");
+				short room = resultSet.getShort("Room");
 				worker.setRoom(room);
 
-				String name = resultSet.getString("name");
+				String name = resultSet.getString("Name");
 				worker.setName(name);
 
-				String profession = resultSet.getString("profession");
+				String profession = resultSet.getString("Profession");
 				worker.setProfession(profession);
 
-				String endurance = resultSet.getString("endurance");
+				String endurance = resultSet.getString("Endurance");
 				worker.setEndurance(endurance);
 
-				byte level = resultSet.getByte("level");
-				worker.setLevel(level);
-
-				long cost = resultSet.getLong("cost");
+				long cost = resultSet.getLong("Cost");
 				worker.setCost(cost);
 
 				workerList.add(worker);

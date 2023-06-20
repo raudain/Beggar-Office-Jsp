@@ -87,19 +87,19 @@ public class WorkerDAO {
 			while (resultSet.next()) {
 				Worker worker = new Worker();
 
-				short room = resultSet.getShort("Room");
+				short room = resultSet.getShort("WK.Room");
 				worker.setRoom(room);
 
-				String name = resultSet.getString("Name");
+				String name = resultSet.getString("WK.Name");
 				worker.setName(name);
 
-				String profession = resultSet.getString("Profession");
+				String profession = resultSet.getString("PR.ProfessionName");
 				worker.setProfession(profession);
 
-				String endurance = resultSet.getString("Endurance");
+				String endurance = resultSet.getString("EN.EnduranceName");
 				worker.setEndurance(endurance);
 
-				long cost = resultSet.getLong("Cost");
+				long cost = resultSet.getLong("WK.Cost");
 				worker.setCost(cost);
 
 				workerList.add(worker);

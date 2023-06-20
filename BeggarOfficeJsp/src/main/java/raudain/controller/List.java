@@ -44,6 +44,8 @@ public class List extends HttpServlet {
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
 		disp.forward(request, response);
+		
+		System.out.println("doGet response forwarded to list.jsp");
 	}
 
 	/**

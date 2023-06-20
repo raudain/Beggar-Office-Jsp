@@ -47,7 +47,6 @@
 					<th>Name</th>
 					<th>Profession</th>
 					<th>Endurance</th>
-					<th>Level</th>
 					<th>Cost</th>
 				</tr>
 				<c:forEach var="worker" items="${workerList}">
@@ -56,7 +55,6 @@
 						<td>${worker.name}</td>
 						<td>${worker.profession}</td>
 						<td>${worker.endurance}</td>
-						<td>${worker.level}</td>
 						<td>${worker.cost}</td>
 					</tr>
 				</c:forEach>

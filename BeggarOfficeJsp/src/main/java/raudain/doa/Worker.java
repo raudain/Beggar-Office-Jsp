@@ -9,7 +9,6 @@ public class Worker implements Serializable {
     private String name;
     private String profession;
     private String endurance;
-    private byte level;
     private long cost;
 
 
@@ -79,22 +78,6 @@ public class Worker implements Serializable {
     }
 
     /**
-     * @return the level
-     */
-    public byte getLevel() {
-
-        return level;
-    }
-
-    /**
-     * @param level the level to set
-     */
-    public void setLevel(final byte level) {
-
-        this.level = level;
-    }
-
-    /**
      * @return the cost
      */
     public long getCost() {
@@ -113,7 +96,6 @@ public class Worker implements Serializable {
     @Override
 	public String toString() {
 		return "Worker [room=" + room + ", name=" + name + ", profession=" + profession + ", endurance=" + endurance
-				+ ", level=" + level + ", cost=" + cost + "]";
+				+ ", cost=" + cost + "]";
 	}
-
 }

@@ -1,3 +1,5 @@
+USE dbo;
+
 SELECT WK.Room, WK.Name, PR.ProfessionName, EN.EnduranceName, WK.Cost
 FROM dbo.Worker WK
 INNER JOIN dbo.Profession PR ON PR.Profession = WK.Profession

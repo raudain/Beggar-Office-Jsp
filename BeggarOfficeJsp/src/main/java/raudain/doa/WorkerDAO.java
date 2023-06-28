@@ -63,7 +63,7 @@ public class WorkerDAO {
 
 		connection = DataConnection.createConnection();
 
-		String sqlScript = sqlScripts.getListWorkers();
+		final String sqlScript = sqlScripts.getWorkerList();
 		try {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
@@ -145,9 +145,9 @@ public class WorkerDAO {
 			System.out.println("Error. Can not create the statement: " + e);
 		}
 
-		final String searchString = "SELECT name FROM workers;";
+		final String sqlScript = sqlScripts.getWorkerNameList();
 		try {
-			resultSet = statement.executeQuery(searchString);
+			resultSet = statement.executeQuery(sqlScript);
 		} catch (final SQLException e) {
 			System.out.println("Error. Problem with executeQuery: " + e);
 		}

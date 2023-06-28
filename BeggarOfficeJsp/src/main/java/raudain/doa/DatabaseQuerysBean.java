@@ -5,22 +5,31 @@ package raudain.doa;
  */
 public class DatabaseQuerysBean {
 	
-	private String listWorkers = "";
+	private String workerList = "";
 	private String updateWorker = "";
+	private String workerNameList = "";
 	
-	public String getListWorkers() {
-		return listWorkers;
+	public String getWorkerList() {
+		return workerList;
 	}
-
-	public void setListWorkers(String listWorkers) {
-		this.listWorkers = listWorkers;
+	
+	public void setWorkerList(String workerList) {
+		this.workerList = workerList;
 	}
 	
 	public String getUpdateWorker() {
 		return updateWorker;
 	}
-
-	public void setUpdateWorker(String updateEvent) {
-		this.updateWorker = updateEvent;
+	
+	public void setUpdateWorker(String updateWorker) {
+		this.updateWorker = updateWorker;
+	}
+	
+	public String getWorkerNameList() {
+		return workerNameList;
+	}
+	
+	public void setWorkerNameList(String workerNameList) {
+		this.workerNameList = workerNameList;
 	}
 }

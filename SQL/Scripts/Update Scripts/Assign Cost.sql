@@ -89,7 +89,7 @@ WHERE Profession = 42
 AND Endurance = 5;
 
 UPDATE dbo.Worker
-SET Cost = 500000000
+SET Cost = 520000000
 WHERE Profession = 42
 AND Endurance = 6;
 
@@ -415,7 +415,7 @@ AND Endurance = 6;
 
 /* Politician */
 UPDATE dbo.Worker
-SET Cost = 0
+SET Cost = 1600000
 WHERE Profession = 51
 AND Endurance = 1;
 

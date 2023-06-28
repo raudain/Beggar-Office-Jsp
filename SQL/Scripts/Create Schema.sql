@@ -243,7 +243,14 @@ INSERT INTO worker (Room, Name, Profession, Endurance, Cost) VALUES
 -- Floor 45
 (4501, 'Wayne', 61, 4, 400000000),
 (4502, 'Joshua', 52, 4, 55000000),
-(4503, 'Sean', 42, 4, 10500000);
+(4503, 'Sean', 42, 4, 10500000),
+-- Floor 46
+(4601, 'Alicia', 61, 6, 48000000000),
+(4602, 'Brian', 42, 6, 520000000),
+(4603, 'Douglas', 52, 4, 55000000),
+-- Floor 47
+(4701, 'Michael', 44, 3, 3050000),
+(4702, 'Adam', 51, 1, 1600000);
 
 
 SELECT worker.Room, worker.Name, profession.Profession AS Profession, endurance.EnduranceName AS Endurance, worker.Cost

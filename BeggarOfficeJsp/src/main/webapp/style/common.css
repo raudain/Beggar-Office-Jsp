@@ -189,7 +189,7 @@ nav, #worker-overlay {
 }
 
 nav {
-	height: 9.8vh;
+	/*height: 9.8vh;*/
 	background-color: #EFE0B1;
 	top: 0;
 	z-index: 1;
@@ -341,6 +341,12 @@ li a:hover {
 
 .below-top, #big-table {
 	margin-top: 7%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .below-top, #big-table {
+	  margin-top: 8%;
+  }
 }
 
 #tower, .tower-floor div, #worker-overlay, .left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {

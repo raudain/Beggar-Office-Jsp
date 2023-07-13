@@ -18,12 +18,13 @@ import raudain.doa.WorkerDAO;
  */
 @WebServlet("/Board")
 public class Board extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing ...<br/>
+	 * This method is for editing workers <br/>
 	 *
 	 * @return void
 	 *
@@ -50,6 +51,7 @@ public class Board extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("doGet response forwarded to board.jsp");
 	}
 
 	/**

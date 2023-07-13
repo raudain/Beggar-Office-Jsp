@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	info="Sort Workers JSP" isELIgnored="false" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<meta charset="UTF-8">
-	<meta name="description" content="Worker tracker for the Virtual Beggar mobile clicker game">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="description" content="Worker sorter for the Virtual Beggar mobile clicker game">
 	<meta name="author" content="Roody Audain">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Change Inc | List</title>
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<link rel="stylesheet" href="style/common.css">
-	
+	<title>Change Inc | List</title>
+	<link rel="stylesheet" href="style/common.css">	
 	<style>
 		th {
 			border-bottom-style: solid;

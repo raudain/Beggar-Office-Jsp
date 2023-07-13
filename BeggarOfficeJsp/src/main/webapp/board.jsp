@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	info="Edit Worker JSP" isELIgnored="false" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
-<meta charset="UTF-8">
-<meta name="description"
-	content="Worker tracker for the Virtual Beggar mobile clicker game">
-<meta name="author" content="Roody Audain">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-<title>Change Inc | Board</title>
-<link rel="stylesheet" href="style/common.css">
-<link rel="stylesheet" href="style/board.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="description" content="Worker Editer for the Virtual Beggar mobile clicker game">
+	<meta name="author" content="Roody Audain">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<title>Change Inc | Board</title>
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/board.css">
 </head>
 
 <body>
@@ -21,9 +21,8 @@
 	<section>
 		<ul>
 			<li><a href="index.html">Home</a></li>
-			<li><a href="List">List Workers</a></li>
-			<li><a style="background-color: white; color: #D99F4D;"
-				href="Board">Worker Board</a></li>
+			<li><a href="list.jsp">List Workers</a></li>
+			<li><a style="background-color: white; color: #D99F4D;" href="Board">Worker Board</a></li>
 		</ul>
 	</section>
 

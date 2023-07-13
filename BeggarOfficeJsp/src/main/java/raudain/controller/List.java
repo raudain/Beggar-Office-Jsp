@@ -24,7 +24,7 @@ public class List extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers date from workers table in mydb database<br/>
+	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
 	 * 
 	 * @return void
 	 * 
@@ -38,13 +38,19 @@ public class List extends HttpServlet {
 			throws ServletException, IOException {
 
 		WorkerDAO doa = new WorkerDAO();
+		
 		ArrayList<Worker> workerList = new ArrayList<>();
 		workerList = doa.getWorkers();
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
-		disp.forward(request, response);
-		
+		try {
+			disp.forward(request, response);
+		} catch (ServletException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		System.out.println("doGet response forwarded to list.jsp");
 	}
 

@@ -51,7 +51,7 @@ public class List extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("doGet response forwarded to list.jsp");
+		//System.out.println("doGet response forwarded to list.jsp");
 	}
 
 	/**

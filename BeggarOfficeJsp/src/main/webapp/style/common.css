@@ -203,6 +203,7 @@ nav {
 }
 
 #brand, #app-switcher figure, .board-column1, .board-column2, th {
+	border-bottom-style: solid;
 	color: #D99F4D;
 }
 
@@ -349,6 +350,12 @@ li a:hover {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .below-top, #big-table {
+	  margin-top: 12%;
+  }
+}
+
 #tower, .tower-floor div, #worker-overlay, .left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
 	border-style: solid;
 }
@@ -374,8 +381,10 @@ li a:hover {
 	bottom: 0px;
 }
 
-table {
+table, th, td {
+	border: 1px solid black;
 	border-spacing: var(--profile-spacing);
+	border-collapse: collapse;
 }
 
 #profile table {

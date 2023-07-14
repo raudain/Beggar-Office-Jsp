@@ -5,6 +5,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<meta name="description" content="Worker sorter for the Virtual Beggar mobile clicker game">
@@ -13,26 +14,18 @@
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<title>Change Inc | List</title>
 	<link rel="stylesheet" href="style/common.css">	
-	<style>
-		th {
-			border-bottom-style: solid;
-		}
-	</style>
+	
 </head>
 
 <body style="margin: 13px 0px 10px 0px; background-color: #ffffff; font-family: Arial, Helvetica, sans-serif; color: #660000;">
   
-  <div id="aa-preloader-area">
-  		<div class="pulse"></div>
-  </div>
-  
-  <section>
+	<nav>
 		<ul>
 			<li><a href=".">Home</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="List">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
-	</section>
+	</nav>
 	
 	<script src="javascript/top.js"></script>
 
@@ -61,12 +54,7 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-	
-	<script>
-		window.addEventListener("load", function () {
-			const loader = document.querySelector("#aa-preloader-area");
-			loader.style.display = "none";
-		})
-	</script>
+
 </body>
+
 </html>

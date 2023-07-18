@@ -125,6 +125,75 @@ public class WorkerDAO {
 	 * Prepare a statement object using the connection that gets all the workers
 	 * from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 *
+	 * @return The number of the next available room for a new worker
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public short getNextRoom() {
+		
+		final short nextRoom = 4703;
+		
+		return nextRoom;
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all the workers in the worker Table in the Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the workers
+	 * from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 *
+	 * @return The number of the next available room for a new worker
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public void insertWorker(Worker worker) {
+
+		connection = DataConnection.createConnection();
+
+		short room = worker.getRoom();
+		String name = worker.getName();
+		String profession = worker.getProfession();
+		String endurance = worker.getEndurance();
+		Long cost = worker.getCost();
+		
+		final String insertSqlStatement = sqlScripts.getWorkerList();
+		try {
+			// Prepare a statement object using the connection for provided worker room
+			preparedStatement = connection.prepareStatement(insertSqlStatement);
+			
+			preparedStatement.setShort(1, room);
+			preparedStatement.setString(2, name);
+			preparedStatement.setString(3, profession);
+			preparedStatement.setString(4, endurance);
+			preparedStatement.setLong(5, cost);
+			
+			preparedStatement.executeUpdate();
+			connection.close();
+		} catch (final SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all the workers in the worker Table in the Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the workers
+	 * from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 *
 	 * @return Collection of Events
@@ -215,9 +284,6 @@ public class WorkerDAO {
 				String endurance = resultSet.getString("endurance");
 				worker.setEndurance(endurance);
 
-				byte level = resultSet.getByte("level");
-				worker.setLevel(level);
-
 				long cost = resultSet.getLong("cost");
 				worker.setCost(cost);
 			}
@@ -252,7 +318,6 @@ public class WorkerDAO {
 		String name = updatedWorker.getName();
 		String profession = updatedWorker.getProfession();
 		String endurance = updatedWorker.getEndurance();
-		Byte level = updatedWorker.getLevel();
 		Long cost = updatedWorker.getCost();
 		try {
 			// Prepare a statement object using the connection for provided worker room
@@ -260,7 +325,6 @@ public class WorkerDAO {
 			preparedStatement.setString(1, name);
 			preparedStatement.setString(2, profession);
 			preparedStatement.setString(3, endurance);
-			preparedStatement.setByte(4, level);
 			preparedStatement.setLong(5, cost);;
 			preparedStatement.setInt(6, room);
 			preparedStatement.executeUpdate();

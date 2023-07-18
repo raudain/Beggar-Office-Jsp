@@ -8,8 +8,11 @@
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
 	<bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
+	
 		<property name="workerList" value="SELECT WK.Room, WK.Name, PR.ProfessionName, EN.EnduranceName, WK.Cost FROM dbo.Worker WK INNER JOIN dbo.Profession PR ON PR.Profession = WK.Profession INNER JOIN Endurance EN ON EN.Endurance = WK.Endurance ORDER BY WK.Room;"></property>
+		<property name="insert" value="INSERT INTO worker (Room, Name, Profession, Endurance, Cost) VALUES (?, ?, ?, ?, ?)"></property>
 		<property name="updateWorker" value="UPDATE `mydb`.`workers` SET `name` = ?, `profession` = ?, `endurance` = ?, `level` = ?, `cost` = ? WHERE (`room` = ?);"></property>
 		<property name="workerNameList" value="SELECT Name FROM dbo.Worker;"></property>
+ 	
  	</bean>
 </beans>

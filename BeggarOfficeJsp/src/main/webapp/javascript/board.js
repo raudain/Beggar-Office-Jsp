@@ -1,3 +1,4 @@
+/*
 // Pane
 var pane = document.createElement("div");
 pane.id = "pane";
@@ -27,6 +28,7 @@ function returnFromOverlay() {
 		workerOverlay.style.display = "none";
 	}
 }
+*/
 
 var formElements = document.forms;
 var workerClassNames = ".left-worker, .middle-worker, .right-worker";

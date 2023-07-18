@@ -320,7 +320,7 @@ AND Endurance = 6;
 
 /* Mad Scientist */
 UPDATE dbo.Worker
-SET Cost = 0
+SET Cost = 12000000
 WHERE Profession = 61
 AND Endurance = 1;
 

@@ -14,12 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
+/**
+ * @author Roody Audain
+ *
+ */
 @WebServlet("/update.htm")
 public class UpdateWorker extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	//JDBC API classes for data persistence
-		
+	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -41,8 +42,6 @@ public class UpdateWorker extends HttpServlet {
 		String name = request.getParameter("workername");
 		String profession = request.getParameter("profession");
 		String endurance = request.getParameter("endurance");
-		String workerLevel = request.getParameter("level");
-		Byte level = Byte.parseByte(workerLevel);
 		String workerCost = request.getParameter("cost");
 		Long cost = Long.parseLong(workerCost);
 		
@@ -51,7 +50,6 @@ public class UpdateWorker extends HttpServlet {
 		updatedWorker.setName(name);
 		updatedWorker.setProfession(profession);
 		updatedWorker.setEndurance(endurance);
-		updatedWorker.setLevel(level);
 		updatedWorker.setCost(cost);
 		
 		WorkerDAO doa = new WorkerDAO();

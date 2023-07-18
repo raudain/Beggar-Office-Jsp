@@ -1,21 +1,32 @@
 /* 
  *	***************** Menu Section Header ****************
  */
-var section = document.querySelector("nav");
+var navigation = document.querySelector("nav");
 
-// Brand
-var brand = document.createElement("div");
-brand.id = "brand";
-brand.addEventListener("click", appSwitcherOn);
+// Create Worker Button
+var insertWorkerButton = document.createElement("button");
+insertWorkerButton.type = "button";
+//insertWorkerButton.className = "btn"
+var icon = document.createElement("i");
+icon.className = "fa-regular fa-plus";
+insertWorkerButton.appendChild(icon);
+var buttonText = document.createTextNode("Onboard Worker");
+insertWorkerButton.addEventListener("click", newPage);
+insertWorkerButton.appendChild(buttonText);
+//createButton.id = "brand";
+//createButton.addEventListener("click", appSwitcherOn);
 var menu = document.querySelector("ul");
-section.insertBefore(brand, menu);
+navigation.insertBefore(insertWorkerButton, menu.nextSibling);
 
+/*
 var logo = document.createElement("h1");
 logo.id = "logo";
 var logoText = document.createTextNode("V.B. Tower");
 logo.appendChild(logoText);
 brand.appendChild(logo);
+*/
 
+/*
 var caret = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 caret.setAttribute("width", 16);
 caret.setAttribute("height", 16);
@@ -27,6 +38,15 @@ lines.setAttribute('points', points);
 caret.appendChild(lines);
 caret.innerHTML += "Sorry, your browser does not support inline SVG.";
 brand.appendChild(caret);
+*/
+
+
+/*
+ * ***************** New Worker Onboarding ****************
+ */
+function newPage() {
+	location.href=".";
+}
 
 /*
  * ***************** Application Switcher ****************

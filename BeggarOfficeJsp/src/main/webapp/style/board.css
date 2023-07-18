@@ -39,6 +39,7 @@
 
 .floor-label, .left-worker figcaption, .middle-worker figcaption, .right-worker figcaption {
 	width: 8.3em;
+	font-size: 2.4vw;
 	background-color: white;
 	color: #9C8E87;
 }

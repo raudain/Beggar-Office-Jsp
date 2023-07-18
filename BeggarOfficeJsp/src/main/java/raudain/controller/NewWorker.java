@@ -1,7 +1,6 @@
 package raudain.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,17 +14,20 @@ import raudain.doa.WorkerDAO;
 
 /**
  * @author Roody Audain
- * 
+ *
  */
-@WebServlet("/List")
-public class List extends HttpServlet {
-	
+@WebServlet("/Insert")
+public class NewWorker extends HttpServlet {
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
+	 * This method creates a new worker <br/>
 	 * 
 	 * @return void
 	 * 
@@ -35,16 +37,27 @@ public class List extends HttpServlet {
 	 * @throws ServletException, IOException
 	 */
 	@Override
-	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response) {
 
 		WorkerDAO doa = new WorkerDAO();
+		short room = doa.getNextRoom();
 		
-		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkers();
-		request.setAttribute("workerList", workerList);
-
-		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
+		String name = request.getParameter("name");
+		String profession = request.getParameter("profession");
+		String endurance = request.getParameter("endurance");
+		String workerCost = request.getParameter("cost");
+		Long cost = Long.parseLong(workerCost);
+		
+		Worker newWorker = new Worker();
+		newWorker.setRoom(room);
+		newWorker.setName(name);
+		newWorker.setProfession(profession);
+		newWorker.setEndurance(endurance);
+		newWorker.setCost(cost);
+		
+		doa.insertWorker(newWorker);
+		
+		final RequestDispatcher disp = request.getRequestDispatcher("/board.jsp");
 		try {
 			disp.forward(request, response);
 		} catch (ServletException e) {
@@ -52,7 +65,6 @@ public class List extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//System.out.println("doGet response forwarded to list.jsp");
 	}
 
 	/**
@@ -64,5 +76,4 @@ public class List extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

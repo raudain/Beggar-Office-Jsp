@@ -51,7 +51,7 @@ public class Board extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("doGet response forwarded to board.jsp");
+		//System.out.println("doGet response forwarded to board.jsp");
 	}
 
 	/**

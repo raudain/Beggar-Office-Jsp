@@ -1,63 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	info="Sort Workers" isELIgnored="false" pageEncoding="ISO-8859-1"%>
+    info="New Worker Room" isELIgnored="false" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
-
+<html>
 <head>
 
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<meta name="description" content="Worker sorter for the Virtual Beggar mobile clicker game">
+	<meta name="description" content="Room creator for the Virtual Beggar mobile clicker game">
 	<meta name="author" content="Roody Audain">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<title>Change Inc | List</title>
+	<title>Change Inc | Create Room</title>
 	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/design.css">
-	
+
 </head>
 
 <body>
-  
+
 	<nav>
 		<ul>
-			<li><a href=".">Home</a></li>
-			<li><a style="background-color: white; color: #D99F4D;" href="List">List Workers</a></li>
+			<li><a style="background-color: white; color: #D99F4D;" href="index.html">Home</a></li>
+			<li><a href="List">List Workers</a></li>
 			<li><a href="Board">Worker Board</a></li>
 		</ul>
 	</nav>
 	
 	<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
+	
 	<script src="javascript/nav.js"></script>
-
-	<c:choose>
-		<c:when test="${workerList == null or workerList.isEmpty()}">
-                The List is empty.
-              </c:when>
-		<c:otherwise>
-			<table id="big-table">
+	
+	<div id="worker-overlay">
+		<form action="Onboarding" method="post">
+			<table>
 				<tr>
 					<th>Room</th>
-					<th>Name</th>
-					<th>Profession</th>
-					<th>Endurance</th>
-					<th>Cost</th>
+					<td><input type="text" name="room"
+					     value="${room}"></td>
 				</tr>
-				<c:forEach var="worker" items="${workerList}">
-					<tr>
-						<td>${worker.room}</td>
-						<td>${worker.name}</td>
-						<td>${worker.profession}</td>
-						<td>${worker.endurance}</td>
-						<td>${worker.cost}</td>
-					</tr>
-				</c:forEach>
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<th>Profession</th>
+					<td><input type="text" name="profession"></td>
+				</tr>
+				<tr>
+					<th>Endurance</th>
+					<td><input type="text" name="endurance"></td>
+				</tr>
 			</table>
-		</c:otherwise>
-	</c:choose>
-
+				<input id="save" type="submit" value="Hire">
+			</form>
+	</div>
 </body>
 
 </html>

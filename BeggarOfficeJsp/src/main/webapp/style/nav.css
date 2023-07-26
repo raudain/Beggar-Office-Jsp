@@ -6,11 +6,6 @@
 	--profile-spacing: 2vh;
 }
 
-body {
-	margin: 0px;
-	background-color: rgba(212, 236, 247, 1);
-}
-
 /*Pre-loader*/
 #aa-preloader-area {
   background-color: #F8F8F8;

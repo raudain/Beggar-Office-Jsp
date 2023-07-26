@@ -60,10 +60,7 @@ public class WorkerDAO {
 	public ArrayList<Worker> getWorkers() {
 
 		Statement statement = null;
-
-		connection = DataConnection.createConnection();
-
-		final String sqlScript = sqlScripts.getWorkerList();
+		connection = DataConnection.createConnection();	
 		try {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
@@ -72,6 +69,7 @@ public class WorkerDAO {
 			e.printStackTrace();
 		}
 		
+		final String sqlScript = sqlScripts.getWorkerList();
 		try {
 			resultSet = statement.executeQuery(sqlScript);
 		} catch (final SQLException e) {
@@ -105,12 +103,14 @@ public class WorkerDAO {
 				workerList.add(worker);
 			}
 		} catch (final SQLException e) {
-			System.out.println("Error. Problem reading data: " + e);
+			System.out.println("Error. Problem getting workers.");
+			e.printStackTrace();
 		}
 		try {
 			DataConnection.closeConnection();
 		} catch (final SQLException e) {
-			System.out.println("Error. Problem with closing connection: " + e);
+			System.out.println("Error. Problem with closing connection");
+			e.printStackTrace();
 		}
 		return workerList;
 	}
@@ -134,47 +134,70 @@ public class WorkerDAO {
 	 */
 	public short getNextRoom() {
 		
-		final short nextRoom = 4703;
+		Statement statement = null;
+		connection = DataConnection.createConnection();
+		try {
+			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in getNextRoom WorkerDAO");
+			e.printStackTrace();
+		}
 		
-		return nextRoom;
+		final String sqlScript = sqlScripts.getLastRoom();
+		try {
+			resultSet = statement.executeQuery(sqlScript);
+			resultSet.next();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "ResultSet in getNextRoom WorkerDAO");
+			e.printStackTrace();
+		}
+		short lastRoom = -1;
+		try {
+			lastRoom = resultSet.getShort("LastRoom");
+		} catch (final SQLException e) {
+			System.out.println("Error. Problem getting next free room.");
+			e.printStackTrace();
+		}
+		if (lastRoom % 10 == 3) {
+			final Integer nextRoom = lastRoom + 98;
+			return Short.parseShort(nextRoom.toString());
+		}
+		else {
+			final Integer nextRoom = lastRoom + 1;
+			return Short.parseShort(nextRoom.toString());
+		}
 	}
 	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all the workers in the worker Table in the Database <br/>
+	 * DAO for inserting a new worker into the worker Table in the Database <br/>
 	 *
-	 * PSEUDOCODE: <br/>
-	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the workers
-	 * from the worker table. <br/>
-	 * Execute the SQL statement and keep a reference to the result set.<br/>
-	 *
-	 * @return The number of the next available room for a new worker
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 *
+	 * @return void
+	 * 
 	 */
 	public void insertWorker(Worker worker) {
 
-		connection = DataConnection.createConnection();
-
 		short room = worker.getRoom();
 		String name = worker.getName();
-		String profession = worker.getProfession();
-		String endurance = worker.getEndurance();
-		Long cost = worker.getCost();
+		String workerProfession = worker.getProfession();
+		byte profession = parseProfession(workerProfession);
+		String workerEndurance = worker.getEndurance();
+		byte endurance = parseEndurance(workerEndurance);
+		long cost = calculateCost(profession, endurance);
 		
-		final String insertSqlStatement = sqlScripts.getWorkerList();
+		connection = DataConnection.createConnection();
+		final String insertSqlStatement = sqlScripts.getInsert();
 		try {
 			// Prepare a statement object using the connection for provided worker room
 			preparedStatement = connection.prepareStatement(insertSqlStatement);
 			
 			preparedStatement.setShort(1, room);
 			preparedStatement.setString(2, name);
-			preparedStatement.setString(3, profession);
-			preparedStatement.setString(4, endurance);
+			preparedStatement.setByte(3, profession);
+			preparedStatement.setByte(4, endurance);
 			preparedStatement.setLong(5, cost);
 			
 			preparedStatement.executeUpdate();
@@ -182,6 +205,395 @@ public class WorkerDAO {
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * Covert the profession from a string to a byte  <br/>
+	 *
+	 *
+	 * @return profession
+	 *
+	 */
+	private static Byte parseProfession(String professionName) {
+		
+		byte profession;	
+		switch (professionName) {
+        	case "Construction Worker":  profession = 11;
+                 break;
+        	case "Postman":  			profession = 12;
+                 						break;
+        	case "Artist":  			profession = 21;
+                 						break;
+        	case "Cook":  				profession = 22;
+                 						break;
+        	case "Magician":  			profession = 23;
+                 						break;
+        	case "Firefighter":  		profession = 24;
+                 						break;
+        	case "Scientist":  			profession = 31;
+                 						break;
+        	case "Journalist":  		profession = 32;
+                 						break;
+        	case "Doctor":  			profession = 41;
+                 						break;
+        	case "Computer Engineer":	profession = 42;
+                 						break;
+        	case "Santa":  				profession = 43;
+                 						break;
+        	case "Lawyer":  			profession = 44;
+                 						break;
+        	case "Politician": 			profession = 51;
+        								break;
+        	case "Pilot":  				profession = 52;
+        								break;
+        	case "Mad Scientist":  		profession = 61;
+        								break;
+        	case "Businessman":  		profession = 71;
+        								break;
+        	default: 					profession = -1;
+                 						break;
+		}
+		return profession;
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * Covert the profession from a string to a byte  <br/>
+	 *
+	 *
+	 * @return profession
+	 *
+	 */
+	private static Byte parseEndurance(String enduranceName) {
+		
+		byte endurance;	
+		switch (enduranceName) {
+			case "Lazy": 			endurance = 1;
+									break;
+			case "Sleepy":  		endurance = 2;
+        							break;
+			case "Diligent":  		endurance = 3;
+        							break;
+			case "Productive":  	endurance = 4;
+        							break;
+			case "Hard-working":	endurance = 5;
+        							break;
+			case "Tireless":  		endurance = 6;
+        							break;
+			default: 				endurance = -1;
+        							break;
+		}
+		return endurance;
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * Get the cost of a new worker  <br/>
+	 *
+	 *
+	 * @return profession
+	 *
+	 */
+	private static Long calculateCost(byte profession, byte endurance) {
+		
+		long cost = 0;
+		
+		switch (profession) {
+			/* 1. Artist */
+			case 21:
+				switch (endurance) {
+					case 1:		cost = 15000;
+								break;
+					case 2: 	cost = 25000;
+        						break;
+					case 3: 	cost = 100000;
+        						break;
+					case 4: 	cost = 370000;
+        						break;
+					case 5:		cost = 2000000;
+        						break;
+					case 6: 	cost = 22000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 2. Businessman */
+			case 71:
+				switch (endurance) {
+					case 1:		cost = 90;
+								break;
+					case 2: 	cost = 160;
+        						break;
+					case 3: 	cost = 270;
+        						break;
+					case 4: 	cost = 450;
+        						break;
+					case 5:		cost = 850;
+        						break;
+					case 6: 	cost = 1700;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 3. Computer Engineer */
+			case 42:
+				switch (endurance) {
+					case 1:		cost = 0;
+								break;
+					case 2: 	cost = 950000;
+        						break;
+					case 3: 	cost = 3050000;
+        						break;
+					case 4: 	cost = 10500000;
+        						break;
+					case 5:		cost = 40000000;
+        						break;
+					case 6: 	cost = 520000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 4. Construction Worker */
+			case 11:
+				switch (endurance) {
+					case 1:		cost = 2500;
+								break;
+					case 2: 	cost = 5000;
+        						break;
+					case 3: 	cost = 20000;
+        						break;
+					case 4: 	cost = 70000;
+        						break;
+					case 5:		cost = 0;
+        						break;
+					case 6: 	cost = 2000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 5. Cook */
+			case 22:
+				switch (endurance) {
+					case 1:		cost = 15000;
+								break;
+					case 2: 	cost = 25000;
+        						break;
+					case 3: 	cost = 100000;
+        						break;
+					case 4: 	cost = 370000;
+        						break;
+					case 5:		cost = 2000000;
+        						break;
+					case 6: 	cost = 22000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 6. Doctor */
+			case 41:
+				switch (endurance) {
+					case 1:		cost = 500000;
+								break;
+					case 2: 	cost = 950000;
+        						break;
+					case 3: 	cost = 3100000;
+        						break;
+					case 4: 	cost = 10500000;
+        						break;
+					case 5:		cost = 40000000;
+        						break;
+					case 6: 	cost = 520000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 7. Firefighter */
+			case 24:
+				switch (endurance) {
+					case 1:		cost = 15000;
+								break;
+					case 2: 	cost = 25000;
+        						break;
+					case 3: 	cost = 250000;
+        						break;
+					case 4: 	cost = 370000;
+        						break;
+					case 5:		cost = 5000000;
+        						break;
+					case 6: 	cost = 22000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 8. Gardener */
+			case 13:
+				switch (endurance) {
+					case 1:		cost = 2500;
+								break;
+					case 2: 	cost = 5000;
+        						break;
+					case 3: 	cost = 20000;
+        						break;
+					case 4: 	cost = 100000;
+        						break;
+					case 5:		cost = 0;
+        						break;
+					case 6: 	cost = 0;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 9. Journalist */
+			case 32:
+				switch (endurance) {
+					case 1:		cost = 100000;
+								break;
+					case 2: 	cost = 180000;
+        						break;
+					case 3: 	cost = 640000;
+        						break;
+					case 4: 	cost = 2400000;
+        						break;
+					case 5:		cost = 10000000;
+        						break;
+					case 6: 	cost = 125000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 10. Lawyer */
+			case 44:
+				switch (endurance) {
+					case 1:		cost = 320000;
+								break;
+					case 2: 	cost = 950000;
+        						break;
+					case 3: 	cost = 3050000;
+        						break;
+					case 4: 	cost = 10500000;
+        						break;
+					case 5:		cost = 40000000;
+        						break;
+					case 6: 	cost = 520000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 11. Mad Scientist */
+			case 61:
+				switch (endurance) {
+					case 1:		cost = 12000000;
+								break;
+					case 2: 	cost = 0;
+        						break;
+					case 3: 	cost = 120000000;
+        						break;
+					case 4: 	cost = 400000000;
+        						break;
+					case 5:		cost = 2000000000;
+        						break;
+					case 6: 	cost = Long.parseLong("48000000000") ;
+        						break;
+					default:	cost = 0;
+        						break;
+				}
+			/* 12. Magician */
+			case 23:
+				switch (endurance) {
+					case 1:		cost = 15000;
+								break;
+					case 2: 	cost = 28000;
+        						break;
+					case 3: 	cost = 95000;
+        						break;
+					case 4: 	cost = 370000;
+        						break;
+					case 5:		cost = 2000000;
+        						break;
+					case 6: 	cost = 25000000;
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 13. Pilot */
+			case 52:
+				switch (endurance) {
+					case 1:		cost = 5000000;
+								break;
+					case 2: 	cost = 5000000;
+        						break;
+					case 3: 	cost = 15500000;
+        						break;
+					case 4: 	cost = 55000000;
+        						break;
+					case 5:		cost = 260000000;
+        						break;
+					case 6: 	cost = Long.parseLong("5800000000");
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 14. Politician */
+			case 51:
+				switch (endurance) {
+					case 1:		cost = 1600000;
+								break;
+					case 2: 	cost = 5000000;
+        						break;
+					case 3: 	cost = 15500000;
+        						break;
+					case 4: 	cost = 55000000;
+        						break;
+					case 5:		cost = 260000000;
+        						break;
+					case 6: 	cost = Long.parseLong("5800000000");
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 15. Santa */
+			case 43:
+				switch (endurance) {
+					case 1:		cost = 310000;
+								break;
+					case 2: 	cost = 950000;
+        						break;
+					case 3: 	cost = 3050000;
+        						break;
+					case 4: 	cost = 10500000;
+        						break;
+					case 5:		cost = 40000000;
+        						break;
+					case 6: 	cost = Long.parseLong("520000000");
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+			/* 16. Scientist */
+			case 31:
+				switch (endurance) {
+					case 1:		cost = 60000;
+								break;
+					case 2: 	cost = 180000;
+        						break;
+					case 3: 	cost = 640000;
+        						break;
+					case 4: 	cost = 2400000;
+        						break;
+					case 5:		cost = 10000000;
+        						break;
+					case 6: 	cost = Long.parseLong("125000000");
+        						break;
+					default:	cost = -1;
+        						break;
+				}
+		}
+		
+		return cost;
 	}
 	
 	/**
@@ -196,11 +608,8 @@ public class WorkerDAO {
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 *
-	 * @return Collection of Events
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
-	 *
+	 * @return All of the worker's names
+	 * 
 	 */
 	public ArrayList<String> getWorkerNames() {
 

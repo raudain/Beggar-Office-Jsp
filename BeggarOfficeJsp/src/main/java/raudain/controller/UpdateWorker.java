@@ -53,7 +53,6 @@ public class UpdateWorker extends HttpServlet {
 		updatedWorker.setCost(cost);
 		
 		WorkerDAO doa = new WorkerDAO();
-		
 		doa.updateWorker(updatedWorker);
 		
 		ArrayList<String> nameList = new ArrayList<>();

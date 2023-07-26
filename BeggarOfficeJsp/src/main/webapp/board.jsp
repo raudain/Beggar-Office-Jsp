@@ -12,21 +12,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<title>Change Inc | Board</title>
-	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/board.css">
 </head>
 
 <body>
 
-	<section>
+	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="list.jsp">List Workers</a></li>
 			<li><a style="background-color: white; color: #D99F4D;" href="Board">Worker Board</a></li>
 		</ul>
-	</section>
+	</nav>
 
-	<script src="javascript/top.js"></script>
+	<script src="javascript/nav.js"></script>
 
 	<img class="below-top" src="images/board/cork-board-top.jpg">
 	<div id="cork-board">

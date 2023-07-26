@@ -1,4 +1,4 @@
-/* Artist */
+/* 1. Artist */
 UPDATE dbo.Worker
 SET Cost = 15000
 WHERE Profession = 21
@@ -30,7 +30,7 @@ WHERE Profession = 21
 AND Endurance = 6;
 
 
-/* Businessman */
+/* 2. Businessman */
 UPDATE dbo.Worker
 SET Cost = 90
 WHERE Profession = 71
@@ -62,7 +62,7 @@ WHERE Profession = 71
 AND Endurance = 6;
 
 
-/* Computer Engineer */
+/* 3. Computer Engineer */
 UPDATE dbo.Worker
 SET Cost = 0
 WHERE Profession = 42
@@ -94,7 +94,7 @@ WHERE Profession = 42
 AND Endurance = 6;
 
 
-/* Construction Worker */
+/* 4. Construction Worker */
 UPDATE dbo.Worker
 SET Cost = 2500
 WHERE Profession = 11
@@ -126,7 +126,7 @@ WHERE Profession = 11
 AND Endurance = 6;
 
 
-/* Cook */
+/* 5. Cook */
 UPDATE dbo.Worker
 SET Cost = 15000
 WHERE Profession = 22
@@ -158,7 +158,7 @@ WHERE Profession = 22
 AND Endurance = 6;
 
 
-/* Doctor */
+/* 6. Doctor */
 UPDATE dbo.Worker
 SET Cost = 500000
 WHERE Profession = 41
@@ -190,7 +190,7 @@ WHERE Profession = 41
 AND Endurance = 6;
 
 
-/* Firefighter */
+/* 7. Firefighter */
 UPDATE dbo.Worker
 SET Cost = 15000
 WHERE Profession = 24
@@ -222,7 +222,7 @@ WHERE Profession = 24
 AND Endurance = 6;
 
 
-/* Gardener */
+/* 8. Gardener */
 UPDATE dbo.Worker
 SET Cost = 2500
 WHERE Profession = 13
@@ -254,7 +254,7 @@ WHERE Profession = 13
 AND Endurance = 6;
 
 
-/* Journalist */
+/* 9. Journalist */
 UPDATE dbo.Worker
 SET Cost = 100000
 WHERE Profession = 32
@@ -286,7 +286,7 @@ WHERE Profession = 32
 AND Endurance = 6;
 
 
-/* Lawyer */
+/* 10. Lawyer */
 UPDATE dbo.Worker
 SET Cost = 320000
 WHERE Profession = 44
@@ -318,7 +318,7 @@ WHERE Profession = 44
 AND Endurance = 6;
 
 
-/* Mad Scientist */
+/* 11. Mad Scientist */
 UPDATE dbo.Worker
 SET Cost = 12000000
 WHERE Profession = 61
@@ -350,7 +350,7 @@ WHERE Profession = 61
 AND Endurance = 6;
 
 
-/* Magician */
+/* 12. Magician */
 UPDATE dbo.Worker
 SET Cost = 15000
 WHERE Profession = 23
@@ -381,7 +381,7 @@ SET Cost = 25000000
 WHERE Profession = 23
 AND Endurance = 6;
 
-/* Pilot */
+/* 13. Pilot */
 UPDATE dbo.Worker
 SET Cost = 5000000
 WHERE Profession = 52
@@ -413,7 +413,7 @@ WHERE Profession = 52
 AND Endurance = 6;
 
 
-/* Politician */
+/* 14. Politician */
 UPDATE dbo.Worker
 SET Cost = 1600000
 WHERE Profession = 51
@@ -445,7 +445,7 @@ WHERE Profession = 51
 AND Endurance = 6;
 
 
-/* Santa */
+/* 15 Santa */
 UPDATE dbo.Worker
 SET Cost = 310000
 WHERE Profession = 43
@@ -477,7 +477,7 @@ WHERE Profession = 43
 AND Endurance = 6;
 
 
-/* Scientist */
+/* 16. Scientist */
 UPDATE dbo.Worker
 SET Cost = 60000
 WHERE Profession = 31

@@ -5,17 +5,18 @@ package raudain.doa;
  */
 public class DatabaseQuerysBean {
 	
+	private String lastRoom = "";
+	private String insert = "";
 	private String workerList = "";
-	private String  insert;
 	private String workerNameList = "";
 	private String updateWorker = "";
 	
-	public String getWorkerList() {
-		return workerList;
+	public String getLastRoom() {
+		return lastRoom;
 	}
-	
-	public void setWorkerList(String workerList) {
-		this.workerList = workerList;
+
+	public void setLastRoom(String nextRoom) {
+		this.lastRoom = nextRoom;
 	}
 	
 	public String getInsert() {
@@ -24,6 +25,14 @@ public class DatabaseQuerysBean {
 	
 	public void setInsert(String insert) {
 		this.insert = insert;
+	}
+	
+	public String getWorkerList() {
+		return workerList;
+	}
+	
+	public void setWorkerList(String workerList) {
+		this.workerList = workerList;
 	}
 	
 	public String getWorkerNameList() {

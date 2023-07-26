@@ -1,8 +1,6 @@
 package raudain.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.ListIterator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,21 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
-import java.lang.NumberFormatException;
-
-@WebServlet("/overlay.htm")
-public class Overlay extends HttpServlet {
+@WebServlet("/Room")
+public class Room extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	//JDBC API classes for data persistence
-		
+	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing the worker profile overlay<br/>
+	 * This method is for queuing up the next open room for a new worker<br/>
 	 * 
 	 * @return void
 	 * 
@@ -38,27 +31,11 @@ public class Overlay extends HttpServlet {
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String workerRoom = request.getParameter("room");
-		short room = -1;
-		try {
-			room = Short.parseShort(workerRoom);
-		}
-		catch (final NumberFormatException e){
-			System.out.println("Room number was not entered");
-			e.printStackTrace();
-		}
-		
 		WorkerDAO doa = new WorkerDAO();
-		ArrayList<String> nameList = new ArrayList<String>();
-		nameList = doa.getWorkerNames();
-		ListIterator<String> nameIterator = nameList.listIterator();
-		request.setAttribute("nameIterator", nameIterator);
-		
-		Worker worker = new Worker();
-		worker = doa.getWorker(room);
-		request.setAttribute("worker", worker);
+		short room = doa.getNextRoom();
+		request.setAttribute("room", room);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/overlay.jsp");
+		final RequestDispatcher disp = request.getRequestDispatcher("/room.jsp");
 		disp.forward(request, response);
 	}
 

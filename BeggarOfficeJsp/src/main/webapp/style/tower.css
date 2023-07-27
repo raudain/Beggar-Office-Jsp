@@ -1,5 +1,8 @@
-@charset "UTF-8";
+@charset "ISO-8859-1";
 
+#tower, .tower-floor div {
+	border-style: solid;
+}
 
 #tower, .tower-floor div {
 	box-sizing: border-box;
@@ -17,10 +20,8 @@
     background-color: #729DBD;
 }
 
-.tower-floor {
-  width: 80%;
-  height: 1.98%;
-  margin-top: 4.8%;
+.tower-floor, #cork-board, .row, .floor-label, #cbb {
+	margin: auto;
 }
 
 .tower-floor div, input {
@@ -34,6 +35,14 @@
   background-repeat: no-repeat;
   background-size: 6.8vh 13.6vh;
   background-position: bottom center;
+}
+
+.tower-floor {
+	width: 80%;
+	height: 1.98%;
+	margin-top: 4.8%;
+	right: 0;
+	left: 0;
 }
 
 .left-worker input, .middle-worker input, .right-worker input, #profile img {

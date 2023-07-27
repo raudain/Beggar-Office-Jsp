@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-:root {
-	--section-margin: 3.4%;
-	--section-background-color: #F4EAC9;
-	--profile-spacing: 2vh;
-}
-
 /*Pre-loader*/
 #aa-preloader-area {
   background-color: #F8F8F8;
@@ -157,48 +151,9 @@
 	bottom: 0;
 }
 
-nav, .board-column1, .board-column2 {
-	font-family: Arial Black;
-}
-
-nav {
-	text-decoration: none;
-}
-
-nav, img, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
-	margin: auto;
-}
-
-nav, #icon, .below-top, .tower-floor, table, #worker-overlay, #cork-board, .row, .floor-label, #profile {
-	right: 0;
-	left: 0;
-}
-
-nav, #worker-overlay {
-	position: fixed;
-}
-
-nav, button {
-	background-color: #EFE0B1; /* Tan background */
-}
-
-nav {
-	/*height: 9.8vh;*/
-	top: 0;
-	z-index: 1;
-	box-shadow: 0px 0px 20px 0px #000000;
-	display: block;
-}
-
 ul {
 	width: 33.3%;
-	list-style-type: none;
-	margin-right: var(--section-margin);
 	padding: 0px;
-	float: left;
-}
-
-li, .left-worker, .middle-worker, .board-column1 {
 	float: left;
 }
 
@@ -206,72 +161,21 @@ li {
 	margin-right: 2%;
 }
 
-li a, button {
-	color: #9C8E87; /* Brown text */
-}
-
 li a {
-	font-size: 2.4vw;
-	display: block;
-	padding: 15px;
 	text-decoration: none;
-}
-
-/* Darker background on mouse-over */
-li a:hover, button:hover {
-	background-color: #E3C867;
 }
 
 button {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	background-color: #EFE0B1; /* Tan background */
 	border: none; /* Remove borders */
-	padding: 12px 16px; /* Some padding */
-	font-size: 16px; /* Set a font size */
 	cursor: pointer; /* Mouse pointer on hover */
 }
 
-#brand, #app-switcher figure, .board-column1, .board-column2 {
-	display: inline-block;
-	font-size: 1.8vw;
-}
-
-#brand, #app-switcher figure, .board-column1, .board-column2, th {
-	border-bottom-style: solid;
-	color: #D99F4D;
-}
-
-#brand,#app-switcher figure {
-	margin-top: 1.3%;
-	margin-left: var(--section-margin);
-}
-
-#brand {
-	border: 2px solid #888;
-}
-
-#brand, #app-switcher figure {
-	width: 15.4%;
-}
-	
-#brand, section a {
+section a {
 	background-color: var(--section-background-color);
-}
-
-#brand, #app-switcher figure {
-	padding-right: 1%;
-	padding-left: 1%;
-}
-
-#logo, form {
-	display: inline;
-}
-
-#logo {
-	padding-right: 3%;
-	padding-left: 1%;
-	font-size: 1.8vw;
 }
 
 polyline {
@@ -288,66 +192,8 @@ polyline {
 	float: right;
 }
 
-#app-switcher img, #icon, .below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
+.below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
 	display: block;
-}
-
-#app-switcher {
-	display: none;
-    width: 11.5%;
-    max-width: calc(100% - 20px);
-    max-inline-size: calc(100% - 20px);
-    position: fixed;
-    top: 10%;
-    left: 14%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #d5d5d5;
-    box-shadow: 0 2px 10px rgba(0,0,0,.1);
-    border-radius: 8px;
-}
-
-#app-switcher figure {
-	width: 88px;
-    height: 85px;
-    margin: 15px 8px;
-}
-
-#app-switcher img, #icon {
-	width: 60px;
-    height: 60px;
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
-    border-radius: 23%;
-}
-
-#app-switcher figcaption, #icon div {
-	font-size: 13px;
-    font-weight: 400;
-    color: #333;
-    white-space: nowrap;
-    overflow-wrap: break-word;
-    padding-top: .8em;
-    color: #333;
-    font-family: SFText, Helvetica, sans-serif;
-    pointer-events: all;
-}
-
-#app-switcher figcaption, #icon div, .floor-label, .left-worker figcaption, .middle-worker figcaption, .right-worker figcaption, td {
-    text-align: center;
-}
-
-#icon #dayOfWeek {
-    font-size: .6vw;
-    color: red;
-}
-
-#icon #dayNumber {
-    padding-top: 0px;
-    font-size: 2vw;
-    font-family: Rajdhani;
-    line-height: 80%;
 }
 
 .below-top, #big-table {
@@ -366,21 +212,8 @@ polyline {
   }
 }
 
-#tower, .tower-floor div, #worker-overlay, .left-worker input, .left-worker input, .middle-worker input, .right-worker input, #profile img {
-	border-style: solid;
-}
-
 .left-worker, .middle-worker, .right-worker {
 	position: relative;
-}
-
-#worker-overlay {
-	width: 56.55%;
-	background-color: #D7D7D7;
-	border-width: 10px;
-	border-color: #E2B452;
-	top: 33.31%;
-	z-index: 9;
 }
 
 #profile {
@@ -389,12 +222,6 @@ polyline {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
-}
-
-table, th, td {
-	border: 1px solid black;
-	border-spacing: var(--profile-spacing);
-	border-collapse: collapse;
 }
 
 #profile table {

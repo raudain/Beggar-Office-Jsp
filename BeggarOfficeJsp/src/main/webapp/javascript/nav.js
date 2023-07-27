@@ -1,19 +1,23 @@
 /* 
  *	***************** Menu Section Header ****************
  */
-var navigation = document.querySelector("nav");
 
 // Create Worker Button
+var lastButton = document.createElement("li");
+lastButton.className = "w3-bar-item w3-margin-right w3-right";
+var navigation = document.querySelector("ul");
+var boardLink = document.getElementById("board");
+navigation.insertBefore(lastButton, boardLink);
 var insertWorkerButton = document.createElement("button");
 insertWorkerButton.type = "button";
+insertWorkerButton.className = "w3-button w3-hover-white w3-round-large";
+lastButton.appendChild(insertWorkerButton);
 var icon = document.createElement("i");
 icon.className = "fa-regular fa-plus";
 insertWorkerButton.appendChild(icon);
 var buttonText = document.createTextNode("Onboard Worker");
 insertWorkerButton.addEventListener("click", newPage);
 insertWorkerButton.appendChild(buttonText);
-var menu = document.querySelector("ul");
-navigation.insertBefore(insertWorkerButton, menu.nextSibling);
 
 /*
  * ***************** New Worker Onboarding ****************
@@ -25,6 +29,7 @@ function newPage() {
 /*
  * ***************** Application Switcher ****************
  */
+/*
 var appSwitcher = document.createElement("div");
 appSwitcher.id = "app-switcher";
 document.body.appendChild(appSwitcher);
@@ -34,6 +39,7 @@ function appSwitcherOn() {
 	appSwitcher.style.zIndex = 9;
 	pane.style.zIndex = 2;
 }
+
 
 // Virtual Beggar
 
@@ -166,3 +172,4 @@ var propertyCaption = document.createElement("figcaption");
 var propertyCaptionText = document.createTextNode("Real Estate");
 propertyCaption.appendChild(propertyCaptionText);
 propertyFigure.appendChild(propertyCaption);
+*/

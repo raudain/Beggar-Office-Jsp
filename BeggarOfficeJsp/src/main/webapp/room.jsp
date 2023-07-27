@@ -14,48 +14,60 @@
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<title>Change Inc | Create Room</title>
 	<link rel="stylesheet" href="style/nav.css">
-	<link rel="stylesheet" href="style/design.css">
+	<link rel="stylesheet" href="style/room.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
 <body>
 
-	<nav>
+<div class="w3-container w3-top">
+	<nav class="w3-bar w3-pale-blue">
 		<ul>
-			<li><a style="background-color: white; color: #D99F4D;" href="index.html">Home</a></li>
-			<li><a href="List">List Workers</a></li>
-			<li><a href="Board">Worker Board</a></li>
+			<li class="w3-bar-item w3-button w3-round-large w3-margin-left w3-yellow w3-hover-white w3-mobile"><a href=".">Home</a></li>
+			<li class="w3-bar-item w3-button w3-hover-white w3-round-large w3-mobile"><a href="List">List Workers</a></li>
+			<li id="board" class="w3-bar-item w3-button w3-hover-white w3-round-large w3-mobile"><a href="Board">Worker Board</a></li>
 		</ul>
 	</nav>
-	
-	<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
-	
-	<script src="javascript/nav.js"></script>
-	
-	<div id="worker-overlay">
-		<form action="Onboarding" method="post">
-			<table>
-				<tr>
-					<th>Room</th>
-					<td><input type="text" name="room"
-					     value="${room}"></td>
-				</tr>
-				<tr>
-					<th>Name</th>
-					<td><input type="text" name="name"></td>
-				</tr>
-				<tr>
-					<th>Profession</th>
-					<td><input type="text" name="profession"></td>
-				</tr>
-				<tr>
-					<th>Endurance</th>
-					<td><input type="text" name="endurance"></td>
-				</tr>
-			</table>
-				<input id="save" type="submit" value="Hire">
-			</form>
-	</div>
-</body>
+</div>
 
+<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>	
+<script src="javascript/nav.js"></script>
+
+<form id="worker-overlay" class="w3-container w3-card-4 w3-light-grey">
+  <h2>Bordered Input</h2>
+  <p>Add the w3-border class to create bordered inputs.</p>
+
+  <p><label>First Name</label>
+  <input class="w3-input w3-border" name="first" type="text"></p>
+
+  <p><label>Last Name</label>
+  <input class="w3-input w3-border" name="last" type="text"></p>
+</form>
+<!--
+<div id="worker-overlay" class="w3-display-topmiddle">
+	<form action="Onboarding" method="post" autocomplete="on">
+		<table class="w3-table">
+			<tr>
+				<th class="w3-right-align">Room</th>
+				<td><input type="text" name="room"
+				     value="${room}"></td>
+			</tr>
+			<tr>
+				<th class="w3-right-align">Name</th>
+				<td><input type="text" name="name" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th class="w3-right-align">Profession</th>
+				<td><input type="text" name="profession"></td>
+			</tr>
+			<tr>
+				<th class="w3-right-align">Endurance</th>
+				<td><input type="text" name="endurance"></td>
+			</tr>
+		</table>
+			<input id="save" type="submit" value="Hire">
+	</form>
+</div>
+-->	
 </html>

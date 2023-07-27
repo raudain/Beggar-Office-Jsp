@@ -1,5 +1,9 @@
 @charset "ISO-8859-1";
 
+#tower, #cork-board, .below-top, #big-table, #cbb {
+	width: 76.6vw;
+}
+
 #tower, .tower-floor div {
 	border-style: solid;
 }

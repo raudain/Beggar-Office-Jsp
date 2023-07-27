@@ -20,16 +20,16 @@
 </head>
 
 <body>
-
-<div class="w3-container w3-top">
-	<nav class="w3-bar w3-pale-blue">
-		<ul>
-			<li class="w3-bar-item w3-button w3-round-large w3-margin-left w3-yellow w3-hover-white w3-mobile"><a href=".">Home</a></li>
-			<li class="w3-bar-item w3-button w3-hover-white w3-round-large w3-mobile"><a href="List">List Workers</a></li>
-			<li id="board" class="w3-bar-item w3-button w3-hover-white w3-round-large w3-mobile"><a href="Board">Worker Board</a></li>
+<!--  
+<div class="w3-container w3-top"> -->
+	<nav class="w3-pale-blue w3-top">
+		<ul class ="w3-bar">
+			<li class="w3-bar-item w3-round-large w3-margin-right w3-margin-left w3-yellow w3-hover-white w3-mobile"><a href=".">Tower</a></li>
+			<li class="w3-bar-item w3-hover-white w3-round-large w3-margin-right w3-mobile"><a href="List">List Workers</a></li>
+			<li id="board" class="w3-bar-item w3-hover-white w3-round-large w3-margin-right w3-mobile"><a href="Board">Worker Board</a></li>
 		</ul>
 	</nav>
-</div>
+<!-- </div> -->
 
 <script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>	
 <script src="javascript/nav.js"></script>

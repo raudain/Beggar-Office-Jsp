@@ -11,6 +11,10 @@ img, .below-top, table {
 	margin: auto;
 }
 
+.below-top {
+	width: 76.6vw;
+}
+
 .left-worker input, .left-worker input, .middle-worker input, .right-worker input {
 	border-style: solid;
 }

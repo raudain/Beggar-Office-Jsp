@@ -1,25 +1,26 @@
-@charset "UTF-8";
+@charset "ISO-8859-1";
 
-li a {
-	text-decoration: none;
+table {
+	display: inline-table;
 }
 
-.navigation {
-	margin-top: 9px;
+th {
+	text-align: left;
 }
 
-.below-top {
+#big-table {
+	width: 76.6vw;
 	margin-top: 7%;
 }
 
 @media only screen and (max-width: 1300px) {
-  .below-top {
+  #big-table {
 	  margin-top: 8%;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .below-top {
+  #big-table {
 	  margin-top: 12%;
   }
 }

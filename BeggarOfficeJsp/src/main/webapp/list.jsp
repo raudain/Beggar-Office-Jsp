@@ -16,47 +16,50 @@
 	<title>Change Inc | List</title>
 	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/design.css">
-	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
-  
-	<nav>
+
+<div class="w3-top">
+	<nav class="w3-bar w3-pale-blue">
 		<ul>
-			<li><a href=".">Home</a></li>
-			<li><a style="background-color: white; color: #D99F4D;" href="List">List Workers</a></li>
-			<li><a href="Board">Worker Board</a></li>
+			<li class="w3-bar-item w3-button w3-mobile w3-hover-white"><a href=".">Tower</a></li>
+			<li class="w3-bar-item w3-button w3-mobile w3-yellow w3-hover-white"><a href="List">List Workers</a></li>
+			<li class="w3-bar-item w3-button w3-mobile w3-hover-white"><a href="Board">Worker Board</a></li>
 		</ul>
 	</nav>
-	
-	<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
-	<script src="javascript/nav.js"></script>
+</div>
 
-	<c:choose>
-		<c:when test="${workerList == null or workerList.isEmpty()}">
-                The List is empty.
-              </c:when>
-		<c:otherwise>
-			<table id="big-table">
+<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
+<script src="javascript/nav.js"></script>
+
+<c:choose>
+	<c:when test="${workerList == null or workerList.isEmpty()}">
+            The List is empty.
+          </c:when>
+	<c:otherwise>
+		<table id="big-table">
+			<tr>
+				<th>Room</th>
+				<th>Name</th>
+				<th>Profession</th>
+				<th>Endurance</th>
+				<th>Cost</th>
+			</tr>
+			<c:forEach var="worker" items="${workerList}">
 				<tr>
-					<th>Room</th>
-					<th>Name</th>
-					<th>Profession</th>
-					<th>Endurance</th>
-					<th>Cost</th>
+					<td>${worker.room}</td>
+					<td>${worker.name}</td>
+					<td>${worker.profession}</td>
+					<td>${worker.endurance}</td>
+					<td>${worker.cost}</td>
 				</tr>
-				<c:forEach var="worker" items="${workerList}">
-					<tr>
-						<td>${worker.room}</td>
-						<td>${worker.name}</td>
-						<td>${worker.profession}</td>
-						<td>${worker.endurance}</td>
-						<td>${worker.cost}</td>
-					</tr>
-				</c:forEach>
-			</table>
-		</c:otherwise>
-	</c:choose>
+			</c:forEach>
+		</table>
+	</c:otherwise>
+</c:choose>
 
 </body>
 

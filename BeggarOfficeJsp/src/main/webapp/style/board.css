@@ -9,6 +9,10 @@
 	width: 7.7vw;
 }
 
+#cork-board, #cbb {
+	width: 76.6vw;
+}
+
 #cork-board, .row, .floor-label, #cbb {
 	margin: auto;
 }
@@ -16,6 +20,10 @@
 #cork-board, .row, .floor-label {
 	right: 0;
 	left: 0;
+}
+
+#cork-board, .row, .floor-label, #cbb {
+	display: block;
 }
 
 #cork-board {
@@ -40,6 +48,10 @@
 
 .board-column1 {
 	float: left;
+}
+
+.board-column2 {
+	float: right;
 }
 
 .left-worker input, .middle-worker input, .right-worker input, #profile img {

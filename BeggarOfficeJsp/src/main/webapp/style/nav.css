@@ -4,61 +4,22 @@ li a {
 	text-decoration: none;
 }
 
-.right-worker, .board-column2 {
-	float: right;
+.navigation {
+	margin-top: 9px;
 }
 
-.below-top, .tower-floor, #worker-overlay, #cork-board, .row, .floor-label, #cbb, #profile {
-	display: block;
-}
-
-.below-top, #big-table {
+.below-top {
 	margin-top: 7%;
 }
 
 @media only screen and (max-width: 1300px) {
-  .below-top, #big-table {
+  .below-top {
 	  margin-top: 8%;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .below-top, #big-table {
+  .below-top {
 	  margin-top: 12%;
   }
-}
-
-.left-worker, .middle-worker, .right-worker {
-	position: relative;
-}
-
-table {
-	display: inline-table;
-}
-
-th {
-	text-align: left;
-}
-
-#save {
-	width: 100%;
-	margin-top: var(--profile-spacing);
-	border-color: rgb(129, 191, 119);
-	background-color: rgb(164,234,148);
-}
-
-@media screen and (max-width: 1500px) {
-	
-	.left-worker input, .middle-worker input, .right-worker input {
-    	height: 18vh;
-	}
-
-}
-
-
-@media screen and (max-width: 800px) {
-	
-	#brand {
-		width: 17.5%;
-	}
 }

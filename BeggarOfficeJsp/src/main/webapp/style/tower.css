@@ -25,6 +25,7 @@
 }
 
 .tower-floor, #cork-board, .row, .floor-label, #cbb {
+	display: block;
 	margin: auto;
 }
 

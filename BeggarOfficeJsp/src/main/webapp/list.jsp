@@ -25,8 +25,8 @@
 <div class="w3-top">
 	<nav class="w3-bar w3-pale-blue">
 		<ul>
-			<li class="w3-bar-item w3-button w3-mobile w3-yellow w3-hover-white"><a href="index.html">Home</a></li>
-			<li class="w3-bar-item w3-button w3-mobile w3-hover-white"><a href="List">List Workers</a></li>
+			<li class="w3-bar-item w3-button w3-mobile w3-hover-white"><a href=".">Tower</a></li>
+			<li class="w3-bar-item w3-button w3-mobile w3-yellow w3-hover-white"><a href="List">List Workers</a></li>
 			<li class="w3-bar-item w3-button w3-mobile w3-hover-white"><a href="Board">Worker Board</a></li>
 		</ul>
 	</nav>

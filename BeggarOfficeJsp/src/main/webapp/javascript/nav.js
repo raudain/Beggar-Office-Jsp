@@ -4,7 +4,7 @@
 
 // Create Worker Button
 var lastButton = document.createElement("li");
-lastButton.className = "w3-bar-item w3-margin-right w3-right";
+lastButton.className = "w3-bar-item w3-margin-right w3-right w3-mobile";
 var navigation = document.querySelector("ul");
 var boardLink = document.getElementById("board");
 navigation.insertBefore(lastButton, boardLink);

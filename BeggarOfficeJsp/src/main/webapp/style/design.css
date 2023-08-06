@@ -1,14 +1,11 @@
 @charset "ISO-8859-1";
 
-body {
-	margin: 13px 0px 10px 0px;
-	background-color: #ffffff;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #660000;
+.below-top, img, table {
+	margin: auto;
 }
 
-img, .below-top, table {
-	margin: auto;
+.below-top, .tower-floor, .row, .floor-label {
+	display: block;
 }
 
 .below-top {
@@ -19,6 +16,22 @@ img, .below-top, table {
 	border-style: solid;
 }
 
+.left-worker, .middle-worker, .right-worker {
+	position: relative;
+}
+
 .left-worker, .middle-worker {
 	float: left;
+}
+
+.right-worker {
+	float: right;
+}
+
+@media screen and (max-width: 1500px) {
+	
+	.left-worker input, .middle-worker input, .right-worker input {
+    	height: 18vh;
+	}
+
 }

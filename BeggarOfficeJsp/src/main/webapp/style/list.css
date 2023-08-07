@@ -7,20 +7,3 @@ table {
 th {
 	text-align: left;
 }
-
-#big-table {
-	width: 76.6vw;
-	margin-top: 7%;
-}
-
-@media only screen and (max-width: 1300px) {
-  #big-table {
-	  margin-top: 8%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  #big-table {
-	  margin-top: 12%;
-  }
-}

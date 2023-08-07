@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en" dir="ltr">
 
 <head>
 
@@ -25,10 +25,10 @@
 <body>
 
 <nav class="w3-pale-blue w3-cell-row">
-	<ul class ="w3-bar">
-		<li class="w3-bar-item w3-round-large w3-margin-right w3-margin-left w3-yellow w3-hover-white w3-mobile navigation"><a href=".">Tower</a></li>
-		<li class="w3-bar-item w3-hover-white w3-round-large w3-margin-right w3-mobile navigation"><a href="List">List Workers</a></li>
-		<li id="board" class="w3-bar-item w3-hover-white w3-round-large w3-margin-right w3-mobile navigation"><a href="Board">Worker Board</a></li>
+	<ul class ="w3-ul w3-large w3-bar">
+		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-margin-left w3-mobile navigation"><a href=".">Tower</a></li>
+		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation"><a href="List">List Workers</a></li>
+		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation"><a href="Board">Worker Board</a></li>
 	</ul>
 </nav>
 

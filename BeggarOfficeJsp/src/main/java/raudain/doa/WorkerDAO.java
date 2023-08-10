@@ -183,9 +183,9 @@ public class WorkerDAO {
 		short room = worker.getRoom();
 		String name = worker.getName();
 		String workerProfession = worker.getProfession();
-		byte profession = parseProfession(workerProfession);
+		byte profession = Byte.parseByte(workerProfession);
 		String workerEndurance = worker.getEndurance();
-		byte endurance = parseEndurance(workerEndurance);
+		byte endurance = Byte.parseByte(workerEndurance);
 		long cost = calculateCost(profession, endurance);
 		
 		connection = DataConnection.createConnection();
@@ -205,88 +205,6 @@ public class WorkerDAO {
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	/**
-	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * Covert the profession from a string to a byte  <br/>
-	 *
-	 *
-	 * @return profession
-	 *
-	 */
-	private static Byte parseProfession(String professionName) {
-		
-		byte profession;	
-		switch (professionName) {
-        	case "Construction Worker":  profession = 11;
-                 break;
-        	case "Postman":  			profession = 12;
-                 						break;
-        	case "Artist":  			profession = 21;
-                 						break;
-        	case "Cook":  				profession = 22;
-                 						break;
-        	case "Magician":  			profession = 23;
-                 						break;
-        	case "Firefighter":  		profession = 24;
-                 						break;
-        	case "Scientist":  			profession = 31;
-                 						break;
-        	case "Journalist":  		profession = 32;
-                 						break;
-        	case "Doctor":  			profession = 41;
-                 						break;
-        	case "Computer Engineer":	profession = 42;
-                 						break;
-        	case "Santa":  				profession = 43;
-                 						break;
-        	case "Lawyer":  			profession = 44;
-                 						break;
-        	case "Politician": 			profession = 51;
-        								break;
-        	case "Pilot":  				profession = 52;
-        								break;
-        	case "Mad Scientist":  		profession = 61;
-        								break;
-        	case "Businessman":  		profession = 71;
-        								break;
-        	default: 					profession = -1;
-                 						break;
-		}
-		return profession;
-	}
-	
-	/**
-	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * Covert the profession from a string to a byte  <br/>
-	 *
-	 *
-	 * @return profession
-	 *
-	 */
-	private static Byte parseEndurance(String enduranceName) {
-		
-		byte endurance;	
-		switch (enduranceName) {
-			case "Lazy": 			endurance = 1;
-									break;
-			case "Sleepy":  		endurance = 2;
-        							break;
-			case "Diligent":  		endurance = 3;
-        							break;
-			case "Productive":  	endurance = 4;
-        							break;
-			case "Hard-working":	endurance = 5;
-        							break;
-			case "Tireless":  		endurance = 6;
-        							break;
-			default: 				endurance = -1;
-        							break;
-		}
-		return endurance;
 	}
 	
 	/**

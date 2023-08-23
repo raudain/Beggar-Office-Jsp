@@ -43,14 +43,16 @@
 
 <c:otherwise>
 
-<table>
-	<tr>
-		<th>Room</th>
-		<th>Name</th>
-		<th>Profession</th>
-		<th>Endurance</th>
-		<th>Cost</th>
-	</tr>
+<table class="w3-table-all">
+	<thead>
+		<tr>
+			<th>Room</th>
+			<th>Name</th>
+			<th>Profession</th>
+			<th>Endurance</th>
+			<th>Cost</th>
+		</tr>
+	</thead>
 	<c:forEach var="worker" items="${workerList}">
 		<tr>
 			<td>${worker.room}</td>

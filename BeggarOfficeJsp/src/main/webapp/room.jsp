@@ -35,7 +35,7 @@
 <script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>	
 <script src="javascript/nav.js"></script>
 
-<form>
+<form action="Onboarding" method="post">
 
 	<div class="w3-container w3-khaki">
 		<h2>Worker</h2>
@@ -55,22 +55,22 @@
 				<label>Profession</label>
 				<select class="field w3-select w3-border w3-display-bottomleft w3-hover-light-grey"" name="profession" required>
 					<option value=""></option>
-			    	<option value="11">Construction Worker</option>
-			    	<option value="12">Postman</option>
 			    	<option value="21">Artist</option>
-			    	<option value="22">Cook</option>
-			    	<option value="23">Magician</option>
-			    	<option value="24">Firefighter</option>
-			    	<option value="31">Scientist</option>
-			    	<option value="32">Journalist</option>
-			    	<option value="41">Doctor</option>
-			    	<option value="42">Computer Engineer</option>
-			    	<option value="43">Santa</option>
-			    	<option value="44">Lawyer</option>
-			    	<option value="51">Politician</option>
-			    	<option value="52">Pilot</option>
-			    	<option value="61">Mad Scientist</option>
 			    	<option value="71">Businessman</option>
+			    	<option value="42">Computer Engineer</option>
+			    	<option value="11">Construction Worker</option>
+			    	<option value="22">Cook</option>
+			    	<option value="41">Doctor</option>
+			    	<option value="24">Firefighter</option>
+			    	<option value="32">Journalist</option>
+			    	<option value="12">Postman</option>
+			    	<option value="44">Lawyer</option>
+			    	<option value="61">Mad Scientist</option>
+			    	<option value="23">Magician</option>
+			    	<option value="52">Pilot</option>
+			    	<option value="51">Politician</option>
+			    	<option value="43">Santa</option>
+			    	<option value="31">Scientist</option>
 				</select>
 			</p>
 			<p class="w3-display-container">

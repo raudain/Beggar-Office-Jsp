@@ -17,8 +17,8 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/List")
-public class List extends HttpServlet {
+@WebServlet("/ListCost")
+public class ListCost extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class List extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkers();
+		workerList = doa.getWorkersByCost();
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
@@ -66,3 +66,4 @@ public class List extends HttpServlet {
 	}
 
 }
+

@@ -9,13 +9,32 @@
 	
 	<bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
 	
+	
 		<property
 			name="lastRoom"
 			value="SELECT Max(Room) AS LastRoom
 		           FROM dbo.worker;"></property>
 		
+		
 		<property
-			name="workerList"
+			name="workerListByRoom"
+			value="SELECT WK.Room
+				   ,      WK.Name
+				   ,      PR.ProfessionName
+				   ,      EN.EnduranceName
+				   ,      WK.Cost
+				   FROM dbo.Worker WK
+				
+				   INNER JOIN dbo.Profession PR ON PR.Profession = WK.Profession
+				
+				   INNER JOIN Endurance EN ON EN.Endurance = WK.Endurance
+				
+				   ORDER BY WK.Room DESC;">
+		</property>
+		
+		
+		<property
+			name="workerListByCost"
 			value="SELECT WK.Room
 				   ,      WK.Name
 				   ,      PR.ProfessionName
@@ -33,6 +52,7 @@
 				   ORDER BY WK.Cost;">
 		</property>
 		
+		
 		<property
 			name="insert"
 			value="INSERT INTO worker
@@ -45,6 +65,7 @@
 				   )
 				   VALUES (?, ?, ?, ?, ?);"></property>
 		
+		
 		<property
 			name="updateWorker"
 			value="UPDATE `mydb`.`worker`
@@ -56,11 +77,13 @@
 				   WHERE (`room` = ?);">
 		</property>
 				   
+				   
 		<property
 			name="workerNameList"
 			value="SELECT Name
 				   FROM dbo.Worker;">
 		</property>
+ 	
  	
  	</bean>
 </beans>

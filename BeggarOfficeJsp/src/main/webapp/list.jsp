@@ -55,11 +55,25 @@
 <table class="w3-table-all">
 	<thead>
 		<tr class="w3-light-grey">
-			<th class="w3-border">Room</th>
-			<th class="w3-border">Name</th>
-			<th class="w3-border">Profession</th>
-			<th class="w3-border">Endurance</th>
-			<th class="w3-border">Cost</th>
+			<th class="w3-border">
+				Room
+				<i id="room" class="fa-solid fa-arrow-down-9-1"></i>
+			</th>
+			
+			<th class="w3-border">
+				Name
+			</th>
+			<th class="w3-border">
+				Profession
+			</th>
+			<th class="w3-border">
+				Endurance
+			</th>
+			<th class="w3-border">
+				Cost
+				<i id="cost" class="fa-solid fa-arrow-up-1-9"></i>
+			</th>
+			<script src="javascript/list.js"></script>
 		</tr>
 	</thead>
 	<c:forEach var="worker" items="${workerList}">

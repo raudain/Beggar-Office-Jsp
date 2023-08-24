@@ -46,20 +46,24 @@
 <table class="w3-table-all">
 	<thead>
 		<tr>
-			<th>Room</th>
-			<th>Name</th>
-			<th>Profession</th>
-			<th>Endurance</th>
-			<th>Cost</th>
+			<th class="w3-border">Room</th>
+			<th class="w3-border">Name</th>
+			<th class="w3-border">Profession</th>
+			<th class="w3-border">Endurance</th>
+			<th class="w3-border w3-center">Cost</th>
 		</tr>
 	</thead>
 	<c:forEach var="worker" items="${workerList}">
-		<tr>
-			<td>${worker.room}</td>
-			<td>${worker.name}</td>
-			<td>${worker.profession}</td>
-			<td>${worker.endurance}</td>
-			<td>${worker.cost}</td>
+		<tr class="w3-hover-pale-blue">
+			<td class="w3-border">${worker.room}</td>
+			<td class="w3-border">${worker.name}</td>
+			<td class="w3-border">${worker.profession}</td>
+			<td class="w3-border">${worker.endurance}</td>
+			<td class="w3-border w3-right-align">
+				${
+					String.valueOf(worker.cost)
+				}
+			</td>
 		</tr>
 	</c:forEach>
 </table>

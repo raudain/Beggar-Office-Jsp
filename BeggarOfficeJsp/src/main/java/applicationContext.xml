@@ -72,7 +72,6 @@
 				   SET name = ?
 				   ,   profession = ?
 				   ,   endurance = ?
-				   ,   level = ?
 				   ,   cost = ?
 				   WHERE (room = ?);">
 		</property>

@@ -10,8 +10,10 @@
 <head>
 
 	<meta charset="ISO-8859-1">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<meta name="description" content="Worker sorter for the Virtual Beggar mobile clicker game">
+	<meta http-equiv="Content-Type"
+		  content="text/html; charset=ISO-8859-1">
+	<meta name="description"
+		  content="Worker sorter for the Virtual Beggar mobile clicker game">
 	<meta name="author" content="Roody Audain">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -25,16 +27,16 @@
 
 <body>
 
-<nav class="w3-pale-blue w3-cell-row">
+<nav class="w3-pale-blue w3-cell-row w3-top">
 
 <ul class ="w3-ul w3-large w3-bar">
-	<li class="w3-bar-item w3-round-large w3-margin-right w3-margin-left w3-hover-white w3-mobile navigation">
+	<li class="w3-hover-white w3-round-large w3-bar-item w3-margin-right w3-margin-left  w3-mobile navigation">
 		<a href=".">Tower</a>
 	</li>
-	<li class="w3-bar-item w3-yellow w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
-		<a href="List">List Workers</a>
+	<li class="w3-yellow w3-hover-white w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
+		<a href="ListRoom">List Workers</a>
 	</li>
-	<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
+	<li class="w3-hover-white w3-round-large  w3-bar-item  w3-margin-right w3-mobile navigation">
 		<a href="Board">Worker Board</a>
 	</li>
 </ul>
@@ -52,6 +54,7 @@
 
 <c:otherwise>
 
+<div class="w3-container w3-margin-top w3-padding-64">
 <table class="w3-table-all">
 	<thead>
 		<tr class="w3-light-grey">
@@ -96,7 +99,7 @@
 		</tr>
 	</c:forEach>
 </table>
-
+</div>
 </c:otherwise>
 	
 </c:choose>

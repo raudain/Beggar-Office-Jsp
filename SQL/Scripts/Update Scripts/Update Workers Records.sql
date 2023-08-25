@@ -9,8 +9,7 @@ WHERE Endurance = 'Hardworking';
 
 UPDATE dbo.Worker
 SET name = 'Lester'
-,   profession = ''
-,   endurance = ''
-,   level = ''
+,   profession = 'Katherine'
+,   endurance = 6
 ,   cost = ''
 WHERE room = '';

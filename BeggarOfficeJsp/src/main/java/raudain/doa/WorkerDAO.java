@@ -253,32 +253,26 @@ public class WorkerDAO {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * DAO for inserting a new worker into the worker Table in the Database <br/>
+	 * DAO for inserting a new worker into the worker table in the Database <br/>
 	 *
 	 * @return void
 	 * 
 	 */
 	public void insertWorker(Worker worker) {
-
-		short room = worker.getRoom();
-		String name = worker.getName();
-		String workerProfession = worker.getProfession();
-		byte profession = Byte.parseByte(workerProfession);
-		String workerEndurance = worker.getEndurance();
-		byte endurance = Byte.parseByte(workerEndurance);
-		long cost = calculateCost(profession, endurance);
 		
+		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 		final String insertSqlStatement = sqlScripts.getInsert();
 		try {
 			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(insertSqlStatement);
-			
-			preparedStatement.setShort(1, room);
-			preparedStatement.setString(2, name);
+			preparedStatement = connection.prepareStatement(insertSqlStatement);		
+			preparedStatement.setShort(1, worker.getRoom());
+			preparedStatement.setString(2, worker.getName());
+			byte profession = Byte.parseByte(worker.getProfession());
 			preparedStatement.setByte(3, profession);
+			byte endurance = Byte.parseByte(worker.getEndurance());
 			preparedStatement.setByte(4, endurance);
-			preparedStatement.setLong(5, cost);
+			preparedStatement.setLong(5, worker.getCost());
 			
 			preparedStatement.executeUpdate();
 			connection.close();
@@ -289,309 +283,34 @@ public class WorkerDAO {
 	
 	/**
 	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * Get the cost of a new worker  <br/>
+	 * * METHOD DESCRIPTION: <br/>
+	 * This method updates a worker in the worker table in the database <br/>
 	 *
-	 *
-	 * @return profession
-	 *
+	 * @param A worker that need to be updated
+	 * @return void
 	 */
-	private static Long calculateCost(byte profession, byte endurance) {
-		
-		long cost = 0;
-		
-		switch (profession) {
-			/* 1. Artist */
-			case 21:
-				switch (endurance) {
-					case 1:		cost = 15000;
-								break;
-					case 2: 	cost = 25000;
-        						break;
-					case 3: 	cost = 100000;
-        						break;
-					case 4: 	cost = 370000;
-        						break;
-					case 5:		cost = 2000000;
-        						break;
-					case 6: 	cost = 22000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 2. Businessman */
-			case 71:
-				switch (endurance) {
-					case 1:		cost = 90;
-								break;
-					case 2: 	cost = 160;
-        						break;
-					case 3: 	cost = 270;
-        						break;
-					case 4: 	cost = 450;
-        						break;
-					case 5:		cost = 850;
-        						break;
-					case 6: 	cost = 1700;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 3. Computer Engineer */
-			case 42:
-				switch (endurance) {
-					case 1:		cost = 0;
-								break;
-					case 2: 	cost = 950000;
-        						break;
-					case 3: 	cost = 3050000;
-        						break;
-					case 4: 	cost = 10500000;
-        						break;
-					case 5:		cost = 40000000;
-        						break;
-					case 6: 	cost = 520000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 4. Construction Worker */
-			case 11:
-				switch (endurance) {
-					case 1:		cost = 2500;
-								break;
-					case 2: 	cost = 5000;
-        						break;
-					case 3: 	cost = 20000;
-        						break;
-					case 4: 	cost = 70000;
-        						break;
-					case 5:		cost = 0;
-        						break;
-					case 6: 	cost = 2000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 5. Cook */
-			case 22:
-				switch (endurance) {
-					case 1:		cost = 15000;
-								break;
-					case 2: 	cost = 25000;
-        						break;
-					case 3: 	cost = 100000;
-        						break;
-					case 4: 	cost = 370000;
-        						break;
-					case 5:		cost = 2000000;
-        						break;
-					case 6: 	cost = 22000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 6. Doctor */
-			case 41:
-				switch (endurance) {
-					case 1:		cost = 500000;
-								break;
-					case 2: 	cost = 950000;
-        						break;
-					case 3: 	cost = 3100000;
-        						break;
-					case 4: 	cost = 10500000;
-        						break;
-					case 5:		cost = 40000000;
-        						break;
-					case 6: 	cost = 520000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 7. Firefighter */
-			case 24:
-				switch (endurance) {
-					case 1:		cost = 15000;
-								break;
-					case 2: 	cost = 25000;
-        						break;
-					case 3: 	cost = 250000;
-        						break;
-					case 4: 	cost = 370000;
-        						break;
-					case 5:		cost = 5000000;
-        						break;
-					case 6: 	cost = 22000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 8. Gardener */
-			case 13:
-				switch (endurance) {
-					case 1:		cost = 2500;
-								break;
-					case 2: 	cost = 5000;
-        						break;
-					case 3: 	cost = 20000;
-        						break;
-					case 4: 	cost = 100000;
-        						break;
-					case 5:		cost = 0;
-        						break;
-					case 6: 	cost = 0;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 9. Journalist */
-			case 32:
-				switch (endurance) {
-					case 1:		cost = 100000;
-								break;
-					case 2: 	cost = 180000;
-        						break;
-					case 3: 	cost = 640000;
-        						break;
-					case 4: 	cost = 2400000;
-        						break;
-					case 5:		cost = 10000000;
-        						break;
-					case 6: 	cost = 125000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 10. Lawyer */
-			case 44:
-				switch (endurance) {
-					case 1:		cost = 320000;
-								break;
-					case 2: 	cost = 950000;
-        						break;
-					case 3: 	cost = 3050000;
-        						break;
-					case 4: 	cost = 10500000;
-        						break;
-					case 5:		cost = 40000000;
-        						break;
-					case 6: 	cost = 520000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 11. Mad Scientist */
-			case 61:
-				switch (endurance) {
-					case 1:		cost = 12000000;
-								break;
-					case 2: 	cost = 0;
-        						break;
-					case 3: 	cost = 120000000;
-        						break;
-					case 4: 	cost = 400000000;
-        						break;
-					case 5:		cost = 2000000000;
-        						break;
-					case 6: 	cost = Long.parseLong("48000000000") ;
-        						break;
-					default:	cost = 0;
-        						break;
-				}
-			/* 12. Magician */
-			case 23:
-				switch (endurance) {
-					case 1:		cost = 15000;
-								break;
-					case 2: 	cost = 28000;
-        						break;
-					case 3: 	cost = 95000;
-        						break;
-					case 4: 	cost = 370000;
-        						break;
-					case 5:		cost = 2000000;
-        						break;
-					case 6: 	cost = 25000000;
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 13. Pilot */
-			case 52:
-				switch (endurance) {
-					case 1:		cost = 5000000;
-								break;
-					case 2: 	cost = 5000000;
-        						break;
-					case 3: 	cost = 15500000;
-        						break;
-					case 4: 	cost = 55000000;
-        						break;
-					case 5:		cost = 260000000;
-        						break;
-					case 6: 	cost = Long.parseLong("5800000000");
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 14. Politician */
-			case 51:
-				switch (endurance) {
-					case 1:		cost = 1600000;
-								break;
-					case 2: 	cost = 5000000;
-        						break;
-					case 3: 	cost = 15500000;
-        						break;
-					case 4: 	cost = 55000000;
-        						break;
-					case 5:		cost = 260000000;
-        						break;
-					case 6: 	cost = Long.parseLong("5800000000");
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 15. Santa */
-			case 43:
-				switch (endurance) {
-					case 1:		cost = 310000;
-								break;
-					case 2: 	cost = 950000;
-        						break;
-					case 3: 	cost = 3050000;
-        						break;
-					case 4: 	cost = 10500000;
-        						break;
-					case 5:		cost = 40000000;
-        						break;
-					case 6: 	cost = Long.parseLong("520000000");
-        						break;
-					default:	cost = -1;
-        						break;
-				}
-			/* 16. Scientist */
-			case 31:
-				switch (endurance) {
-					case 1:		cost = 60000;
-								break;
-					case 2: 	cost = 180000;
-        						break;
-					case 3: 	cost = 640000;
-        						break;
-					case 4: 	cost = 2400000;
-        						break;
-					case 5:		cost = 10000000;
-        						break;
-					case 6: 	cost = Long.parseLong("125000000");
-        						break;
-					default:	cost = -1;
-        						break;
-				}
+	public void updateWorker(Worker worker) {
+
+		// Create a new connection to the database
+		connection = DataConnection.createConnection();
+		final String updateSqlStatement = sqlScripts.getUpdateWorker();
+		try {
+			// Prepare a statement object using the connection for provided worker room
+			preparedStatement = connection.prepareStatement(updateSqlStatement);
+			preparedStatement.setString(1, worker.getName());
+			byte profession = Byte.parseByte(worker.getProfession());
+			preparedStatement.setByte(2, profession);
+			byte endurance = Byte.parseByte(worker.getEndurance());
+			preparedStatement.setByte(3, endurance);
+			preparedStatement.setLong(4, worker.getCost());
+			preparedStatement.setShort(5, worker.getRoom());
+			
+			preparedStatement.executeUpdate();
+			connection.close();
+		} catch (final SQLException e) {
+			System.out.println("Error with preparedStatement: " + e);
+			e.printStackTrace();
 		}
-		
-		return cost;
 	}
 	
 	/**
@@ -619,6 +338,7 @@ public class WorkerDAO {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
 			System.out.println("Error. Can not create the statement: " + e);
+			e.printStackTrace();
 		}
 
 		final String sqlScript = sqlScripts.getWorkerNameList();
@@ -699,45 +419,5 @@ public class WorkerDAO {
 			System.out.println(exception.getMessage());
 		}
 		return worker;
-	}
-
-	/**
-	 * This method updates a worker
-	 *
-	 * PSEUDOCODE: <br/>
-	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that get a worker from the
-	 * worker table for provided worker id. <br/>
-	 * Execute the SQL statement and keep a reference to the result set. <br/>
-	 * Update the event object by calling getUpdateEventSession method Event is
-	 * updated in database. <br/>
-	 *
-	 * @param A worker that need to be updated
-	 * @return void
-	 */
-	public void updateWorker(Worker updatedWorker) {
-
-		// Create a new connection to the database
-		connection = DataConnection.createConnection();
-
-		String sqlScript = sqlScripts.getUpdateWorker();
-		short room = updatedWorker.getRoom();
-		String name = updatedWorker.getName();
-		String profession = updatedWorker.getProfession();
-		String endurance = updatedWorker.getEndurance();
-		Long cost = updatedWorker.getCost();
-		try {
-			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(sqlScript);
-			preparedStatement.setString(1, name);
-			preparedStatement.setString(2, profession);
-			preparedStatement.setString(3, endurance);
-			preparedStatement.setLong(5, cost);;
-			preparedStatement.setInt(6, room);
-			preparedStatement.executeUpdate();
-			connection.close();
-		} catch (final SQLException e) {
-			e.printStackTrace();
-		}
 	}
 }

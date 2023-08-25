@@ -383,7 +383,7 @@ AND Endurance = 6;
 
 /* 13. Pilot */
 UPDATE dbo.Worker
-SET Cost = 5000000
+SET Cost = 1600000
 WHERE Profession = 52
 AND Endurance = 1;
 

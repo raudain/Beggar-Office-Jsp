@@ -7,16 +7,17 @@ public class DatabaseQuerysBean {
 	
 	private String lastRoom = "";
 	private String insert = "";
-	private String workerList = "";
+	private String workerListByRoom = "";
+	private String workerListByCost = "";
 	private String workerNameList = "";
 	private String updateWorker = "";
 	
 	public String getLastRoom() {
 		return lastRoom;
 	}
-
-	public void setLastRoom(String nextRoom) {
-		this.lastRoom = nextRoom;
+	
+	public void setLastRoom(String lastRoom) {
+		this.lastRoom = lastRoom;
 	}
 	
 	public String getInsert() {
@@ -27,12 +28,20 @@ public class DatabaseQuerysBean {
 		this.insert = insert;
 	}
 	
-	public String getWorkerList() {
-		return workerList;
+	public String getWorkerListByRoom() {
+		return workerListByRoom;
 	}
 	
-	public void setWorkerList(String workerList) {
-		this.workerList = workerList;
+	public void setWorkerListByRoom(String workerListByRoom) {
+		this.workerListByRoom = workerListByRoom;
+	}
+	
+	public String getWorkerListByCost() {
+		return workerListByCost;
+	}
+	
+	public void setWorkerListByCost(String workerListByCost) {
+		this.workerListByCost = workerListByCost;
 	}
 	
 	public String getWorkerNameList() {
@@ -50,4 +59,5 @@ public class DatabaseQuerysBean {
 	public void setUpdateWorker(String updateWorker) {
 		this.updateWorker = updateWorker;
 	}
+	
 }

@@ -43,7 +43,7 @@
 
 	<p class="w3-margin-left">
 		<label>Room</label>
-		<input name="room" type="text" value="${room}" class="field w3-input w3-border w3-hover-light-grey" readonly>
+		<input name="room" type="text" value="${room}" class="field w3-input w3-border w3-hover-light-grey">
 	</p>
 	<p class="w3-margin-left">
 		<label>Name</label>

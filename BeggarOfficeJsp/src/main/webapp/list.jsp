@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	info="Sort Workers" isELIgnored="false" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 
@@ -25,11 +26,19 @@
 <body>
 
 <nav class="w3-pale-blue w3-cell-row">
-	<ul class ="w3-ul w3-large w3-bar">
-		<li class="w3-bar-item w3-round-large w3-margin-right w3-margin-left w3-hover-white w3-mobile navigation"><a href=".">Tower</a></li>
-		<li class="w3-bar-item w3-yellow w3-round-large w3-hover-white w3-margin-right w3-mobile navigation"><a href="List">List Workers</a></li>
-		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation"><a href="Board">Worker Board</a></li>
-	</ul>
+
+<ul class ="w3-ul w3-large w3-bar">
+	<li class="w3-bar-item w3-round-large w3-margin-right w3-margin-left w3-hover-white w3-mobile navigation">
+		<a href=".">Tower</a>
+	</li>
+	<li class="w3-bar-item w3-yellow w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
+		<a href="List">List Workers</a>
+	</li>
+	<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
+		<a href="Board">Worker Board</a>
+	</li>
+</ul>
+	
 </nav>
 
 <script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
@@ -43,25 +52,51 @@
 
 <c:otherwise>
 
-<table>
-	<tr>
-		<th>Room</th>
-		<th>Name</th>
-		<th>Profession</th>
-		<th>Endurance</th>
-		<th>Cost</th>
-	</tr>
+<table class="w3-table-all">
+	<thead>
+		<tr class="w3-light-grey">
+			<th class="w3-border">
+				Room
+				<i id="room" class="fa-solid fa-arrow-down-9-1"></i>
+			</th>
+			
+			<th class="w3-border">
+				Name
+			</th>
+			<th class="w3-border">
+				Profession
+			</th>
+			<th class="w3-border">
+				Endurance
+			</th>
+			<th class="w3-border">
+				Cost
+				<i id="cost" class="fa-solid fa-arrow-up-1-9"></i>
+			</th>
+			<script src="javascript/list.js"></script>
+		</tr>
+	</thead>
 	<c:forEach var="worker" items="${workerList}">
-		<tr>
-			<td>${worker.room}</td>
-			<td>${worker.name}</td>
-			<td>${worker.profession}</td>
-			<td>${worker.endurance}</td>
-			<td>${worker.cost}</td>
+		<tr class="w3-hover-pale-blue">
+			<td class="w3-border">
+				${worker.room}
+			</td>
+			<td class="w3-border">
+				${worker.name}</td>
+			<td class="w3-border">
+				${worker.profession}
+			</td>
+			<td class="w3-border">
+				${worker.endurance}
+			</td>
+			<td class="w3-border">
+				<fmt:formatNumber type = "number" 
+         			groupingUsed = "true" value = "${worker.cost}" />
+			</td>
 		</tr>
 	</c:forEach>
 </table>
-	
+
 </c:otherwise>
 	
 </c:choose>

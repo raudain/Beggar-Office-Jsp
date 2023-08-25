@@ -13,7 +13,7 @@
 		<property
 			name="lastRoom"
 			value="SELECT Max(Room) AS LastRoom
-		           FROM dbo.worker;"></property>
+		           FROM dbo.Worker;"></property>
 		
 		
 		<property
@@ -55,7 +55,7 @@
 		
 		<property
 			name="insert"
-			value="INSERT INTO worker
+			value="INSERT INTO dbo.Worker
 				   (
 				   		Room
 				   ,	Name
@@ -68,13 +68,13 @@
 		
 		<property
 			name="updateWorker"
-			value="UPDATE `mydb`.`worker`
-				   SET `name` = ?
-				   ,   `profession` = ?
-				   ,   `endurance` = ?
-				   ,   `level` = ?
-				   ,   `cost` = ?
-				   WHERE (`room` = ?);">
+			value="UPDATE dbo.Worker
+				   SET name = ?
+				   ,   profession = ?
+				   ,   endurance = ?
+				   ,   level = ?
+				   ,   cost = ?
+				   WHERE (room = ?);">
 		</property>
 				   
 				   

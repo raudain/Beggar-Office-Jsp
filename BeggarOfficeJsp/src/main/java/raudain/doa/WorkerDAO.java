@@ -715,17 +715,17 @@ public class WorkerDAO {
 	 * @param A worker that need to be updated
 	 * @return void
 	 */
-	public void updateWorker(Worker updatedWorker) {
+	public void updateWorker(Worker worker) {
 
 		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 
 		String sqlScript = sqlScripts.getUpdateWorker();
-		short room = updatedWorker.getRoom();
-		String name = updatedWorker.getName();
-		String profession = updatedWorker.getProfession();
-		String endurance = updatedWorker.getEndurance();
-		Long cost = updatedWorker.getCost();
+		short room = worker.getRoom();
+		String name = worker.getName();
+		String profession = worker.getProfession();
+		String endurance = worker.getEndurance();
+		Long cost = worker.getCost();
 		try {
 			// Prepare a statement object using the connection for provided worker room
 			preparedStatement = connection.prepareStatement(sqlScript);

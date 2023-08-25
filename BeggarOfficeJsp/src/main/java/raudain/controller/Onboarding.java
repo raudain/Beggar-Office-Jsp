@@ -44,7 +44,10 @@ public class Onboarding extends HttpServlet {
 		worker.setEndurance(endurance);
 		
 		WorkerDAO doa = new WorkerDAO();
-		doa.insertWorker(worker);
+		if(worker.getRoom() == doa.getNextRoom())
+			doa.insertWorker(worker);
+		else
+			doa.updateWorker(worker);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("List");
 		disp.forward(request, response);

@@ -23,7 +23,8 @@
 				   ,      ProfessionName
 				   ,      EnduranceName
 				   ,      Cost
-				   FROM dbo.`View Worker List By Room`;">
+				   FROM dbo.`View Worker List By Room`
+				   LIMIT 26;">
 		</property>
 		
 		

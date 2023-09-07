@@ -11,9 +11,9 @@ navigation.insertBefore(lastButton, boardLink);
 var insertWorkerButton = document.createElement("button");
 insertWorkerButton.type = "button";
 if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Room')
-    insertWorkerButton.className = "w3-button w3-yellow w3-hover-white w3-round-large";
+    insertWorkerButton.className = "w3-button w3-yellow w3-hover-red w3-round-large";
 else
-	insertWorkerButton.className = "w3-button w3-hover-white w3-round-large";
+	insertWorkerButton.className = "w3-button w3-hover-red w3-round-large";
 lastButton.appendChild(insertWorkerButton);
 var icon = document.createElement("i");
 icon.className = "fa-regular fa-plus";

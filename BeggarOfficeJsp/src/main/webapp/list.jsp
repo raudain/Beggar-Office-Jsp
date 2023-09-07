@@ -30,13 +30,13 @@
 <nav class="w3-pale-blue w3-cell-row w3-top">
 
 <ul class ="w3-ul w3-large w3-bar">
-	<li class="w3-hover-white w3-round-large w3-bar-item w3-margin-right w3-margin-left  w3-mobile navigation">
+	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left  w3-mobile navigation">
 		<a href=".">Tower</a>
 	</li>
-	<li class="w3-yellow w3-hover-white w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
+	<li class="w3-yellow w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
 		<a href="ListRoom">List Workers</a>
 	</li>
-	<li class="w3-hover-white w3-round-large  w3-bar-item  w3-margin-right w3-mobile navigation">
+	<li class="w3-hover-red w3-round-large  w3-bar-item  w3-margin-right w3-mobile navigation">
 		<a href="Board">Worker Board</a>
 	</li>
 </ul>
@@ -55,50 +55,64 @@
 <c:otherwise>
 
 <div class="w3-container w3-margin-top w3-padding-64">
-<table class="w3-table-all">
-	<thead>
-		<tr class="w3-light-grey">
-			<th class="w3-border">
-				Room
-				<i id="room" class="fa-solid fa-arrow-down-9-1"></i>
-			</th>
-			
-			<th class="w3-border">
-				Name
-			</th>
-			<th class="w3-border">
-				Profession
-			</th>
-			<th class="w3-border">
-				Endurance
-			</th>
-			<th class="w3-border">
-				Cost
-				<i id="cost" class="fa-solid fa-arrow-up-1-9"></i>
-			</th>
-			<script src="javascript/list.js"></script>
-		</tr>
-	</thead>
-	<c:forEach var="worker" items="${workerList}">
-		<tr class="w3-hover-pale-blue">
-			<td class="w3-border">
-				${worker.room}
-			</td>
-			<td class="w3-border">
-				${worker.name}</td>
-			<td class="w3-border">
-				${worker.profession}
-			</td>
-			<td class="w3-border">
-				${worker.endurance}
-			</td>
-			<td class="w3-border">
-				<fmt:formatNumber type = "number" 
-         			groupingUsed = "true" value = "${worker.cost}" />
-			</td>
-		</tr>
-	</c:forEach>
-</table>
+
+	<table class="w3-table-all">
+		<thead>
+			<tr class="w3-light-grey">
+				<th class="w3-border">
+					Room
+					<i id="room" class="fa-solid fa-arrow-down-9-1"></i>
+				</th>
+				
+				<th class="w3-border">
+					Name
+				</th>
+				<th class="w3-border">
+					Profession
+				</th>
+				<th class="w3-border">
+					Endurance
+				</th>
+				<th class="w3-border">
+					Cost
+					<i id="cost" class="fa-solid fa-arrow-up-1-9"></i>
+				</th>
+				<script src="javascript/list.js"></script>
+			</tr>
+		</thead>
+		<c:forEach var="worker" items="${workerList}">
+			<tr class="w3-hover-red">
+				<td class="w3-border">
+					${worker.room}
+				</td>
+				<td class="w3-border">
+					${worker.name}</td>
+				<td class="w3-border">
+					${worker.profession}
+				</td>
+				<td class="w3-border">
+					${worker.endurance}
+				</td>
+				<td class="w3-border">
+					<fmt:formatNumber type = "number" 
+	         			groupingUsed = "true" value = "${worker.cost}" />
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+	
+	<div class="w3-bar w3-margin-top w3-center">
+	  <a href="#" class="w3-button w3-hover-red">&laquo;</a>
+	  <a href="#" class="w3-button w3-hover-red">&#60;</a>
+	  <a href="#" class="w3-button w3-yellow w3-hover-red">1</a>
+	  <a href="#" class="w3-button w3-hover-red">2</a>
+	  <a href="#" class="w3-button w3-hover-red">3</a>
+	  <a href="#" class="w3-button w3-hover-red">4</a>
+	  <a href="#" class="w3-button w3-hover-red">5</a>
+	  <a href="#" class="w3-button w3-hover-red">&#62;</a>
+	  <a href="#" class="w3-button w3-hover-red">&raquo;</a>
+	</div>
+
 </div>
 </c:otherwise>
 	

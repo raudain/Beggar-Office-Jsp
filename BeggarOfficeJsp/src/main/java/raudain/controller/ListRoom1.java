@@ -17,8 +17,8 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/ListRoom")
-public class ListRoom extends HttpServlet {
+@WebServlet("/ListRoom1")
+public class ListRoom1 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -53,6 +53,7 @@ public class ListRoom extends HttpServlet {
 			e.printStackTrace();
 		}
 		//System.out.println("doGet response forwarded to list.jsp");
+		response.setHeader("Set-Cookie", "key=value; HttpOnly; SameSite=strict");
 	}
 
 	/**

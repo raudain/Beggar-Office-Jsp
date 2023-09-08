@@ -30,7 +30,7 @@
 <nav class="w3-pale-blue w3-cell-row w3-top">
 
 <ul class ="w3-ul w3-large w3-bar">
-	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left  w3-mobile navigation">
+	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href=".">Tower</a>
 	</li>
 	<li class="w3-yellow w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
@@ -77,7 +77,6 @@
 					Cost
 					<i id="cost" class="fa-solid fa-arrow-up-1-9"></i>
 				</th>
-				<script src="javascript/list.js"></script>
 			</tr>
 		</thead>
 		<c:forEach var="worker" items="${workerList}">
@@ -102,15 +101,18 @@
 	</table>
 	
 	<div class="w3-bar w3-margin-top w3-center">
-	  <a href="#" class="w3-button w3-hover-red">&laquo;</a>
-	  <a href="#" class="w3-button w3-hover-red">&#60;</a>
-	  <a href="#" class="w3-button w3-yellow w3-hover-red">1</a>
-	  <a href="#" class="w3-button w3-hover-red">2</a>
-	  <a href="#" class="w3-button w3-hover-red">3</a>
-	  <a href="#" class="w3-button w3-hover-red">4</a>
-	  <a href="#" class="w3-button w3-hover-red">5</a>
-	  <a href="#" class="w3-button w3-hover-red">&#62;</a>
-	  <a href="#" class="w3-button w3-hover-red">&raquo;</a>
+	  <a href="ListRoom1" class="w3-button w3-hover-red">&laquo;</a>
+	  <a href="ListRoom1" class="w3-button w3-hover-red">&#60;</a>
+	  <a id=page1 href="ListRoom1" class="w3-button w3-hover-red">1</a>
+	  <a id=page2 href="ListRoom2" class="w3-button w3-hover-red">2</a>
+	  <a id=page3 href="ListRoom3" class="w3-button w3-hover-red">3</a>
+	  <a id=page4 href="ListRoom4" class="w3-button w3-hover-red">4</a>
+	  <a id=page5 href="ListRoom5" class="w3-button w3-hover-red">5</a>
+	  <a id=page6 href="ListRoom5" class="w3-button w3-hover-red">6</a>
+	  <a id=page7 href="ListRoom5" class="w3-button w3-hover-red">7</a>
+	  <script src="javascript/list.js"></script>
+	  <a href="ListRoom1" class="w3-button w3-hover-red">&#62;</a>
+	  <a href="ListRoom1" class="w3-button w3-hover-red">&raquo;</a>
 	</div>
 
 </div>

@@ -46,9 +46,6 @@ public class WorkerDAO {
 	 * Prepare a statement object using the connection that gets all the worker
 	 * names from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
-	 * Using a WHILE LOOP, store each record in the result set returned in a Worker
-	 * object by setting the values of the Event attributes as the corresponding
-	 * values in the Result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 *
 	 * @return Collection of Events
@@ -57,7 +54,7 @@ public class WorkerDAO {
 	 * @throws SQLException
 	 *
 	 */
-	public ArrayList<Worker> getWorkersByRoom() {
+	public ArrayList<Worker> getWorkersByRoom1() {
 
 		Statement statement = null;
 		connection = DataConnection.createConnection();	
@@ -65,56 +62,189 @@ public class WorkerDAO {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
 			System.out.println("Error creating "
-					+ "Statement in WorkerDAO.getWorkersByRoom()");
+					+ "Statement in WorkerDAO.getWorkersByRoom1()");
 			e.printStackTrace();
 		}
 		
-		final String sqlScript = sqlScripts.getWorkerListByRoom();
+		final String sqlScript = sqlScripts.getWorkerListByRoom1();
 		try {
 			resultSet = statement.executeQuery(sqlScript);
 		} catch (final SQLException e) {
 			System.out.println("Error creating "
-					+ "ResultSet in WorkerDAO.getWorkersByRoom()");
+					+ "ResultSet in WorkerDAO.getWorkersByRoom1()");
 			e.printStackTrace();
 		}
-
-		// Now we collect the data from the result in order to display them in
-		// the Java Server Page
-		ArrayList<Worker> workerList = new ArrayList<Worker>();
-		try {
-			while (resultSet.next()) {
-				Worker worker = new Worker();
-
-				short room = resultSet.getShort("Room");
-				worker.setRoom(room);
-
-				String name = resultSet.getString("Name");
-				worker.setName(name);
-
-				String profession = resultSet.getString("ProfessionName");
-				worker.setProfession(profession);
-
-				String endurance = resultSet.getString("EnduranceName");
-				worker.setEndurance(endurance);
-
-				long cost = resultSet.getLong("Cost");
-				worker.setCost(cost);
-
-				workerList.add(worker);
-			}
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem getting workers.");
-			e.printStackTrace();
-		}
-		try {
-			DataConnection.closeConnection();
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem with closing connection");
-			e.printStackTrace();
-		}
-		return workerList;
+		return getWorkerList(resultSet);
 	}
 
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all of the worker names in the worker Table in the
+	 * Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the worker
+	 * names from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 * Return the ArrayList to the calling method. <br/>
+	 *
+	 * @return Collection of Events
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public ArrayList<Worker> getWorkersByRoom2() {
+
+		Statement statement = null;
+		connection = DataConnection.createConnection();	
+		try {
+			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in WorkerDAO.getWorkersByRoom2()");
+			e.printStackTrace();
+		}
+		
+		final String sqlScript = sqlScripts.getWorkerListByRoom2();
+		try {
+			resultSet = statement.executeQuery(sqlScript);
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "ResultSet in WorkerDAO.getWorkersByRoom2()");
+			e.printStackTrace();
+		}
+		return getWorkerList(resultSet);
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all of the worker names in the worker Table in the
+	 * Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the worker
+	 * names from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 * Return the ArrayList to the calling method. <br/>
+	 *
+	 * @return Collection of Events
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public ArrayList<Worker> getWorkersByRoom3() {
+
+		Statement statement = null;
+		connection = DataConnection.createConnection();	
+		try {
+			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in WorkerDAO.getWorkersByRoom3()");
+			e.printStackTrace();
+		}
+		
+		final String sqlScript = sqlScripts.getWorkerListByRoom3();
+		try {
+			resultSet = statement.executeQuery(sqlScript);
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "ResultSet in WorkerDAO.getWorkersByRoom3()");
+			e.printStackTrace();
+		}
+		return getWorkerList(resultSet);
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all of the worker names in the worker Table in the
+	 * Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the worker
+	 * names from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 * Return the ArrayList to the calling method. <br/>
+	 *
+	 * @return Collection of Events
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public ArrayList<Worker> getWorkersByRoom4() {
+
+		Statement statement = null;
+		connection = DataConnection.createConnection();	
+		try {
+			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in WorkerDAO.getWorkersByRoom4()");
+			e.printStackTrace();
+		}
+		
+		final String sqlScript = sqlScripts.getWorkerListByRoom4();
+		try {
+			resultSet = statement.executeQuery(sqlScript);
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "ResultSet in WorkerDAO.getWorkersByRoom1()");
+			e.printStackTrace();
+		}
+		return getWorkerList(resultSet);
+	}
+	
+	/**
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * DAO for displaying all of the worker names in the worker Table in the
+	 * Database <br/>
+	 *
+	 * PSEUDOCODE: <br/>
+	 * Create a new connection to the database. <br/>
+	 * Prepare a statement object using the connection that gets all the worker
+	 * names from the worker table. <br/>
+	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 * Return the ArrayList to the calling method. <br/>
+	 *
+	 * @return Collection of Events
+	 *
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 *
+	 */
+	public ArrayList<Worker> getWorkersByRoom5() {
+
+		Statement statement = null;
+		connection = DataConnection.createConnection();	
+		try {
+			statement = connection.createStatement();
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "Statement in WorkerDAO.getWorkersByRoom5()");
+			e.printStackTrace();
+		}
+		
+		final String sqlScript = sqlScripts.getWorkerListByRoom5();
+		try {
+			resultSet = statement.executeQuery(sqlScript);
+		} catch (final SQLException e) {
+			System.out.println("Error creating "
+					+ "ResultSet in WorkerDAO.getWorkersByRoom5()");
+			e.printStackTrace();
+		}
+		return getWorkerList(resultSet);
+	}
+	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -132,9 +262,6 @@ public class WorkerDAO {
 	 * Return the ArrayList to the calling method. <br/>
 	 *
 	 * @return Collection of Events
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
 	 *
 	 */
 	public ArrayList<Worker> getWorkersByCost() {
@@ -178,6 +305,51 @@ public class WorkerDAO {
 				worker.setEndurance(endurance);
 
 				long cost = resultSet.getLong("WK.Cost");
+				worker.setCost(cost);
+
+				workerList.add(worker);
+			}
+		} catch (final SQLException e) {
+			System.out.println("Error. Problem getting workers.");
+			e.printStackTrace();
+		}
+		try {
+			DataConnection.closeConnection();
+		} catch (final SQLException e) {
+			System.out.println("Error. Problem with closing connection");
+			e.printStackTrace();
+		}
+		return workerList;
+	}
+	
+	/**
+	 * <br/>
+	 * Now we collect the data from the result in order to display them in
+	 * the Java Server Page <br/>
+	 * 
+	 * @return ArrayList<Worker>
+	 *
+	 */
+	private ArrayList<Worker> getWorkerList(ResultSet resultSet) {
+
+		ArrayList<Worker> workerList = new ArrayList<Worker>();
+		try {
+			while (resultSet.next()) {
+				Worker worker = new Worker();
+
+				short room = resultSet.getShort("Room");
+				worker.setRoom(room);
+
+				String name = resultSet.getString("Name");
+				worker.setName(name);
+
+				String profession = resultSet.getString("ProfessionName");
+				worker.setProfession(profession);
+
+				String endurance = resultSet.getString("EnduranceName");
+				worker.setEndurance(endurance);
+
+				long cost = resultSet.getLong("Cost");
 				worker.setCost(cost);
 
 				workerList.add(worker);

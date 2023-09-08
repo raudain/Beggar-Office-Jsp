@@ -285,41 +285,7 @@ public class WorkerDAO {
 			e.printStackTrace();
 		}
 
-		// Now we collect the data from the result in order to display them in
-		// the Java Server Page
-		ArrayList<Worker> workerList = new ArrayList<Worker>();
-		try {
-			while (resultSet.next()) {
-				Worker worker = new Worker();
-
-				short room = resultSet.getShort("WK.Room");
-				worker.setRoom(room);
-
-				String name = resultSet.getString("WK.Name");
-				worker.setName(name);
-
-				String profession = resultSet.getString("PR.ProfessionName");
-				worker.setProfession(profession);
-
-				String endurance = resultSet.getString("EN.EnduranceName");
-				worker.setEndurance(endurance);
-
-				long cost = resultSet.getLong("WK.Cost");
-				worker.setCost(cost);
-
-				workerList.add(worker);
-			}
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem getting workers.");
-			e.printStackTrace();
-		}
-		try {
-			DataConnection.closeConnection();
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem with closing connection");
-			e.printStackTrace();
-		}
-		return workerList;
+		return getWorkerList(resultSet);
 	}
 	
 	/**

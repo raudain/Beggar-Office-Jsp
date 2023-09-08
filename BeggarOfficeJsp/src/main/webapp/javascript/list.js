@@ -51,6 +51,6 @@ switch (pageNumber) {
 }
 
 if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Room')
-    insertWorkerButton.className = "w3-button w3-yellow w3-hover-red w3-round-large";
+    changeListButton.className = "w3-button w3-yellow w3-hover-red w3-round-large";
 else
-	insertWorkerButton.className = "w3-button w3-hover-red w3-round-large";
+	changeListButton.className = "w3-button w3-hover-red w3-round-large";

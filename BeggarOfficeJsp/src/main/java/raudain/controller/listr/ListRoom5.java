@@ -25,7 +25,8 @@ public class ListRoom5 extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
+	 * This method is for showing the fifth page of workers, sorted by<br>
+	 * room number, from workers table in the database<br/>
 	 * 
 	 * @return void
 	 * 

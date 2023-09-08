@@ -6,7 +6,7 @@ const room = document.getElementById("room");
 room.addEventListener("click", sortByRoom);
 
 function sortByRoom() {
-	location.href="ListRoom";
+	location.href="ListRoom1";
 }
 
 

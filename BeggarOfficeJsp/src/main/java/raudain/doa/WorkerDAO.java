@@ -24,6 +24,7 @@ public class WorkerDAO {
 
 	// JDBC API classes for data persistence
 	private Connection connection = null;
+	private Statement statement = null;
 	private PreparedStatement preparedStatement = null;
 	private DatabaseQuerysBean sqlScripts;
 	private ResultSet resultSet = null;
@@ -51,9 +52,8 @@ public class WorkerDAO {
 	 * @return List of workers for page one
 	 *
 	 */
-	public ArrayList<Worker> getWorkersByRoom(int page) {
+	public ArrayList<Worker> getWorkersByRoom(byte page) {
 
-		Statement statement = null;
 		connection = DataConnection.createConnection();	
 		try {
 			statement = connection.createStatement();
@@ -118,7 +118,6 @@ public class WorkerDAO {
 	 */
 	public ArrayList<Worker> getWorkersByCost() {
 
-		Statement statement = null;
 		connection = DataConnection.createConnection();	
 		try {
 			statement = connection.createStatement();
@@ -189,25 +188,12 @@ public class WorkerDAO {
 	}
 	
 	/**
-	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all the workers in the worker Table in the Database <br/>
-	 *
-	 * PSEUDOCODE: <br/>
-	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the workers
-	 * from the worker table. <br/>
-	 * Execute the SQL statement and keep a reference to the result set.<br/>
 	 *
 	 * @return The number of the next available room for a new worker
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
 	 *
 	 */
 	public short getNextRoom() {
 		
-		Statement statement = null;
 		connection = DataConnection.createConnection();
 		try {
 			statement = connection.createStatement();
@@ -218,9 +204,9 @@ public class WorkerDAO {
 			exception.printStackTrace();
 		}
 		
-		final String sqlScript = sqlScripts.getLastRoom();
+		final String selectStatement = sqlScripts.getLastRoom();
 		try {
-			resultSet = statement.executeQuery(sqlScript);
+			resultSet = statement.executeQuery(selectStatement);
 			resultSet.next();
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());

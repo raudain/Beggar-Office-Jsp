@@ -10,12 +10,6 @@
 <bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
 	
 	<property
-		name="lastRoom"
-		value="SELECT Max(Room) AS LastRoom
-	           FROM dbo.Worker;">
-	</property>
-	
-	<property
 		name="workerListByRoom1"
 		value="SELECT Room
 			   ,      Name
@@ -103,6 +97,11 @@
 			   LIMIT 26;">
 	</property>
 	
+	<property
+		name="lastRoom"
+		value="SELECT Max(Room) AS LastRoom
+	           FROM dbo.Worker;">
+	</property>
 	
 	<property
 		name="insert"

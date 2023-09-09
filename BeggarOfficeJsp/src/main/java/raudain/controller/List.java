@@ -40,7 +40,7 @@ public class List extends HttpServlet {
 			throws ServletException, IOException {		
 		
 		String pageNumber = request.getParameter("page");
-		int page = Integer.parseInt(pageNumber);
+		byte page = Byte.parseByte(pageNumber);
 		ArrayList<Worker> workerList = new ArrayList<>();
 		WorkerDAO doa = new WorkerDAO();
 		if (page == 69)

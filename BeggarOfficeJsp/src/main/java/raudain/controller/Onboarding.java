@@ -98,7 +98,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 22000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -21;
         						break;
 				}
 				break;
@@ -117,7 +117,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 1700;
         						break;
-					default:	cost = -1;
+					default:	cost = -71;
         						break;
 				}
 				break;
@@ -136,7 +136,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 520000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -42;
         						break;
 				}
 				break;
@@ -155,7 +155,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 2000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -11;
         						break;
 				}
 				break;
@@ -174,7 +174,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 22000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -22;
         						break;
 				}
 				break;
@@ -193,7 +193,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 520000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -41;
         						break;
 				}
 				break;
@@ -212,7 +212,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 22000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -24;
         						break;
 				}
 				break;
@@ -231,7 +231,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 0;
         						break;
-					default:	cost = -1;
+					default:	cost = -13;
         						break;
 				}
 				break;
@@ -250,7 +250,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 125000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -32;
         						break;
 				}
 				break;
@@ -269,7 +269,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 520000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -44;
         						break;
 				}
 				break;
@@ -288,7 +288,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = Long.parseLong("48000000000") ;
         						break;
-					default:	cost = 0;
+					default:	cost = -61;
         						break;
 				}
 				break;
@@ -307,7 +307,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = 25000000;
         						break;
-					default:	cost = -1;
+					default:	cost = -23;
         						break;
 				}
 				break;
@@ -326,7 +326,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = Long.parseLong("5800000000");
         						break;
-					default:	cost = -1;
+					default:	cost = -52;
         						break;
 				}
 				break;
@@ -346,7 +346,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = Long.parseLong("5800000000");
         						break;
-					default:	cost = -1;
+					default:	cost = -14;
         						break;
 				}
 				break;
@@ -365,7 +365,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = Long.parseLong("520000000");
         						break;
-					default:	cost = -1;
+					default:	cost = -15;
         						break;
 				}
 				break;
@@ -384,7 +384,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 6: 	cost = Long.parseLong("125000000");
         						break;
-					default:	cost = -1;
+					default:	cost = -16;
         						break;
 				}
 			default:	cost = -1;

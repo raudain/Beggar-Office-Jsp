@@ -1350,11 +1350,6 @@
 						value="${worker.getEndurance()}"></td>
 				</tr>
 				<tr>
-					<th>Level:</th>
-					<td><input type="text" name="level"
-						value="${worker.getLevel()}"></td>
-				</tr>
-				<tr>
 					<th>Cost:</th>
 					<td><input type="text" name="cost"
 						value="${worker.getCost()}"></td>

@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import raudain.doa.WorkerDAO;
 
-@WebServlet("/Room")
-public class Room extends HttpServlet {
+@WebServlet("/Update")
+public class Update extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	/**
@@ -35,7 +35,7 @@ public class Room extends HttpServlet {
 		short room = doa.getNextRoom();
 		request.setAttribute("room", room);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/room.jsp");
+		final RequestDispatcher disp = request.getRequestDispatcher("/update.jsp");
 		disp.forward(request, response);
 	}
 

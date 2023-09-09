@@ -7,134 +7,127 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
-	<bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
+<bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
+	
+	<property
+		name="lastRoom"
+		value="SELECT Max(Room) AS LastRoom
+	           FROM dbo.Worker;">
+	</property>
+	
+	<property
+		name="workerListByRoom1"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   LIMIT 26;">
+	</property>
+	
+	<property
+		name="workerListByRoom2"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 4103 AND 5001;">
+	</property>
+	
+	<property
+		name="workerListByRoom3"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 3301 AND 4102;">
+	</property>
+	
+	<property
+		name="workerListByRoom4"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 2402 AND 3203;">
+	</property>
+	
+	<property
+		name="workerListByRoom5"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 1503 AND 2401;">
+	</property>
+	
+	<property
+		name="workerListByRoom6"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 701 AND 1502;">
+	</property>
+	
+	<property
+		name="workerListByRoom7"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Room`
+			   WHERE Room BETWEEN 101 AND 603;">
+	</property>
+	
+	<property
+		name="workerListByCost"
+		value="SELECT Room
+			   ,      Name
+			   ,      ProfessionName
+			   ,      EnduranceName
+			   ,      Cost
+			   FROM dbo.`View Worker List By Cost`
+			   LIMIT 26;">
+	</property>
 	
 	
-		<property
-			name="lastRoom"
-			value="SELECT Max(Room) AS LastRoom
-		           FROM dbo.Worker;"></property>
-		
-		
-		<property
-			name="workerListByRoom1"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   LIMIT 26;">
-		</property>
-		
-		<property
-			name="workerListByRoom2"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 4103 AND 5001;">
-		</property>
-		
-		<property
-			name="workerListByRoom3"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 3301 AND 4102;">
-		</property>
-		
-		<property
-			name="workerListByRoom4"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 2402 AND 3203;">
-		</property>
-		
-		<property
-			name="workerListByRoom5"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 1503 AND 2401;">
-		</property>
-		
-		<property
-			name="workerListByRoom6"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 701 AND 1502;">
-		</property>
-		
-		<property
-			name="workerListByRoom7"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 101 AND 603;">
-		</property>
-		
-		<property
-			name="workerListByCost"
-			value="SELECT Room
-				   ,      Name
-				   ,      ProfessionName
-				   ,      EnduranceName
-				   ,      Cost
-				   FROM dbo.`View Worker List By Cost`
-				   LIMIT 26;">
-		</property>
-		
-		
-		<property
-			name="insert"
-			value="INSERT INTO dbo.Worker
-				   (
-				   		Room
-				   ,	Name
-				   ,	Profession
-				   ,	Endurance
-				   ,	Cost
-				   )
-				   VALUES (?, ?, ?, ?, ?);"></property>
-		
-		
-		<property
-			name="updateWorker"
-			value="UPDATE dbo.Worker
-				   SET name = ?
-				   ,   profession = ?
-				   ,   endurance = ?
-				   ,   cost = ?
-				   WHERE (room = ?);">
-		</property>
-				   
-				   
-		<property
-			name="workerNameList"
-			value="SELECT Name
-				   FROM dbo.Worker;">
-		</property>
- 	
- 	
- 	</bean>
+	<property
+		name="insert"
+		value="INSERT INTO dbo.Worker
+			   (
+			   		Room
+			   ,	Name
+			   ,	Profession
+			   ,	Endurance
+			   ,	Cost
+			   )
+			   VALUES (?, ?, ?, ?, ?);">
+	</property>
+	
+	
+	<property
+		name="updateWorker"
+		value="UPDATE dbo.Worker
+			   SET name = ?
+			   ,   profession = ?
+			   ,   endurance = ?
+			   ,   cost = ?
+			   WHERE (room = ?);">
+	</property>   
+	
+</bean>
+
 </beans>

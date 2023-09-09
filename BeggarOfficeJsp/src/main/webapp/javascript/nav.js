@@ -10,7 +10,7 @@ var boardLink = document.getElementById("board");
 navigation.insertBefore(rightButton, boardLink);
 const changeListButton = document.createElement("button");
 changeListButton.type = "button";
-if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Room')
+if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Update')
     changeListButton.className = "w3-button w3-yellow w3-hover-red w3-round-large";
 else
 	changeListButton.className = "w3-button w3-hover-red w3-round-large";
@@ -26,5 +26,5 @@ changeListButton.appendChild(buttonText);
  * ***************** New Worker Onboarding ****************
  */
 function changeListPage() {
-	location.href="Room";
+	location.href="Update";
 }

@@ -37,14 +37,17 @@ public class List extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
-			throws ServletException, IOException {
-
-		WorkerDAO doa = new WorkerDAO();
+			throws ServletException, IOException {		
 		
-		ArrayList<Worker> workerList = new ArrayList<>();
 		String pageNumber = request.getParameter("page");
 		int page = Integer.parseInt(pageNumber);
-		workerList = doa.getWorkersByRoom(page);
+		ArrayList<Worker> workerList = new ArrayList<>();
+		WorkerDAO doa = new WorkerDAO();
+		if (page == 69)
+			workerList = doa.getWorkersByCost();
+		else
+			workerList = doa.getWorkersByRoom(page);
+		
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");

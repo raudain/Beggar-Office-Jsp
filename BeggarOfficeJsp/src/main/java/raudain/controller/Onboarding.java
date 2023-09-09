@@ -55,7 +55,7 @@ public class Onboarding extends HttpServlet {
 			doa.updateWorker(worker);
 			System.out.println("Worker number " + worker.getRoom() + " updated");
 		}
-		final RequestDispatcher disp = request.getRequestDispatcher("ListRoom");
+		final RequestDispatcher disp = request.getRequestDispatcher("List?page=1");
 		disp.forward(request, response);
 	}
 

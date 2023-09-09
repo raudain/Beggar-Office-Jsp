@@ -16,7 +16,7 @@
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<title>Change Inc | Create Room</title>
 	<link rel="stylesheet" href="style/nav.css">
-	<link rel="stylesheet" href="style/room.css">
+	<link rel="stylesheet" href="style/update.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="style/design.css">
 
@@ -30,10 +30,7 @@
 			<a href=".">Tower</a>
 		</li>
 		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
-			<a href="ListRoom1">List Workers</a>
-			</li>
-		<li class="w3-bar-item w3-round-large w3-hover-white w3-margin-right w3-mobile navigation">
-			<a href="Board">Worker Board</a>
+			<a href="List?page=1">List Workers</a>
 		</li>
 	</ul>
 </nav>
@@ -71,12 +68,12 @@
 	    	<option value="41">Doctor</option>
 	    	<option value="24">Firefighter</option>
 	    	<option value="32">Journalist</option>
-	    	<option value="12">Postman</option>
 	    	<option value="44">Lawyer</option>
 	    	<option value="61">Mad Scientist</option>
 	    	<option value="23">Magician</option>
 	    	<option value="52">Pilot</option>
 	    	<option value="51">Politician</option>
+	    	<option value="12">Postman</option>
 	    	<option value="43">Santa</option>
 	    	<option value="31">Scientist</option>
 		</select>

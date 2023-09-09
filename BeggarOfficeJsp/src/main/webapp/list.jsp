@@ -101,18 +101,18 @@
 	</table>
 	
 	<div class="w3-bar w3-margin-top w3-display-bottommiddle w3-center">
-	  <a href="ListRoom1" class="w3-button w3-hover-red">&laquo;</a>
+	  <a href="List?page=1" class="w3-button w3-hover-red">&laquo;</a>
 	  <a id="arrowPrevious" class="w3-button w3-hover-red">&#60;</a>
-	  <a id=page1 href="ListRoom1" class="w3-button w3-hover-red">1</a>
-	  <a id=page2 href="ListRoom2" class="w3-button w3-hover-red">2</a>
-	  <a id=page3 href="ListRoom3" class="w3-button w3-hover-red">3</a>
-	  <a id=page4 href="ListRoom4" class="w3-button w3-hover-red">4</a>
-	  <a id=page5 href="ListRoom5" class="w3-button w3-hover-red">5</a>
-	  <a id=page6 href="ListRoom6" class="w3-button w3-hover-red">6</a>
-	  <a id=page7 href="ListRoom7" class="w3-button w3-hover-red">7</a>
+	  <a id=page1 href="List?page=1" class="w3-button w3-hover-red">1</a>
+	  <a id=page2 href="List?page=2" class="w3-button w3-hover-red">2</a>
+	  <a id=page3 href="List?page=3" class="w3-button w3-hover-red">3</a>
+	  <a id=page4 href="List?page=4" class="w3-button w3-hover-red">4</a>
+	  <a id=page5 href="List?page=5" class="w3-button w3-hover-red">5</a>
+	  <a id=page6 href="List?page=6" class="w3-button w3-hover-red">6</a>
+	  <a id=page7 href="List?page=7" class="w3-button w3-hover-red">7</a>
 	  <a id="arrowNext" class="w3-button w3-hover-red">&#62;</a>
 	  <script src="javascript/list.js"></script>
-	  <a href="ListRoom7" class="w3-button w3-hover-red">&raquo;</a>
+	  <a href="List?page=7" class="w3-button w3-hover-red">&raquo;</a>
 	</div>
 
 </div>

@@ -25,7 +25,8 @@ public class ListCost extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
+	 * This method is for showing all workers, sorted by cost <br/>
+	 * ascending, from the workers table in the database <br/>
 	 * 
 	 * @return void
 	 * 

@@ -1,4 +1,4 @@
-package raudain.controller.listr;
+package raudain.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,15 +17,16 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/ListRoom1")
-public class ListRoom1 extends HttpServlet {
+@WebServlet("/List")
+public class List extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
+	 * This method is for showing all workers, paginated and sorted by<br\>
+	 * room number descending, from the workers table in the database <br/>
 	 * 
 	 * @return void
 	 * 
@@ -41,7 +42,9 @@ public class ListRoom1 extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkersByRoom(1);
+		String pageNumber = request.getParameter("page");
+		int page = Integer.parseInt(pageNumber);
+		workerList = doa.getWorkersByRoom(page);
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");

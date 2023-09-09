@@ -10,7 +10,8 @@ function sortByRoom() {
 }
 
 const page = location.href;
-let pageNumber = page.substring(46, 47);
+let pageNumber = page.substring(48, 49);
+urlBase = "List?page=";
 
 /* 
  *	***************** Arrow Previous ****************
@@ -22,7 +23,7 @@ function onePageBack() {
 	if (pageNumber != 1) {
 		pageNumber--;
 		const pageNumberPrevious = pageNumber;
-		const pagePrevious = "ListRoom" + pageNumberPrevious;
+		const pagePrevious = urlBase + pageNumberPrevious;
 		location.href = pagePrevious;
 	}
 }
@@ -37,7 +38,7 @@ function onePageForward() {
 	if (pageNumber != 7) {
 		pageNumber++;
 		const pageNumberNext = pageNumber;
-		const pageNext = "ListRoom" + pageNumberNext;
+		const pageNext = urlBase + pageNumberNext;
 		location.href = pageNext;
 	}
 }

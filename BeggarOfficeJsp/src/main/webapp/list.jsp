@@ -13,9 +13,11 @@
 	<meta http-equiv="Content-Type"
 		  content="text/html; charset=ISO-8859-1">
 	<meta name="description"
-		  content="Worker sorter for the Virtual Beggar mobile clicker game">
-	<meta name="author" content="Roody Audain">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  content="Worker list for the Virtual Beggar mobile clicker game">
+	<meta name="author"
+		  content="Roody Audain">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<title>Change Inc | List</title>
 	<link rel="stylesheet" href="style/nav.css">
@@ -30,12 +32,14 @@
 <nav class="w3-pale-blue">
 
 <ul class ="w3-ul w3-large w3-bar">
+
 	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href=".">Tower</a>
 	</li>
 	<li class="w3-yellow w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
 		<a href="List?page=1">List Workers</a>
 	</li>
+	
 </ul>
 	
 </nav>

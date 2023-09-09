@@ -68,7 +68,29 @@
 				   ,      EnduranceName
 				   ,      Cost
 				   FROM dbo.`View Worker List By Room`
-				   WHERE Room BETWEEN 101 AND 2401;">
+				   WHERE Room BETWEEN 1503 AND 2401;">
+		</property>
+		
+		<property
+			name="workerListByRoom6"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 701 AND 1502;">
+		</property>
+		
+		<property
+			name="workerListByRoom7"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 101 AND 603;">
 		</property>
 		
 		<property

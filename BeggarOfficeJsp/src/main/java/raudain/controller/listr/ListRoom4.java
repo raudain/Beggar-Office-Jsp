@@ -41,7 +41,7 @@ public class ListRoom4 extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkersByRoom4();
+		workerList = doa.getWorkersByRoom(4);
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");

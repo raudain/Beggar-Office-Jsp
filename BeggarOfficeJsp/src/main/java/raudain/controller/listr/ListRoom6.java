@@ -17,15 +17,16 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/ListRoom1")
-public class ListRoom1 extends HttpServlet {
+@WebServlet("/ListRoom6")
+public class ListRoom6 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, sorted, from workers table in dbo database<br/>
+	 * This method is for showing the fifth page of workers, sorted by<br>
+	 * room number, from workers table in the database<br/>
 	 * 
 	 * @return void
 	 * 
@@ -41,7 +42,7 @@ public class ListRoom1 extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkersByRoom(1);
+		workerList = doa.getWorkersByRoom(6);
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");

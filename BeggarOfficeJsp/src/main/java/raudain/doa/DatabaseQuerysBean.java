@@ -7,11 +7,14 @@ public class DatabaseQuerysBean {
 	
 	private String lastRoom = "";
 	private String insert = "";
+	
 	private String workerListByRoom1 = "";
 	private String workerListByRoom2 = "";
 	private String workerListByRoom3 = "";
 	private String workerListByRoom4 = "";
 	private String workerListByRoom5 = "";
+	private String workerListByRoom6 = "";
+	private String workerListByRoom7 = "";
 	private String workerListByCost = "";
 	private String workerNameList = "";
 	private String updateWorker = "";
@@ -61,12 +64,29 @@ public class DatabaseQuerysBean {
 	public void setWorkerListByRoom4(String workerListByRoom4) {
 		this.workerListByRoom4 = workerListByRoom4;
 	}
+	
 	public String getWorkerListByRoom5() {
 		return workerListByRoom5;
 	}
 	
 	public void setWorkerListByRoom5(String workerListByRoom5) {
 		this.workerListByRoom5 = workerListByRoom5;
+	}
+	
+	public String getWorkerListByRoom6() {
+		return workerListByRoom6;
+	}
+	
+	public void setWorkerListByRoom6(String workerListByRoom6) {
+		this.workerListByRoom6 = workerListByRoom6;
+	}
+	
+	public String getWorkerListByRoom7() {
+		return workerListByRoom7;
+	}
+	
+	public void setWorkerListByRoom7(String workerListByRoom7) {
+		this.workerListByRoom7 = workerListByRoom7;
 	}
 	
 	public String getWorkerListByCost() {

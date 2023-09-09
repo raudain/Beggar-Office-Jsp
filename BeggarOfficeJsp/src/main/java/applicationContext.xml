@@ -17,39 +17,91 @@
 		
 		
 		<property
-			name="workerListByRoom"
-			value="SELECT WK.Room
-				   ,      WK.Name
-				   ,      PR.ProfessionName
-				   ,      EN.EnduranceName
-				   ,      WK.Cost
-				   FROM dbo.Worker WK
-				
-				   INNER JOIN dbo.Profession PR ON PR.Profession = WK.Profession
-				
-				   INNER JOIN Endurance EN ON EN.Endurance = WK.Endurance
-				
-				   ORDER BY WK.Room DESC;">
+			name="workerListByRoom1"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   LIMIT 26;">
 		</property>
 		
+		<property
+			name="workerListByRoom2"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 4103 AND 5001;">
+		</property>
+		
+		<property
+			name="workerListByRoom3"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 3301 AND 4102;">
+		</property>
+		
+		<property
+			name="workerListByRoom4"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 2402 AND 3203;">
+		</property>
+		
+		<property
+			name="workerListByRoom5"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 1503 AND 2401;">
+		</property>
+		
+		<property
+			name="workerListByRoom6"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 701 AND 1502;">
+		</property>
+		
+		<property
+			name="workerListByRoom7"
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Room`
+				   WHERE Room BETWEEN 101 AND 603;">
+		</property>
 		
 		<property
 			name="workerListByCost"
-			value="SELECT WK.Room
-				   ,      WK.Name
-				   ,      PR.ProfessionName
-				   ,      EN.EnduranceName
-				   ,      WK.Cost
-				   FROM dbo.Worker WK
-				
-				   INNER JOIN dbo.Profession PR ON PR.Profession = WK.Profession
-				
-				   INNER JOIN Endurance EN ON EN.Endurance = WK.Endurance
-				
-				   WHERE WK.Cost != 0
-				   AND PR.ProfessionName != 'Businessman'
-				
-				   ORDER BY WK.Cost;">
+			value="SELECT Room
+				   ,      Name
+				   ,      ProfessionName
+				   ,      EnduranceName
+				   ,      Cost
+				   FROM dbo.`View Worker List By Cost`
+				   LIMIT 26;">
 		</property>
 		
 		

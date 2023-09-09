@@ -1,4 +1,4 @@
-package raudain.controller;
+package raudain.controller.listr;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,8 +17,8 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/ListRoom")
-public class ListRoom extends HttpServlet {
+@WebServlet("/ListRoom1")
+public class ListRoom1 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class ListRoom extends HttpServlet {
 		WorkerDAO doa = new WorkerDAO();
 		
 		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkersByRoom();
+		workerList = doa.getWorkersByRoom(1);
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
@@ -53,6 +53,7 @@ public class ListRoom extends HttpServlet {
 			e.printStackTrace();
 		}
 		//System.out.println("doGet response forwarded to list.jsp");
+		response.setHeader("Set-Cookie", "key=value; HttpOnly; SameSite=strict");
 	}
 
 	/**

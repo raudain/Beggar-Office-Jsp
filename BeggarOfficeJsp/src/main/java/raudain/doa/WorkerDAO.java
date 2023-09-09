@@ -46,18 +46,12 @@ public class WorkerDAO {
 	 * Prepare a statement object using the connection that gets all the worker
 	 * names from the worker table. <br/>
 	 * Execute the SQL statement and keep a reference to the result set.<br/>
-	 * Using a WHILE LOOP, store each record in the result set returned in a Worker
-	 * object by setting the values of the Event attributes as the corresponding
-	 * values in the Result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 *
-	 * @return Collection of Events
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
+	 * @return List of workers for page one
 	 *
 	 */
-	public ArrayList<Worker> getWorkersByRoom() {
+	public ArrayList<Worker> getWorkersByRoom(int page) {
 
 		Statement statement = null;
 		connection = DataConnection.createConnection();	
@@ -65,56 +59,42 @@ public class WorkerDAO {
 			statement = connection.createStatement();
 		} catch (final SQLException e) {
 			System.out.println("Error creating "
-					+ "Statement in WorkerDAO.getWorkersByRoom()");
+					+ "Statement in WorkerDAO.getWorkersByRoom1()");
 			e.printStackTrace();
 		}
 		
-		final String sqlScript = sqlScripts.getWorkerListByRoom();
+		String selectStatement = sqlScripts.getWorkerListByRoom1();
+		switch (page) {
+		  case 2:
+			  selectStatement = sqlScripts.getWorkerListByRoom2();
+			  break;
+		  case 3:
+			  selectStatement = sqlScripts.getWorkerListByRoom3();
+			  break;
+		  case 4:
+			  selectStatement = sqlScripts.getWorkerListByRoom4();
+			  break;
+		  case 5:
+			  selectStatement = sqlScripts.getWorkerListByRoom5();
+			  break;
+		  case 6:
+			  selectStatement = sqlScripts.getWorkerListByRoom6();
+			  break;
+		  case 7:
+			  selectStatement = sqlScripts.getWorkerListByRoom7();
+		      break;
+		}
+		
 		try {
-			resultSet = statement.executeQuery(sqlScript);
+			resultSet = statement.executeQuery(selectStatement);
 		} catch (final SQLException e) {
 			System.out.println("Error creating "
 					+ "ResultSet in WorkerDAO.getWorkersByRoom()");
 			e.printStackTrace();
 		}
-
-		// Now we collect the data from the result in order to display them in
-		// the Java Server Page
-		ArrayList<Worker> workerList = new ArrayList<Worker>();
-		try {
-			while (resultSet.next()) {
-				Worker worker = new Worker();
-
-				short room = resultSet.getShort("WK.Room");
-				worker.setRoom(room);
-
-				String name = resultSet.getString("WK.Name");
-				worker.setName(name);
-
-				String profession = resultSet.getString("PR.ProfessionName");
-				worker.setProfession(profession);
-
-				String endurance = resultSet.getString("EN.EnduranceName");
-				worker.setEndurance(endurance);
-
-				long cost = resultSet.getLong("WK.Cost");
-				worker.setCost(cost);
-
-				workerList.add(worker);
-			}
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem getting workers.");
-			e.printStackTrace();
-		}
-		try {
-			DataConnection.closeConnection();
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem with closing connection");
-			e.printStackTrace();
-		}
-		return workerList;
+		return getWorkerList(resultSet);
 	}
-
+	
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -132,9 +112,6 @@ public class WorkerDAO {
 	 * Return the ArrayList to the calling method. <br/>
 	 *
 	 * @return Collection of Events
-	 *
-	 * @throws ClassNotFoundException
-	 * @throws SQLException
 	 *
 	 */
 	public ArrayList<Worker> getWorkersByCost() {
@@ -158,26 +135,37 @@ public class WorkerDAO {
 			e.printStackTrace();
 		}
 
-		// Now we collect the data from the result in order to display them in
-		// the Java Server Page
+		return getWorkerList(resultSet);
+	}
+	
+	/**
+	 * <br/>
+	 * Now we collect the data from the result in order to display them in
+	 * the Java Server Page <br/>
+	 * 
+	 * @return ArrayList<Worker>
+	 *
+	 */
+	private ArrayList<Worker> getWorkerList(ResultSet resultSet) {
+
 		ArrayList<Worker> workerList = new ArrayList<Worker>();
 		try {
 			while (resultSet.next()) {
 				Worker worker = new Worker();
 
-				short room = resultSet.getShort("WK.Room");
+				short room = resultSet.getShort("Room");
 				worker.setRoom(room);
 
-				String name = resultSet.getString("WK.Name");
+				String name = resultSet.getString("Name");
 				worker.setName(name);
 
-				String profession = resultSet.getString("PR.ProfessionName");
+				String profession = resultSet.getString("ProfessionName");
 				worker.setProfession(profession);
 
-				String endurance = resultSet.getString("EN.EnduranceName");
+				String endurance = resultSet.getString("EnduranceName");
 				worker.setEndurance(endurance);
 
-				long cost = resultSet.getLong("WK.Cost");
+				long cost = resultSet.getLong("Cost");
 				worker.setCost(cost);
 
 				workerList.add(worker);

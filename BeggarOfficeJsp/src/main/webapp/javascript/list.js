@@ -6,10 +6,69 @@ const room = document.getElementById("room");
 room.addEventListener("click", sortByRoom);
 
 function sortByRoom() {
-	location.href="ListRoom";
+	location.href = "ListRoom1";
 }
 
+const page = location.href;
+let pageNumber = page.substring(46, 47);
 
+/* 
+ *	***************** Arrow Previous ****************
+ */
+
+const arrowP = document.getElementById("arrowPrevious");
+arrowP.addEventListener("click", onePageBack);
+function onePageBack() {
+	if (pageNumber != 1) {
+		pageNumber--;
+		const pageNumberPrevious = pageNumber;
+		const pagePrevious = "ListRoom" + pageNumberPrevious;
+		location.href = pagePrevious;
+	}
+}
+
+/* 
+ *	***************** Arrow Next****************
+ */
+
+const arrowN = document.getElementById("arrowNext");
+arrowN.addEventListener("click", onePageForward);
+function onePageForward() {
+	if (pageNumber != 7) {
+		pageNumber++;
+		const pageNumberNext = pageNumber;
+		const pageNext = "ListRoom" + pageNumberNext;
+		location.href = pageNext;
+	}
+}
+
+/* 
+ *	***************** Highlight Pagnation ****************
+ */
+
+let link = document.getElementById("page1");
+switch (pageNumber) {
+  case "2":
+    link = document.getElementById("page2");
+    break;
+  case "3":
+     link = document.getElementById("page3");
+    break;
+  case "4":
+    link = document.getElementById("page4");
+    break;
+  case "5":
+    link = document.getElementById("page5");
+    break;
+  case "6":
+    link = document.getElementById("page6");
+    break;
+  case "7":
+    link = document.getElementById("page7");
+    break;
+}
+link.className = "w3-button w3-yellow w3-hover-red";
+	
 /* 
  *	***************** Sort by Worker's Cost Accending ****************
  */
@@ -18,5 +77,10 @@ const cost = document.getElementById("cost");
 cost.addEventListener("click", sortByCost);
 
 function sortByCost() {
-	location.href="ListCost";
+	location.href = "ListCost";
+}
+
+if (location.href == "http://localhost:8080/BeggarOfficeJsp/ListCost"){
+	const pagination = document.querySelector(".w3-display-bottommiddle");
+	pagination.style.display = "none";
 }

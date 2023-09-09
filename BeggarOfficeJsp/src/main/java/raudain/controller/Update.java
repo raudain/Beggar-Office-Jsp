@@ -18,7 +18,8 @@ public class Update extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for queuing up the next open room for a new worker<br/>
+	 * This method is for queuing up the next <br/>
+	 * open room for a new worker<br/>
 	 * 
 	 * @return void
 	 * 

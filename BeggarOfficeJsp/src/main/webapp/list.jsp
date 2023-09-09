@@ -27,7 +27,7 @@
 
 <body>
 
-<nav class="w3-pale-blue w3-cell-row w3-top">
+<nav class="w3-pale-blue">
 
 <ul class ="w3-ul w3-large w3-bar">
 	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
@@ -54,7 +54,7 @@
 
 <c:otherwise>
 
-<div class="w3-container w3-margin-top w3-padding-64">
+<div class="w3-container w3-margin-top">
 
 	<table class="w3-table-all">
 		<thead>

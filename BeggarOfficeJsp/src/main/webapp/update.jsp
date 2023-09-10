@@ -22,7 +22,6 @@
 	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/update.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="style/design.css">
 
 </head>
 
@@ -33,7 +32,7 @@
 <ul class ="w3-ul w3-large w3-bar">
 
 	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
-		<a href=".">Tower</a>
+		<a href=".">Tutorial</a>
 	</li>
 	<li class="w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
 		<a href="List?page=1">List Workers</a>

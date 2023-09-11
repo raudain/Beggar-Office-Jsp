@@ -18,11 +18,16 @@
 		  content="Roody Audain">
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<title>Change Inc | Table</title>
-	<link rel="stylesheet" href="style/nav.css">
-	<link rel="stylesheet" href="style/list.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="shortcut icon"
+		  type="image/png"
+		  href="images/favicon.png">
+	<title>Table</title>
+	<link rel="stylesheet"
+		  href="style/nav.css">
+	<link rel="stylesheet"
+		  href="style/list.css">
+	<link rel="stylesheet"
+		  href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 

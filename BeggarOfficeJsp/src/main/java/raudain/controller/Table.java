@@ -58,7 +58,6 @@ public class Table extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		response.setHeader("Set-Cookie", "key=value; HttpOnly; SameSite=strict");
 	}
 
 	/**

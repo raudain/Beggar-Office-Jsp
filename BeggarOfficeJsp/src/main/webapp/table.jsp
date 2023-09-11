@@ -31,6 +31,8 @@
 
 <ul class  = "w3-ul w3-large w3-bar">
 	
+	<script src = "javascript/nav.js"></script>
+	
 	<li class = "w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href = ".">Tutorial</a>
 	</li>
@@ -84,57 +86,58 @@
 	</table>
 	
 	<div class = "w3-bar w3-margin-top w3-display-bottommiddle w3-center">
-		<script src = "javascript/nav.js"></script>
-		  <a href = "Table?page=1"
+		
+		<a href = "Table?page=1"
 		  	 class = "w3-button w3-hover-red w3-mobile">&laquo;
-		  </a>
-		  <a id = "arrowPrevious"
-		  	 class = "w3-button w3-hover-red w3-mobile">&#60;
-		  </a>
-		  <a id = page1
-		  	 href = "Table?page=1"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 1
-		  </a>
-		  <a id = page2
-		  	 href = "Table?page=2"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 2
-		  </a>
-		  <a id = page3
-		  	 href = "Table?page=3"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 3
-		  </a>
-		  <a id = page4
-		  	 href = "Table?page=4"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 4
-		  </a>
-		  <a id = page5
-		  	 href = "List?page=5"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 5
-		  </a>
-		  <a id = page6
-		  	 href = "Table?page=6"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-			 6
-		  </a>
-		  <a id = page7
-		  	 href = "Table?page=7"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 7
-		  </a>
-		  <a id = "arrowNext"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 &#62;
-		  </a>
-		  <script src = "javascript/list.js"></script>
-		  <a href = "Table?page=7"
-		  	 class = "w3-button w3-hover-red w3-mobile">
-		  	 &raquo;
-		  </a>
+		</a>
+		<a id = "arrowPrevious"
+			 class = "w3-button w3-hover-red w3-mobile">&#60;
+		</a>
+		<a id = page1
+			 href = "Table?page=1"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 1
+		</a>
+		<a id = page2
+			 href = "Table?page=2"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 2
+		</a>
+		<a id = page3
+			 href = "Table?page=3"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 3
+		</a>
+		<a id = page4
+			 href = "Table?page=4"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 4
+		</a>
+		<a id = page5
+			 href = "List?page=5"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 5
+		</a>
+		<a id = page6
+			 href = "Table?page=6"
+			 class = "w3-button w3-hover-red w3-mobile">
+		 6
+		</a>
+		<a id = page7
+			 href = "Table?page=7"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 7
+		</a>
+		<a id = "arrowNext"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 &#62;
+		</a>
+		<script src = "javascript/table.js"></script>
+		<a href = "Table?page=7"
+			 class = "w3-button w3-hover-red w3-mobile">
+			 &raquo;
+		</a>
+		
 	</div>
 
 </div>

@@ -81,7 +81,7 @@ function sortByCost() {
 	location.href = "Table?page=69";
 }
 
-if (location.href == "http://localhost:8080/BeggarOfficeJsp/List?page=69"){
+if (location.href == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
 	const pagination = document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";
 }

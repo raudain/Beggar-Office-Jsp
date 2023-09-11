@@ -143,8 +143,7 @@ public class WorkerDAO {
 	
 	/**
 	 * <br/>
-	 * Now we collect the data from the result in order to display them in
-	 * the Java Server Page <br/>
+	 * Collect worker data from the result
 	 * 
 	 * @return ArrayList<Worker>
 	 *

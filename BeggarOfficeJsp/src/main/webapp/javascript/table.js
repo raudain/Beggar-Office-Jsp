@@ -4,6 +4,7 @@
 
 const page = location.href;
 let pageNumber = page.substring(49, 50);
+const urlBase = "Table?page="
 
 /* 
  *	***************** Arrow Previous ****************

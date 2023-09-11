@@ -62,13 +62,16 @@
 			<tr class = "w3-light-grey">
 				<th class = "w3-border">
 					Room
-					<i id = "room" class = "fa-solid fa-arrow-down-9-1"></i>
+					<a href = "Table?page=1">
+						<i class = "fa-solid fa-arrow-down-9-1"></i>
+					</a>
 				</th>
 				
 				<th class = "w3-border">Name</th>
 				<th class = "w3-border">Profession</th>
 				<th class = "w3-border">Endurance</th>
-				<th class = "w3-border">Cost<i id = "cost" class = "fa-solid fa-arrow-up-1-9"></i>
+				<th class = "w3-border">
+					Cost<a href = "Table?page=69"><i class = "fa-solid fa-arrow-up-1-9"></i></a>
 				</th>
 			</tr>
 		</thead>

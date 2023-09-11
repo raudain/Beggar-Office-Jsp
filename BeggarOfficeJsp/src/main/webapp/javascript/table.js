@@ -2,16 +2,8 @@
  *	***************** Sort by Room Number Accending ****************
  */
 
-const room = document.getElementById("room");
-room.addEventListener("click", sortByRoom);
-
-function sortByRoom() {
-	location.href = "Table?page=1";
-}
-
 const page = location.href;
 let pageNumber = page.substring(49, 50);
-urlBase = "Table?page=";
 
 /* 
  *	***************** Arrow Previous ****************
@@ -73,13 +65,6 @@ link.className = "w3-button w3-yellow w3-hover-red";
 /* 
  *	***************** Sort by Worker's Cost Accending ****************
  */
-
-const cost = document.getElementById("cost");
-cost.addEventListener("click", sortByCost);
-
-function sortByCost() {
-	location.href = "Table?page=69";
-}
 
 if (location.href == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
 	const pagination = document.querySelector(".w3-display-bottommiddle");

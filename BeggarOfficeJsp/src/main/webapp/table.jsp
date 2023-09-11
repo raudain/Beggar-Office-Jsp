@@ -19,7 +19,7 @@
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<title>Change Inc | List</title>
+	<title>Change Inc | Table</title>
 	<link rel="stylesheet" href="style/nav.css">
 	<link rel="stylesheet" href="style/list.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,23 +28,29 @@
 
 <body>
 
+<script src="https://kit.fontawesome.com/6a7805bc60.js"
+		crossorigin="anonymous">
+</script>
+
 <nav class="w3-pale-blue">
 
 <ul class ="w3-ul w3-large w3-bar">
 
+	<script src="javascript/nav.js"></script>
+	
 	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href=".">Tutorial</a>
 	</li>
 	<li class="w3-yellow w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
-		<a href="List?page=1">List Workers</a>
+		<a href="Table?page=1">Workers Table</a>
 	</li>
 	
 </ul>
 	
 </nav>
 
-<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
-<script src="javascript/nav.js"></script>
+
+
 
 <c:choose>
 
@@ -101,29 +107,29 @@
 	</table>
 	
 	<div class="w3-bar w3-margin-top w3-display-bottommiddle w3-center">
-	  <a href="List?page=1"
+	  <a href="Table?page=1"
 	  	 class="w3-button w3-hover-red w3-mobile">&laquo;
 	  </a>
 	  <a id="arrowPrevious"
 	  	 class="w3-button w3-hover-red w3-mobile">&#60;
 	  </a>
 	  <a id=page1
-	  	 href="List?page=1"
+	  	 href="Table?page=1"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 1
 	  </a>
 	  <a id=page2
-	  	 href="List?page=2"
+	  	 href="Table?page=2"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 2
 	  </a>
 	  <a id=page3
-	  	 href="List?page=3"
+	  	 href="Table?page=3"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 3
 	  </a>
 	  <a id=page4
-	  	 href="List?page=4"
+	  	 href="Table?page=4"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 4
 	  </a>
@@ -133,12 +139,12 @@
 	  	 5
 	  </a>
 	  <a id=page6
-	  	 href="List?page=6"
+	  	 href="Table?page=6"
 	  	 class="w3-button w3-hover-red w3-mobile">
 		 6
 	  </a>
 	  <a id=page7
-	  	 href="List?page=7"
+	  	 href="Table?page=7"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 7
 	  </a>
@@ -147,7 +153,7 @@
 	  	 &#62;
 	  </a>
 	  <script src="javascript/list.js"></script>
-	  <a href="List?page=7"
+	  <a href="Table?page=7"
 	  	 class="w3-button w3-hover-red w3-mobile">
 	  	 &raquo;
 	  </a>

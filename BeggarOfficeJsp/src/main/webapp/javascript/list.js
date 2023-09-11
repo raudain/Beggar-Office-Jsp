@@ -6,12 +6,12 @@ const room = document.getElementById("room");
 room.addEventListener("click", sortByRoom);
 
 function sortByRoom() {
-	location.href = "List?page=1";
+	location.href = "Table?page=1";
 }
 
 const page = location.href;
-let pageNumber = page.substring(48, 49);
-urlBase = "List?page=";
+let pageNumber = page.substring(49, 50);
+urlBase = "Table?page=";
 
 /* 
  *	***************** Arrow Previous ****************
@@ -78,7 +78,7 @@ const cost = document.getElementById("cost");
 cost.addEventListener("click", sortByCost);
 
 function sortByCost() {
-	location.href = "List?page=69";
+	location.href = "Table?page=69";
 }
 
 if (location.href == "http://localhost:8080/BeggarOfficeJsp/List?page=69"){

@@ -17,8 +17,8 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/List")
-public class List extends HttpServlet {
+@WebServlet("/Table")
+public class Table extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -50,7 +50,7 @@ public class List extends HttpServlet {
 		
 		request.setAttribute("workerList", workerList);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
+		final RequestDispatcher disp = request.getRequestDispatcher("/table.jsp");
 		try {
 			disp.forward(request, response);
 		} catch (ServletException e) {
@@ -58,7 +58,6 @@ public class List extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//System.out.println("doGet response forwarded to list.jsp");
 		response.setHeader("Set-Cookie", "key=value; HttpOnly; SameSite=strict");
 	}
 

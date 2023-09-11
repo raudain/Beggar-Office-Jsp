@@ -6,8 +6,7 @@
 const rightButton = document.createElement("li");
 rightButton.className = "w3-bar-item w3-margin-right w3-right w3-mobile";
 const navigation = document.querySelector("ul");
-var boardLink = document.getElementById("board");
-navigation.insertBefore(rightButton, boardLink);
+navigation.insertBefore(rightButton, null);
 const changeListButton = document.createElement("button");
 changeListButton.type = "button";
 if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Update')

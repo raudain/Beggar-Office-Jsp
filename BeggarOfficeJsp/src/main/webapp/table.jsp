@@ -13,7 +13,7 @@
 	<meta http-equiv="Content-Type"
 		  content="text/html; charset=ISO-8859-1">
 	<meta name="description"
-		  content="Worker list for the Virtual Beggar mobile clicker game">
+		  content="Worker table for the Virtual Beggar mobile clicker game">
 	<meta name="author"
 		  content="Roody Audain">
 	<meta name="viewport"

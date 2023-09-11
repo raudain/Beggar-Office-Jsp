@@ -89,7 +89,7 @@
 	</p>
 	<p>
 		<label>Endurance</label>
-		<select class="field w3-select w3-border w3-display-bottomleft w3-hover-red"" name="endurance" required>
+		<select class="field w3-select w3-border w3-display-bottomleft w3-hover-red" name="endurance" required>
 			<option value=""></option>
 	    	<option value="1">Lazy</option>
 	    	<option value="2">Sleepy</option>

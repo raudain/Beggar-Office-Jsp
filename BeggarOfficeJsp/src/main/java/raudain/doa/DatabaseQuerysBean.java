@@ -18,7 +18,6 @@ public class DatabaseQuerysBean {
 	private String workerListByCost = "";
 	private String workerNameList = "";
 	private String updateWorker = "";
-	private String worker = "";
 	
 	public String getLastRoom() {
 		return lastRoom;

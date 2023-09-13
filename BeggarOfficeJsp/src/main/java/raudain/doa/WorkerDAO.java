@@ -46,68 +46,88 @@ public class WorkerDAO {
 	 *
 	 */
 	public ArrayList<Worker> getWorkers(byte page) {
-		
-		final short nextRoom = getNextRoom();
+			
+		String selectStatement = null;
 		final int decrementPage = 899;
 		int minimum = 0;
-		byte offset = 97;
-		
+		int maximum = 0;
+		final short nextRoom = getNextRoom();
 		connection = DataConnection.createConnection();
-		String selectStatement = null;
+		final byte offset1 = 97;
+		final short offset2 = offset1 + 100;
+		final short offset3 = offset1 + 99;
 		try {
 			switch (page) {
 				case 1:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom1();
-					preparedStatement =
-							connection.prepareStatement(selectStatement);
 					minimum = nextRoom - decrementPage;
+					if (nextRoom % 10 > 1) {
+						maximum = nextRoom - 1;
+					}
+					else {
+						maximum = nextRoom - (offset1 + 1);
+					}
 					break;
 				case 2:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom2();
 					minimum = nextRoom - (decrementPage * 2);
+					maximum = nextRoom - (decrementPage + 1);
 					break;
 				case 3:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom3();
 					minimum =
-							nextRoom - ((decrementPage * 3) - offset);
+							nextRoom - ((decrementPage * 3) - offset1);
+					maximum = nextRoom - ((decrementPage * 2) + 1);
 				  	break;
 				case 4:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom4();
 					minimum =
-							nextRoom - ((decrementPage * 4) - offset);
+							nextRoom - ((decrementPage * 4) - offset2);
+					maximum =
+							nextRoom -
+							(((decrementPage * 3) - offset1)) + 3;
 					break;
 				case 5:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom5();
 					minimum =
-							nextRoom - ((decrementPage * 5) - offset);
+							nextRoom - ((decrementPage * 5) - offset2);
+					maximum = nextRoom -
+							((decrementPage * 4) - offset3);
 					break;
 				case 6:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom6();
 					minimum = 
-							nextRoom - ((decrementPage * 6) - offset);
+							nextRoom -
+							((decrementPage * 6) - offset2);
+					maximum = nextRoom -
+							((decrementPage * 5) - offset3);
 				  break;
 				case 7:
 					selectStatement =
 					sqlScripts.getWorkerListByRoom7();
 					minimum =
-							nextRoom - ((decrementPage * 7) - offset);
+							nextRoom -
+							((decrementPage * 7) - offset2);
+					maximum = nextRoom -
+							((decrementPage * 6) - offset3);
 			      break;
 				case 69:
 					selectStatement =
 					sqlScripts.getWorkerListByCost();
-					
-					minimum = nextRoom - decrementPage;
+					minimum = 101;
+					maximum = nextRoom;
 			      break;
 			}
 			preparedStatement =
 					connection.prepareStatement(selectStatement);
 			preparedStatement.setInt(1, minimum);
+			preparedStatement.setInt(2, maximum);
 			preparedStatement.execute();
 			final ResultSet resultSet =
 					preparedStatement.getResultSet();
@@ -168,30 +188,30 @@ public class WorkerDAO {
 	 *
 	 */
 	public short getNextRoom() {
+			
+		short lastRoom = -1;
 		
-		connection = DataConnection.createConnection();
-		final String selectStatement = sqlScripts.getLastRoom();
+		connection = DataConnection.createConnection();	
 		Statement statement = getStatement(connection);
+		final String selectStatement = sqlScripts.getLastRoom();
 		final ResultSet resultSet =
 				getResultSet(statement, selectStatement);
 		try {
 			resultSet.next();
-			short lastRoom = -1;
 			lastRoom = resultSet.getShort("LastRoom");
 			closeConnection(connection);
-			if (lastRoom % 10 == 3) {
-				final Integer nextRoom = lastRoom + 98;
-				return Short.parseShort(nextRoom.toString());
-			}
-			else {
-				final Integer nextRoom = lastRoom + 1;
-				return Short.parseShort(nextRoom.toString());
-			}
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
 		}
-		return -1;
+		if (lastRoom % 10 < 3) {
+			final Integer nextRoom = lastRoom + 1;
+			return Short.parseShort(nextRoom.toString());
+		}
+		else {
+			final Integer nextRoom = lastRoom + 98;
+			return Short.parseShort(nextRoom.toString());
+		}
 	}
 	
 	private Statement getStatement(Connection connection) {

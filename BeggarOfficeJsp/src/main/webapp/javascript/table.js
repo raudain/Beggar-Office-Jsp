@@ -1,40 +1,13 @@
+const page = location.href;
+
 /* 
  *	***************** Sort by Room Number Accending ****************
  */
 
-const page = location.href;
 let pageNumber = page.substring(49, 50);
-const urlBase = "Table?page="
-
-/* 
- *	***************** Arrow Previous ****************
- */
-
 const arrowP = document.getElementById("arrowPrevious");
-arrowP.addEventListener("click", onePageBack);
-function onePageBack() {
-	if (pageNumber != 1) {
-		pageNumber--;
-		const pageNumberPrevious = pageNumber;
-		const pagePrevious = urlBase + pageNumberPrevious;
-		location.href = pagePrevious;
-	}
-}
-
-/* 
- *	***************** Arrow Next****************
- */
-
+const urlBase = "Table?page="
 const arrowN = document.getElementById("arrowNext");
-arrowN.addEventListener("click", onePageForward);
-function onePageForward() {
-	if (pageNumber != 7) {
-		pageNumber++;
-		const pageNumberNext = pageNumber;
-		const pageNext = urlBase + pageNumberNext;
-		location.href = pageNext;
-	}
-}
 
 /* 
  *	***************** Highlight Pagnation ****************
@@ -62,12 +35,60 @@ switch (pageNumber) {
     break;
 }
 link.className = "w3-button w3-yellow w3-hover-red";
-	
+
+/* 
+ *	***************** Arrow First Page ****************
+ */
+
+if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=1"){
+	const arrowF = document.getElementById("first");
+	arrowF.style.color = "lightgray";
+	arrowP.style.color = "lightgray";
+}
+
+/* 
+ *	***************** Arrow Previous ****************
+ */
+
+arrowP.addEventListener("click", onePageBack);
+function onePageBack() {
+	if (pageNumber != 1) {
+		pageNumber--;
+		const pageNumberPrevious = pageNumber;
+		const pagePrevious = urlBase + pageNumberPrevious;
+		location.href = pagePrevious;
+	}
+}
+
+/* 
+ *	***************** Arrow Next****************
+ */
+
+arrowN.addEventListener("click", onePageForward);
+function onePageForward() {
+	if (pageNumber != 7) {
+		pageNumber++;
+		const pageNumberNext = pageNumber;
+		const pageNext = urlBase + pageNumberNext;
+		location.href = pageNext;
+	}
+}
+
+/* 
+ *	***************** Arrow Last Page ****************
+ */
+
+if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
+	const arrowL = document.getElementById("last");
+	arrowL.style.color = "lightgray";
+	arrowN.style.color = "lightgray";
+}
+
 /* 
  *	***************** Sort by Worker's Cost Accending ****************
  */
 
-if (location.href == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
+if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
 	const pagination = document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";
 }

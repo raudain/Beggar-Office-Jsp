@@ -24,10 +24,8 @@ public class WorkerDAO {
 
 	// JDBC API classes for data persistence
 	private Connection connection = null;
-	private Statement statement = null;
 	private PreparedStatement preparedStatement = null;
 	private DatabaseQuerysBean sqlScripts;
-	private ResultSet resultSet = null;
 
 	// Default constructor for injecting Spring dependencies for SQL queries
 	public WorkerDAO() {
@@ -54,16 +52,8 @@ public class WorkerDAO {
 	 */
 	public ArrayList<Worker> getWorkersByRoom(byte page) {
 
-		connection = DataConnection.createConnection();	
-		try {
-			statement = connection.createStatement();
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error creating "
-					+ "Statement in WorkerDAO.getWorkersByRoom()");
-			exception.printStackTrace();
-		}
-		
+		connection = DataConnection.createConnection();
+		Statement statement = getStatement(connection);
 		String selectStatement = sqlScripts.getWorkerListByRoom1();
 		switch (page) {
 		  case 2:
@@ -84,17 +74,12 @@ public class WorkerDAO {
 		  case 7:
 			  selectStatement = sqlScripts.getWorkerListByRoom7();
 		      break;
-		}
+		}	
+		ResultSet resultSet = getResultSet(statement, selectStatement);
+		ArrayList<Worker> workerList = getWorkerList(resultSet);
+		closeConnection(connection);
 		
-		try {
-			resultSet = statement.executeQuery(selectStatement);
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error creating "
-					+ "ResultSet in WorkerDAO.getWorkersByRoom()");
-			exception.printStackTrace();
-		}
-		return getWorkerList(resultSet);
+		return workerList;
 	}
 	
 	/**
@@ -117,28 +102,14 @@ public class WorkerDAO {
 	 *
 	 */
 	public ArrayList<Worker> getWorkersByCost() {
-
-		connection = DataConnection.createConnection();	
-		try {
-			statement = connection.createStatement();
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error creating "
-					+ "Statement in getWorkers WorkerDAO");
-			exception.printStackTrace();
-		}
 		
-		final String sqlScript = sqlScripts.getWorkerListByCost();
-		try {
-			resultSet = statement.executeQuery(sqlScript);
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error creating "
-					+ "ResultSet in getWorkers WorkerDAO");
-			exception.printStackTrace();
-		}
-
-		return getWorkerList(resultSet);
+		connection = DataConnection.createConnection();
+		Statement statement = getStatement(connection);
+		final String selectStatment = sqlScripts.getWorkerListByCost();
+		ResultSet resultSet = getResultSet(statement, selectStatment);
+		ArrayList<Worker> workerList = getWorkerList(resultSet);
+		closeConnection(connection);
+		return workerList;
 	}
 	
 	/**
@@ -172,15 +143,8 @@ public class WorkerDAO {
 
 				workerList.add(worker);
 			}
-		} catch (final SQLException e) {
-			System.out.println("Error. Problem getting workers.");
-			e.printStackTrace();
-		}
-		try {
-			DataConnection.closeConnection();
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
-			System.out.println("Error. Problem with closing connection");
 			exception.printStackTrace();
 		}
 		return workerList;
@@ -194,43 +158,57 @@ public class WorkerDAO {
 	public short getNextRoom() {
 		
 		connection = DataConnection.createConnection();
+		final String selectStatement = sqlScripts.getLastRoom();
+		Statement statement = getStatement(connection);
+		final ResultSet resultSet =
+				getResultSet(statement, selectStatement);
+		try {
+			resultSet.next();
+			short lastRoom = -1;
+			lastRoom = resultSet.getShort("LastRoom");
+			closeConnection(connection);
+			if (lastRoom % 10 == 3) {
+				final Integer nextRoom = lastRoom + 98;
+				return Short.parseShort(nextRoom.toString());
+			}
+			else {
+				final Integer nextRoom = lastRoom + 1;
+				return Short.parseShort(nextRoom.toString());
+			}
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
+			exception.printStackTrace();
+		}
+		return -1;
+	}
+	
+	private Statement getStatement(Connection connection) {
+		
+		Statement statement = null;
 		try {
 			statement = connection.createStatement();
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			System.out.println("Error creating "
-					+ "Statement in getNextRoom WorkerDAO");
+					+ "Statement WorkerDAO");
 			exception.printStackTrace();
 		}
-		
-		final String selectStatement = sqlScripts.getLastRoom();
-		try {
-			resultSet = statement.executeQuery(selectStatement);
-			resultSet.next();
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error creating "
-					+ "ResultSet in getNextRoom WorkerDAO");
-			exception.printStackTrace();
-		}
-		short lastRoom = -1;
-		try {
-			lastRoom = resultSet.getShort("LastRoom");
-		} catch (final SQLException exception) {
-			System.out.println(exception.getMessage());
-			System.out.println("Error. Problem getting next free room.");
-			exception.printStackTrace();
-		}
-		if (lastRoom % 10 == 3) {
-			final Integer nextRoom = lastRoom + 98;
-			return Short.parseShort(nextRoom.toString());
-		}
-		else {
-			final Integer nextRoom = lastRoom + 1;
-			return Short.parseShort(nextRoom.toString());
-		}
+		return statement;
 	}
 	
+	private ResultSet getResultSet(Statement statement, 
+								   String selectStatement) {
+		
+		ResultSet resultSet = null;
+		try {
+			resultSet = statement.executeQuery(selectStatement);
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
+			exception.printStackTrace();
+		}
+		return resultSet;
+	}
+
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
@@ -246,7 +224,9 @@ public class WorkerDAO {
 		final String insertSqlStatement = sqlScripts.getInsert();
 		try {
 			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(insertSqlStatement);		
+			preparedStatement = connection.prepareStatement(insertSqlStatement);
+			closeConnection(connection);
+			
 			preparedStatement.setShort(1, worker.getRoom());
 			preparedStatement.setString(2, worker.getName());
 			byte profession = Byte.parseByte(worker.getProfession());
@@ -256,11 +236,8 @@ public class WorkerDAO {
 			preparedStatement.setLong(5, worker.getCost());
 			
 			preparedStatement.executeUpdate();
-			connection.close();
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
-			System.out.println("Problem created a prepared statement " +
-							   "in WokerDAO.insertWorker");
 			exception.printStackTrace();
 		}
 	}
@@ -281,6 +258,8 @@ public class WorkerDAO {
 		try {
 			// Prepare a statement object using the connection for provided worker room
 			preparedStatement = connection.prepareStatement(updateStatement);
+			closeConnection(connection);
+			
 			preparedStatement.setString(1, worker.getName());
 			byte profession = Byte.parseByte(worker.getProfession());
 			preparedStatement.setByte(2, profession);
@@ -290,10 +269,19 @@ public class WorkerDAO {
 			preparedStatement.setShort(5, worker.getRoom());
 			
 			preparedStatement.executeUpdate();
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
+			exception.printStackTrace();
+		}
+	}
+	
+	private void closeConnection(Connection Connection) {
+		
+		try {
+			DataConnection.closeConnection();
 			connection.close();
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
-			System.out.println("Error with preparedStatement: " + exception);
 			exception.printStackTrace();
 		}
 	}

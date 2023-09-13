@@ -27,23 +27,26 @@
 
 <body>
 
+<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>
+
 <nav class="w3-pale-blue">
 
 <ul class ="w3-ul w3-large w3-bar">
-
+	
+	<script src="javascript/nav.js"></script>
+	
 	<li class="w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href=".">Tutorial</a>
 	</li>
 	<li class="w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
-		<a href="List?page=1">List Workers</a>
+		<a href="Table?page=1">Workers Table</a>
 	</li>
 	
 </ul>
 
 </nav>
+	
 
-<script src="https://kit.fontawesome.com/6a7805bc60.js" crossorigin="anonymous"></script>	
-<script src="javascript/nav.js"></script>
 
 <div class="w3-container w3-khaki">
 	<h2>Worker</h2>
@@ -86,7 +89,7 @@
 	</p>
 	<p>
 		<label>Endurance</label>
-		<select class="field w3-select w3-border w3-display-bottomleft w3-hover-red"" name="endurance" required>
+		<select class="field w3-select w3-border w3-display-bottomleft w3-hover-red" name="endurance" required>
 			<option value=""></option>
 	    	<option value="1">Lazy</option>
 	    	<option value="2">Sleepy</option>

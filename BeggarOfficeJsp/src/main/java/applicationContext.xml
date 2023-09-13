@@ -17,7 +17,7 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   LIMIT 26;">
+			   WHERE Room > 5101">
 	</property>
 	
 	<property

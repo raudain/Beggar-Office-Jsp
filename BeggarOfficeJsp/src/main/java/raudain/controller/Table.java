@@ -17,16 +17,17 @@ import raudain.doa.WorkerDAO;
  * @author Roody Audain
  * 
  */
-@WebServlet("/List")
-public class List extends HttpServlet {
+@WebServlet("/Table")
+public class Table extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing all workers, paginated and sorted by<br\>
-	 * room number descending, from the workers table in the database <br/>
+	 * This method is for showing all workers, paginated and <br\>
+	 * sorted by room number descending, from the workers table <br\>
+	 * in the database <br/>
 	 * 
 	 * @return void
 	 * 
@@ -36,21 +37,20 @@ public class List extends HttpServlet {
 	 * @throws ServletException, IOException
 	 */
 	@Override
-	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
+	protected void doGet(final HttpServletRequest request,
+			final HttpServletResponse response)
 			throws ServletException, IOException {		
 		
 		String pageNumber = request.getParameter("page");
 		byte page = Byte.parseByte(pageNumber);
-		ArrayList<Worker> workerList = new ArrayList<>();
 		WorkerDAO doa = new WorkerDAO();
-		if (page == 69)
-			workerList = doa.getWorkersByCost();
-		else
-			workerList = doa.getWorkersByRoom(page);
+		ArrayList<Worker> workerList = new ArrayList<>();
+		workerList = doa.getWorkers(page);
 		
 		request.setAttribute("workerList", workerList);
 
-		final RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
+		final RequestDispatcher disp =
+				request.getRequestDispatcher("/table.jsp");
 		try {
 			disp.forward(request, response);
 		} catch (ServletException e) {
@@ -58,13 +58,11 @@ public class List extends HttpServlet {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//System.out.println("doGet response forwarded to list.jsp");
-		response.setHeader("Set-Cookie", "key=value; HttpOnly; SameSite=strict");
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, <br\>
+	 * HttpServletResponse response)
 	 */
 	@Override
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)

@@ -12,10 +12,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * <br/>
  * CLASS DESCRIPTION: <br/>
- * A Data Access Object (DAO) class for handling and managing event related data
- * requested, updated, and processed in the application and maintained in the
- * database. The interface between the application and event data persisting in
- * the database. <br/>
+ * A Data Access Object (DAO) class for handling and managing <br\>
+ * event related data requested, updated, and processed in the <br\>
+ * application and maintained in the database. The interface <br\>
+ * between the application and event data persisting in the <br\>
+ * database. <br/>
  *
  * @author Roody Audain
  *
@@ -29,31 +30,31 @@ public class WorkerDAO {
 
 	// Default constructor for injecting Spring dependencies for SQL queries
 	public WorkerDAO() {
-		try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
-			sqlScripts = (DatabaseQuerysBean) context.getBean("SqlBean");
+		try (ClassPathXmlApplicationContext context =
+				new ClassPathXmlApplicationContext("applicationContext.xml")) {
+			sqlScripts =
+					(DatabaseQuerysBean) context.getBean("SqlBean");
 		}
 	}
 
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all of the worker names in the worker Table in the
-	 * Database <br/>
+	 * DAO for displaying all of the worker names in the worker <br\>
+	 * Table in the Database <br/>
 	 *
 	 * PSEUDOCODE: <br/>
 	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the worker
-	 * names from the worker table. <br/>
-	 * Execute the SQL statement and keep a reference to the result set.<br/>
+	 * Prepare a statement object using the connection that gets <br\>
+	 * all the workernames from the worker table. Execute the <br\>
+	 * SQL statement and keep a reference to the result set.<br/>
 	 * Return the ArrayList to the calling method. <br/>
 	 *
 	 * @return List of workers for page one
 	 *
 	 */
-	public ArrayList<Worker> getWorkersByRoom(byte page) {
+	public ArrayList<Worker> getWorkers(byte page) {
 
-		connection = DataConnection.createConnection();
-		Statement statement = getStatement(connection);
 		String selectStatement = sqlScripts.getWorkerListByRoom1();
 		switch (page) {
 		  case 2:
@@ -74,42 +75,26 @@ public class WorkerDAO {
 		  case 7:
 			  selectStatement = sqlScripts.getWorkerListByRoom7();
 		      break;
-		}	
-		ResultSet resultSet = getResultSet(statement, selectStatement);
-		ArrayList<Worker> workerList = getWorkerList(resultSet);
-		closeConnection(connection);
-		
-		return workerList;
-	}
-	
-	/**
-	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all of the worker names in the worker Table in the
-	 * Database <br/>
-	 *
-	 * PSEUDOCODE: <br/>
-	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets all the worker
-	 * names from the worker table. <br/>
-	 * Execute the SQL statement and keep a reference to the result set.<br/>
-	 * Using a WHILE LOOP, store each record in the result set returned in a Worker
-	 * object by setting the values of the Event attributes as the corresponding
-	 * values in the Result set.<br/>
-	 * Return the ArrayList to the calling method. <br/>
-	 *
-	 * @return Collection of Events
-	 *
-	 */
-	public ArrayList<Worker> getWorkersByCost() {
-		
+		  case 69:
+			  selectStatement = sqlScripts.getWorkerListByCost();
+		      break;
+		}
 		connection = DataConnection.createConnection();
-		Statement statement = getStatement(connection);
-		final String selectStatment = sqlScripts.getWorkerListByCost();
-		ResultSet resultSet = getResultSet(statement, selectStatment);
-		ArrayList<Worker> workerList = getWorkerList(resultSet);
-		closeConnection(connection);
-		return workerList;
+		try {
+			preparedStatement =
+				connection.prepareStatement(selectStatement);
+			preparedStatement.execute();
+			final ResultSet resultSet =
+					preparedStatement.getResultSet();
+			final ArrayList<Worker> workerList =
+					getWorkerList(resultSet);
+			closeConnection(connection);
+			return workerList;
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
+			exception.printStackTrace();
+		}
+		return null;
 	}
 	
 	/**
@@ -132,10 +117,12 @@ public class WorkerDAO {
 				String name = resultSet.getString("Name");
 				worker.setName(name);
 
-				String profession = resultSet.getString("ProfessionName");
+				String profession =
+						resultSet.getString("ProfessionName");
 				worker.setProfession(profession);
 
-				String endurance = resultSet.getString("EnduranceName");
+				String endurance =
+						resultSet.getString("EnduranceName");
 				worker.setEndurance(endurance);
 
 				long cost = resultSet.getLong("Cost");
@@ -212,7 +199,8 @@ public class WorkerDAO {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * DAO for inserting a new worker into the worker table in the Database <br/>
+	 * DAO for inserting a new worker into the worker table in <br\>
+	 * the Database <br/>
 	 *
 	 * @return void
 	 * 
@@ -223,8 +211,8 @@ public class WorkerDAO {
 		connection = DataConnection.createConnection();
 		final String insertSqlStatement = sqlScripts.getInsert();
 		try {
-			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(insertSqlStatement);
+			preparedStatement =
+					connection.prepareStatement(insertSqlStatement);
 			closeConnection(connection);
 			
 			preparedStatement.setShort(1, worker.getRoom());
@@ -245,7 +233,8 @@ public class WorkerDAO {
 	/**
 	 * <br/>
 	 * * METHOD DESCRIPTION: <br/>
-	 * This method updates a worker in the worker table in the database <br/>
+	 * This method updates a worker in the worker table in the <br\>
+	 * database <br/>
 	 *
 	 * @param A worker that need to be updated
 	 * @return void
@@ -256,8 +245,8 @@ public class WorkerDAO {
 		connection = DataConnection.createConnection();
 		final String updateStatement = sqlScripts.getUpdateWorker();
 		try {
-			// Prepare a statement object using the connection for provided worker room
-			preparedStatement = connection.prepareStatement(updateStatement);
+			preparedStatement =
+					connection.prepareStatement(updateStatement);
 			closeConnection(connection);
 			
 			preparedStatement.setString(1, worker.getName());

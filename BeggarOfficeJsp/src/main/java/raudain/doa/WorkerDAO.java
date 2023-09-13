@@ -28,61 +28,86 @@ public class WorkerDAO {
 	private PreparedStatement preparedStatement = null;
 	private DatabaseQuerysBean sqlScripts;
 
-	// Default constructor for injecting Spring dependencies for SQL queries
+	/*
+	 *  Default constructor for injecting Spring dependencies for SQL
+	 *  queries
+	 */
 	public WorkerDAO() {
 		try (ClassPathXmlApplicationContext context =
-				new ClassPathXmlApplicationContext("applicationContext.xml")) {
+				new ClassPathXmlApplicationContext("applicationContext.xml"))
+		{
 			sqlScripts =
 					(DatabaseQuerysBean) context.getBean("SqlBean");
 		}
 	}
 
 	/**
-	 * <br/>
-	 * METHOD DESCRIPTION: <br/>
-	 * DAO for displaying all of the worker names in the worker <br\>
-	 * Table in the Database <br/>
-	 *
-	 * PSEUDOCODE: <br/>
-	 * Create a new connection to the database. <br/>
-	 * Prepare a statement object using the connection that gets <br\>
-	 * all the workernames from the worker table. Execute the <br\>
-	 * SQL statement and keep a reference to the result set.<br/>
-	 * Return the ArrayList to the calling method. <br/>
-	 *
-	 * @return List of workers for page one
+	 * @return worker data
 	 *
 	 */
 	public ArrayList<Worker> getWorkers(byte page) {
-
-		String selectStatement = sqlScripts.getWorkerListByRoom1();
-		switch (page) {
-		  case 2:
-			  selectStatement = sqlScripts.getWorkerListByRoom2();
-			  break;
-		  case 3:
-			  selectStatement = sqlScripts.getWorkerListByRoom3();
-			  break;
-		  case 4:
-			  selectStatement = sqlScripts.getWorkerListByRoom4();
-			  break;
-		  case 5:
-			  selectStatement = sqlScripts.getWorkerListByRoom5();
-			  break;
-		  case 6:
-			  selectStatement = sqlScripts.getWorkerListByRoom6();
-			  break;
-		  case 7:
-			  selectStatement = sqlScripts.getWorkerListByRoom7();
-		      break;
-		  case 69:
-			  selectStatement = sqlScripts.getWorkerListByCost();
-		      break;
-		}
+		
+		final short nextRoom = getNextRoom();
+		final int decrementPage = 899;
+		int minimum = 0;
+		byte offset = 97;
+		
 		connection = DataConnection.createConnection();
+		String selectStatement = null;
 		try {
+			switch (page) {
+				case 1:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom1();
+					preparedStatement =
+							connection.prepareStatement(selectStatement);
+					minimum = nextRoom - decrementPage;
+					break;
+				case 2:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom2();
+					minimum = nextRoom - (decrementPage * 2);
+					break;
+				case 3:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom3();
+					minimum =
+							nextRoom - ((decrementPage * 3) - offset);
+				  	break;
+				case 4:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom4();
+					minimum =
+							nextRoom - ((decrementPage * 4) - offset);
+					break;
+				case 5:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom5();
+					minimum =
+							nextRoom - ((decrementPage * 5) - offset);
+					break;
+				case 6:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom6();
+					minimum = 
+							nextRoom - ((decrementPage * 6) - offset);
+				  break;
+				case 7:
+					selectStatement =
+					sqlScripts.getWorkerListByRoom7();
+					minimum =
+							nextRoom - ((decrementPage * 7) - offset);
+			      break;
+				case 69:
+					selectStatement =
+					sqlScripts.getWorkerListByCost();
+					
+					minimum = nextRoom - decrementPage;
+			      break;
+			}
 			preparedStatement =
-				connection.prepareStatement(selectStatement);
+					connection.prepareStatement(selectStatement);
+			preparedStatement.setInt(1, minimum);
 			preparedStatement.execute();
 			final ResultSet resultSet =
 					preparedStatement.getResultSet();
@@ -207,7 +232,6 @@ public class WorkerDAO {
 	 */
 	public void insertWorker(Worker worker) {
 		
-		// Create a new connection to the database
 		connection = DataConnection.createConnection();
 		final String insertSqlStatement = sqlScripts.getInsert();
 		try {

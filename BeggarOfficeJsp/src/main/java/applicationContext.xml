@@ -17,7 +17,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room > 5101">
+			   WHERE Room BETWEEN ? AND 5903">
+			   <!-- 5102 -->
 	</property>
 	
 	<property
@@ -28,7 +29,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 4203 AND 5101;">
+			   WHERE Room BETWEEN ? AND 5101;">
+			   <!-- 4203 -->
 	</property>
 	
 	<property
@@ -39,7 +41,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 3401 AND 4202;">
+			   WHERE Room BETWEEN ? AND 4202;">
+			   <!-- 3401 -->
 	</property>
 	
 	<property
@@ -50,7 +53,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 2502 AND 3303;">
+			   WHERE Room BETWEEN ? AND 3303;">
+			   <!-- 2502 -->
 	</property>
 	
 	<property
@@ -61,7 +65,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 1603 AND 2501;">
+			   WHERE Room BETWEEN ? AND 2501;">
+			   <!-- 1603 -->
 	</property>
 	
 	<property
@@ -72,7 +77,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 801 AND 1602;">
+			   WHERE Room BETWEEN ? AND 1602;">
+			   <!-- 801 -->
 	</property>
 	
 	<property
@@ -83,7 +89,8 @@
 			   ,      EnduranceName
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN 101 AND 703;">
+			   WHERE Room BETWEEN ? AND 703;">
+			   <!-- 101 -->
 	</property>
 	
 	<property

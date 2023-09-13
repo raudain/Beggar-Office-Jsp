@@ -43,6 +43,7 @@ link.className = "w3-button w3-yellow w3-hover-red";
 if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=1"){
 	const arrowF = document.getElementById("first");
 	arrowF.style.color = "lightgray";
+	arrowF.style.pointerEvents = "none";
 	arrowP.style.color = "lightgray";
 }
 
@@ -81,6 +82,7 @@ function onePageForward() {
 if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
 	const arrowL = document.getElementById("last");
 	arrowL.style.color = "lightgray";
+	arrowL.style.pointerEvents = "none";
 	arrowN.style.color = "lightgray";
 }
 

@@ -5,9 +5,9 @@ const page = location.href;
  */
 
 let pageNumber = page.substring(49, 50);
-const arrowP = document.getElementById("arrowPrevious");
+const arrowPrevious = document.getElementById("arrowPrevious");
 const urlBase = "Table?page="
-const arrowN = document.getElementById("arrowNext");
+const arrowNext = document.getElementById("arrowNext");
 
 /* 
  *	***************** Highlight Pagnation ****************
@@ -37,21 +37,22 @@ switch (pageNumber) {
 link.className = "w3-button w3-yellow w3-hover-red";
 
 /* 
- *	***************** Arrow First Page ****************
+ *	***************** Arrows Left ****************
  */
 
 if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=1"){
-	const arrowF = document.getElementById("first");
-	arrowF.style.color = "lightgray";
-	arrowF.style.pointerEvents = "none";
-	arrowP.style.color = "lightgray";
+	const arrowFirst = document.getElementById("pageFirst");
+	arrowFirst.style.color = "lightgray";
+	arrowFirst.style.pointerEvents = "none";
+	arrowPrevious.style.color = "lightgray";
+	arrowPrevious.className = "w3-button w3-hover-white w3-mobile";
 }
 
 /* 
  *	***************** Arrow Previous ****************
  */
 
-arrowP.addEventListener("click", onePageBack);
+arrowPrevious.addEventListener("click", onePageBack);
 function onePageBack() {
 	if (pageNumber != 1) {
 		pageNumber--;
@@ -65,7 +66,7 @@ function onePageBack() {
  *	***************** Arrow Next****************
  */
 
-arrowN.addEventListener("click", onePageForward);
+arrowNext.addEventListener("click", onePageForward);
 function onePageForward() {
 	if (pageNumber != 7) {
 		pageNumber++;
@@ -76,14 +77,15 @@ function onePageForward() {
 }
 
 /* 
- *	***************** Arrow Last Page ****************
+ *	***************** Arrows Right ****************
  */
 
 if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
-	const arrowL = document.getElementById("last");
-	arrowL.style.color = "lightgray";
-	arrowL.style.pointerEvents = "none";
-	arrowN.style.color = "lightgray";
+	const arrowLast = document.getElementById("pageLast");
+	arrowLast.style.color = "lightgray";
+	arrowLast.style.pointerEvents = "none";
+	arrowNext.style.color = "lightgray";
+	arrowNext.className = "w3-button w3-hover-white w3-mobile";
 }
 
 /* 

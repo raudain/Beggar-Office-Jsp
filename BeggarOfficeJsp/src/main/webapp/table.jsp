@@ -22,9 +22,9 @@
 		href = "images/favicon.png">
 	<title>Table</title>
 	<link rel = "stylesheet" href = "style/nav.css">
-	<link rel = "stylesheet" href = "style/table.css">
 	<link rel = "stylesheet"
 		href = "https://www.w3schools.com/w3css/4/w3.css">
+	<link rel = "stylesheet" href = "style/table.css">
 
 </head>
 
@@ -100,7 +100,7 @@
 	
 	<div class = "w3-bar w3-margin-top w3-display-bottommiddle w3-center">
 		
-		<a id = "first" href = "Table?page=1"
+		<a id = "pageFirst" href = "Table?page=1"
 			class = "w3-button w3-hover-red w3-mobile">&laquo;
 		</a>
 		<a id = "arrowPrevious"
@@ -130,7 +130,7 @@
 		<a id = "arrowNext"
 			class = "w3-button w3-hover-red w3-mobile"> &#62;
 		</a>
-		<a id = "last" href = "Table?page=7"
+		<a id = "pageLast" href = "Table?page=7"
 			class = "w3-button w3-hover-red w3-mobile">&raquo;
 		</a>
 		<script src = "javascript/table.js"></script>

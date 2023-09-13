@@ -13,3 +13,7 @@ table {
 th {
 	text-align: left;
 }
+
+.w3-hover-white:hover {
+	color: lightgray!important
+}

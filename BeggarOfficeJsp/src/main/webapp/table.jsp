@@ -72,6 +72,9 @@
 					<a href = "Table?page=1">
 						<i class = "fa-solid fa-arrow-down-9-1"></i>
 					</a>
+					<input name="search" type="text" minlength="1"
+					maxlength="1"
+	 				class="w3-input w3-border w3-hover-red">
 				</th>
 				
 				<th class = "w3-border">Name</th>

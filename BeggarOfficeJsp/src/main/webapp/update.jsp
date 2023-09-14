@@ -55,11 +55,14 @@
 <form action="Onboarding" method="post">
 <p class="w3-margin-left">
 	<label>Room</label>
-	<input name="room" type="text" value="${room}" class="field w3-input w3-border w3-hover-red">
+	<input name="room" type="text" value="${room}"
+	class="field w3-input w3-border w3-hover-red">
 </p>
 <p class="w3-margin-left">
 	<label>Name</label>
-	<input name="name" type="text" minlength="2" maxlength="255" autocomplete="on" class="field w3-input w3-border w3-hover-red" required>
+	<input name="name" type="text" minlength="2" maxlength="255"
+	autocomplete="on" class="field w3-input w3-border w3-hover-red"
+	required>
 </p>
 
 <div class="w3-display-container w3-margin-left">
@@ -100,7 +103,8 @@
 		</select>
 	</p>
 </div>
-<input id="save" class="w3-button w3-light-green w3-jumbo w3-round-large w3-border w3-border-lime w3-hover-red w3-ripple w3-display-bottomright" type="submit" value="Hire">
+<input id="save"
+class="w3-button w3-light-green w3-jumbo w3-round-large w3-border w3-border-lime w3-hover-red w3-ripple w3-display-bottomright" type="submit" value="Hire">
 
 </div>
   	

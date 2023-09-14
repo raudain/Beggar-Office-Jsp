@@ -57,8 +57,9 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=1"){
 	const arrowFirst = document.getElementById("pageFirst");
 	arrowFirst.style.color = "lightgray";
 	arrowFirst.style.pointerEvents = "none";
-	arrowPrevious.style.color = "lightgray";
 	arrowPrevious.className = "w3-button w3-hover-white w3-mobile";
+	arrowPrevious.style.color = "lightgray";
+	arrowPrevious.style.cursor = "auto";
 }
 
 /* 
@@ -97,8 +98,9 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
 	const arrowLast = document.getElementById("pageLast");
 	arrowLast.style.color = "lightgray";
 	arrowLast.style.pointerEvents = "none";
-	arrowNext.style.color = "lightgray";
 	arrowNext.className = "w3-button w3-hover-white w3-mobile";
+	arrowNext.style.color = "lightgray";
+	arrowNext.style.cursor = "auto";
 }
 
 /* 

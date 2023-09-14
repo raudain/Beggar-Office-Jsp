@@ -14,6 +14,10 @@ th {
 	text-align: left;
 }
 
+a {
+	text-decoration: none;
+}
+
 .w3-hover-white:hover {
 	color: lightgray!important
 }

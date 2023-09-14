@@ -3,6 +3,8 @@ package raudain.controller;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +20,8 @@ public class Onboarding extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for inserting a worker into the dbo.worker table<br/>
+	 * This method is for inserting a worker into the dbo.worker <br\>
+	 * table<br/>
 	 * 
 	 * @return void
 	 * 
@@ -28,43 +31,52 @@ public class Onboarding extends HttpServlet {
 	 * @throws ServletException, IOException
 	 */
 	@Override
-	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
+	protected void doGet(final HttpServletRequest request,
+			final HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String roomNumber = request.getParameter("room");
-		Short room = Short.parseShort(roomNumber);
-		String name = request.getParameter("name");
-		String workerProfession = request.getParameter("profession");
-		byte profession = Byte.parseByte(workerProfession);
-		String workerEndurance = request.getParameter("endurance");
-		byte endurance = Byte.parseByte(workerEndurance);
-		Long cost = calculateCost(profession, endurance);
+		final String roomNumber = request.getParameter("room");
+		final Short room = Short.parseShort(roomNumber);
+		final String name = request.getParameter("name");
+		final String workerProfession = request.getParameter("profession");
+		final byte profession = Byte.parseByte(workerProfession);
+		final String workerEndurance = request.getParameter("endurance");
+		final byte endurance = Byte.parseByte(workerEndurance);
+		final Long cost = calculateCost(profession, endurance);
 		
-		Worker worker = new Worker();
+		final Worker worker = new Worker();
 		worker.setRoom(room);
 		worker.setName(name);
 		worker.setProfession(workerProfession);
 		worker.setEndurance(workerEndurance);
 		worker.setCost(cost);
 		
-		WorkerDAO doa = new WorkerDAO();
+		final WorkerDAO doa = new WorkerDAO();
 		if(worker.getRoom() == doa.getNextRoom()) {
 			doa.insertWorker(worker);
-			System.out.println("Worker number " + worker.getRoom() + " added");
+			System.out.println("Worker number " + worker.getRoom() +
+					" added");
 		} else {
 			doa.updateWorker(worker);
-			System.out.println("Worker number " + worker.getRoom() + " updated");
+			System.out.println("Worker number " + worker.getRoom() +
+					" updated");
 		}
-		final RequestDispatcher disp = request.getRequestDispatcher("List?page=1");
+		final ArrayList<Worker> workerList = doa.getWorkers(1);
+		request.setAttribute("workerList", workerList);
+		final RequestDispatcher disp =
+				request.getRequestDispatcher("table.jsp");
+		
 		disp.forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 * @see HttpServlet#doPost(HttpServletRequest request, <br\>
+	 * HttpServletResponse
 	 *      response)
 	 */
 	@Override
-	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
+	protected void doPost(final HttpServletRequest request,
+			final HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
@@ -78,7 +90,8 @@ public class Onboarding extends HttpServlet {
 	 * @return profession
 	 *
 	 */
-	private static Long calculateCost(byte profession, byte endurance) {
+	private static Long calculateCost(byte profession,
+			byte endurance) {
 		
 		long cost = 0;
 		
@@ -286,7 +299,7 @@ public class Onboarding extends HttpServlet {
         						break;
 					case 5:		cost = 2000000000;
         						break;
-					case 6: 	cost = Long.parseLong("48000000000") ;
+					case 6: 	cost = Long.parseLong("48000000000");
         						break;
 					default:	cost = -61;
         						break;

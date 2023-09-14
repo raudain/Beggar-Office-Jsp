@@ -10,7 +10,7 @@
 <bean id="SqlBean" class="raudain.doa.DatabaseQuerysBean">
 	
 	<property
-		name="workerListByRoom1"
+		name="workerListByRoom"
 		value="SELECT Room
 			   ,      Name
 			   ,      ProfessionName
@@ -18,72 +18,6 @@
 			   ,      Cost
 			   FROM dbo.`View Worker List By Room`
 			   WHERE Room BETWEEN ? AND ?">
-	</property>
-	
-	<property
-		name="workerListByRoom2"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
-	</property>
-	
-	<property
-		name="workerListByRoom3"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
-	</property>
-	
-	<property
-		name="workerListByRoom4"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
-	</property>
-	
-	<property
-		name="workerListByRoom5"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
-	</property>
-	
-	<property
-		name="workerListByRoom6"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
-	</property>
-	
-	<property
-		name="workerListByRoom7"
-		value="SELECT Room
-			   ,      Name
-			   ,      ProfessionName
-			   ,      EnduranceName
-			   ,      Cost
-			   FROM dbo.`View Worker List By Room`
-			   WHERE Room BETWEEN ? AND ?;">
 	</property>
 	
 	<property

@@ -45,22 +45,19 @@ public class WorkerDAO {
 	 * @return worker data
 	 *
 	 */
-	public ArrayList<Worker> getWorkers(byte page) {
+	public ArrayList<Worker> getWorkers(int page) {
 			
-		String selectStatement = null;
 		final int decrementPage = 899;
 		int minimum = 0;
-		int maximum = 0;
 		final short nextRoom = getNextRoom();
+		int maximum = nextRoom;
 		connection = DataConnection.createConnection();
 		final byte offset1 = 97;
-		final short offset2 = offset1 + 100;
-		final short offset3 = offset1 + 99;
+		final short offset2 = 802;
+		final short offset3 = 803;
 		try {
 			switch (page) {
 				case 1:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom1();
 					minimum = nextRoom - decrementPage;
 					if (nextRoom % 10 > 1) {
 						maximum = nextRoom - 1;
@@ -70,60 +67,47 @@ public class WorkerDAO {
 					}
 					break;
 				case 2:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom2();
 					minimum = nextRoom - (decrementPage * 2);
 					maximum = nextRoom - (decrementPage + 1);
 					break;
 				case 3:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom3();
 					minimum =
 							nextRoom - ((decrementPage * 3) - offset1);
 					maximum = nextRoom - ((decrementPage * 2) + 1);
 				  	break;
 				case 4:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom4();
 					minimum =
-							nextRoom - ((decrementPage * 4) - offset2);
+							nextRoom - ((decrementPage * 3) + offset2);
 					maximum =
-							nextRoom -
-							(((decrementPage * 3) - offset1)) + 3;
+							nextRoom - (decrementPage * 3) + 1;
 					break;
 				case 5:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom5();
 					minimum =
-							nextRoom - ((decrementPage * 5) - offset2);
-					maximum = nextRoom -
-							((decrementPage * 4) - offset3);
+							nextRoom - ((decrementPage * 4) + offset2);
+					maximum =
+							nextRoom - ((decrementPage * 3) + offset3);
 					break;
 				case 6:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom6();
-					minimum = 
-							nextRoom -
-							((decrementPage * 6) - offset2);
-					maximum = nextRoom -
-							((decrementPage * 5) - offset3);
+					minimum =
+							nextRoom - ((decrementPage * 5) + offset2);
+					maximum =
+							nextRoom - ((decrementPage * 4) + offset3);
 				  break;
 				case 7:
-					selectStatement =
-					sqlScripts.getWorkerListByRoom7();
 					minimum =
-							nextRoom -
-							((decrementPage * 7) - offset2);
-					maximum = nextRoom -
-							((decrementPage * 6) - offset3);
+							nextRoom - ((decrementPage * 6) + offset2);
+					maximum =
+							nextRoom - ((decrementPage * 5) + offset3);
 			      break;
 				case 69:
-					selectStatement =
-					sqlScripts.getWorkerListByCost();
-					minimum = 101;
-					maximum = nextRoom;
+					
 			      break;
 			}
+			String selectStatement;
+			if (page == 69)
+				selectStatement = sqlScripts.getWorkerListByCost();
+			else
+				selectStatement = sqlScripts.getWorkerListByRoom();
 			preparedStatement =
 					connection.prepareStatement(selectStatement);
 			preparedStatement.setInt(1, minimum);
@@ -138,7 +122,7 @@ public class WorkerDAO {
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
-		}
+		}	
 		return null;
 	}
 	
@@ -257,8 +241,6 @@ public class WorkerDAO {
 		try {
 			preparedStatement =
 					connection.prepareStatement(insertSqlStatement);
-			closeConnection(connection);
-			
 			preparedStatement.setShort(1, worker.getRoom());
 			preparedStatement.setString(2, worker.getName());
 			byte profession = Byte.parseByte(worker.getProfession());
@@ -268,6 +250,7 @@ public class WorkerDAO {
 			preparedStatement.setLong(5, worker.getCost());
 			
 			preparedStatement.executeUpdate();
+			closeConnection(connection);
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
@@ -291,8 +274,6 @@ public class WorkerDAO {
 		try {
 			preparedStatement =
 					connection.prepareStatement(updateStatement);
-			closeConnection(connection);
-			
 			preparedStatement.setString(1, worker.getName());
 			byte profession = Byte.parseByte(worker.getProfession());
 			preparedStatement.setByte(2, profession);
@@ -302,6 +283,7 @@ public class WorkerDAO {
 			preparedStatement.setShort(5, worker.getRoom());
 			
 			preparedStatement.executeUpdate();
+			closeConnection(connection);
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();

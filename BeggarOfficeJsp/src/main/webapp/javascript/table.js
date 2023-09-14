@@ -10,6 +10,20 @@ const urlBase = "Table?page="
 const arrowNext = document.getElementById("arrowNext");
 
 /* 
+ *	***************** Sort By Room ****************
+ */
+
+if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
+	const sortByCost = document.querySelectorAll("th a")[1];
+	sortByCost.style.color = "lightgray";
+	sortByCost.style.pointerEvents = "none";
+} else {
+	const sortByRoom = document.querySelectorAll("th a")[0];
+	sortByRoom.style.color = "lightgray";
+	sortByRoom.style.pointerEvents = "none";
+}
+
+/* 
  *	***************** Highlight Pagnation ****************
  */
 

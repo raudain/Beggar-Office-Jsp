@@ -41,23 +41,17 @@ public class Table extends HttpServlet {
 			final HttpServletResponse response)
 			throws ServletException, IOException {		
 		
-		String pageNumber = request.getParameter("page");
+		final String pageNumber = request.getParameter("page");
 		byte page = Byte.parseByte(pageNumber);
-		WorkerDAO doa = new WorkerDAO();
-		ArrayList<Worker> workerList = new ArrayList<>();
-		workerList = doa.getWorkers(page);
-		
+		final WorkerDAO doa = new WorkerDAO();
+		final ArrayList<Worker> workerList = doa.getWorkers(page);
 		request.setAttribute("workerList", workerList);
 
-		final RequestDispatcher disp =
+		final RequestDispatcher requestDispatcher =
 				request.getRequestDispatcher("/table.jsp");
-		try {
-			disp.forward(request, response);
-		} catch (ServletException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
+		requestDispatcher.forward(request, response);
+		
 	}
 
 	/**

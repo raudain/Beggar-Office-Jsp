@@ -55,6 +55,7 @@ public class WorkerDAO {
 		final byte offset1 = 97;
 		final short offset2 = 802;
 		final short offset3 = 803;
+		ArrayList<Worker> workerList = null;
 		try {
 			switch (page) {
 				case 1:
@@ -103,27 +104,36 @@ public class WorkerDAO {
 					minimum = nextRoom;
 					maximum = 0;
 			}
-			String selectStatement;
-			if (page == 69)
-				selectStatement = sqlScripts.getWorkerListByCost();
+			String selectStatement = null;
+			if (page > 7) {
+				minimum = 0;
+				maximum = nextRoom;
+				if (page == 11)
+					selectStatement = sqlScripts.getWorkerListLeft();
+				if (page == 12)
+					selectStatement = sqlScripts.getWorkerListMiddle();
+				if (page == 13)
+					selectStatement = sqlScripts.getWorkerListRight();
+				if (page == 69)
+					selectStatement = sqlScripts.getWorkerListByCost();
+			}
 			else
 				selectStatement = sqlScripts.getWorkerListByRoom();
-			preparedStatement =
+			if (selectStatement != null) {
+				preparedStatement =
 					connection.prepareStatement(selectStatement);
-			preparedStatement.setInt(1, minimum);
-			preparedStatement.setInt(2, maximum);
-			preparedStatement.execute();
-			final ResultSet resultSet =
-					preparedStatement.getResultSet();
-			final ArrayList<Worker> workerList =
-					getWorkerList(resultSet);
+				preparedStatement.setInt(1, minimum);
+				preparedStatement.setInt(2, maximum);
+				preparedStatement.execute();
+				ResultSet resultSet = preparedStatement.getResultSet();
+				workerList = getWorkerList(resultSet);
+			}
 			closeConnection(connection);
-			return workerList;
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
-		}	
-		return null;
+		}
+		return workerList;
 	}
 	
 	/**

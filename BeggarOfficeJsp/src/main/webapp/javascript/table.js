@@ -117,10 +117,12 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
 }
 
 /* 
- *	***************** Sort by Worker's Cost Accending ***************
+ *	***************** Special Pages ***************
  */
 
-if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
+let pageNumberSpecial = page.substring(49, 51);
+
+if (pageNumberSpecial > 7){
 	const pagination =
 	document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";

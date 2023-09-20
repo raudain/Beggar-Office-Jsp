@@ -9,6 +9,9 @@ public class DatabaseQuerysBean {
 	private String insert = "";
 	
 	private String workerListByRoom = "";
+	private String workerListLeft = "";
+	private String workerListMiddle = "";
+	private String workerListRight = "";
 	private String workerListByCost = "";
 	private String workerNameList = "";
 	private String updateWorker = "";
@@ -33,8 +36,32 @@ public class DatabaseQuerysBean {
 		return workerListByRoom;
 	}
 	
-	public void setWorkerListByRoom(String workerListByRoom1) {
-		this.workerListByRoom = workerListByRoom1;
+	public void setWorkerListByRoom(String workerListByRoom) {
+		this.workerListByRoom = workerListByRoom;
+	}
+	
+	public String getWorkerListLeft() {
+		return workerListLeft;
+	}
+	
+	public void setWorkerListLeft(String workerListLeft) {
+		this.workerListLeft = workerListLeft;
+	}
+	
+	public String getWorkerListMiddle() {
+		return workerListMiddle;
+	}
+	
+	public void setWorkerListMiddle(String workerListMiddle) {
+		this.workerListMiddle = workerListMiddle;
+	}
+	
+	public String getWorkerListRight() {
+		return workerListRight;
+	}
+	
+	public void setWorkerListRight(String workerListRight) {
+		this.workerListRight = workerListRight;
 	}
 	
 	public String getWorkerListByCost() {

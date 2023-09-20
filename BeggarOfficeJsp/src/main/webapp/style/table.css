@@ -20,6 +20,15 @@ a {
 	color: lightgray!important;
 }
 
+main {
+	min-height: 640px;
+}
+
 h1 {
 	font-family: Georgia;
+}
+
+img {
+	width: 600px;
+	height: 356.516px;
 }

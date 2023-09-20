@@ -57,10 +57,16 @@
 <c:choose>
 
 <c:when test = "${workerList == null or workerList.isEmpty()}">
-	<h1 class = "w3-xxxlarge w3-center w3-margin-top">
-		We lost this page
-	</h1>
-	<p class = "w3-xxxlarge w3-center">We searched high and low but couldn’t find what you’re looking for. Let’s find a better place for you to go.</p>
+	<main class="w3-display-container">
+		<h1 class = "w3-xxxlarge w3-center w3-margin-top">
+			We lost this page
+		</h1>
+		<h3 class = "w3-center w3-margin-right w3-margin-left">
+			We searched high and low but couldn’t find what you’re looking for. Let’s find a better place for you to go.
+		</h3>
+		<img src="images/404Horse.gif"
+			class="w3-display-bottommiddle">
+	</main>
 </c:when>
 
 <c:otherwise>
@@ -75,8 +81,8 @@
 					<a href = "Table?page=1">
 						<i class = "fa-solid fa-arrow-down-9-1"></i>
 					</a>
-					<input name="search" type="text" minlength="1"
-					maxlength="1"
+					<input type = "number" name = "search"
+					min = "1" max ="3"
 	 				class="w3-input w3-border w3-hover-red">
 				</th>
 				

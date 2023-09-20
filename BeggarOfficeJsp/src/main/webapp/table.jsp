@@ -1,6 +1,6 @@
-<%@ page language = "java" contentType = "text/html; charset=ISO-8859-1"
+<%@ page language = "java" contentType = "text/html; charset=UTF-8"
 	info = "Sort Workers" isELIgnored = "false"
-	pageEncoding = "ISO-8859-1"%>
+	pageEncoding = "UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -57,7 +57,10 @@
 <c:choose>
 
 <c:when test = "${workerList == null or workerList.isEmpty()}">
-	No workers are hired yet.
+	<h1 class = "w3-xxxlarge w3-center w3-margin-top">
+		We lost this page
+	</h1>
+	<p class = "w3-xxxlarge w3-center">We searched high and low but couldn’t find what you’re looking for. Let’s find a better place for you to go.</p>
 </c:when>
 
 <c:otherwise>

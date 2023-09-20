@@ -1,7 +1,5 @@
 @charset "ISO-8859-1";
 
-
-
 .w3-container {
 	min-height: 1170px;
 }
@@ -19,5 +17,9 @@ a {
 }
 
 .w3-hover-white:hover {
-	color: lightgray!important
+	color: lightgray!important;
+}
+
+h1 {
+	font-family: Georgia;
 }

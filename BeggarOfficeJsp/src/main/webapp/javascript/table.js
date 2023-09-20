@@ -23,6 +23,19 @@ sort.style.color = "lightgray";
 sort.style.pointerEvents = "none";
 
 /* 
+ *	***************** Search ****************
+ */
+
+const input = document.querySelector("input");
+input.addEventListener("keydown", search);
+function search(event) {
+	let key = event.key;
+	if (key == "Enter") {
+		location.href = urlBase + "1" + input.value;
+	}
+}
+
+/* 
  *	***************** Highlight Pagnation ****************
  */
 
@@ -104,10 +117,11 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
 }
 
 /* 
- *	***************** Sort by Worker's Cost Accending ****************
+ *	***************** Sort by Worker's Cost Accending ***************
  */
 
 if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
-	const pagination = document.querySelector(".w3-display-bottommiddle");
+	const pagination =
+	document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";
 }

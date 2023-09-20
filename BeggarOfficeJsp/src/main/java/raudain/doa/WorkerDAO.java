@@ -99,9 +99,9 @@ public class WorkerDAO {
 					maximum =
 							nextRoom - ((decrementPage * 5) + offset3);
 			      break;
-				case 69:
-					
-			      break;
+				default:
+					minimum = nextRoom;
+					maximum = 0;
 			}
 			String selectStatement;
 			if (page == 69)

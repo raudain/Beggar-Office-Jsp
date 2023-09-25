@@ -4,7 +4,7 @@ const page = location.href;
  *	***************** Sort by Room Number Accending ****************
  */
 
-let pageNumber = page.substring(49, 50);
+const pageNumber = page.substring(49, 50);
 const arrowPrevious = document.getElementById("arrowPrevious");
 const urlBase = "Table?page="
 const arrowNext = document.getElementById("arrowNext");
@@ -21,19 +21,6 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
 }
 sort.style.color = "lightgray";
 sort.style.pointerEvents = "none";
-
-/* 
- *	***************** Search ****************
- */
-
-const input = document.querySelector("input");
-input.addEventListener("keydown", search);
-function search(event) {
-	let key = event.key;
-	if (key == "Enter") {
-		location.href = urlBase + "1" + input.value;
-	}
-}
 
 /* 
  *	***************** Highlight Pagnation ****************
@@ -120,9 +107,7 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
  *	***************** Special Pages ***************
  */
 
-let pageNumberSpecial = page.substring(49, 51);
-
-if (pageNumberSpecial > 7){
+if (pageNumber == ''){
 	const pagination =
 	document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";

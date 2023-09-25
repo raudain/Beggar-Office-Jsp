@@ -81,9 +81,11 @@
 					<a href = "Table?page=1">
 						<i class = "fa-solid fa-arrow-down-9-1"></i>
 					</a>
-					<input type = "number" name = "search"
+					<form action = "Table" method = "POST">
+					<input type = "number" name = "page"
 					min = "1" max ="3"
 	 				class="w3-input w3-border w3-hover-red">
+	 				</form>
 				</th>
 				
 				<th class = "w3-border">Name</th>

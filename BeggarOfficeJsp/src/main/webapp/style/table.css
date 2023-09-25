@@ -1,9 +1,7 @@
 @charset "ISO-8859-1";
 
-
-
 .w3-container {
-	min-height: 1121.980px;
+	min-height: 1170px;
 }
 
 table {
@@ -19,5 +17,18 @@ a {
 }
 
 .w3-hover-white:hover {
-	color: lightgray!important
+	color: lightgray!important;
+}
+
+main {
+	min-height: 640px;
+}
+
+h1 {
+	font-family: Georgia;
+}
+
+img {
+	width: 600px;
+	height: 356.516px;
 }

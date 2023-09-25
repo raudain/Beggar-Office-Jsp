@@ -4,7 +4,7 @@ const page = location.href;
  *	***************** Sort by Room Number Accending ****************
  */
 
-let pageNumber = page.substring(49, 50);
+const pageNumber = page.substring(49, 50);
 const arrowPrevious = document.getElementById("arrowPrevious");
 const urlBase = "Table?page="
 const arrowNext = document.getElementById("arrowNext");
@@ -57,8 +57,9 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=1"){
 	const arrowFirst = document.getElementById("pageFirst");
 	arrowFirst.style.color = "lightgray";
 	arrowFirst.style.pointerEvents = "none";
-	arrowPrevious.style.color = "lightgray";
 	arrowPrevious.className = "w3-button w3-hover-white w3-mobile";
+	arrowPrevious.style.color = "lightgray";
+	arrowPrevious.style.cursor = "auto";
 }
 
 /* 
@@ -97,15 +98,17 @@ if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=7"){
 	const arrowLast = document.getElementById("pageLast");
 	arrowLast.style.color = "lightgray";
 	arrowLast.style.pointerEvents = "none";
-	arrowNext.style.color = "lightgray";
 	arrowNext.className = "w3-button w3-hover-white w3-mobile";
+	arrowNext.style.color = "lightgray";
+	arrowNext.style.cursor = "auto";
 }
 
 /* 
- *	***************** Sort by Worker's Cost Accending ****************
+ *	***************** Special Pages ***************
  */
 
-if (page == "http://localhost:8080/BeggarOfficeJsp/Table?page=69"){
-	const pagination = document.querySelector(".w3-display-bottommiddle");
+if (pageNumber == ''){
+	const pagination =
+	document.querySelector(".w3-display-bottommiddle");
 	pagination.style.display = "none";
 }

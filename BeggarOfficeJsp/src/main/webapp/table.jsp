@@ -1,6 +1,6 @@
-<%@ page language = "java" contentType = "text/html; charset=ISO-8859-1"
+<%@ page language = "java" contentType = "text/html; charset=UTF-8"
 	info = "Sort Workers" isELIgnored = "false"
-	pageEncoding = "ISO-8859-1"%>
+	pageEncoding = "UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -57,7 +57,16 @@
 <c:choose>
 
 <c:when test = "${workerList == null or workerList.isEmpty()}">
-	No workers are hired yet.
+	<main class="w3-display-container">
+		<h1 class = "w3-xxxlarge w3-center w3-margin-top">
+			We lost this page
+		</h1>
+		<h3 class = "w3-center w3-margin-right w3-margin-left">
+			We searched high and low but couldn’t find what you’re looking for. Let’s find a better place for you to go.
+		</h3>
+		<img src="images/404Horse.gif"
+			class="w3-display-bottommiddle">
+	</main>
 </c:when>
 
 <c:otherwise>
@@ -72,6 +81,11 @@
 					<a href = "Table?page=1">
 						<i class = "fa-solid fa-arrow-down-9-1"></i>
 					</a>
+					<form action = "Table" method = "POST">
+					<input type = "number" name = "page"
+					min = "1" max ="3"
+	 				class="w3-input w3-border w3-hover-red">
+	 				</form>
 				</th>
 				
 				<th class = "w3-border">Name</th>

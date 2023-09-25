@@ -26,7 +26,7 @@ public class Table extends HttpServlet {
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
 	 * This method is for showing all workers, paginated and <br\>
-	 * sorted by room number descending, from the workers table <br\>
+	 * sorted by room number descending from the workers table <br\>
 	 * in the database <br/>
 	 * 
 	 * @return void
@@ -42,26 +42,46 @@ public class Table extends HttpServlet {
 			throws ServletException, IOException {		
 		
 		final String pageNumber = request.getParameter("page");
-		byte page = Byte.parseByte(pageNumber);
+		final byte page = Byte.parseByte(pageNumber);
+		
 		final WorkerDAO doa = new WorkerDAO();
 		final ArrayList<Worker> workerList = doa.getWorkers(page);
 		request.setAttribute("workerList", workerList);
 
 		final RequestDispatcher requestDispatcher =
 				request.getRequestDispatcher("/table.jsp");
-		
 		requestDispatcher.forward(request, response);
-		
 	}
-
+	
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, <br\>
-	 * HttpServletResponse response)
+	 * <br/>
+	 * METHOD DESCRIPTION: <br/>
+	 * This method is for showing left, middle, or right workers <br\>
+	 * paginated and sorted by room number descending from the <br\>
+	 * workers table in the database <br/>
+	 * 
+	 * @return void
+	 * 
+	 * @param request
+	 * @param response
+	 * 
+	 * @throws ServletException, IOException
 	 */
 	@Override
-	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
+	protected void doPost(final HttpServletRequest request,
+			final HttpServletResponse response)
+			throws ServletException, IOException {		
+		
+		final String filterByNumber = request.getParameter("page");
+		final String filterNumber = "1" + filterByNumber;
+		final byte page = Byte.parseByte(filterNumber);
+		
+		final WorkerDAO doa = new WorkerDAO();
+		final ArrayList<Worker> workerList = doa.getWorkers(page);
+		request.setAttribute("workerList", workerList);
 
+		final RequestDispatcher requestDispatcher =
+				request.getRequestDispatcher("/table.jsp");
+		requestDispatcher.forward(request, response);
+	}
 }

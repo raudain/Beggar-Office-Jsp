@@ -14,17 +14,10 @@ else
 const navigation = document.querySelector("ul");
 navigation.insertBefore(rightButton, null);
 const changeListButton = document.createElement("a");
+changeListButton.href = "Update";
 rightButton.appendChild(changeListButton);
 const icon = document.createElement("i");
 icon.className = "fa-solid fa-keyboard w3-margin-right";
-changeListButton.appendChild(icon);
+rightButton.appendChild(icon);
 const buttonText = document.createTextNode("Update");
-changeListButton.addEventListener("click", changeListPage);
 changeListButton.appendChild(buttonText);
-
-/*
- * ***************** New Worker Onboarding ****************
- */
-function changeListPage() {
-	location.href="Update";
-}

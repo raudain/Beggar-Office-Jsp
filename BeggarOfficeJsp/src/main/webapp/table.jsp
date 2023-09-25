@@ -40,11 +40,15 @@
 	
 	<script src = "javascript/nav.js"></script>
 	
-	<li class = "w3-hover-red w3-round-large w3-bar-item w3-margin-right w3-margin-left w3-mobile navigation">
+	<li class = "w3-bar-item w3-hover-red w3-round-large w3-margin-right w3-margin-left w3-mobile navigation">
 		<a href = ".">Tutorial</a>
 	</li>
-	<li class = "w3-yellow w3-hover-red w3-round-large w3-bar-item  w3-margin-right w3-mobile navigation">
+	<li class = "w3-bar-item w3-yellow w3-hover-red w3-round-large w3-margin-right w3-mobile navigation">
 		<a href = "Table?page=1">Workers Table</a>
+	</li>
+	<li class = "w3-bar-item w3-hover-red w3-round-large w3-margin-right w3-right w3-mobile navigation">
+		<a href = "Table?page=1">Export</a>
+		<i class="fa-solid fa-file-export"></i>
 	</li>
 	
 </ul>

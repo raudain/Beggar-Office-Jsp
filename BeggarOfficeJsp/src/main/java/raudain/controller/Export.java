@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import raudain.doa.Worker;
 import raudain.doa.WorkerDAO;
 
-import java.io.File;  // Import the File class
+import java.io.FileWriter;   // Import the FileWriter class
 
 /**
  * @author Roody Audain
@@ -47,15 +47,15 @@ public class Export extends HttpServlet {
 		ArrayList<Worker> workerList = doa.getAllWorkers();
 		
 		try {
-		      File file = new File("Worker Export.txt");
-		      if (file.createNewFile()) {
-		        System.out.println("File created: " + file.getName());
-		      } else {
-		        System.out.println("File already exists.");
-		      }
-		    } catch (IOException e) {
-		      System.out.println("An error occurred.");
-		      e.printStackTrace();
+		      FileWriter myWriter =
+		    		  new FileWriter("C:\\Users\\Rudy1\\Downloads\\" +
+		      "Worker Export.txt");
+		      for (Worker worker : workerList)
+		    	  myWriter.write(worker.toString() + "\n");
+		      myWriter.close();
+		    } catch (IOException exception) {
+		      System.out.println(exception.getMessage());
+		      exception.printStackTrace();
 		    }
 		
 		workerList = doa.getWorkers(1);

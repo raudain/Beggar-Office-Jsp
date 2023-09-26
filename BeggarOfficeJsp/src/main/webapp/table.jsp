@@ -48,6 +48,9 @@
 		<a href = "Table?page=1">Workers Table</a>
 		<i class="fa-solid fa-table"></i>
 	</li>
+	<li class = "w3-bar-item w3-hover-red w3-round-large w3-margin-right w3-mobile navigation">
+		<a href = "cv.html">Curriculum Vitae</a>
+	</li>
 	<li class = "w3-bar-item w3-hover-red w3-round-large w3-margin-right w3-right w3-mobile navigation">
 		<a href = "Export?page=1">Export CSV</a>
 		<i class="fa-solid fa-file-export"></i>

@@ -42,7 +42,7 @@ public class WorkerDAO {
 	}
 
 	/**
-	 * @return worker data
+	 * @return Workers for one page
 	 *
 	 */
 	public ArrayList<Worker> getWorkers(int page) {
@@ -128,6 +128,34 @@ public class WorkerDAO {
 				ResultSet resultSet = preparedStatement.getResultSet();
 				workerList = getWorkerList(resultSet);
 			}
+			closeConnection(connection);
+		} catch (final SQLException exception) {
+			System.out.println(exception.getMessage());
+			exception.printStackTrace();
+		}
+		return workerList;
+	}
+	
+	/**
+	 * @return All workers
+	 *
+	 */
+	public ArrayList<Worker> getAllWorkers() {
+		
+		connection = DataConnection.createConnection();
+		ArrayList<Worker> workerList = null;
+		try {
+			final String selectStatement = sqlScripts.getWorkerListByRoom();
+			preparedStatement = 
+					connection.prepareStatement(selectStatement);
+			final byte minimum = 0;
+			final short nextRoom = getNextRoom();
+			short maximum = nextRoom;
+			preparedStatement.setInt(1, minimum);
+			preparedStatement.setInt(2, maximum);
+			preparedStatement.execute();
+			ResultSet resultSet = preparedStatement.getResultSet();
+			workerList = getWorkerList(resultSet);
 			closeConnection(connection);
 		} catch (final SQLException exception) {
 			System.out.println(exception.getMessage());

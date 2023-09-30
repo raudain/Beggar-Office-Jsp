@@ -6,10 +6,10 @@
 const rightButton = document.createElement("li");
 if  (location.href == 'http://localhost:8080/BeggarOfficeJsp/Update')
     rightButton.className = "w3-bar-item w3-yellow w3-hover-red " + 
-    "w3-round-large w3-margin-right w3-right w3-mobile navigation";
+    "w3-round-large w3-margin-right w3-right w3-mobile";
 else
 	rightButton.className = "w3-bar-item  w3-hover-red w3-round-large " +
-	"w3-margin-right w3-right w3-mobile navigation";
+	"w3-margin-right w3-right w3-mobile";
 
 const navigation = document.querySelector("ul");
 navigation.insertBefore(rightButton, null);

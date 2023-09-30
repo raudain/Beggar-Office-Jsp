@@ -1,0 +1,183 @@
+6103,Alice,Pilot,Sleepy,5000000
+6102,Jose,Lawyer,Hard-working,40000000
+6101,Heather,Politician,Hard-working,260000000
+6003,Tammy,Pilot,Hard-working,260000000
+6002,Angela,Mad Scientist,Productive,400000000
+6001,Jennifer,Lawyer,Tireless,520000000
+5903,Lucille,Politician,Diligent,15500000
+5902,Katie,Pilot,Hard-working,260000000
+5901,Pauline,Politician,Tireless,5800000000
+5803,Shawn,Mad Scientist,Productive,400000000
+5802,Clara,Mad Scientist,Productive,400000000
+5801,Larry,Lawyer,Tireless,520000000
+5703,Matthew,Politician,Diligent,15500000
+5702,Hector,Politician,Hard-working,260000000
+5701,Gary,Computer Engineer,Tireless,520000000
+5603,Veronica,Pilot,Hard-working,260000000
+5602,Charles,Mad Scientist,Diligent,120000000
+5601,Charlotte,Doctor,Productive,10500000
+5503,Ernest,Doctor,Productive,10500000
+5502,Carolyn,Pilot,Productive,55000000
+5501,Yvonne,Mad Scientist,Diligent,120000000
+5403,Carol,Mad Scientist,Tireless,48000000000
+5402,Michael,Journalist,Hard-working,10000000
+5401,Heather,Computer Engineer,Productive,10500000
+5303,Diane,Politician,Diligent,15500000
+5302,Rita,Mad Scientist,Diligent,120000000
+5301,Rose,Politician,Tireless,5800000000
+5203,Lawrence,Lawyer,Hard-working,40000000
+5202,Lillian,Computer Engineer,Hard-working,40000000
+5201,Rick,Santa,Hard-working,40000000
+5103,John,Pilot,Productive,55000000
+5102,Victor,Mad Scientist,Productive,400000000
+5101,Janet,Pilot,Hard-working,260000000
+5003,Leroy,Lawyer,Productive,10500000
+5002,Lee,Mad Scientist,Diligent,120000000
+5001,Lawrence,Politician,Productive,55000000
+4903,Glenn,Pilot,Hard-working,260000000
+4902,Pedro,Computer Engineer,Hard-working,40000000
+4901,Willie,Politician,Productive,55000000
+4803,Brent,Mad Scientist,Diligent,120000000
+4802,Wanda,Mad Scientist,Productive,400000000
+4801,Roy,Doctor,Tireless,520000000
+4703,Adam,Santa,Tireless,520000000
+4702,Florence,Pilot,Diligent,15500000
+4701,Audrey,Pilot,Productive,55000000
+4603,Douglas,Pilot,Productive,55000000
+4602,Brian,Computer Engineer,Tireless,520000000
+4601,Alicia,Mad Scientist,Tireless,48000000000
+4503,Sean,Computer Engineer,Productive,10500000
+4502,Joshua,Pilot,Productive,55000000
+4501,Wayne,Mad Scientist,Productive,400000000
+4403,Johnny,Pilot,Productive,55000000
+4402,Irene,Businessman,Tireless,1700
+4401,Lauren,Lawyer,Tireless,520000000
+4303,Clarence,Mad Scientist,Productive,400000000
+4302,Nicholas,Politician,Hard-working,260000000
+4301,Barry,Businessman,Tireless,1700
+4203,Lee,Scientist,Hard-working,10000000
+4202,Rita,Pilot,Productive,55000000
+4201,Travis,Politician,Productive,55000000
+4103,Ida,Journalist,Tireless,125000000
+4102,Edward,Politician,Hard-working,260000000
+4101,Travis,Businessman,Tireless,1700
+4003,Leonard,Politician,Productive,55000000
+4002,Thomas,Pilot,Hard-working,260000000
+4001,Francis,Politician,Tireless,5800000000
+3903,Joshua,Politician,Productive,55000000
+3902,Judith,Politician,Hard-working,260000000
+3901,Darrel,Doctor,Tireless,520000000
+3803,Vincent,Doctor,Productive,10500000
+3802,Norman,Santa,Hard-working,40000000
+3801,Hector,Politician,Hard-working,260000000
+3703,Sharon,Pilot,Diligent,15500000
+3702,Irene,Doctor,Tireless,520000000
+3701,Sally,Pilot,Productive,55000000
+3603,Douglas,Mad Scientist,Productive,400000000
+3602,Esther,Lawyer,Tireless,520000000
+3601,Hector,Pilot,Tireless,5800000000
+3503,Christina,Scientist,Hard-working,10000000
+3502,Alice,Lawyer,Productive,10500000
+3501,Irene,Politician,Diligent,15500000
+3403,Philip,Firefighter,Tireless,22000000
+3402,Wesley,Pilot,Hard-working,260000000
+3401,Charlotte,Mad Scientist,Tireless,48000000000
+3303,Howard,Doctor,Productive,10500000
+3302,Randall,Pilot,Hard-working,260000000
+3301,Suzanne,Mad Scientist,Diligent,120000000
+3203,Howard,Pilot,Hard-working,260000000
+3202,Anna,Politician,Hard-working,260000000
+3201,Bernard,Mad Scientist,Hard-working,2000000000
+3103,Peter,Doctor,Tireless,520000000
+3102,Eugene,Politician,Productive,55000000
+3101,Jean,Pilot,Tireless,5800000000
+3003,Hector,Politician,Productive,55000000
+3002,Sara,Mad Scientist,Diligent,120000000
+3001,Kathy,Politician,Tireless,5800000000
+2903,Robin,Lawyer,Tireless,520000000
+2902,Shane,Politician,Sleepy,5000000
+2901,Zachary,Politician,Diligent,15500000
+2803,Fransisco,Santa,Hard-working,40000000
+2802,Jason,Pilot,Hard-working,260000000
+2801,Justin,Mad Scientist,Productive,400000000
+2703,Steve,Politician,Productive,55000000
+2702,Nicholas,Doctor,Tireless,520000000
+2701,Lori,Mad Scientist,Diligent,120000000
+2603,Clarence,Politician,Tireless,5800000000
+2602,Jesus,Journalist,Hard-working,10000000
+2601,Chad,Journalist,Hard-working,10000000
+2503,Anne,Lawyer,Hard-working,40000000
+2502,Anita,Politician,Productive,55000000
+2501,Julia,Mad Scientist,Tireless,48000000000
+2403,Brandon,Politician,Productive,55000000
+2402,Dustin,Pilot,Diligent,15500000
+2401,Florence,Pilot,Diligent,15500000
+2303,Rita,Lawyer,Hard-working,40000000
+2302,Kenneth,Politician,Hard-working,260000000
+2301,Eva,Pilot,Tireless,5800000000
+2203,Craig,Postman,Hard-working,0
+2202,Carl,Lawyer,Hard-working,40000000
+2201,Raymond,Santa,Tireless,520000000
+2103,Ricardo,Politician,Diligent,15500000
+2102,Roy,Mad Scientist,Diligent,120000000
+2101,Joanne,Mad Scientist,Hard-working,2000000000
+2003,Walter,Santa,Hard-working,40000000
+2002,Carolyn,Pilot,Hard-working,260000000
+2001,Phyllis,Politician,Hard-working,260000000
+1903,Jay,Computer Engineer,Tireless,520000000
+1902,Carlos,Computer Engineer,Tireless,520000000
+1901,Howard,Businessman,Tireless,1700
+1803,Dustin,Mad Scientist,Hard-working,2000000000
+1802,Jerry,Lawyer,Hard-working,40000000
+1801,Adam,Politician,Diligent,15500000
+1703,Diane,Politician,Productive,55000000
+1702,Leon,Businessman,Tireless,1700
+1701,Melvin,Mad Scientist,Productive,400000000
+1603,Marcus,Mad Scientist,Diligent,120000000
+1602,Sally,Politician,Tireless,5800000000
+1601,Eugene,Politician,Diligent,15500000
+1503,Kenneth,Doctor,Tireless,520000000
+1502,Rhonda,Computer Engineer,Tireless,520000000
+1501,Dawn,Computer Engineer,Hard-working,40000000
+1403,Shirley,Lawyer,Hard-working,40000000
+1402,Vanessa,Pilot,Productive,55000000
+1401,Edith,Pilot,Tireless,5800000000
+1303,Karen,Pilot,Tireless,5800000000
+1302,Andrew,Businessman,Tireless,1700
+1301,Janice,Pilot,Productive,55000000
+1203,Craig,Politician,Productive,55000000
+1202,Vivian,Pilot,Productive,55000000
+1201,Carmen,Pilot,Productive,55000000
+1103,Lauren,Doctor,Tireless,520000000
+1102,Vivian,Lawyer,Hard-working,40000000
+1101,Thomas,Pilot,Diligent,15500000
+1003,Regina,Mad Scientist,Hard-working,2000000000
+1002,Jack,Mad Scientist,Hard-working,2000000000
+1001,Erin,Scientist,Hard-working,10000000
+903,Mary,Lawyer,Tireless,520000000
+902,Bonnie,Mad Scientist,Hard-working,2000000000
+901,Raymond,Construction Worker,Hard-working,0
+803,Judith,Mad Scientist,Diligent,120000000
+802,Danielle,Scientist,Hard-working,10000000
+801,Marilyn,Businessman,Tireless,1700
+703,Marcus,Mad Scientist,Hard-working,2000000000
+702,Debra,Mad Scientist,Productive,400000000
+701,Carrie,Pilot,Diligent,15500000
+603,Norman,Santa,Tireless,520000000
+602,Anthony,Scientist,Tireless,125000000
+601,Elsie,Journalist,Tireless,125000000
+503,Clifford,Construction Worker,Hard-working,0
+502,Roger,Doctor,Hard-working,40000000
+501,Mary,Pilot,Tireless,5800000000
+403,Jorge,Mad Scientist,Diligent,120000000
+402,Diana,Doctor,Tireless,520000000
+401,Bernard,Santa,Productive,10500000
+303,Thelma,Politician,Tireless,5800000000
+302,Bryan,Politician,Tireless,5800000000
+301,Beverley,Computer Engineer,Productive,10500000
+203,Martha,Journalist,Tireless,125000000
+202,April,Businessman,Tireless,1700
+201,Darlene,Businessman,Tireless,1700
+103,Nicholas,Businessman,Tireless,1700
+102,Timothy,Businessman,Tireless,1700
+101,Terry,Businessman,Tireless,1700

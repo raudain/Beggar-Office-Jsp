@@ -1,17 +1,17 @@
 package raudain.controller;
+import raudain.doa.Worker;
+import raudain.doa.WorkerDAO;
+
+import java.io.IOException;
+import java.io.FileWriter;
+import java.util.ArrayList;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import raudain.doa.Worker;
-import raudain.doa.WorkerDAO;
 
 @WebServlet("/Onboarding")
 public class Onboarding extends HttpServlet {
@@ -31,54 +31,62 @@ public class Onboarding extends HttpServlet {
 	 * @throws ServletException, IOException
 	 */
 	@Override
-	protected void doGet(final HttpServletRequest request,
-			final HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(final HttpServletRequest request,
+			final HttpServletResponse response) {
 		
 		final String roomNumber = request.getParameter("room");
 		final Short room = Short.parseShort(roomNumber);
 		final String name = request.getParameter("name");
-		final String workerProfession = request.getParameter("profession");
+		final String workerProfession =
+				request.getParameter("profession");
 		final byte profession = Byte.parseByte(workerProfession);
-		final String workerEndurance = request.getParameter("endurance");
+		final String workerEndurance =
+				request.getParameter("endurance");
 		final byte endurance = Byte.parseByte(workerEndurance);
 		final Long cost = calculateCost(profession, endurance);
 		
-		final Worker worker = new Worker();
-		worker.setRoom(room);
-		worker.setName(name);
-		worker.setProfession(workerProfession);
-		worker.setEndurance(workerEndurance);
-		worker.setCost(cost);
+		final Worker newWorker = new Worker();
+		newWorker.setRoom(room);
+		newWorker.setName(name);
+		newWorker.setProfession(workerProfession);
+		newWorker.setEndurance(workerEndurance);
+		newWorker.setCost(cost);
 		
 		final WorkerDAO doa = new WorkerDAO();
-		if(worker.getRoom() == doa.getNextRoom()) {
-			doa.insertWorker(worker);
-			System.out.println("Worker number " + worker.getRoom() +
-					" added");
+		if(newWorker.getRoom() == doa.getNextRoom()) {
+			doa.insertWorker(newWorker);
+			System.out.println("Worker number " + newWorker.getRoom() +
+					" has been added");
 		} else {
-			doa.updateWorker(worker);
-			System.out.println("Worker number " + worker.getRoom() +
-					" updated");
+			doa.updateWorker(newWorker);
+			System.out.println("Worker number " + newWorker.getRoom() +
+					" has been updated");
 		}
-		final ArrayList<Worker> workerList = doa.getWorkers(1);
-		request.setAttribute("workerList", workerList);
-		final RequestDispatcher disp =
-				request.getRequestDispatcher("table.jsp");
+		ArrayList<Worker> workerList = doa.getAllWorkers();
 		
-		disp.forward(request, response);
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, <br\>
-	 * HttpServletResponse
-	 *      response)
-	 */
-	@Override
-	protected void doPost(final HttpServletRequest request,
-			final HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
+		try {
+		      FileWriter myWriter =
+		    		  new FileWriter("C:\\Users\\Rudy1\\Documents\\" +
+		      "GitHub\\Virtual-Beggar-Servlet\\BeggarOfficeJsp\\src" +
+		      "\\main\\webapp\\Worker Export.txt");
+		      for (Worker worker : workerList)
+		    	  myWriter.write(worker.toString() + "\n");
+		      myWriter.close();
+		    } catch (IOException exception) {
+		      System.out.println(exception.getMessage());
+		      exception.printStackTrace();
+		    }
+		workerList = doa.getWorkers(1);
+		request.setAttribute("workerList", workerList);
+		
+		try {
+			RequestDispatcher requestDispatcher =
+					request.getRequestDispatcher("table.jsp");
+			requestDispatcher.forward(request, response);
+		} catch (Exception exception) {
+			System.out.println(exception.getMessage());
+		      exception.printStackTrace();
+		}
 	}
 	
 	/**
@@ -198,7 +206,7 @@ public class Onboarding extends HttpServlet {
 								break;
 					case 2: 	cost = 950000;
         						break;
-					case 3: 	cost = 3100000;
+					case 3: 	cost = 3050000;
         						break;
 					case 4: 	cost = 10500000;
         						break;

@@ -39,14 +39,4 @@ public class Update extends HttpServlet {
 		final RequestDispatcher disp = request.getRequestDispatcher("/update.jsp");
 		disp.forward(request, response);
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	@Override
-	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
 }

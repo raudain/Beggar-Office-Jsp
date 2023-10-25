@@ -56,7 +56,7 @@ public class Table extends HttpServlet {
 	/**
 	 * <br/>
 	 * METHOD DESCRIPTION: <br/>
-	 * This method is for showing left, middle, or right workers <br\>
+	 * This method is for showing only left, middle, or right workers exclusively <br\>
 	 * paginated and sorted by room number descending from the <br\>
 	 * workers table in the database <br/>
 	 * 

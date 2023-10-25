@@ -252,6 +252,29 @@ INSERT INTO worker (Room, Name, Profession, Endurance, Cost) VALUES
 (4701, 'Michael', 44, 3, 3050000),
 (4702, 'Adam', 51, 1, 1600000);
 
+CREATE OR REPLACE VIEW dbo.`View Worker List By Room` AS
+SELECT Worker.Room
+,      Worker.Name
+,      Profession.ProfessionName
+,      Endurance.EnduranceName
+,      Worker.Cost
+FROM dbo.Worker
+INNER JOIN dbo.Profession ON Worker.Profession = Profession.Profession
+INNER JOIN dbo.Endurance ON Worker.Endurance = Endurance.Endurance
+ORDER BY Worker.Room DESC;
+
+CREATE OR REPLACE VIEW dbo.`View Worker List By Cost` AS
+SELECT Worker.Room
+,      Worker.Name
+,      Profession.ProfessionName
+,      Endurance.EnduranceName
+,      Worker.Cost
+FROM dbo.Worker
+INNER JOIN dbo.Profession ON Worker.Profession = Profession.Profession
+INNER JOIN dbo.Endurance ON Worker.Endurance = Endurance.Endurance
+WHERE Worker.Cost != 0
+AND Profession.ProfessionName != 'Businessman'
+ORDER BY Worker.Cost;
 
 SELECT worker.Room, worker.Name, profession.Profession AS Profession, endurance.EnduranceName AS Endurance, worker.Cost
 FROM dbo.worker
